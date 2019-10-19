@@ -1,3 +1,3 @@
 # ModellbasierterEntwurf
 
-Welcome to Pynq developement @ beuth University of applied science
+Welcome to Pynq development @ beuth University of applied science
