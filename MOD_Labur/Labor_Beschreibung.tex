@@ -53,7 +53,7 @@ Um Codeabschnitte besser von Beschreibungen besser unterscheiden zu können, wur
 \end{verbatim}
 
 \chapter{Projektbeschreibung}
-In diesem Projekt sollen die Momente von Regionen (Blobs) berechnet werden. Momente sind im englischen Sprachgebrauch etabliert und werden im Deutschen als Massenträgheitsmomente oder einfach Trägheitsmomente bezeichnet. Sie kommen zum Einsatz wo statische Kennwerte die Konturabhängig sind benötigt werden. Eine wichtige Fragestellung ist z.B. in welcher richtig sich ein L-Projil biegen wird. Die kontinuierliche Darstellung von Momenten als Integral in dem I(x,y) die gesamt Fläche eines Querschnittes darstellt: $$M = \int \int I(i,j) dxdy$$
+In diesem Projekt sollen die Momente von Regionen (Blobs) berechnet werden. Momente sind im englischen Sprachgebrauch etabliert und werden im Deutschen als Massenträgheitsmomente oder einfach Trägheitsmomente bezeichnet. Sie kommen zum Einsatz wo statische Kennwerte die Konturabhängig sind benötigt werden. Eine wichtige Fragestellung ist z.B. in welcher Richtung sich ein L-Profil biegen wird. Die kontinuierliche Darstellung von Momenten als Integral in dem I(x,y) die gesamte Fläche eines Querschnittes darstellt: $$M = \int \int I(i,j) dxdy$$
 
 Diskret (Bildpixel) können durch Iteration über alle Pixel einer Region die Momente berechnet werden. Die allgemeine Formel kann für alle Kombinationen verwendet werden, z.B. $M_{00}$, $M_{01}$, $M_{20}$. Die Zahlen dienen hierbei gleichzeitig als Exponent p oder q.: $$M_{p,q} = \sum \sum i^p jp^q I(i,j)$$
 
@@ -64,7 +64,7 @@ Diskret (Bildpixel) können durch Iteration über alle Pixel einer Region die Mo
 	\label{Entwurf des Projects}
 	\end{figure}
 
-Im Projekt soll auf Bildern jweils mindestens eine Region selektiert werden. In diese soll zur Anzeige des Ergebnisses der Schwerpunkt und die Orientierung in Richtung der Achse mit höherem Biegemoment. In der folgenden Abbildung sind die Schwerpunkte lila und die Orientierung grün eingezeichnet.
+Im Projekt soll auf Bildern jeweils mindestens eine Region selektiert werden. In diese soll zur Anzeige des Ergebnisses der Schwerpunkt und die Orientierung in Richtung der Achse mit höherem Biegemoment. In der folgenden Abbildung sind die Schwerpunkte lila und die Orientierung grün eingezeichnet.
 	
 	\begin{figure}[H]
 	\centering
@@ -73,7 +73,7 @@ Im Projekt soll auf Bildern jweils mindestens eine Region selektiert werden. In 
 	\label{Entwurf des Projects}
 	\end{figure}
 	
-Nach der binarisierung der Region können die Pixel jeder Region gezählt werden und sind in x und y Koordinaten im Bild bekannt. Zuerst werden die Schwerpunkte berechnet $\overline{x}$ und $\overline{y}$ und die Berechnung der Orientierung erfolgt aus den Flächenmomenten, den Kovarianzen der Kovarianzmatrix. \\
+Nach der binarisierung der Region können die Pixel jeder Region gezählt werden und sind in x und y Koordinaten im Bild bekannt. Zuerst werden die Schwerpunkte $\overline{x}$ und $\overline{y}$ berechnet. Danach erfolgt die Berechnung der Orientierung aus den Flächenmomenten mittels der Kovarianzen und der Kovarianzmatrix. \\
 
 Schwerpunkt x: $$\overline{x} = \frac{M_{10}}{M_{00}}$$
 
