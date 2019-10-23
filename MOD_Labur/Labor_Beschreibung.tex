@@ -99,13 +99,7 @@ Bei der Hardware Realisierung sind mehrere Optionen denkbar. Es werden FPGA Impl
 
 \chapter{Hardware}
 
-In diesem Kapitel werden die für das Projekt erforderliche Hardware ermittelt und erläutert.\\
-
-Nachfolgend zeigen wir zwei Überblicken und Möglichkeiten über unser Projekt: \\
-
-Erste Möglichkeit:
-
-Wir können durch Verwendung des USB-Ports ein Bild auf Bildschirm zeigen.
+In diesem Kapitel wird die für das Projekt erforderliche Hardware dargestellt und erläutert. Optional kann im Projekt die Kamera auf zwei verschiedene Arten angeschlossen werden. Die erste Möglichkeit ist über Verwendung des HDMI-Ports einen Bilschirm anzuschließen:
 	\begin{figure}[H]
 	\centering
 	\subfloat{\includegraphics[width=13cm,height=8cm]{PIC/schematikUSB}}
@@ -113,16 +107,15 @@ Wir können durch Verwendung des USB-Ports ein Bild auf Bildschirm zeigen.
 	\label{Entwurf des Projects durch_USB_Host}
 	\end{figure}
 
-Zweite Möglichkeit:
-
-Wie unten im Entwrf gezeigt wurde, können wir durch Nutzung den VGA-Adapter ein Bild auf Bildschirm darstellen.
+Die zweite Möglichkeit, wie unten im Entwurf gezeigt, wir über die FPGA Pins mit VGA Adapter ein Bildschirm angeschlossen.
 	\begin{figure}[H]
 	\centering
 	\subfloat{\includegraphics[width=13cm,height=8cm]{PIC/schematik}}
 	\caption{Entwurf des Projects durch VGA Adapter}
 	\label{Entwurf des Projects durch_VGA_Adapter}
 	\end{figure}
-
+	
+Die Kamera kann ebenfalls entweder an USD oder PMOD...
 
 
 \section{Xilinx Pynq-Z1 board}
