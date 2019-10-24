@@ -1,0 +1,29 @@
+@I [SIM-47] Using XSIM for RTL simulation.
+@I [SIM-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vivado_HLS/2016.2/msys/bin/g++.exe"
+   Compiling apatb_fir.cpp
+   Compiling (apcc) fir.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2016.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Misca' on host 'alienware' (Windows NT_amd64 version 6.2) on Sun Dec 16 23:17:20 +0100 2018
+INFO: [HLS 200-10] In directory 'C:/Users/Misca/Documents/KES-AMS/KES/Lab4/fir_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) fir_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2016.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Misca' on host 'alienware' (Windows NT_amd64 version 6.2) on Sun Dec 16 23:17:23 +0100 2018
+INFO: [HLS 200-10] In directory 'C:/Users/Misca/Documents/KES-AMS/KES/Lab4/fir_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+C:/Users/Misca/Documents/KES-AMS/KES/Lab4/2016.1/Introduction/lab1/fir_test.c:77:39: error: expected expression
+    fprintf(fp,"%i %d %d\n",i,signal, );
+                                      ^
+1 error generated.
+CRITICAL WARNING: [HLS 200-101] Message ID '1-1' value invalid for uint argument.
+   Generating cosim.tv.exe
+@E [SIM-317] C++ compile error.
+@E [SIM-321] EXE file generate failed.
+@E [SIM-321] EXE file generate failed.
+@E [SIM-331] Aborting co-simulation: C simulation failed, compilation errors.
+@E [SIM-4] *** C/RTL co-simulation finished: FAIL ***

@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2013.3 (64-bit)
+# SW Build 325226 on Sun Oct  6 19:38:51 MDT 2013
+# IP Build 189985 on Sat Oct  5 03:19:40 MDT 2013
+# Start of session at: Mon Oct 21 08:32:39 2013
+# Process ID: 18984
+# Log file: C:/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/vivado.log
+# Journal file: C:/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2\vivado.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: Implementation
+INFO: [Common 17-81] Feature available: Implementation
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/Vivado/2013.3/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/Vivado/2013.3/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/Vivado/2013.3/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+create_project project_1 C:/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1 -part xc7z020clg484-1
+set_property board xilinx.com:zynq:zc702:1.0 [current_project]
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado repository 'C:/Xilinx/Vivado/2013.3/data/ip'.
+set_property ip_repo_paths  C:/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/vivado_ip_repo [current_fileset]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user repository 'c:/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/vivado_ip_repo'.
+update_ip_catalog -add_ip C:/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/hls_designs/be_vhls_prj/IPXACTExport/impl/ip/xilinx_com_hls_hls_xfft2real_1_0.zip -repo_path c:/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/vivado_ip_repo
+CRITICAL WARNING: [IP_Flow 19-2263] Did not add IP xilinx.com:hls:hls_xfft2real:1.0 (from zip file C:/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/hls_designs/be_vhls_prj/IPXACTExport/impl/ip/xilinx_com_hls_hls_xfft2real_1_0.zip) to repository 'c:/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/vivado_ip_repo' because this repository already contains that IP.
+0
+create_bd_design "Zynq_RealFFT"
+Wrote  : <C:/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/Zynq_RealFFT.bd> 
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xfft:9.0 xfft_0
+endgroup
+startgroup
+set_property -dict [list CONFIG.transform_length {512} CONFIG.target_clock_frequency {100} CONFIG.implementation_options {pipelined_streaming_io} CONFIG.aresetn {true}] [get_bd_cells xfft_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:hls_real2xfft:1.0 hls_real2xfft_0
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:hls_xfft2real:1.0 hls_xfft2real_0
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_subset_converter:1.1 axis_subset_converter_0
+endgroup
+connect_bd_intf_net [get_bd_intf_pins hls_real2xfft_0/m_axis_dout] [get_bd_intf_pins xfft_0/S_AXIS_DATA]
+connect_bd_intf_net [get_bd_intf_pins xfft_0/M_AXIS_DATA] [get_bd_intf_pins hls_xfft2real_0/s_axis_din]
+connect_bd_intf_net [get_bd_intf_pins hls_xfft2real_0/m_axis_dout] [get_bd_intf_pins axis_subset_converter_0/S_AXIS]
+regenerate_bd_layout
+group_bd_cells RealFFT [get_bd_cells hls_real2xfft_0] [get_bd_cells hls_xfft2real_0] [get_bd_cells xfft_0] [get_bd_cells axis_subset_converter_0]
+save_bd_design
+Wrote  : <C:/Vivado_HLS_Tutorial/Using_IP_with_Zynq/lab2/project_1/project_1.srcs/sources_1/bd/Zynq_RealFFT/Zynq_RealFFT.bd> 
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 21 08:48:42 2013...

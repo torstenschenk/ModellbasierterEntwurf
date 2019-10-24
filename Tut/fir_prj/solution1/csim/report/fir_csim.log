@@ -1,0 +1,20 @@
+   Compiling(apcc) ../../../../2016.1/Introduction/lab1/fir_test.c in debug mode
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2016.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Misca' on host 'alienware' (Windows NT_amd64 version 6.2) on Sat Jan 05 15:54:19 +0100 2019
+INFO: [HLS 200-10] In directory 'C:/Users/Misca/Documents/KES-AMS/KES/Lab4/fir_prj/solution1/csim/build'
+../../../../2016.1/Introduction/lab1/fir_test.c:77:39: error: expected expression
+    fprintf(fp,"%i %d %d\n",i,signal, );
+                                      ^
+1 error generated.
+CRITICAL WARNING: [HLS 200-101] Message ID '1-1' value invalid for uint argument.
+   Generating csim.exe
+
+FORMAT
+  ap_puts_err [OPTIONS] [ Message namespace] [ Message ID] [ Message string]
+      <string>
+      <uint>
+      <string>
+
+g++.exe: error: obj/fir_test.o: No such file or directory
+make: *** [csim.exe] Error 1
+CRITICAL WARNING: [SIM 1] 'csim_design' failed: compilation error(s).
