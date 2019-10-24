@@ -102,9 +102,9 @@ Bei der Hardware Realisierung sind mehrere Optionen denkbar. Es werden FPGA Impl
 In diesem Kapitel wird die für das Projekt erforderliche Hardware dargestellt und erläutert. Optional kann im Projekt die Kamera auf zwei verschiedene Arten angeschlossen werden. Die erste Möglichkeit ist über Verwendung des HDMI-Ports einen Bilschirm anzuschließen:
 	\begin{figure}[H]
 	\centering
-	\subfloat{\includegraphics[width=13cm,height=8cm]{PIC/schematikUSB}}
-	\caption{Entwurf des Projects durch USB Host}
-	\label{Entwurf des Projects durch_USB_Host}
+	\subfloat{\includegraphics[width=15cm,height=9cm]{PIC/schematikcameraUsb}}
+	\caption{Entwurf des Projects durch USB Host und HDMI OUT}
+	\label{Entwurf des Projects durch_USB_Host_und_HDMI_OUT}
 	\end{figure}
 
 Die zweite Möglichkeit, wie unten im Entwurf gezeigt, wir über die FPGA Pins mit VGA Adapter ein Bildschirm angeschlossen.
@@ -115,7 +115,7 @@ Die zweite Möglichkeit, wie unten im Entwurf gezeigt, wir über die FPGA Pins m
 	\label{Entwurf des Projects durch_VGA_Adapter}
 	\end{figure}
 	
-Die Kamera kann ebenfalls entweder an USD oder PMOD...
+Die Kamera kann ebenfalls entweder an USB oder PMOD...
 
 
 \section{Xilinx Pynq-Z1 board}
@@ -222,6 +222,23 @@ Der Steckplatz ist mit Bank 1/501 MIO [40-47] auch einschließlich Card Detect v
 \textbf{Hinweis:} Für das Betriebssystem wird mindestens eine\textbf{ Klasse-4 Karte} mit \textbf{8 GB Speicherplatz} empfohlen.
 
 Informationen zum Einrichten und Verwendung der Speicherkarte finden Sie im Abschnitt Software und im Bereich \textbf{\nameref{Einrichtung_der_Speicherkarte}}.
+
+
+
+\subsection{HDMI IN/OUT}
+
+Die PYNQ-Z1-Karte enthält einen HDMI-Eingangsanschluss und einen HDMI-Ausgangsanschluss, die mit dem FPGA-Fabric des Zynq Chips verbunden sind.
+Dies bedeutet, dass zur Verwendung der HDMI-Anschlüsse die HDMI-Controller in einer Hardware-Bibliothek oder einem Overlay enthalten müssen.
+
+	\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=7cm]{PIC/HDMIINOUT}}
+	\caption{HDMI IN/OUT}
+	\label{HDMI_IN_/_OUT}
+	\end{figure}
+
+Das Basis-Overlay enthält einen HDMI-Eingangscontroller und einen HDMI-Ausgangscontroller, die beide an die entsprechenden HDMI-Anschlüsse angeschlossen sind.\\
+Am Zynq PS ist ein USB-Controller angeschlossen. Eine Webcam kann auch zum Aufnehmen von Bildern oder Videoeingaben verwendet werden, die über den HDMI-Ausgang verarbeitet und angezeigt werden können.
 
 
 \subsection{USB-HOST}
