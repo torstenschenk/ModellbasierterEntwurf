@@ -12,6 +12,7 @@
 \usepackage{tgadventor} % Use the Paratype Serif font
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{float}
+\usepackage{tcolorbox}
 \usepackage[hidelinks]{hyperref}
 \usepackage{refstyle}
 \usepackage{caption}
@@ -31,6 +32,41 @@
 \lhead{\nouppercase{\rightmark} (\nouppercase{\leftmark})}
 \rfoot{Page \thepage}
 \renewcommand{\headrulewidth}{2pt}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+%"mystyle" code listing set
+\lstset{style=mystyle}
+
+\title{Code Listing}
+\date{ }
+
 
 	%------------------------------------------------
 	%	Start der Beschreibung
@@ -53,6 +89,7 @@ Um Codeabschnitte besser von Beschreibungen besser unterscheiden zu können, wur
 \end{verbatim}
 
 \chapter{Projektbeschreibung}
+\label{Projektbeschreibung}
 In diesem Projekt sollen die Momente von Regionen (Blobs) berechnet werden. Momente sind im englischen Sprachgebrauch etabliert und werden im Deutschen als Massenträgheitsmomente oder einfach Trägheitsmomente bezeichnet. Sie kommen zum Einsatz wo statische Kennwerte die Konturabhängig sind benötigt werden. Eine wichtige Fragestellung ist z.B. in welcher Richtung sich ein L-Profil biegen wird. Die kontinuierliche Darstellung von Momenten als Integral in dem I(x,y) die gesamte Fläche eines Querschnittes darstellt: $$M = \int \int I(i,j) dxdy$$
 
 Diskret (Bildpixel) können durch Iteration über alle Pixel einer Region die Momente berechnet werden. Die allgemeine Formel kann für alle Kombinationen verwendet werden, z.B. $M_{00}$, $M_{01}$, $M_{20}$. Die Zahlen dienen hierbei gleichzeitig als Exponent p oder q.: $$M_{p,q} = \sum \sum i^p jp^q I(i,j)$$
@@ -415,13 +452,240 @@ Wie im Abschnitt \textbf{\nameref{PMODE_PORTS}} schon erwähnt wurde,
 \section{HLS Software Implementierung}
 
 
+\section{Code}
+
+\subsection{Simulation in OpenCV}
+
+\begin{lstlisting}[language=Python, caption=Simulation in OpenCV]
+import cv2
+import numpy as np 
+import sys
+import math
+
+img = cv2.imread("img.png",0)
+
+# convert the grayscale image to binary image
+ret,thresh = cv2.threshold(img,127,255,0)
+ 
+# find contours in the binary image
+im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+
+print('Number contours:',len(contours))
+for c in contours:
+    area = cv2.contourArea(c)
+    print(area)
+	if (area < 100.0):
+		contours.remove(c)
+	print('Number contours>100:',len(contours))
 
 
+cv2.namedWindow("main", cv2.WINDOW_NORMAL)
+color_image = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
+cv2.drawContours(color_image, contours, -1, (0, 0, 255), 1) 
+
+for c in contours:
+    # calculate moments for each contour
+    M = cv2.moments(c)
+
+    # calculate x,y coordinate of center
+    cX = int(M["m10"] / M["m00"])
+    cY = int(M["m01"] / M["m00"])
+   
+    # cv2.circle(img, (cX, cY), 5, (255, 0, 255), -1)
+    cv2.circle(color_image, (cX, cY), 5, (255, 0, 255), -1)
+    cv2.putText(color_image, "centroid", (cX - 25, cY - 25),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+
+    # display the image
+    cv2.imshow("main", color_image)
+    cv2.waitKey(0)
+    
+for c in contours:
+    M = cv2.moments(c)
+    cX = int(M["m10"] / M["m00"])
+    cY = int(M["m01"] / M["m00"])
+    mu20 = (M["m20"]/M["m00"])-(cX**2)
+    mu11 = (M["m11"]/M["m00"])-(cX*cY)
+    mu02 = (M["m02"]/M["m00"])-(cY**2)
+    theta = 0.5 *  math.atan2( (2*mu11) , (mu20-mu02) )
+   
+    ### tan not working!!!!
+    #theta = 0.5 *  math.atan( (2*mu11) / (mu20-mu02) )
+    #cv2.line()
+    
+    #print('val:',(2*mu11) / (mu20-mu02))
+    print("mu20 {}  m02 {}".format(mu20,mu02))
+    print('cx:',cX,'cY:',cY,'degree:',math.degrees(theta), 'G:', 2*mu11, 'A:', (mu20-mu02))
+    #print('cx:',cX,'cY:',cY,'degree:',theta, 'G:', 2*mu11, 'A:', (mu20-mu02))
+    
+    length = 50
+    x2 = cX + length * math.cos(theta)
+    y2 = cY + length * math.sin(theta) 
+    lineThickness = 2
+    cv2.line(color_image, (int(cX), int(cY)), (int(x2), int(y2)), (0,255,0), lineThickness)
+    
+    # display the image
+cv2.imshow("main", color_image)
+cv2.waitKey(0)    
+cv2.imwrite("colorres.png",color_image)
+cv2.destroyAllWindows()
+
+\end{lstlisting}
 
 
+Die Abbildung vom Beispiel ''Blobs mit Schwerpunkt und Richtung'' wurde im  Abschnitt \textbf{ \nameref{Projektbeschreibung}} gezeigt.
 
 
+\subsection{Simulation Numeric}
 
+\begin{lstlisting}[language=Python, caption=Simulation Numeric]
+
+import cv2
+import numpy as np 
+import math # for tan
+import matplotlib.pyplot as plt
+
+#from PIL import Image # Python Imaging Library (Fork)
+
+def calcmoments(img):
+    # function to calculate moments
+    moments = np.zeros(6, dtype=int) # Moments : [ m00, m01, m10, m11, m20, m02 ]
+    for y in range(img.shape[0]):
+        for x in range(img.shape[1]):
+            if (img[y,x] & 128): # check if 7th bit is '1', it is set for all gray values >=128
+                moments[0] += 1
+                moments[1] += y
+                moments[2] += x
+                moments[3] += x*y
+                moments[4] += x*x
+                moments[5] += y*y
+    
+    return moments
+    
+    
+def calcthetacXcY(m):
+    # calculate cX,cY,theta of blob
+    cxytheta = np.zeros(3, dtype=float) # cxytheta : [ cX, cY, theta ]
+    cxytheta[0] = int(m[2]/m[0])
+    cxytheta[1] = int(m[1]/m[0])
+    mu20 = (m[4]/m[0])-cxytheta[0]**2
+    mu11 = (m[3]/m[0])-cxytheta[0]*cxytheta[1]
+    mu02 = (m[5]/m[0])-cxytheta[1]**2
+    cxytheta[2] = 0.5 *  math.atan2( (2*mu11) , (mu20-mu02) )
+    
+    return cxytheta
+    
+    test = cv2.imread('pics/Block0.png',0)
+tiles = 4
+rows = test.shape[0]
+cols = test.shape[1]
+hugeImg = np.zeros( (4*rows, 4*cols, 3), np.uint8)
+# print(hugeImg.shape)
+
+# cv::Mat small_image;
+# cv::Mat big_image;
+# ...
+# //Somehow fill small_image and big_image with your data
+# ...
+# small_image.copyTo(big_image(cv::Rect(x,y,small_image.cols, small_image.rows)));
+
+for i in np.arange(16):
+    img = cv2.imread('pics/Block'+str(i)+'.png',0)
+    
+    m = calcmoments(img) # Moments : [ m00, m01, m10, m11, m20, m02 ]
+    #print("Moments: m00: {} m01: {} m10: {} m11: {} m20: {} m02 {}".format(m[0],m[1],m[2],m[3],m[4],m[5]))
+    
+    cxytheta = calcthetacXcY(m) # cxytheta : [ cX, cY, theta ]
+    #print('Center X {0:.2f}, Center Y {1:.2f}, Angle clockwise {2:.2f}.format(cxytheta[0],cxytheta[1],np.degrees(cxytheta[2])) )
+    
+    # visu
+    # create line through center point
+    length = 130
+    x1 = cxytheta[0] + length * math.cos(cxytheta[2])
+    y1 = cxytheta[1] + length * math.sin(cxytheta[2]) 
+    x2 = cxytheta[0] - length * math.cos(cxytheta[2])
+    y2 = cxytheta[1] - length * math.sin(cxytheta[2]) 
+ 
+    color_image = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
+    lineThickness = 2
+    cv2.line(color_image, (int(x1), int(y1)), (int(x2), int(y2)), (0,255,0), lineThickness)
+    cv2.circle(color_image, (int(cxytheta[0]), int(cxytheta[1])), 5, (255, 0, 255), -1)
+    cv2.putText(color_image, "centroid", (int(cxytheta[0]) - 25, int(cxytheta[1]) - 25),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+    
+    # copy images into large result image
+    rpos = int(i/4)*rows
+    cpos = i%4*cols
+    hugeImg[rpos:rpos+rows, cpos:cpos+cols] = color_image
+
+# display plot in notebook
+%matplotlib inline
+plt.axis("off")
+plt.figure(figsize=(15,15))
+plt.imshow(hugeImg)
+plt.show()
+
+\end{lstlisting}
+
+\textbf{Ergebnis von Simulation-Numeric:}
+
+\begin{tcolorbox}
+
+Moments: m00: 15964 m01: 1773113 m10: 2281256 m11: 269670230 m20: 365332132 m02 215154207
+Center X 142.00, Center Y 111.00, Angle clockwise 27.66$^\circ$ \\
+
+Moments: m00: 15979 m01: 1704601 m10: 2337778 m11: 268749999 m20: 369586230 m02 211883899
+Center X 146.00, Center Y 106.00, Angle clockwise 47.24 $^\circ$ \\	
+
+Moments: m00: 15975 m01: 1662657 m10: 2398584 m11: 265651241 m20: 377952942 m02 212836887
+Center X 150.00, Center Y 104.00, Angle clockwise 61.61 $^\circ$ \\
+
+Moments: m00: 15978 m01: 1634737 m10: 2560677 m11: 257510681 m20: 420299847 m02 214938043
+Center X 160.00, Center Y 102.00, Angle clockwise -85.08 $^\circ$ \\
+
+Moments: m00: 15974 m01: 1677800 m10: 2674852 m11: 263372887 m20: 468465736 m02 213258504
+Center X 167.00, Center Y 105.00, Angle clockwise -56.48 $^\circ$ \\
+
+Moments: m00: 15979 m01: 1787154 m10: 2773197 m11: 294464042 m20: 521555013 m02 217256650
+Center X 173.00, Center Y 111.00, Angle clockwise -23.59 $^\circ$ \\
+
+Moments: m00: 15984 m01: 1883291 m10: 2800963 m11: 325751916 m20: 538609945 m02 231766647
+Center X 175.00, Center Y 117.00, Angle clockwise -2.41 $^\circ$ \\
+
+Moments: m00: 15982 m01: 1984770 m10: 2792153 m11: 356419376 m20: 533466039 m02 258459794
+Center X 174.00, Center Y 124.00, Angle clockwise 16.08 $^\circ$ \\
+
+Moments: m00: 15985 m01: 2051864 m10: 2762597 m11: 371478817 m20: 515920577 m02 282562434
+Center X 172.00, Center Y 128.00, Angle clockwise 30.12 $^\circ$ \\
+
+Moments: m00: 15980 m01: 2130862 m10: 2692024 m11: 377803343 m20: 477539714 m02 317743586
+Center X 168.00, Center Y 133.00, Angle clockwise 50.82 $^\circ$ \\
+
+Moments: m00: 15968 m01: 2113472 m10: 2355435 m11: 322139854 m20: 359811393 m02 325031646
+Center X 147.00, Center Y 132.00, Angle clockwise 71.25 $^\circ$ \\
+
+Moments: m00: 15983 m01: 2102606 m10: 2176327 m11: 272766784 m20: 311226229 m02 319371846
+Center X 136.00, Center Y 131.00, Angle clockwise -70.44 $^\circ$ \\
+
+Moments: m00: 15982 m01: 2059361 m10: 2644366 m11: 322251016 m20: 472348962 m02 288198369
+Center X 165.00, Center Y 128.00, Angle clockwise -35.20 $^\circ$ \\
+
+Moments: m00: 15981 m01: 1961118 m10: 2598457 m11: 309985630 m20: 468569589 m02 252209140
+Center X 162.00, Center Y 122.00, Angle clockwise -9.31 $^\circ$ \\
+
+Moments: m00: 15970 m01: 1832332 m10: 2580468 m11: 297177111 m20: 465096326 m02 219644544
+Center X 161.00, Center Y 114.00, Angle clockwise 5.88 $^\circ$ \\
+
+Moments: m00: 15975 m01: 1843081 m10: 2592954 m11: 306254292 m20: 467746636 m02 223370567
+Center X 162.00, Center Y 115.00, Angle clockwise 12.70 $^\circ$ 
+
+\end{tcolorbox}
+
+
+	\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=12cm]{PIC/SimulationNumeric}}
+	\caption{Abbildung von Simulation-Numeric}
+	\label{fig:Abbildung_von_Simulation_-_Numeric}
+	\end{figure}
 
 	%------------------------------------------------
 	%	Literaturverzeichnis
