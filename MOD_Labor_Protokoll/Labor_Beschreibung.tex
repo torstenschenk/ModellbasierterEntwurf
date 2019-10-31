@@ -33,40 +33,8 @@
 \rfoot{Page \thepage}
 \renewcommand{\headrulewidth}{2pt}
 
+
 \usepackage{listings}
-\usepackage{xcolor}
-
-%New colors defined below
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
-%Code listing style named "mystyle"
-\lstdefinestyle{mystyle}{
-  backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
-  keywordstyle=\color{magenta},
-  numberstyle=\tiny\color{codegray},
-  stringstyle=\color{codepurple},
-  basicstyle=\ttfamily\footnotesize,
-  breakatwhitespace=false,         
-  breaklines=true,                 
-  captionpos=b,                    
-  keepspaces=true,                 
-  numbers=left,                    
-  numbersep=5pt,                  
-  showspaces=false,                
-  showstringspaces=false,
-  showtabs=false,                  
-  tabsize=2
-}
-
-%"mystyle" code listing set
-\lstset{style=mystyle}
-
-\title{Code Listing}
-\date{ }
-
 
 	%------------------------------------------------
 	%	Start der Beschreibung
@@ -513,7 +481,7 @@ for c in contours:
     #cv2.line()
     
     #print('val:',(2*mu11) / (mu20-mu02))
-    print("mu20 {}  m02 {}".format(mu20,mu02))
+    print("mu20{} m02{}".format(mu20,mu02))
     print('cx:',cX,'cY:',cY,'degree:',math.degrees(theta), 'G:', 2*mu11, 'A:', (mu20-mu02))
     #print('cx:',cX,'cY:',cY,'degree:',theta, 'G:', 2*mu11, 'A:', (mu20-mu02))
     
