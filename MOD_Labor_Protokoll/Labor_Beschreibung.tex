@@ -1,5 +1,8 @@
 \documentclass[a4paper]{report}
 \usepackage{amsmath}
+% for pseudo code
+\usepackage{algorithm,algpseudocode}
+%
 \usepackage{ulem}
 \usepackage{ngerman}
 \usepackage{graphicx}
@@ -650,12 +653,34 @@ Center X 162.00, Center Y 115.00, Angle clockwise 12.70 $^\circ$
 \end{tcolorbox}
 
 
-	\begin{figure}[H]
-	\centering
-	\subfloat{\includegraphics[width=12cm]{PIC/SimulationNumeric}}
-	\caption{Abbildung von Simulation-Numeric}
-	\label{fig:Abbildung_von_Simulation_-_Numeric}
-	\end{figure}
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=12cm]{PIC/SimulationNumeric}}
+\caption{Abbildung von Simulation-Numeric}
+\label{fig:Abbildung_von_Simulation_-_Numeric}
+\end{figure}
+
+
+% Algotest
+\begin{algorithm}
+\caption{Momente}
+\label{Momente}
+\begin{algorithmic}[1]
+\Require Ein Bild mit Breite {$=b$}, Höhe {$=h$}, Pixelintensitäten {$\in I(x,y)$} und einer Bittiefe von 8Bit mit dem Wertebereich {$px\in \{I\backslash0,...,255\}$} wird als zeilenweise serialisierter Stream mit der Pixelanzahl {$L=b*h$} verarbeitet. Die 8Bits werden als 8 separate Signalleitungen übertragen.  Initialisiere 6 Ausgabewerte als positive Integer {$m_{00}=0.0$} {$m_{01}=0.0$} {$m_{10}=0.0$} {$m_{11}=0.0$} {$m_{20}=0.0$} {$m_{02}=0.0$} alle Werte {$\in \{m_{ij}\backslash0.0,...,2^{32}-1\}$}
+
+\For{$jedes$ $i$ $in$ $L$}
+    \If{$px_{i}[7] == 1)$}
+      	\State {$m_{00}+=1$}    
+	    \State $m_{01}+= px_{i/b}$ \textit{(Zeile)}
+    	\State $m_{10}+=px_{i\%b}$ \textit{(Spalte)}
+    	\State $m_{11}+=px_{i/b * i\%b}$ \textit{(Zeile*Spalte)}
+    	\State $m_{20}+=px_{i\%b * i\%b}$ \textit{(Spalte*Spalte)}
+    	\State $m_{02}+=px_{i/b * i/b}$ \textit{(Zeile*Zeile)}
+    \EndIf
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
 
 	%------------------------------------------------
 	%	Literaturverzeichnis
