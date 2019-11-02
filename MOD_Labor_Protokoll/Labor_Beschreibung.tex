@@ -406,6 +406,88 @@ Mit dem folgenden Verfahren können Sie den Zynq von microSD mit einem Standard-
 
 	\end{enumerate}
 
+
+
+
+\section{PYNQ-Z1 Installationsanleitung}
+Für PYNQ-Z1-Board können Sie der Kurzanleitung folgen:
+
+
+\subsection{Board Setup}
+
+	\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=11cm]{PIC/pynqz1setup}}
+	\caption{Board Setup}
+	\label{fig:Board_Setup}
+	\end{figure}
+
+
+
+	\begin{enumerate} 
+		\item Setzen Sie den \textbf{JP4 / Boot-Jumper} auf die \textbf{SD-Position}, indem Sie den Jumper wie in der Abbildung gezeigt über die beiden oberen Stifte von JP4 stecken.\\
+		 (Dadurch wird das Board so eingestellt, dass es von der Micro-SD-Karte bootet.)
+
+		\item Um den PYNQ-Z1 über das Micro-USB-Kabel mit Strom zu versorgen, setzen Sie den \textbf{ JP5 / Power}-Jumper auf die USB-Position.\\
+(Sie können die Karte auch über einen externen 12-V-Spannungsregler mit Strom versorgen, indem Sie den Jumper auf REG setzen.)
+
+		\item Setzen Sie die mit dem PYNQ-Z1-Image geladene Micro-SD-Karte in den \textbf{Micro-SD}-Kartensteckplatz unter der Karte ein.
+
+		\item Setzen Sie die mit dem PYNQ-Z1-Image geladene Micro-SD-Karte in den Micro-SD-Kartensteckplatz unter der Karte ein.
+
+		\item Schließen Sie das USB-Kabel an Ihren PC / Laptop und an den \textbf{PROG-UART / J14} MicroUSB-Anschluss auf der Karte an.
+
+		\item Schließen Sie die Karte an Ethernet an, indem Sie die folgenden Anweisungen befolgen.
+
+		\item Schalten Sie den PYNQ-Z1 ein.
+
+	\end{enumerate}
+
+
+
+\subsection{Verbindung mit unserem Rechner}
+Auf Ihrem Computer muss ein Ethernet-Anschluss verfügbar sein, und Sie müssen über Berechtigungen zum Konfigurieren Ihrer Netzwerkschnittstelle verfügen. Ohne Internetzugang können Sie keine neuen Pakete aktualisieren oder laden.
+
+	Direkt an einen Rechner anschließen (Statische IP):
+		\begin{enumerate} 
+		\item Geben Sie Ihren Rechner eine statische IP-Adresse
+		\item Verbinden Sie die Karte mit dem Ethernet-Anschluss Ihres Computers
+		\item Navigieren Sie zu \textbf{http://192.168.2.99}
+		\end{enumerate}
+ 
+\textbf{Hinweis: } Wenn obere Methode nicht klappt sein, können Sie Ihren Rechner durch '' Verbindung zu einem Netzwerk-Router'' mit dem Board verbinden. 
+
+
+\subsection{Anschließen an Jupyter Notebook}
+
+Sobald Ihr Board eingerichtet ist, öffnen Sie zum Herstellen einer Verbindung zu Jupyter Notebooks einen Webbrowser und navigieren Sie zu:\\
+		
+		\begin{itemize} 
+		\item \textbf{http://192.168.2.99} If your board is connected to a computer via a static IP address.
+		\item Wenn Ihr Board richtig konfiguriert ist, wird eine Anmeldung-Webseite angezeigt.
+		Geben Sie hier den Benutzername und Passwort.
+		\end{itemize}
+
+		\begin{tcolorbox}
+		Benutzername: \textbf{xilinx}\\
+		Passwort: \textbf{xilinx}
+		\end{tcolorbox}
+
+Nach der Anmeldung wird der folgende Bildschirm angezeigt:
+
+	\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=10cm]{PIC/Jupyter}}
+	\caption{Jupyter Notebook}
+	\label{fig:Jupyter_Notebook}
+	\end{figure}
+
+
+Der Standard-Hostname lautet \textbf{pynq} und die statische Standard-IP-Adresse lautet \textbf{192.168.2.99}.
+
+\textbf{Hinweis: } Wenn Sie die statische IP-Adresse der Karte geändert haben, müssen Sie die Adresse ändern. 
+
+
 	%------------------------------------------------
 	%	4. Chapter
 	%------------------------------------------------
@@ -441,7 +523,8 @@ img = cv2.imread("img.png",0)
 ret,thresh = cv2.threshold(img,127,255,0)
  
 # find contours in the binary image
-im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,
+cv2.CHAIN_APPROX_SIMPLE)
 
 print('Number contours:',len(contours))
 for c in contours:
@@ -466,7 +549,9 @@ for c in contours:
    
     # cv2.circle(img, (cX, cY), 5, (255, 0, 255), -1)
     cv2.circle(color_image, (cX, cY), 5, (255, 0, 255), -1)
-    cv2.putText(color_image, "centroid", (cX - 25, cY - 25),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+    
+    cv2.putText(color_image, "centroid", (cX - 25, cY - 25),
+    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
 
     # display the image
     cv2.imshow("main", color_image)
@@ -487,14 +572,19 @@ for c in contours:
     
     #print('val:',(2*mu11) / (mu20-mu02))
     print("mu20{} m02{}".format(mu20,mu02))
-    print('cx:',cX,'cY:',cY,'degree:',math.degrees(theta), 'G:', 2*mu11, 'A:', (mu20-mu02))
-    #print('cx:',cX,'cY:',cY,'degree:',theta, 'G:', 2*mu11, 'A:', (mu20-mu02))
+   
+    print('cx:',cX,'cY:',cY,'degree:',
+    math.degrees(theta), 'G:', 2*mu11, 'A:', (mu20-mu02))
+    
+   #print('cx:',cX,'cY:',cY,'degree:',theta, 'G:', 2*mu11, 'A:', (mu20-mu02))
     
     length = 50
     x2 = cX + length * math.cos(theta)
     y2 = cY + length * math.sin(theta) 
     lineThickness = 2
-    cv2.line(color_image, (int(cX), int(cY)), (int(x2), int(y2)), (0,255,0), lineThickness)
+   
+    cv2.line(color_image, (int(cX), int(cY)), (int(x2), int(y2)), 
+    (0,255,0), lineThickness)
     
     # display the image
 cv2.imshow("main", color_image)
@@ -524,7 +614,8 @@ def calcmoments(img):
     moments = np.zeros(6, dtype=int) # Moments : [ m00, m01, m10, m11, m20, m02 ]
     for y in range(img.shape[0]):
         for x in range(img.shape[1]):
-            if (img[y,x] & 128): # check if 7th bit is '1', it is set for all gray values >=128
+           # check if 7th bit is '1', it is set for all gray values >=128
+            if (img[y,x] & 128): 
                 moments[0] += 1
                 moments[1] += y
                 moments[2] += x
@@ -565,10 +656,14 @@ for i in np.arange(16):
     img = cv2.imread('pics/Block'+str(i)+'.png',0)
     
     m = calcmoments(img) # Moments : [ m00, m01, m10, m11, m20, m02 ]
-    #print("Moments: m00: {} m01: {} m10: {} m11: {} m20: {} m02 {}".format(m[0],m[1],m[2],m[3],m[4],m[5]))
+    
+    #print("Moments: m00: {} m01: {} m10: {} m11: {} m20: {} m02 {}"
+    .format(m[0],m[1],m[2],m[3],m[4],m[5]))
     
     cxytheta = calcthetacXcY(m) # cxytheta : [ cX, cY, theta ]
-    #print('Center X {0:.2f}, Center Y {1:.2f}, Angle clockwise {2:.2f}.format(cxytheta[0],cxytheta[1],np.degrees(cxytheta[2])) )
+    
+     #print('Center X {0:.2f}, Center Y {1:.2f}, Angle clockwise {2:.2f}
+    .format(cxytheta[0],cxytheta[1],np.degrees(cxytheta[2])) )
     
     # visu
     # create line through center point
@@ -580,9 +675,15 @@ for i in np.arange(16):
  
     color_image = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
     lineThickness = 2
-    cv2.line(color_image, (int(x1), int(y1)), (int(x2), int(y2)), (0,255,0), lineThickness)
-    cv2.circle(color_image, (int(cxytheta[0]), int(cxytheta[1])), 5, (255, 0, 255), -1)
-    cv2.putText(color_image, "centroid", (int(cxytheta[0]) - 25, int(cxytheta[1]) - 25),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+    
+    cv2.line(color_image, (int(x1), int(y1)), (int(x2), int(y2)), 
+    (0,255,0), lineThickness)
+    
+    cv2.circle(color_image, (int(cxytheta[0]), int(cxytheta[1])), 5,
+    (255, 0, 255), -1)
+    
+    cv2.putText(color_image, "centroid", (int(cxytheta[0]) - 25, int(cxytheta[1]) - 25),
+    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
     
     # copy images into large result image
     rpos = int(i/4)*rows
@@ -598,10 +699,11 @@ plt.show()
 
 \end{lstlisting}
 
-\textbf{Ergebnis von Simulation-Numeric:}
+
 
 \begin{tcolorbox}
-
+\textbf{Ergebnis von Simulation-Numeric:}\\
+{\small
 Moments: m00: 15964 m01: 1773113 m10: 2281256 m11: 269670230 m20: 365332132 m02 215154207
 Center X 142.00, Center Y 111.00, Angle clockwise 27.66$^\circ$ \\
 
@@ -648,7 +750,7 @@ Moments: m00: 15970 m01: 1832332 m10: 2580468 m11: 297177111 m20: 465096326 m02 
 Center X 161.00, Center Y 114.00, Angle clockwise 5.88 $^\circ$ \\
 
 Moments: m00: 15975 m01: 1843081 m10: 2592954 m11: 306254292 m20: 467746636 m02 223370567
-Center X 162.00, Center Y 115.00, Angle clockwise 12.70 $^\circ$ 
+Center X 162.00, Center Y 115.00, Angle clockwise 12.70 $^\circ$ }
 
 \end{tcolorbox}
 
@@ -660,7 +762,7 @@ Center X 162.00, Center Y 115.00, Angle clockwise 12.70 $^\circ$
 \label{fig:Abbildung_von_Simulation_-_Numeric}
 \end{figure}
 
-
+\subsection{Algorithm von Simulation Numeric}
 % Algotest
 \begin{algorithm}
 \caption{Momente}
@@ -705,6 +807,9 @@ PYNQ Z1-Einrichtung,
 Ov7670camera,
 \\\texttt{http://www.alselectro.com/arduino-camera-ov7670.html}
 
+\bibitem{PYNQ-Z1} 
+Board Setup,
+\\\texttt{pynqZ1{\_}v205.pdf}
 \end{thebibliography}
 
 
