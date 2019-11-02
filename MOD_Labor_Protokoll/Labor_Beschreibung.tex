@@ -1,5 +1,6 @@
 \documentclass[a4paper]{report}
 \usepackage{amsmath}
+\usepackage{amssymb}
 % for pseudo code
 \usepackage{algorithm,algpseudocode}
 %
@@ -87,9 +88,9 @@ Schwerpunkt x: $$\overline{x} = \frac{M_{10}}{M_{00}}$$
 
 Schwerpunkt y: $$\overline{y} = \frac{M_{01}}{M_{00}}$$
 
-Kovarianzen: $$\mu_{20} = \frac{M_{20}}{M_{00}} - \overline{x}^2 $$
-			 $$\mu_{11} = \frac{M_{11}}{M_{00}} - \overline{x}\overline{y} $$
+Kovarianzen: $$\mu_{11} = \frac{M_{11}}{M_{00}} - \overline{x}\overline{y} $$
 			 $$\mu_{02} = \frac{M_{02}}{M_{00}} - \overline{y}^2 $$
+			 $$\mu_{20} = \frac{M_{20}}{M_{00}} - \overline{x}^2 $$
 
      		$$cov(Obj) =\begin{bmatrix}
 			 			\mu_{20} & \mu_{11}\\ 
@@ -97,7 +98,7 @@ Kovarianzen: $$\mu_{20} = \frac{M_{20}}{M_{00}} - \overline{x}^2 $$
 					 	\end{bmatrix}$$
 			
 			 
-Orientierung einer Region im Wertebereich (+$\pi$, -$\pi$): $$ \theta = \frac{1}{2} tan^{-1}(\frac{2\mu_{11}}{\mu_{20}-\mu_{02}})    $$
+Orientierung einer Region im Wertebereich (+$\pi$, -$\pi$): $$ \theta = \frac{1}{2} atan2(2\mu_{11}, (\mu_{20}-\mu_{02}))    $$
 
 Bei der Hardware Realisierung sind mehrere Optionen denkbar. Es werden FPGA Implementation für Kamera via PMOD und VGA über SHIELD PINs angestrebt. Sollte sich der mathematische Teil als \textbf{semesterfüllend} herausstellen, kann auf USB Kamera und HDMI Display (Anbindung über Pynq-Linux) ausgewichen werden. Im Worse-Case wäre noch das Laden und Speichern von Bildern aus einem Bildordner als Möglichkeit offen. \textbf{Im Vordergrund steht die Implementation der mathematischen Funktionen deren Verarbeitung im FPGA erfolgt.}
 
@@ -495,8 +496,129 @@ Der Standard-Hostname lautet \textbf{pynq} und die statische Standard-IP-Adresse
 \chapter{Implementierung des Projeks}
 \label{Implementierung_des_Projeks}
 
+\section{Algorithm}
+ 
+\begin{algorithm}
+\caption{Momente}
+\label{Momente}
+\begin{algorithmic}[1]
+\Require Ein Bild $I$ mit Breite {$b$}, Höhe {$h$} und Pixelintensitäten $px\in \{I(u,v)|0,...,255\}$ $(8Bit)$. Die Laufindices $u,v,i,j,r,c \in \mathbb{N}_0$. $I$ wird als zeilenweise serialisierter Stream mit der Pixelanzahl {$L=b*h$} verarbeitet. Jedes $px$ wird als 8 separate Signalleitungen ausgelegt, die Adressierung erfolgt über $n\in \{n|0,...,7\}$ und wird als $px_n$ indiziert. Sechs Ausgabewerte {$m_{ij}\in \{m_{ij}|.0,...,2^{32}-1\}$} werden mit 0 initialisiert.
 
-\section{Hardwares Implementierung}
+\For{$jedes$ $i$ $in$ $L$}
+	\State $px = L_i$
+    \If{$px_7 == 1)$}
+    	\State $r=i\%b$ $(Zeile)$
+    	\State $c=i/b$  $(Spalte)$
+      	\State $m_{00}+=1$    
+	    \State $m_{01}+= c$ 
+    	\State $m_{10}+= r$
+    	\State $m_{11}+= r*c$
+    	\State $m_{02}+= c*c$
+    	\State $m_{20}+= r*r$
+    \EndIf
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+\caption{Zentrum und Winkel der Hauptachse}
+\label{Momente}
+\begin{algorithmic}[1]
+\Require Sechs Eingabewerte {$m_{ij}\in\{m|0,...,2^{32}-1\},ij\in\{00,01,10,11,02,20\}$} enthalten die Momente. Temporäre Variablen $\overline{x},\overline{y},\overline{x}\overline{y},\overline{x^2},\overline{y^2},\mu_{11},\mu_{02},\mu_{20}\in \{0,...,2^{32}-1\}$ und $sub,mult\in \{-2^{16},...,2^{16}-1\}$ werden mit 0 initialisiert. Ergebnisse werden als Festkommazahl $\theta \in \{+\pi, -\pi\}$ und  $\overline{x},\overline{y}$ als Zentrumkoordinaten ausgegeben.
+
+\If{$m_{00} > 0$}
+	\State $\overline{x} = \frac{m_{10}}{m_{00}}$
+	\State $\overline{y} = \frac{m_{01}}{m_{00}}$
+	\State $\overline{x}\overline{y} = \overline{x} * \overline{y}$
+	\State $\overline{x^2} = \overline{x} * \overline{x}$
+	\State $\overline{y^2} = \overline{y} * \overline{y}$
+	\State $\mu_{11} = \frac{m_{11}}{m_{00}} - \overline{x}\overline{y} $
+	\State $\mu_{02} = \frac{m_{02}}{m_{00}} - \overline{y}^2 $
+	\State $\mu_{20} = \frac{m_{20}}{m_{00}} - \overline{x}^2 $
+	\State $mult = \mu_{11}* \mu_{11}$
+    \State $sub = \mu_{20}-\mu_{02}$
+	\State $\theta = \frac{1}{2} atan2(mult, sub)$
+\EndIf
+\end{algorithmic}
+\end{algorithm}
+
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=12cm]{PIC/SimulationNumeric}}
+\caption{Abbildung von Simulation-Numeric}
+\label{fig:Abbildung_von_Simulation_-_Numeric}
+\end{figure}
+
+\textbf{Ergebnis von Simulation-Numeric:}
+\begin{tcolorbox}
+Moments: m00: 15964 m01: 1773113 m10: 2281256 m11: 269670230 m20: 365332132 m02 215154207
+Center X 142.00, Center Y 111.00, Angle clockwise 27.66$^\circ$ \\
+
+Moments: m00: 15979 m01: 1704601 m10: 2337778 m11: 268749999 m20: 369586230 m02 211883899
+Center X 146.00, Center Y 106.00, Angle clockwise 47.24 $^\circ$ \\	
+
+Moments: m00: 15975 m01: 1662657 m10: 2398584 m11: 265651241 m20: 377952942 m02 212836887
+Center X 150.00, Center Y 104.00, Angle clockwise 61.61 $^\circ$ \\
+\end{tcolorbox}
+
+\textbf{Anpassung des Winkelergebnisses, atan2 mit positiven Argumenten:}
+Es erfolgt eine Gegenüberstellung von dem Ergebnis der atan2 Funktion mit Argumenten, die einmal mit korrektem Vorzeichen verwendet werden und einmal mit ihrem Absolutwert. Bei Verwendung des Absolutwertes muss das Ergebnis nochmal korrigiert werden.
+\begin{tcolorbox}
+$mult = \mu_{11}* \mu_{11}$ versus $mult = abs(\mu_{11}* \mu_{11})$ Ergebnis mit $abs$ gekennzeichnet\\
+$sub = \mu_{20}-\mu_{02}$ versus $sub = abs(\mu_{20}-\mu_{02})$ Ergebnis mit $abs$ gekennzeichnet\\
+$\theta = \frac{1}{2} atan2(mult, sub)$\\
+sub: -1348.09 mul: 2058.37 Center X 150.00, Center Y 104.00, Angle atan2 61.61$^\circ$  \\
+korrekt: -s+m=61.61$^\circ$, abs: +s+m: 28.39$^\circ$, Anpassung: (90$^\circ$-x)\\
+
+sub: -887.58 mul: -2094.80 Center X 167.00, Center Y 105.00, Angle atan2 -56.48$^\circ$ \\
+korrekt: -s-m=-56.48$^\circ$, abs: +s+m: 33.52$^\circ$, Anpassung: (x+90$^\circ$ )\\
+
+sub: 1435.64 mul: -1549.62 Center X 173.00, Center Y 111.00, Angle atan2 -23.59$^\circ$ \\
+korrekt: +s-m=-23.59$^\circ$, abs: +s+m: 23.59$^\circ$, Anpassung: (x*(-1$^\circ$))\\
+\end{tcolorbox}
+
+\begin{algorithm}
+\caption{Zentrum und Winkel der Hauptachse mit abs(mult) und abs(sub)}
+\label{Momente}
+\begin{algorithmic}[1]
+\Require Sechs Eingabewerte {$m_{ij}\in\{m|0,...,2^{32}-1\},ij\in\{00,01,10,11,02,20\}$} enthalten die Momente. Temporäre Variablen $\overline{x},\overline{y},\overline{x}\overline{y},\overline{x^2},\overline{y^2},\mu_{11},\mu_{02},\mu_{20},sub,mult\in \{0,...,2^{32}-1\}$ werden mit 0 initialisiert. Ergebnisse werden als Festkommazahl $\theta \in \{+\pi, -\pi\}$ und  $\overline{x},\overline{y}$ als Zentrumkoordinaten. Flags $s,m$ für Korrektur des Ergebnisses $\theta$. {$s,m\in\{0,1\}$} ausgegeben.
+\State $m = 0$, $s = 0$
+\If{$m_{00} > 0$}
+	\State $\overline{x} = \frac{m_{10}}{m_{00}}$
+	\State $\overline{y} = \frac{m_{01}}{m_{00}}$
+	\State $\overline{x}\overline{y} = \overline{x} * \overline{y}$
+	\State $\overline{x^2} = \overline{x} * \overline{x}$
+	\State $\overline{y^2} = \overline{y} * \overline{y}$
+	\State $\mu_{11} = \frac{m_{11}}{m_{00}} - \overline{x}\overline{y} $
+	\State $\mu_{02} = \frac{m_{02}}{m_{00}} - \overline{y}^2 $
+	\State $\mu_{20} = \frac{m_{20}}{m_{00}} - \overline{x}^2 $	
+	\If{$\mu_{11} < 0$}
+		\State $m = 1$
+		\State $\mu_{11} = -\mu_{11}$
+	\EndIf
+	\State $mult = \mu_{11}* \mu_{11}$
+	\If{$\mu_{02} < \mu_{20}$}
+		\State $sub = \mu_{20}-\mu_{02}$
+		\State $s = 1$
+	\Else
+		\State $sub = \mu_{02}-\mu_{20}$
+    \EndIf  
+	\State $\theta = \frac{1}{2} atan2(mult, sub)$
+\EndIf
+\If{$m = 1$ \&\& $s = 1$}
+	\State $\theta = \theta + \frac{\pi}{2}$
+\ElsIf {$m = 0$ \&\& $s = 1$}
+	\State $\theta = \frac{\pi}{2} - \theta$
+\ElsIf {$m = 1$ \&\& $s = 0$}
+	\State $\theta= \theta*(-1)$
+\EndIf  
+
+
+\end{algorithmic}
+\end{algorithm}
+
+\newpage
+\section{Hardware Implementierung}
 
 \subsection{Einstellung von Pmod port}
 Wie im Abschnitt \textbf{\nameref{PMODE_PORTS}} schon erwähnt wurde, 
@@ -507,7 +629,9 @@ Wie im Abschnitt \textbf{\nameref{PMODE_PORTS}} schon erwähnt wurde,
 
 
 
-\section{Code}
+
+
+\section{Code, Listings}
 
 \subsection{Simulation in OpenCV}
 
@@ -518,13 +642,16 @@ import sys
 import math
 
 img = cv2.imread("img.png",0)
-
 # convert the grayscale image to binary image
 ret,thresh = cv2.threshold(img,127,255,0)
- 
 # find contours in the binary image
+<<<<<<< HEAD
 im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,
 cv2.CHAIN_APPROX_SIMPLE)
+=======
+im2, contours, hierarchy = cv2.findContours(\
+	thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+>>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
 
 print('Number contours:',len(contours))
 for c in contours:
@@ -533,7 +660,6 @@ for c in contours:
 	if (area < 100.0):
 		contours.remove(c)
 	print('Number contours>100:',len(contours))
-
 
 cv2.namedWindow("main", cv2.WINDOW_NORMAL)
 color_image = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
@@ -549,9 +675,14 @@ for c in contours:
    
     # cv2.circle(img, (cX, cY), 5, (255, 0, 255), -1)
     cv2.circle(color_image, (cX, cY), 5, (255, 0, 255), -1)
+<<<<<<< HEAD
     
     cv2.putText(color_image, "centroid", (cX - 25, cY - 25),
     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+=======
+    cv2.putText(color_image, "centroid", (cX - 25, cY - 25),\
+    	cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+>>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
 
     # display the image
     cv2.imshow("main", color_image)
@@ -561,10 +692,11 @@ for c in contours:
     M = cv2.moments(c)
     cX = int(M["m10"] / M["m00"])
     cY = int(M["m01"] / M["m00"])
-    mu20 = (M["m20"]/M["m00"])-(cX**2)
     mu11 = (M["m11"]/M["m00"])-(cX*cY)
     mu02 = (M["m02"]/M["m00"])-(cY**2)
+    mu20 = (M["m20"]/M["m00"])-(cX**2)
     theta = 0.5 *  math.atan2( (2*mu11) , (mu20-mu02) )
+<<<<<<< HEAD
    
     ### tan not working!!!!
     #theta = 0.5 *  math.atan( (2*mu11) / (mu20-mu02) )
@@ -578,53 +710,57 @@ for c in contours:
     
    #print('cx:',cX,'cY:',cY,'degree:',theta, 'G:', 2*mu11, 'A:', (mu20-mu02))
     
+=======
+      
+>>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
     length = 50
     x2 = cX + length * math.cos(theta)
     y2 = cY + length * math.sin(theta) 
     lineThickness = 2
+<<<<<<< HEAD
    
     cv2.line(color_image, (int(cX), int(cY)), (int(x2), int(y2)), 
     (0,255,0), lineThickness)
+=======
+    cv2.line(color_image, (int(cX), int(cY)), (int(x2), \
+    	int(y2)), (0,255,0), lineThickness)
+>>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
     
-    # display the image
+# display the image
 cv2.imshow("main", color_image)
 cv2.waitKey(0)    
-cv2.imwrite("colorres.png",color_image)
 cv2.destroyAllWindows()
-
 \end{lstlisting}
 
-
-Die Abbildung vom Beispiel ''Blobs mit Schwerpunkt und Richtung'' wurde im  Abschnitt \textbf{ \nameref{Projektbeschreibung}} gezeigt.
-
+Die Abbildung vom Beispiel ''Blobs mit Schwerpunkt und Richtung'' wurde im  Abschnitt \textbf{ \nameref{Projektbeschreibung}} gezeigt.\\
 
 \subsection{Simulation Numeric}
 
 \begin{lstlisting}[language=Python, caption=Simulation Numeric]
-
 import cv2
 import numpy as np 
 import math # for tan
 import matplotlib.pyplot as plt
 
-#from PIL import Image # Python Imaging Library (Fork)
-
 def calcmoments(img):
     # function to calculate moments
-    moments = np.zeros(6, dtype=int) # Moments : [ m00, m01, m10, m11, m20, m02 ]
+    moments = np.zeros(6, dtype=int) # Moments :[m00,m01,m10,m11,m20,m02]
     for y in range(img.shape[0]):
         for x in range(img.shape[1]):
+<<<<<<< HEAD
            # check if 7th bit is '1', it is set for all gray values >=128
             if (img[y,x] & 128): 
+=======
+            if (img[y,x] & 128): \
+            	# check if 7th bit is '1', it is set for gray values >=128
+>>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
                 moments[0] += 1
                 moments[1] += y
                 moments[2] += x
                 moments[3] += x*y
-                moments[4] += x*x
-                moments[5] += y*y
-    
+                moments[4] += y*y
+                moments[5] += x*x
     return moments
-    
     
 def calcthetacXcY(m):
     # calculate cX,cY,theta of blob
@@ -634,26 +770,18 @@ def calcthetacXcY(m):
     mu20 = (m[4]/m[0])-cxytheta[0]**2
     mu11 = (m[3]/m[0])-cxytheta[0]*cxytheta[1]
     mu02 = (m[5]/m[0])-cxytheta[1]**2
-    cxytheta[2] = 0.5 *  math.atan2( (2*mu11) , (mu20-mu02) )
-    
+    cxytheta[2] = 0.5 *  math.atan2((2*mu11),(mu20-mu02))
     return cxytheta
     
-    test = cv2.imread('pics/Block0.png',0)
+test = cv2.imread('pics/Block0.png',0)
 tiles = 4
 rows = test.shape[0]
 cols = test.shape[1]
 hugeImg = np.zeros( (4*rows, 4*cols, 3), np.uint8)
-# print(hugeImg.shape)
-
-# cv::Mat small_image;
-# cv::Mat big_image;
-# ...
-# //Somehow fill small_image and big_image with your data
-# ...
-# small_image.copyTo(big_image(cv::Rect(x,y,small_image.cols, small_image.rows)));
 
 for i in np.arange(16):
     img = cv2.imread('pics/Block'+str(i)+'.png',0)
+<<<<<<< HEAD
     
     m = calcmoments(img) # Moments : [ m00, m01, m10, m11, m20, m02 ]
     
@@ -667,6 +795,12 @@ for i in np.arange(16):
     
     # visu
     # create line through center point
+=======
+    m = calcmoments(img) # Moments : [ m00, m01, m10, m11, m02, m20 ]
+    cxytheta = calcthetacXcY(m) # cxytheta : [ cX, cY, theta ]
+
+    # visu, create line through center point
+>>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
     length = 130
     x1 = cxytheta[0] + length * math.cos(cxytheta[2])
     y1 = cxytheta[1] + length * math.sin(cxytheta[2]) 
@@ -675,6 +809,7 @@ for i in np.arange(16):
  
     color_image = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
     lineThickness = 2
+<<<<<<< HEAD
     
     cv2.line(color_image, (int(x1), int(y1)), (int(x2), int(y2)), 
     (0,255,0), lineThickness)
@@ -684,6 +819,14 @@ for i in np.arange(16):
     
     cv2.putText(color_image, "centroid", (int(cxytheta[0]) - 25, int(cxytheta[1]) - 25),
     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+=======
+    cv2.line(color_image, (int(x1), int(y1)), (int(x2), int(y2)),\
+    	(0,255,0), lineThickness)
+    cv2.circle(color_image, (int(cxytheta[0]), int(cxytheta[1])), \
+    	5, (255, 0, 255), -1)
+    cv2.putText(color_image, "centroid", (int(cxytheta[0])-25, \
+    	int(cxytheta[1])-25),cv2.FONT_HERSHEY_SIMPLEX,0.5,(255,0,255),2)
+>>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
     
     # copy images into large result image
     rpos = int(i/4)*rows
@@ -699,6 +842,7 @@ plt.show()
 
 \end{lstlisting}
 
+<<<<<<< HEAD
 
 
 \begin{tcolorbox}
@@ -789,6 +933,11 @@ Center X 162.00, Center Y 115.00, Angle clockwise 12.70 $^\circ$ }
 	%------------------------------------------------
 
 
+=======
+%------------------------------------------------
+%	Literaturverzeichnis
+%------------------------------------------------
+>>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
 \begin{thebibliography}{9}
 
 \bibitem{PYNQ-Z1 Board} 
