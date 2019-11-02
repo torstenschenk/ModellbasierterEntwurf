@@ -407,9 +407,6 @@ Mit dem folgenden Verfahren können Sie den Zynq von microSD mit einem Standard-
 
 	\end{enumerate}
 
-
-
-
 \section{PYNQ-Z1 Installationsanleitung}
 Für PYNQ-Z1-Board können Sie der Kurzanleitung folgen:
 
@@ -487,6 +484,7 @@ Nach der Anmeldung wird der folgende Bildschirm angezeigt:
 Der Standard-Hostname lautet \textbf{pynq} und die statische Standard-IP-Adresse lautet \textbf{192.168.2.99}.
 
 \textbf{Hinweis: } Wenn Sie die statische IP-Adresse der Karte geändert haben, müssen Sie die Adresse ändern. 
+
 
 
 	%------------------------------------------------
@@ -645,13 +643,8 @@ img = cv2.imread("img.png",0)
 # convert the grayscale image to binary image
 ret,thresh = cv2.threshold(img,127,255,0)
 # find contours in the binary image
-<<<<<<< HEAD
-im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,
-cv2.CHAIN_APPROX_SIMPLE)
-=======
 im2, contours, hierarchy = cv2.findContours(\
 	thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
->>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
 
 print('Number contours:',len(contours))
 for c in contours:
@@ -675,14 +668,8 @@ for c in contours:
    
     # cv2.circle(img, (cX, cY), 5, (255, 0, 255), -1)
     cv2.circle(color_image, (cX, cY), 5, (255, 0, 255), -1)
-<<<<<<< HEAD
-    
-    cv2.putText(color_image, "centroid", (cX - 25, cY - 25),
-    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
-=======
     cv2.putText(color_image, "centroid", (cX - 25, cY - 25),\
     	cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
->>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
 
     # display the image
     cv2.imshow("main", color_image)
@@ -696,35 +683,13 @@ for c in contours:
     mu02 = (M["m02"]/M["m00"])-(cY**2)
     mu20 = (M["m20"]/M["m00"])-(cX**2)
     theta = 0.5 *  math.atan2( (2*mu11) , (mu20-mu02) )
-<<<<<<< HEAD
-   
-    ### tan not working!!!!
-    #theta = 0.5 *  math.atan( (2*mu11) / (mu20-mu02) )
-    #cv2.line()
-    
-    #print('val:',(2*mu11) / (mu20-mu02))
-    print("mu20{} m02{}".format(mu20,mu02))
-   
-    print('cx:',cX,'cY:',cY,'degree:',
-    math.degrees(theta), 'G:', 2*mu11, 'A:', (mu20-mu02))
-    
-   #print('cx:',cX,'cY:',cY,'degree:',theta, 'G:', 2*mu11, 'A:', (mu20-mu02))
-    
-=======
       
->>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
     length = 50
     x2 = cX + length * math.cos(theta)
     y2 = cY + length * math.sin(theta) 
     lineThickness = 2
-<<<<<<< HEAD
-   
-    cv2.line(color_image, (int(cX), int(cY)), (int(x2), int(y2)), 
-    (0,255,0), lineThickness)
-=======
     cv2.line(color_image, (int(cX), int(cY)), (int(x2), \
     	int(y2)), (0,255,0), lineThickness)
->>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
     
 # display the image
 cv2.imshow("main", color_image)
@@ -747,13 +712,8 @@ def calcmoments(img):
     moments = np.zeros(6, dtype=int) # Moments :[m00,m01,m10,m11,m20,m02]
     for y in range(img.shape[0]):
         for x in range(img.shape[1]):
-<<<<<<< HEAD
-           # check if 7th bit is '1', it is set for all gray values >=128
-            if (img[y,x] & 128): 
-=======
             if (img[y,x] & 128): \
             	# check if 7th bit is '1', it is set for gray values >=128
->>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
                 moments[0] += 1
                 moments[1] += y
                 moments[2] += x
@@ -781,26 +741,10 @@ hugeImg = np.zeros( (4*rows, 4*cols, 3), np.uint8)
 
 for i in np.arange(16):
     img = cv2.imread('pics/Block'+str(i)+'.png',0)
-<<<<<<< HEAD
-    
-    m = calcmoments(img) # Moments : [ m00, m01, m10, m11, m20, m02 ]
-    
-    #print("Moments: m00: {} m01: {} m10: {} m11: {} m20: {} m02 {}"
-    .format(m[0],m[1],m[2],m[3],m[4],m[5]))
-    
-    cxytheta = calcthetacXcY(m) # cxytheta : [ cX, cY, theta ]
-    
-     #print('Center X {0:.2f}, Center Y {1:.2f}, Angle clockwise {2:.2f}
-    .format(cxytheta[0],cxytheta[1],np.degrees(cxytheta[2])) )
-    
-    # visu
-    # create line through center point
-=======
     m = calcmoments(img) # Moments : [ m00, m01, m10, m11, m02, m20 ]
     cxytheta = calcthetacXcY(m) # cxytheta : [ cX, cY, theta ]
 
     # visu, create line through center point
->>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
     length = 130
     x1 = cxytheta[0] + length * math.cos(cxytheta[2])
     y1 = cxytheta[1] + length * math.sin(cxytheta[2]) 
@@ -809,24 +753,12 @@ for i in np.arange(16):
  
     color_image = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
     lineThickness = 2
-<<<<<<< HEAD
-    
-    cv2.line(color_image, (int(x1), int(y1)), (int(x2), int(y2)), 
-    (0,255,0), lineThickness)
-    
-    cv2.circle(color_image, (int(cxytheta[0]), int(cxytheta[1])), 5,
-    (255, 0, 255), -1)
-    
-    cv2.putText(color_image, "centroid", (int(cxytheta[0]) - 25, int(cxytheta[1]) - 25),
-    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
-=======
     cv2.line(color_image, (int(x1), int(y1)), (int(x2), int(y2)),\
     	(0,255,0), lineThickness)
     cv2.circle(color_image, (int(cxytheta[0]), int(cxytheta[1])), \
     	5, (255, 0, 255), -1)
     cv2.putText(color_image, "centroid", (int(cxytheta[0])-25, \
     	int(cxytheta[1])-25),cv2.FONT_HERSHEY_SIMPLEX,0.5,(255,0,255),2)
->>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
     
     # copy images into large result image
     rpos = int(i/4)*rows
@@ -842,102 +774,9 @@ plt.show()
 
 \end{lstlisting}
 
-<<<<<<< HEAD
-
-
-\begin{tcolorbox}
-\textbf{Ergebnis von Simulation-Numeric:}\\
-{\small
-Moments: m00: 15964 m01: 1773113 m10: 2281256 m11: 269670230 m20: 365332132 m02 215154207
-Center X 142.00, Center Y 111.00, Angle clockwise 27.66$^\circ$ \\
-
-Moments: m00: 15979 m01: 1704601 m10: 2337778 m11: 268749999 m20: 369586230 m02 211883899
-Center X 146.00, Center Y 106.00, Angle clockwise 47.24 $^\circ$ \\	
-
-Moments: m00: 15975 m01: 1662657 m10: 2398584 m11: 265651241 m20: 377952942 m02 212836887
-Center X 150.00, Center Y 104.00, Angle clockwise 61.61 $^\circ$ \\
-
-Moments: m00: 15978 m01: 1634737 m10: 2560677 m11: 257510681 m20: 420299847 m02 214938043
-Center X 160.00, Center Y 102.00, Angle clockwise -85.08 $^\circ$ \\
-
-Moments: m00: 15974 m01: 1677800 m10: 2674852 m11: 263372887 m20: 468465736 m02 213258504
-Center X 167.00, Center Y 105.00, Angle clockwise -56.48 $^\circ$ \\
-
-Moments: m00: 15979 m01: 1787154 m10: 2773197 m11: 294464042 m20: 521555013 m02 217256650
-Center X 173.00, Center Y 111.00, Angle clockwise -23.59 $^\circ$ \\
-
-Moments: m00: 15984 m01: 1883291 m10: 2800963 m11: 325751916 m20: 538609945 m02 231766647
-Center X 175.00, Center Y 117.00, Angle clockwise -2.41 $^\circ$ \\
-
-Moments: m00: 15982 m01: 1984770 m10: 2792153 m11: 356419376 m20: 533466039 m02 258459794
-Center X 174.00, Center Y 124.00, Angle clockwise 16.08 $^\circ$ \\
-
-Moments: m00: 15985 m01: 2051864 m10: 2762597 m11: 371478817 m20: 515920577 m02 282562434
-Center X 172.00, Center Y 128.00, Angle clockwise 30.12 $^\circ$ \\
-
-Moments: m00: 15980 m01: 2130862 m10: 2692024 m11: 377803343 m20: 477539714 m02 317743586
-Center X 168.00, Center Y 133.00, Angle clockwise 50.82 $^\circ$ \\
-
-Moments: m00: 15968 m01: 2113472 m10: 2355435 m11: 322139854 m20: 359811393 m02 325031646
-Center X 147.00, Center Y 132.00, Angle clockwise 71.25 $^\circ$ \\
-
-Moments: m00: 15983 m01: 2102606 m10: 2176327 m11: 272766784 m20: 311226229 m02 319371846
-Center X 136.00, Center Y 131.00, Angle clockwise -70.44 $^\circ$ \\
-
-Moments: m00: 15982 m01: 2059361 m10: 2644366 m11: 322251016 m20: 472348962 m02 288198369
-Center X 165.00, Center Y 128.00, Angle clockwise -35.20 $^\circ$ \\
-
-Moments: m00: 15981 m01: 1961118 m10: 2598457 m11: 309985630 m20: 468569589 m02 252209140
-Center X 162.00, Center Y 122.00, Angle clockwise -9.31 $^\circ$ \\
-
-Moments: m00: 15970 m01: 1832332 m10: 2580468 m11: 297177111 m20: 465096326 m02 219644544
-Center X 161.00, Center Y 114.00, Angle clockwise 5.88 $^\circ$ \\
-
-Moments: m00: 15975 m01: 1843081 m10: 2592954 m11: 306254292 m20: 467746636 m02 223370567
-Center X 162.00, Center Y 115.00, Angle clockwise 12.70 $^\circ$ }
-
-\end{tcolorbox}
-
-
-\begin{figure}[H]
-\centering
-\subfloat{\includegraphics[width=12cm]{PIC/SimulationNumeric}}
-\caption{Abbildung von Simulation-Numeric}
-\label{fig:Abbildung_von_Simulation_-_Numeric}
-\end{figure}
-
-\subsection{Algorithm von Simulation Numeric}
-% Algotest
-\begin{algorithm}
-\caption{Momente}
-\label{Momente}
-\begin{algorithmic}[1]
-\Require Ein Bild mit Breite {$=b$}, Höhe {$=h$}, Pixelintensitäten {$\in I(x,y)$} und einer Bittiefe von 8Bit mit dem Wertebereich {$px\in \{I\backslash0,...,255\}$} wird als zeilenweise serialisierter Stream mit der Pixelanzahl {$L=b*h$} verarbeitet. Die 8Bits werden als 8 separate Signalleitungen übertragen.  Initialisiere 6 Ausgabewerte als positive Integer {$m_{00}=0.0$} {$m_{01}=0.0$} {$m_{10}=0.0$} {$m_{11}=0.0$} {$m_{20}=0.0$} {$m_{02}=0.0$} alle Werte {$\in \{m_{ij}\backslash0.0,...,2^{32}-1\}$}
-
-\For{$jedes$ $i$ $in$ $L$}
-    \If{$px_{i}[7] == 1)$}
-      	\State {$m_{00}+=1$}    
-	    \State $m_{01}+= px_{i/b}$ \textit{(Zeile)}
-    	\State $m_{10}+=px_{i\%b}$ \textit{(Spalte)}
-    	\State $m_{11}+=px_{i/b * i\%b}$ \textit{(Zeile*Spalte)}
-    	\State $m_{20}+=px_{i\%b * i\%b}$ \textit{(Spalte*Spalte)}
-    	\State $m_{02}+=px_{i/b * i/b}$ \textit{(Zeile*Zeile)}
-    \EndIf
-\EndFor
-\end{algorithmic}
-\end{algorithm}
-
-
-	%------------------------------------------------
-	%	Literaturverzeichnis
-	%------------------------------------------------
-
-
-=======
 %------------------------------------------------
 %	Literaturverzeichnis
 %------------------------------------------------
->>>>>>> 9440d1a65eda9fb15b1bf55402c850d70c5e5a07
 \begin{thebibliography}{9}
 
 \bibitem{PYNQ-Z1 Board} 
@@ -959,6 +798,7 @@ Ov7670camera,
 \bibitem{PYNQ-Z1} 
 Board Setup,
 \\\texttt{pynqZ1{\_}v205.pdf}
+
 \end{thebibliography}
 
 
