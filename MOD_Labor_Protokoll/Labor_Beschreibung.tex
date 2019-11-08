@@ -496,6 +496,10 @@ Der Standard-Hostname lautet \textbf{pynq} und die statische Standard-IP-Adresse
 
 \section{Algorithm}
  
+Zur Einschätzung des Zahlenraumes wird mit Bildgröße 640x480 gearbeitet. Bei einem Objekt von ca. 1/4 Größe des Kamerabildes muss mit ~640*480 / 4 = 76800 Pixlen im Objekt gerechnet werden. Wen das Objekt mittig liegt sind x oder y Koordinaten im Bereich $\{100,500\}$. Bei der Berechnung von $m_{02}$ wird die Spaltennummer mit sich selbst multipliziert und aufaddiert. Dies Ergibt eine Summe von $41.463.400=\{500*500+499*499+.....102*102+101*101+100*100\}$ und würde in den Wertebereich in (nicht Vorzeichen behaftete) 26Bits $2^{26}=67.108.864$. Bei  Betrachtung der gesamten Bildgröße: $87.586.240=\{640*640+639*639+.....2*2+1*1\}$ benötigt mindestens 27Bits $2^{27}=134.217.728$.
+Der folgende Algorthimus zur Bestimmung der Flächenmomente bis zum Grad 2 wird vollständig in einen Int32 Datentyp passen.
+
+ 
 \begin{algorithm}
 \caption{Momente}
 \label{Momente}
