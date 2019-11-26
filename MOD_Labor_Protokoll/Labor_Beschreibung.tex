@@ -627,7 +627,105 @@ Wie im Abschnitt \textbf{\nameref{PMODE_PORTS}} schon erwähnt wurde,
 
 
 \section{HLS Software Implementierung}
+In dieser Sektion wird eine grundlegende Einführung in die High Level Synthesis erläutet. (HLS)\\
+ \textbf{Was bedeutet HLS?}\\
+ High Level Synthesis wurde eingeführt, um die Elektronikkenntnisse zu reduzieren, die zum Entwerfen von Hardware erforderlich sind. Dies erleichtert auch den Ablauf des Hardware-Designs, wenn es darum geht, ein bestimmtes Verhaltensmodell zu erreichen.\\
+ Unter Verwendung einer Programmiersprache wie C / C ++ implementieren wir das Verhaltensmodell in Hardware. \\
+ Das HLS-Tool bildet unser Verhaltensmodell in Hardware ab und generiert den HDL-Code dafür und dann wird synthetisiert und danach im letzten Schritt wird  auf einem FPGA implementiert.
 
+
+Wenn Wir mit HLS vertraut sind, fahren wir mit dem Beginn der Schritte fort und erzeugen unseren eigenen  \textbf{IP Core}.
+\subsection{Mein eigener IP Core}
+Im ersten Schritt werden wir dies Thema nachvollziehen, dass wie ich meinen eigenen IP Core in HLS  erstellen kann!\\
+
+
+\textbf{Schritt 1:} \textit{Erstellung eines neuen Projekts}\\
+
+- Öffnen wir Vivado HLS und legen wir ein neues Projekt mit dem eigenen Funktionsnamen z.B. \textbf{„XXXX“} an.\\
+
+- Wählen wir ein Bauteil oder eine Entwicklungsplatine aus (wir verwenden PYNQ-Z1) und beenden Sie die Erstellung des neuen Projekts.\\
+
+- Behalten wir vorerst den Standardzeitraum (10ns) bei. (Wir können ihn später ändern, wenn Sie möchten.)\\
+
+- Auf der rechten Seite des Fensters sehen wir den ''Explorer'', wie in der folgenden Abbildung.\\
+
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=6cm]{PIC/Explorer}}
+\caption{Explorer}
+\label{fig:Explorer}
+\end{figure}
+
+- Klicken wir mit der rechten Maustaste auf die Quelle, erstellen eine neue Datei, nennen wir sie mit dem eigenen Name z.B. \textbf{''core.cpp''} und speichern wir sie im Projektordner.\\
+ 
+- Nach dem Speichern öffnet Vivado HLS automatisch die leere neue Datei. \\
+
+ \textbf{Beginnen wir mit dem Entwerfen des IP-Cores}\\
+
+\textbf{Schritt 2:} \textit{Entwurf des IP-Cores}\\
+
+In diesem Schritt wird der IP-Core nur für Funktionstests entworfen. Diese Funktion muss mit Ihrem Top-Funktionsnamen benannt werden. Damit der Entwurf des IP-Kerns abgeschlossen wird, benötigen wir jedoch zum Test einen Test Bench, ob die Funktionalität des IP-Cores unseren Erwartungen entspricht.\\
+
+\textbf{Schritt 2:} \textit{Entwurf des Test-Benchs}\\
+
+- Erstellen wir eine neue Datei unter Test bench. Wir können die Top-Funktion (bei uns z.B. „XXXX“) in der Hauptfunktion des Test Benchs aufrufen und Ein- und Ausgänge weitergeben und prüfen.\\
+
+- In der Hauptfunktion "test bench" ist die Rückgabe von \textbf{0} sehr wichtig, weil Vivado HLS damit prüft, ob die Funktionssimulation erfolgreich war.\\
+
+\textbf{Schritt 4:} \textit{Ausführung des Test Benchs für Verhaltenssimulation}\\
+
+- Führen wir unseren Test Bench aus. Klicken wir in der oberen \textit{Toolbar} auf \textbf{''Run C Simulation''}.
+
+- Dann wird ''Popup-Window'' wie in der folgenden Abbildung angezeigt:\\
+
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=6cm]{PIC/popupwindow}}
+\caption{C-Simulation pop-up Fenster}
+\label{fig:C_Simulation_pop_-_up_Fenster}
+\end{figure}
+
+- Wählen wir hier einfach ''OK'' und die \textit{C-Simulation} wird gestartet. Dies wird einige Zeit (abhängig von Ihren Ressourcen) nehmen.\\
+
+\textbf{Schritt 5:} \textit{Vorbereitung des IP-Cores für die Synthese}
+Wir können \textit{Compiler-Directives} verwenden, um den Compiler dazu zu bringen, den IP-Core so zu synthetisieren.\\
+
+Wenn wir keine Compiler-Directives verwenden, analysiert \textit{Vivado HLS} den Code und verwendet Standard-Directives an den entsprechenden Positionen des Codes. Sie können diese Standardanweisungen im rechten Fenster unter der Registerkarte  \textbf{''Directive''} sehen.\\
+
+Mit Doppelklick auf ''Ein- oder Ausgänge'' wird Ein Fenster angezeigt, dass wir die Optionen wie in der folgenden Abbildung ausfüllen können und dass klicken wir auf ''OK''.\\
+
+
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=6cm]{PIC/VivadoHLSDirectiveEditor}}
+\caption{Vivado HLS Directive Editor}
+\label{fig:Vivado_HLS_Directive_Editor}
+\end{figure}
+
+
+
+	\begin{itemize}
+		\item  \textbf{directive}
+		
+		Interface, da wir Eingabe-Ausgabeschnittstelle für den IP-Core verwenden wollen.
+		
+		\item  \textbf{mode}
+		
+		Es steht für einen AXI oder AXI Master Full-Port.
+
+		\item  \textbf{depth}
+
+		Größe des Arrays. Dies ist optional. Wenn wir dieses Feld leer lassen, verwendet Vivado HLS die Standardtiefe. Es ist besser, wenn wir hier die Tiefe angeben können. Durch Auswahl von ''Slave'' können wir die Speicheradresse des Ports zum \textit{Run-time} über einen AXI Lite-Port festlegen.
+		
+		\item  \textbf{offset}
+		
+		Hier wird \textit{''mapped memory location''} des angeschlossenen Eingangs oder Ausgangs gesteuert.
+				
+		\item  \textbf{bundle}
+		
+		Über AXI Lite wird der Port mit dem Namen \textit{''CRTL\_BUS''} gebündelt.
+		
+	\end{itemize}
 
 
 
@@ -802,6 +900,10 @@ Ov7670camera,
 \bibitem{PYNQ-Z1} 
 Board Setup,
 \\\texttt{pynqZ1{\_}v205.pdf}
+
+\bibitem{HLS} 
+HLS,
+\\\texttt{https://medium.com/@chathura.abeyrathne.lk/xilinx-vivado-hls-beginners-tutorial-custom-ip-core-design-for-fpga-59876d5a4119}
 
 \end{thebibliography}
 
