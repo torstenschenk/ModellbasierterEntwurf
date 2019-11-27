@@ -643,9 +643,9 @@ Im ersten Schritt werden wir dies Thema nachvollziehen, dass wie ich meinen eige
 
 - Öffnen wir Vivado HLS und legen wir ein neues Projekt mit dem eigenen Funktionsnamen z.B. \textbf{„XXXX“} an.\\
 
-- Wählen wir ein Bauteil oder eine Entwicklungsplatine aus (wir verwenden PYNQ-Z1) und beenden Sie die Erstellung des neuen Projekts.\\
+- Wählen wir ein Bauteil oder eine Entwicklungsplatine aus (wir verwenden PYNQ-Z1) und beenden wir die Erstellung des neuen Projekts.\\
 
-- Behalten wir vorerst den Standardzeitraum (10ns) bei. (Wir können ihn später ändern, wenn Sie möchten.)\\
+- Behalten wir vorerst den Standardzeitraum (10ns) bei. (Wir können ihn später ändern, wenn wir wollen.)\\
 
 - Auf der rechten Seite des Fensters sehen wir den ''Explorer'', wie in der folgenden Abbildung.\\
 
@@ -666,7 +666,7 @@ Im ersten Schritt werden wir dies Thema nachvollziehen, dass wie ich meinen eige
 
 In diesem Schritt wird der IP-Core nur für Funktionstests entworfen. Diese Funktion muss mit Ihrem Top-Funktionsnamen benannt werden. Damit der Entwurf des IP-Kerns abgeschlossen wird, benötigen wir jedoch zum Test einen Test Bench, ob die Funktionalität des IP-Cores unseren Erwartungen entspricht.\\
 
-\textbf{Schritt 2:} \textit{Entwurf des Test-Benchs}\\
+\textbf{Schritt 3:} \textit{Entwurf des Test-Benchs}\\
 
 - Erstellen wir eine neue Datei unter Test bench. Wir können die Top-Funktion (bei uns z.B. „XXXX“) in der Hauptfunktion des Test Benchs aufrufen und Ein- und Ausgänge weitergeben und prüfen.\\
 
@@ -687,10 +687,11 @@ In diesem Schritt wird der IP-Core nur für Funktionstests entworfen. Diese Funk
 
 - Wählen wir hier einfach ''OK'' und die \textit{C-Simulation} wird gestartet. Dies wird einige Zeit (abhängig von Ihren Ressourcen) nehmen.\\
 
-\textbf{Schritt 5:} \textit{Vorbereitung des IP-Cores für die Synthese}
+\textbf{Schritt 5:} \textit{Vorbereitung des IP-Cores für die Synthese}\\
+
 Wir können \textit{Compiler-Directives} verwenden, um den Compiler dazu zu bringen, den IP-Core so zu synthetisieren.\\
 
-Wenn wir keine Compiler-Directives verwenden, analysiert \textit{Vivado HLS} den Code und verwendet Standard-Directives an den entsprechenden Positionen des Codes. Sie können diese Standardanweisungen im rechten Fenster unter der Registerkarte  \textbf{''Directive''} sehen.\\
+Wenn wir keine Compiler-Directives verwenden, analysiert \textit{Vivado HLS} den Code und verwendet Standard-Directives an den entsprechenden Positionen des Codes. Wir können diese Standardanweisungen im rechten Fenster unter der Registerkarte  \textbf{''Directive''} sehen.\\
 
 Mit Doppelklick auf ''Ein- oder Ausgänge'' wird Ein Fenster angezeigt, dass wir die Optionen wie in der folgenden Abbildung ausfüllen können und dass klicken wir auf ''OK''.\\
 
@@ -728,6 +729,54 @@ Mit Doppelklick auf ''Ein- oder Ausgänge'' wird Ein Fenster angezeigt, dass wir
 	\end{itemize}
 
 
+Wählen wir dann \textbf{OK}.\\
+
+Zum Synthetisieren des unseren IP-Cores klicken wir auf \textit{''Run C Synthesis''}.\\
+
+Wenn das Design ordnungsgemäß synthetisiert wurde, wird ein ähnlicher Synthesebericht angezeigt.\\
+
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=6cm]{PIC/TimingDetails}}
+\caption{Beispiel von Timing Details}
+\label{fig:Beispiel_von_Timing_Details}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=10cm]{PIC/RessourcennutzungdesDesigns}}
+\caption{Beispiel von Ressourcennutzung des Designs}
+\label{fig:Ressourcennutzung_des_Designs}
+\end{figure}
+
+
+Bevor wir unseren IP-Core exportieren, müssen wir eine \textbf{RTL-Co-Simulation} durchführen, um die Funktionsunterschiede zwischen der \textbf{C-Simulation} und der \textbf{RTL-Simulation} zu überprüfen.
+
+Klicken wir auf \textbf{''Run C/RTL co-simulation''} und dann klicken im Popup-Fenster auf \textbf{''OK''}, wenn \textbf{''setup only''} aktiviert ist.\\
+
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=7cm]{PIC/co-simulation}}
+\caption{Beispiel von Co-Simulation}
+\label{fig:Co_-_Simulation}
+\end{figure}
+
+
+Nachdem wir diese Simulation erfolgreich geschafft haben, können wir mit dem Export des IP-Cores vorgehen.
+Klicken wir auf \textbf{''Export RTL''} und dann auf \textbf{''OK''}.\\
+
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=8cm]{PIC/ExportRTL}}
+\caption{Beispiel von Export RTL}
+\label{fig:Export_RTL}
+\end{figure}
+
+
+Im obigen Fenster können wir auswählen, ob wir unser Design mithilfe einer HDL oder Verilog bewerten möchten.
+Nach dem Export unseres IP-Cores sind wir mit dem IP-Core-Design mit Vivado HLS fertig.\\
+
+Der nächste Schritt besteht darin, die gesamte Hardware-Architektur einschließlich unseres IP-Cores mit Vivado zu entwerfen.
 
 
 
@@ -901,9 +950,6 @@ Ov7670camera,
 Board Setup,
 \\\texttt{pynqZ1{\_}v205.pdf}
 
-\bibitem{HLS} 
-HLS,
-\\\texttt{https://medium.com/@chathura.abeyrathne.lk/xilinx-vivado-hls-beginners-tutorial-custom-ip-core-design-for-fpga-59876d5a4119}
 
 \end{thebibliography}
 
