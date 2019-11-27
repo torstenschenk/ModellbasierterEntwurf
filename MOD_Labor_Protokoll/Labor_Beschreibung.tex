@@ -509,8 +509,8 @@ Der folgende Algorthimus zur Bestimmung der Flächenmomente bis zum Grad 2 wird 
 \For{$jedes$ $i$ $in$ $L$}
 	\State $px = L_i$
     \If{$px_7 == 1)$}
-    	\State $r=i\%b$ $(Zeile)$
-    	\State $c=i/b$  $(Spalte)$
+    	\State $r=i/\%b$ $(Zeile)$
+    	\State $c=i\%b$  $(Spalte)$
       	\State $m_{00}+=1$    
 	    \State $m_{01}+= c$ 
     	\State $m_{10}+= r$
@@ -634,7 +634,7 @@ In dieser Sektion wird eine grundlegende Einführung in die High Level Synthesis
  Das HLS-Tool bildet unser Verhaltensmodell in Hardware ab und generiert den HDL-Code dafür und dann wird synthetisiert und danach im letzten Schritt wird  auf einem FPGA implementiert.
 
 
-Wenn Wir mit HLS vertraut sind, fahren wir mit dem Beginn der Schritte fort und erzeugen unseren eigenen  \textbf{IP Core}.
+Wenn wir mit HLS vertraut sind, fahren wir mit dem Beginn der Schritte fort und erzeugen unseren eigenen \textbf{IP Core}.
 \subsection{Mein eigener IP Core}
 Im ersten Schritt werden wir dies Thema nachvollziehen, dass wie ich meinen eigenen IP Core in HLS  erstellen kann!\\
 
@@ -670,7 +670,7 @@ In diesem Schritt wird der IP-Core nur für Funktionstests entworfen. Diese Funk
 
 - Erstellen wir eine neue Datei unter Test bench. Wir können die Top-Funktion (bei uns z.B. „XXXX“) in der Hauptfunktion des Test Benchs aufrufen und Ein- und Ausgänge weitergeben und prüfen.\\
 
-- In der Hauptfunktion "test bench" ist die Rückgabe von \textbf{0} sehr wichtig, weil Vivado HLS damit prüft, ob die Funktionssimulation erfolgreich war.\\
+- In der Hauptfunktion \"test bench\" ist die Rückgabe von \textbf{0} sehr wichtig, weil Vivado HLS damit prüft, ob die Funktionssimulation erfolgreich war.\\
 
 \textbf{Schritt 4:} \textit{Ausführung des Test Benchs für Verhaltenssimulation}\\
 
