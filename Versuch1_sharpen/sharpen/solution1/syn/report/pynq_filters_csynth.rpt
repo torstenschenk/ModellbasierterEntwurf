@@ -1,0 +1,233 @@
+
+
+================================================================
+== Vivado HLS Report for 'pynq_filters'
+================================================================
+* Date:           Thu Nov 28 03:43:06 2019
+
+* Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
+* Project:        sharpen
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     10.84|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+----------+
+    |     Latency     |     Interval    | Pipeline |
+    |   min  |   max  |   min  |   max  |   Type   |
+    +--------+--------+--------+--------+----------+
+    |  319243|  319243|  319203|  319203| dataflow |
+    +--------+--------+--------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------+-----------------------------------------+--------+--------+--------+--------+---------+
+        |                                                    |                                         |     Latency     |     Interval    | Pipeline|
+        |                      Instance                      |                  Module                 |   min  |   max  |   min  |   max  |   Type  |
+        +----------------------------------------------------+-----------------------------------------+--------+--------+--------+--------+---------+
+        |stg_60_pynq_filters_pynq_filters_entry3_fu_467      |pynq_filters_pynq_filters_entry3         |       0|       0|       0|       0|   none  |
+        |stg_61_pynq_filters_pynq_filters_entry211_fu_474    |pynq_filters_pynq_filters_entry211       |       0|       0|       0|       0|   none  |
+        |stg_62_pynq_filters_Block_proc_fu_461               |pynq_filters_Block_proc                  |       0|       0|       0|       0|   none  |
+        |grp_pynq_filters_AXIvideo2Mat_fu_345                |pynq_filters_AXIvideo2Mat                |       3|  310083|       3|  310083|   none  |
+        |grp_pynq_filters_Duplicate_fu_422                   |pynq_filters_Duplicate                   |       1|  308641|       1|  308641|   none  |
+        |grp_pynq_filters_CvtColor_1_fu_383                  |pynq_filters_CvtColor_1                  |  310081|  310081|  310081|  310081|   none  |
+        |grp_pynq_filters_gaussianBlur_fu_329                |pynq_filters_gaussianBlur                |  314944|  314944|  314944|  314944|   none  |
+        |grp_pynq_filters_convertToSigned_fu_455             |pynq_filters_convertToSigned             |  308641|  308641|  308641|  308641|   none  |
+        |grp_pynq_filters_laplacian_fu_337                   |pynq_filters_laplacian                   |  313810|  313810|  313810|  313810|   none  |
+        |grp_pynq_filters_Block_proc208_fu_316               |pynq_filters_Block_proc208               |      38|      38|      38|      38|   none  |
+        |grp_pynq_filters_Scale_480_640_9_9_double_1_fu_322  |pynq_filters_Scale_480_640_9_9_double_1  |  319202|  319202|  319202|  319202|   none  |
+        |grp_pynq_filters_CvtColor_fu_447                    |pynq_filters_CvtColor                    |  308641|  308641|  308641|  308641|   none  |
+        |grp_pynq_filters_convertToSigned_1_fu_437           |pynq_filters_convertToSigned_1           |  308641|  308641|  308641|  308641|   none  |
+        |grp_pynq_filters_AddWeighted_fu_370                 |pynq_filters_AddWeighted                 |  309122|  309122|  309122|  309122|   none  |
+        |grp_pynq_filters_convertToUnsigned_fu_391           |pynq_filters_convertToUnsigned           |  309121|  309121|  309121|  309121|   none  |
+        |grp_pynq_filters_Mat2AXIvideo_fu_401                |pynq_filters_Mat2AXIvideo                |  309121|  309121|  309121|  309121|   none  |
+        +----------------------------------------------------+-----------------------------------------+--------+--------+--------+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       -|      -|
+|FIFO             |       63|      -|    1006|   3340|
+|Instance         |        8|     35|    8077|  10836|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|      13|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |       71|     35|    9096|  14176|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |       25|     15|       8|     26|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------+-----------------------------------------+---------+-------+------+------+
+    |                  Instance                  |                  Module                 | BRAM_18K| DSP48E|  FF  |  LUT |
+    +--------------------------------------------+-----------------------------------------+---------+-------+------+------+
+    |pynq_filters_AXIvideo2Mat_U0                |pynq_filters_AXIvideo2Mat                |        0|      0|   232|   209|
+    |pynq_filters_AddWeighted_U0                 |pynq_filters_AddWeighted                 |        0|      0|    77|   246|
+    |pynq_filters_Block_proc_U0                  |pynq_filters_Block_proc                  |        0|      0|     2|     3|
+    |pynq_filters_Block_proc208_U0               |pynq_filters_Block_proc208               |        0|      0|  3823|  4378|
+    |pynq_filters_CvtColor_U0                    |pynq_filters_CvtColor                    |        0|      0|    36|    52|
+    |pynq_filters_CvtColor_1_U0                  |pynq_filters_CvtColor_1                  |        0|      3|   147|    74|
+    |pynq_filters_Duplicate_U0                   |pynq_filters_Duplicate                   |        0|      0|    57|    60|
+    |pynq_filters_Mat2AXIvideo_U0                |pynq_filters_Mat2AXIvideo                |        0|      0|    80|    65|
+    |pynq_filters_Scale_480_640_9_9_double_1_U0  |pynq_filters_Scale_480_640_9_9_double_1  |        0|     14|  1722|  3658|
+    |pynq_filters_control_s_axi_U                |pynq_filters_control_s_axi               |        0|      0|    68|   104|
+    |pynq_filters_convertToSigned_U0             |pynq_filters_convertToSigned             |        0|      0|    36|    50|
+    |pynq_filters_convertToSigned_1_U0           |pynq_filters_convertToSigned_1           |        0|      0|    36|    54|
+    |pynq_filters_convertToUnsigned_U0           |pynq_filters_convertToUnsigned           |        0|      0|    62|   101|
+    |pynq_filters_gaussianBlur_U0                |pynq_filters_gaussianBlur                |        5|      9|   906|   935|
+    |pynq_filters_laplacian_U0                   |pynq_filters_laplacian                   |        3|      9|   789|   842|
+    |pynq_filters_pynq_filters_entry211_U0       |pynq_filters_pynq_filters_entry211       |        0|      0|     2|     3|
+    |pynq_filters_pynq_filters_entry3_U0         |pynq_filters_pynq_filters_entry3         |        0|      0|     2|     2|
+    +--------------------------------------------+-----------------------------------------+---------+-------+------+------+
+    |Total                                       |                                         |        8|     35|  8077| 10836|
+    +--------------------------------------------+-----------------------------------------+---------+-------+------+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------------------------------+---------+-----+-----+-------+-----+---------+
+    |                Name                | BRAM_18K|  FF | LUT | Depth | Bits| Size:D*B|
+    +------------------------------------+---------+-----+-----+-------+-----+---------+
+    |image_blur_10S1_data_stream_0_U     |        0|    5|   22|      1|   10|       10|
+    |image_blur_data_stream_0_V_U        |        0|    5|   20|      1|    8|        8|
+    |image_laplacian_10S1_data_stre_U    |        0|    5|   22|      1|   10|       10|
+    |image_laplacian_10S3_data_stre_1_U  |        0|    5|   22|      1|   10|       10|
+    |image_laplacian_10S3_data_stre_2_U  |        0|    5|   22|      1|   10|       10|
+    |image_laplacian_10S3_data_stre_U    |        0|    5|   22|      1|   10|       10|
+    |image_laplacian_reduced_10S1_d_U    |        0|    5|   22|      1|   10|       10|
+    |input_image_10S3_data_stream_0_U    |        5|   81|  217|   5000|   10|    50000|
+    |input_image_10S3_data_stream_1_U    |        5|   81|  217|   5000|   10|    50000|
+    |input_image_10S3_data_stream_2_U    |        5|   81|  217|   5000|   10|    50000|
+    |input_image_8U1_data_stream_0_U     |        0|    5|   20|      1|    8|        8|
+    |input_image_8U3_cols_V_channel_1_U  |        0|    5|   23|      1|   11|       11|
+    |input_image_8U3_cols_V_channel_U    |        0|    5|   23|      1|   11|       11|
+    |input_image_8U3_copy1_data_str_1_U  |        0|    5|   20|      1|    8|        8|
+    |input_image_8U3_copy1_data_str_2_U  |        0|    5|   20|      1|    8|        8|
+    |input_image_8U3_copy1_data_str_U    |        0|    5|   20|      1|    8|        8|
+    |input_image_8U3_copy2_data_str_1_U  |       16|  209|  672|  19200|    8|   153600|
+    |input_image_8U3_copy2_data_str_2_U  |       16|  209|  672|  19200|    8|   153600|
+    |input_image_8U3_copy2_data_str_U    |       16|  209|  672|  19200|    8|   153600|
+    |input_image_8U3_data_stream_0_U     |        0|    5|   20|      1|    8|        8|
+    |input_image_8U3_data_stream_1_U     |        0|    5|   20|      1|    8|        8|
+    |input_image_8U3_data_stream_2_U     |        0|    5|   20|      1|    8|        8|
+    |input_image_8U3_rows_V_channel_1_U  |        0|    5|   22|      1|   10|       10|
+    |input_image_8U3_rows_V_channel_U    |        0|    5|   22|      1|   10|       10|
+    |ouput_image_10S3_data_stream_0_U    |        0|    5|   22|      1|   10|       10|
+    |ouput_image_10S3_data_stream_1_U    |        0|    5|   22|      1|   10|       10|
+    |ouput_image_10S3_data_stream_2_U    |        0|    5|   22|      1|   10|       10|
+    |output_image_8U3_data_stream_0_U    |        0|    5|   20|      1|    8|        8|
+    |output_image_8U3_data_stream_1_U    |        0|    5|   20|      1|    8|        8|
+    |output_image_8U3_data_stream_2_U    |        0|    5|   20|      1|    8|        8|
+    |reduce_channel1_U                   |        0|    5|   44|      1|   32|       32|
+    |reduce_channel_U                    |        0|    5|   44|      1|   32|       32|
+    |tmp_1_loc_channel_U                 |        0|    6|   77|      7|   64|      448|
+    +------------------------------------+---------+-----+-----+-------+-----+---------+
+    |Total                               |       63| 1006| 3340|  72633|  402|   611532|
+    +------------------------------------+---------+-----+-----+-------+-----+---------+
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +-----------------------------------------------------+---+----+-----+-----------+
+    |                         Name                        | FF| LUT| Bits| Const Bits|
+    +-----------------------------------------------------+---+----+-----+-----------+
+    |pynq_filters_AddWeighted_U0_ap_start                 |  1|   0|    1|          0|
+    |pynq_filters_Block_proc208_U0_ap_start               |  1|   0|    1|          0|
+    |pynq_filters_CvtColor_1_U0_ap_start                  |  1|   0|    1|          0|
+    |pynq_filters_CvtColor_U0_ap_start                    |  1|   0|    1|          0|
+    |pynq_filters_Duplicate_U0_ap_start                   |  1|   0|    1|          0|
+    |pynq_filters_Mat2AXIvideo_U0_ap_start                |  1|   0|    1|          0|
+    |pynq_filters_Scale_480_640_9_9_double_1_U0_ap_start  |  1|   0|    1|          0|
+    |pynq_filters_convertToSigned_1_U0_ap_start           |  1|   0|    1|          0|
+    |pynq_filters_convertToSigned_U0_ap_start             |  1|   0|    1|          0|
+    |pynq_filters_convertToUnsigned_U0_ap_start           |  1|   0|    1|          0|
+    |pynq_filters_gaussianBlur_U0_ap_start                |  1|   0|    1|          0|
+    |pynq_filters_laplacian_U0_ap_start                   |  1|   0|    1|          0|
+    |pynq_filters_pynq_filters_entry211_U0_ap_start       |  1|   0|    1|          0|
+    +-----------------------------------------------------+---+----+-----+-----------+
+    |Total                                                | 13|   0|   13|          0|
+    +-----------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+--------------+-------------------+--------------+
+|       RTL Ports       | Dir | Bits|   Protocol   |   Source Object   |    C Type    |
++-----------------------+-----+-----+--------------+-------------------+--------------+
+|s_axi_control_AWVALID  |  in |    1|     s_axi    |      control      |    scalar    |
+|s_axi_control_AWREADY  | out |    1|     s_axi    |      control      |    scalar    |
+|s_axi_control_AWADDR   |  in |    5|     s_axi    |      control      |    scalar    |
+|s_axi_control_WVALID   |  in |    1|     s_axi    |      control      |    scalar    |
+|s_axi_control_WREADY   | out |    1|     s_axi    |      control      |    scalar    |
+|s_axi_control_WDATA    |  in |   32|     s_axi    |      control      |    scalar    |
+|s_axi_control_WSTRB    |  in |    4|     s_axi    |      control      |    scalar    |
+|s_axi_control_ARVALID  |  in |    1|     s_axi    |      control      |    scalar    |
+|s_axi_control_ARREADY  | out |    1|     s_axi    |      control      |    scalar    |
+|s_axi_control_ARADDR   |  in |    5|     s_axi    |      control      |    scalar    |
+|s_axi_control_RVALID   | out |    1|     s_axi    |      control      |    scalar    |
+|s_axi_control_RREADY   |  in |    1|     s_axi    |      control      |    scalar    |
+|s_axi_control_RDATA    | out |   32|     s_axi    |      control      |    scalar    |
+|s_axi_control_RRESP    | out |    2|     s_axi    |      control      |    scalar    |
+|s_axi_control_BVALID   | out |    1|     s_axi    |      control      |    scalar    |
+|s_axi_control_BREADY   |  in |    1|     s_axi    |      control      |    scalar    |
+|s_axi_control_BRESP    | out |    2|     s_axi    |      control      |    scalar    |
+|ap_clk                 |  in |    1| ap_ctrl_none |    pynq_filters   | return value |
+|ap_rst_n               |  in |    1| ap_ctrl_none |    pynq_filters   | return value |
+|in_data_TDATA          |  in |   24|     axis     |  in_data_V_data_V |    pointer   |
+|in_data_TKEEP          |  in |    3|     axis     |  in_data_V_keep_V |    pointer   |
+|in_data_TSTRB          |  in |    3|     axis     |  in_data_V_strb_V |    pointer   |
+|in_data_TUSER          |  in |    1|     axis     |  in_data_V_user_V |    pointer   |
+|in_data_TLAST          |  in |    1|     axis     |  in_data_V_last_V |    pointer   |
+|in_data_TID            |  in |    1|     axis     |   in_data_V_id_V  |    pointer   |
+|in_data_TDEST          |  in |    1|     axis     |  in_data_V_dest_V |    pointer   |
+|in_data_TVALID         |  in |    1|     axis     |  in_data_V_dest_V |    pointer   |
+|in_data_TREADY         | out |    1|     axis     |  in_data_V_dest_V |    pointer   |
+|out_data_TDATA         | out |   24|     axis     | out_data_V_data_V |    pointer   |
+|out_data_TKEEP         | out |    3|     axis     | out_data_V_keep_V |    pointer   |
+|out_data_TSTRB         | out |    3|     axis     | out_data_V_strb_V |    pointer   |
+|out_data_TUSER         | out |    1|     axis     | out_data_V_user_V |    pointer   |
+|out_data_TLAST         | out |    1|     axis     | out_data_V_last_V |    pointer   |
+|out_data_TID           | out |    1|     axis     |  out_data_V_id_V  |    pointer   |
+|out_data_TDEST         | out |    1|     axis     | out_data_V_dest_V |    pointer   |
+|out_data_TVALID        | out |    1|     axis     | out_data_V_dest_V |    pointer   |
+|out_data_TREADY        |  in |    1|     axis     | out_data_V_dest_V |    pointer   |
++-----------------------+-----+-----+--------------+-------------------+--------------+
+

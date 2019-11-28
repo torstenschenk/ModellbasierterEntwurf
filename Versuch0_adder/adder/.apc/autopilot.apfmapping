@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="add_example.cpp" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch0_adder\add_example.cpp"/>
+    <originFiles name="add_example.h" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch0_adder\add_example.h"/>
+  </source>
+  <testbench>
+    <originFiles name="test.cpp" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch0_adder\test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

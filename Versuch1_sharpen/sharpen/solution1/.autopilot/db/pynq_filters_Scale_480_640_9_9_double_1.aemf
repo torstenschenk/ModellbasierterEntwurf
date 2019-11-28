@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1574908981456">
+  <ports id="1" name="src_data_stream_V_V" type="PortType" originalName="src.data_stream.V.V" coreName="FIFO" bitwidth="10" iftype="IfTypeRom">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="dst_data_stream_V_V" type="PortType" originalName="dst.data_stream.V.V" coreName="FIFO" bitwidth="10" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="3" name="scale" type="PortType" originalName="scale" coreName="FIFO" bitwidth="64" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="13" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="16" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="17" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@ports.1"/>
+  <edges id="18" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <blocks id="10" name="pynq_filters_Scale&lt;480, 640, 9, 9, double>1" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="scale_read" bitwidth="64" opcode="read">
+      <dataInputObjs>scale</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="node_8" lineNumber="853" fileName="C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_video_arithm.h" fileDirectory=".." rtlName="grp_pynq_filters_arithm_pro_fu_28" contextFuncName="Scale&amp;lt;480, 640, 9, 9, double&amp;gt;" opcode="call" nodeLatency="1">
+      <inlineStackInfo fileName="C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_video_arithm.h" linenumber="853" fileDirectory="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch1_sharpen" functionName="Scale&amp;lt;480, 640, 9, 9, double&amp;gt;"/>
+      <dataInputObjs>src_data_stream_V_V</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>dst_data_stream_V_V</dataOutputObjs>
+      <constName>pynq_filters_arithm_pro</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="node_9" opcode="ret" nodeLabel="1"/>
+    <fileValidLineNumbers fileName="C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_video_arithm.h">
+      <validLinenumbers>853</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <regnodes realName="scale_read_reg_38">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <moduleNodes realName="grp_pynq_filters_arithm_pro_fu_28">
+    <nodeIds>8</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="scale_read_read_fu_22">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioPorts name="dst_data_stream_V_V">
+    <contents name="call">
+      <nodeIds>8</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="scale">
+    <contents name="read">
+      <nodeIds>7</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="src_data_stream_V_V">
+    <contents name="call">
+      <nodeIds>8</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="2"/>
+      <operations id="9" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="2"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="pynq_filters_Scale&lt;480, 640, 9, 9, double>1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="319202" mMaxLatency="-1">
+      <basicBlocks>10</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

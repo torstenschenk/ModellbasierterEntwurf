@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="pynq_filters.cpp" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch1_sharpen\pynq_filters.cpp"/>
+    <originFiles name="pynq_filters.h" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch1_sharpen\pynq_filters.h"/>
+  </source>
+  <testbench>
+    <originFiles name="test.cpp" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch1_sharpen\test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

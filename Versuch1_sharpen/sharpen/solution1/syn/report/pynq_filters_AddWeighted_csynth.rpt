@@ -1,0 +1,172 @@
+
+
+================================================================
+== Vivado HLS Report for 'pynq_filters_AddWeighted'
+================================================================
+* Date:           Thu Nov 28 03:43:03 2019
+
+* Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
+* Project:        sharpen
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.12|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  309122|  309122|  309122|  309122|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------+---------------------------+--------+--------+--------+--------+---------+
+        |                                     |                           |     Latency     |     Interval    | Pipeline|
+        |               Instance              |           Module          |   min  |   max  |   min  |   max  |   Type  |
+        +-------------------------------------+---------------------------+--------+--------+--------+--------+---------+
+        |grp_pynq_filters_arithm_pro_1_fu_32  |pynq_filters_arithm_pro_1  |  309121|  309121|  309121|  309121|   none  |
+        +-------------------------------------+---------------------------+--------+--------+--------+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|      1|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|      73|    235|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     10|
+|Register         |        -|      -|       4|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|      77|    246|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------+---------------------------+---------+-------+----+-----+
+    |               Instance              |           Module          | BRAM_18K| DSP48E| FF | LUT |
+    +-------------------------------------+---------------------------+---------+-------+----+-----+
+    |grp_pynq_filters_arithm_pro_1_fu_32  |pynq_filters_arithm_pro_1  |        0|      0|  73|  235|
+    +-------------------------------------+---------------------------+---------+-------+----+-----+
+    |Total                                |                           |        0|      0|  73|  235|
+    +-------------------------------------+---------------------------+---------+-------+----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------+----------+-------+---+----+------------+------------+
+    | Variable Name| Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------+----------+-------+---+----+------------+------------+
+    |ap_sig_101    |    or    |      0|  0|   1|           1|           1|
+    +--------------+----------+-------+---+----+------------+------------+
+    |Total         |          |      0|  0|   1|           1|           1|
+    +--------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                    |   1|          3|    1|          3|
+    |dst_data_stream_0_V_V_write  |   1|          2|    1|          2|
+    |dst_data_stream_1_V_V_write  |   1|          2|    1|          2|
+    |dst_data_stream_2_V_V_write  |   1|          2|    1|          2|
+    |src1_data_stream_0_V_V_read  |   1|          2|    1|          2|
+    |src1_data_stream_1_V_V_read  |   1|          2|    1|          2|
+    |src1_data_stream_2_V_V_read  |   1|          2|    1|          2|
+    |src2_data_stream_0_V_V_read  |   1|          2|    1|          2|
+    |src2_data_stream_1_V_V_read  |   1|          2|    1|          2|
+    |src2_data_stream_2_V_V_read  |   1|          2|    1|          2|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        |  10|         21|   10|         21|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------+---+----+-----+-----------+
+    |                         Name                        | FF| LUT| Bits| Const Bits|
+    +-----------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                            |  2|   0|    2|          0|
+    |ap_done_reg                                          |  1|   0|    1|          0|
+    |ap_reg_grp_pynq_filters_arithm_pro_1_fu_32_ap_start  |  1|   0|    1|          0|
+    +-----------------------------------------------------+---+----+-----+-----------+
+    |Total                                                |  4|   0|    4|          0|
+    +-----------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------+-----+-----+------------+--------------------------+--------------+
+|            RTL Ports           | Dir | Bits|  Protocol  |       Source Object      |    C Type    |
++--------------------------------+-----+-----+------------+--------------------------+--------------+
+|ap_clk                          |  in |    1| ap_ctrl_hs | pynq_filters_AddWeighted | return value |
+|ap_rst                          |  in |    1| ap_ctrl_hs | pynq_filters_AddWeighted | return value |
+|ap_start                        |  in |    1| ap_ctrl_hs | pynq_filters_AddWeighted | return value |
+|ap_done                         | out |    1| ap_ctrl_hs | pynq_filters_AddWeighted | return value |
+|ap_continue                     |  in |    1| ap_ctrl_hs | pynq_filters_AddWeighted | return value |
+|ap_idle                         | out |    1| ap_ctrl_hs | pynq_filters_AddWeighted | return value |
+|ap_ready                        | out |    1| ap_ctrl_hs | pynq_filters_AddWeighted | return value |
+|src1_data_stream_0_V_V_dout     |  in |   10|   ap_fifo  |  src1_data_stream_0_V_V  |    pointer   |
+|src1_data_stream_0_V_V_empty_n  |  in |    1|   ap_fifo  |  src1_data_stream_0_V_V  |    pointer   |
+|src1_data_stream_0_V_V_read     | out |    1|   ap_fifo  |  src1_data_stream_0_V_V  |    pointer   |
+|src1_data_stream_1_V_V_dout     |  in |   10|   ap_fifo  |  src1_data_stream_1_V_V  |    pointer   |
+|src1_data_stream_1_V_V_empty_n  |  in |    1|   ap_fifo  |  src1_data_stream_1_V_V  |    pointer   |
+|src1_data_stream_1_V_V_read     | out |    1|   ap_fifo  |  src1_data_stream_1_V_V  |    pointer   |
+|src1_data_stream_2_V_V_dout     |  in |   10|   ap_fifo  |  src1_data_stream_2_V_V  |    pointer   |
+|src1_data_stream_2_V_V_empty_n  |  in |    1|   ap_fifo  |  src1_data_stream_2_V_V  |    pointer   |
+|src1_data_stream_2_V_V_read     | out |    1|   ap_fifo  |  src1_data_stream_2_V_V  |    pointer   |
+|src2_data_stream_0_V_V_dout     |  in |   10|   ap_fifo  |  src2_data_stream_0_V_V  |    pointer   |
+|src2_data_stream_0_V_V_empty_n  |  in |    1|   ap_fifo  |  src2_data_stream_0_V_V  |    pointer   |
+|src2_data_stream_0_V_V_read     | out |    1|   ap_fifo  |  src2_data_stream_0_V_V  |    pointer   |
+|src2_data_stream_1_V_V_dout     |  in |   10|   ap_fifo  |  src2_data_stream_1_V_V  |    pointer   |
+|src2_data_stream_1_V_V_empty_n  |  in |    1|   ap_fifo  |  src2_data_stream_1_V_V  |    pointer   |
+|src2_data_stream_1_V_V_read     | out |    1|   ap_fifo  |  src2_data_stream_1_V_V  |    pointer   |
+|src2_data_stream_2_V_V_dout     |  in |   10|   ap_fifo  |  src2_data_stream_2_V_V  |    pointer   |
+|src2_data_stream_2_V_V_empty_n  |  in |    1|   ap_fifo  |  src2_data_stream_2_V_V  |    pointer   |
+|src2_data_stream_2_V_V_read     | out |    1|   ap_fifo  |  src2_data_stream_2_V_V  |    pointer   |
+|dst_data_stream_0_V_V_din       | out |   10|   ap_fifo  |   dst_data_stream_0_V_V  |    pointer   |
+|dst_data_stream_0_V_V_full_n    |  in |    1|   ap_fifo  |   dst_data_stream_0_V_V  |    pointer   |
+|dst_data_stream_0_V_V_write     | out |    1|   ap_fifo  |   dst_data_stream_0_V_V  |    pointer   |
+|dst_data_stream_1_V_V_din       | out |   10|   ap_fifo  |   dst_data_stream_1_V_V  |    pointer   |
+|dst_data_stream_1_V_V_full_n    |  in |    1|   ap_fifo  |   dst_data_stream_1_V_V  |    pointer   |
+|dst_data_stream_1_V_V_write     | out |    1|   ap_fifo  |   dst_data_stream_1_V_V  |    pointer   |
+|dst_data_stream_2_V_V_din       | out |   10|   ap_fifo  |   dst_data_stream_2_V_V  |    pointer   |
+|dst_data_stream_2_V_V_full_n    |  in |    1|   ap_fifo  |   dst_data_stream_2_V_V  |    pointer   |
+|dst_data_stream_2_V_V_write     | out |    1|   ap_fifo  |   dst_data_stream_2_V_V  |    pointer   |
++--------------------------------+-----+-----+------------+--------------------------+--------------+
+

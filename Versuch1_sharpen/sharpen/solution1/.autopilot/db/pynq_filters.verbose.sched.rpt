@@ -1,0 +1,675 @@
+
+
+================================================================
+== Vivado HLS Report for 'pynq_filters'
+================================================================
+* Date:           Thu Nov 28 03:42:46 2019
+
+* Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
+* Project:        sharpen
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     10.84|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+----------+
+    |     Latency     |     Interval    | Pipeline |
+    |   min  |   max  |   min  |   max  |   Type   |
+    +--------+--------+--------+--------+----------+
+    |  319243|  319243|  319203|  319203| dataflow |
+    +--------+--------+--------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 25
+* Pipeline: 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 25, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+* FSM state operations: 
+
+ <State 1>: 5.38ns
+ST_1: reduce_read [1/1] 1.00ns
+codeRepl:0  %reduce_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %reduce)
+
+ST_1: reduce_channel1 [1/1] 0.00ns
+codeRepl:1  %reduce_channel1 = alloca i32, align 4
+
+ST_1: tmp_1_loc_channel [1/1] 0.00ns
+codeRepl:2  %tmp_1_loc_channel = alloca double, align 8
+
+ST_1: input_image_8U3_cols_V_channel_1 [1/1] 0.00ns
+codeRepl:3  %input_image_8U3_cols_V_channel_1 = alloca i11, align 2
+
+ST_1: input_image_8U3_rows_V_channel_1 [1/1] 0.00ns
+codeRepl:4  %input_image_8U3_rows_V_channel_1 = alloca i10, align 2
+
+ST_1: input_image_8U3_cols_V_channel [1/1] 0.00ns
+codeRepl:5  %input_image_8U3_cols_V_channel = alloca i11, align 2
+
+ST_1: input_image_8U3_rows_V_channel [1/1] 0.00ns
+codeRepl:6  %input_image_8U3_rows_V_channel = alloca i10, align 2
+
+ST_1: reduce_channel [1/1] 0.00ns
+codeRepl:7  %reduce_channel = alloca i32, align 4
+
+ST_1: input_image_8U3_data_stream_0 [1/1] 0.00ns
+codeRepl:25  %input_image_8U3_data_stream_0 = alloca i8, align 1
+
+ST_1: input_image_8U3_data_stream_1 [1/1] 0.00ns
+codeRepl:28  %input_image_8U3_data_stream_1 = alloca i8, align 1
+
+ST_1: input_image_8U3_data_stream_2 [1/1] 0.00ns
+codeRepl:31  %input_image_8U3_data_stream_2 = alloca i8, align 1
+
+ST_1: output_image_8U3_data_stream_0 [1/1] 0.00ns
+codeRepl:34  %output_image_8U3_data_stream_0 = alloca i8, align 1
+
+ST_1: output_image_8U3_data_stream_1 [1/1] 0.00ns
+codeRepl:37  %output_image_8U3_data_stream_1 = alloca i8, align 1
+
+ST_1: output_image_8U3_data_stream_2 [1/1] 0.00ns
+codeRepl:40  %output_image_8U3_data_stream_2 = alloca i8, align 1
+
+ST_1: input_image_8U3_copy1_data_str [1/1] 0.00ns
+codeRepl:43  %input_image_8U3_copy1_data_str = alloca i8, align 1
+
+ST_1: input_image_8U3_copy1_data_str_1 [1/1] 0.00ns
+codeRepl:46  %input_image_8U3_copy1_data_str_1 = alloca i8, align 1
+
+ST_1: input_image_8U3_copy1_data_str_2 [1/1] 0.00ns
+codeRepl:49  %input_image_8U3_copy1_data_str_2 = alloca i8, align 1
+
+ST_1: input_image_8U3_copy2_data_str [1/1] 0.00ns
+codeRepl:52  %input_image_8U3_copy2_data_str = alloca i8, align 1
+
+ST_1: input_image_8U3_copy2_data_str_1 [1/1] 0.00ns
+codeRepl:55  %input_image_8U3_copy2_data_str_1 = alloca i8, align 1
+
+ST_1: input_image_8U3_copy2_data_str_2 [1/1] 0.00ns
+codeRepl:58  %input_image_8U3_copy2_data_str_2 = alloca i8, align 1
+
+ST_1: image_blur_data_stream_0_V [1/1] 0.00ns
+codeRepl:61  %image_blur_data_stream_0_V = alloca i8, align 1
+
+ST_1: input_image_8U1_data_stream_0 [1/1] 0.00ns
+codeRepl:64  %input_image_8U1_data_stream_0 = alloca i8, align 1
+
+ST_1: image_blur_10S1_data_stream_0 [1/1] 0.00ns
+codeRepl:67  %image_blur_10S1_data_stream_0 = alloca i10, align 2
+
+ST_1: image_laplacian_10S1_data_stre [1/1] 0.00ns
+codeRepl:70  %image_laplacian_10S1_data_stre = alloca i10, align 2
+
+ST_1: image_laplacian_reduced_10S1_d [1/1] 0.00ns
+codeRepl:73  %image_laplacian_reduced_10S1_d = alloca i10, align 2
+
+ST_1: image_laplacian_10S3_data_stre [1/1] 0.00ns
+codeRepl:76  %image_laplacian_10S3_data_stre = alloca i10, align 2
+
+ST_1: image_laplacian_10S3_data_stre_1 [1/1] 0.00ns
+codeRepl:79  %image_laplacian_10S3_data_stre_1 = alloca i10, align 2
+
+ST_1: image_laplacian_10S3_data_stre_2 [1/1] 0.00ns
+codeRepl:82  %image_laplacian_10S3_data_stre_2 = alloca i10, align 2
+
+ST_1: input_image_10S3_data_stream_0 [1/1] 0.00ns
+codeRepl:85  %input_image_10S3_data_stream_0 = alloca i10, align 2
+
+ST_1: input_image_10S3_data_stream_1 [1/1] 0.00ns
+codeRepl:88  %input_image_10S3_data_stream_1 = alloca i10, align 2
+
+ST_1: input_image_10S3_data_stream_2 [1/1] 0.00ns
+codeRepl:91  %input_image_10S3_data_stream_2 = alloca i10, align 2
+
+ST_1: ouput_image_10S3_data_stream_0 [1/1] 0.00ns
+codeRepl:94  %ouput_image_10S3_data_stream_0 = alloca i10, align 2
+
+ST_1: ouput_image_10S3_data_stream_1 [1/1] 0.00ns
+codeRepl:97  %ouput_image_10S3_data_stream_1 = alloca i10, align 2
+
+ST_1: ouput_image_10S3_data_stream_2 [1/1] 0.00ns
+codeRepl:100  %ouput_image_10S3_data_stream_2 = alloca i10, align 2
+
+ST_1: stg_60 [1/1] 4.38ns
+codeRepl:111  call void @pynq_filters_pynq_filters.entry3(i32 %reduce_read, i32* %reduce_channel1)
+
+
+ <State 2>: 0.00ns
+ST_2: stg_61 [1/1] 0.00ns
+codeRepl:112  call fastcc void @pynq_filters_pynq_filters.entry211(i32* nocapture %reduce_channel1, i32* %reduce_channel)
+
+ST_2: stg_62 [1/1] 0.00ns
+codeRepl:117  call fastcc void @pynq_filters_Block__proc(i10* %input_image_8U3_rows_V_channel, i11* %input_image_8U3_cols_V_channel)
+
+
+ <State 3>: 0.00ns
+ST_3: stg_63 [2/2] 0.00ns
+codeRepl:122  call fastcc void @pynq_filters_AXIvideo2Mat(i24* %in_data_V_data_V, i3* %in_data_V_keep_V, i3* %in_data_V_strb_V, i1* %in_data_V_user_V, i1* %in_data_V_last_V, i1* %in_data_V_id_V, i1* %in_data_V_dest_V, i10* nocapture %input_image_8U3_rows_V_channel, i11* nocapture %input_image_8U3_cols_V_channel, i8* %input_image_8U3_data_stream_0, i8* %input_image_8U3_data_stream_1, i8* %input_image_8U3_data_stream_2, i10* %input_image_8U3_rows_V_channel_1, i11* %input_image_8U3_cols_V_channel_1)
+
+ST_3: stg_64 [2/2] 0.00ns
+codeRepl:130  call fastcc void @pynq_filters_Block__proc208(i32* nocapture %reduce_channel, double* %tmp_1_loc_channel)
+
+
+ <State 4>: 0.00ns
+ST_4: stg_65 [1/2] 0.00ns
+codeRepl:122  call fastcc void @pynq_filters_AXIvideo2Mat(i24* %in_data_V_data_V, i3* %in_data_V_keep_V, i3* %in_data_V_strb_V, i1* %in_data_V_user_V, i1* %in_data_V_last_V, i1* %in_data_V_id_V, i1* %in_data_V_dest_V, i10* nocapture %input_image_8U3_rows_V_channel, i11* nocapture %input_image_8U3_cols_V_channel, i8* %input_image_8U3_data_stream_0, i8* %input_image_8U3_data_stream_1, i8* %input_image_8U3_data_stream_2, i10* %input_image_8U3_rows_V_channel_1, i11* %input_image_8U3_cols_V_channel_1)
+
+ST_4: stg_66 [1/2] 0.00ns
+codeRepl:130  call fastcc void @pynq_filters_Block__proc208(i32* nocapture %reduce_channel, double* %tmp_1_loc_channel)
+
+
+ <State 5>: 0.00ns
+ST_5: stg_67 [2/2] 0.00ns
+codeRepl:123  call fastcc void @pynq_filters_Duplicate(i10* nocapture %input_image_8U3_rows_V_channel_1, i11* nocapture %input_image_8U3_cols_V_channel_1, i8* %input_image_8U3_data_stream_0, i8* %input_image_8U3_data_stream_1, i8* %input_image_8U3_data_stream_2, i8* %input_image_8U3_copy1_data_str, i8* %input_image_8U3_copy1_data_str_1, i8* %input_image_8U3_copy1_data_str_2, i8* %input_image_8U3_copy2_data_str, i8* %input_image_8U3_copy2_data_str_1, i8* %input_image_8U3_copy2_data_str_2)
+
+
+ <State 6>: 0.00ns
+ST_6: stg_68 [1/2] 0.00ns
+codeRepl:123  call fastcc void @pynq_filters_Duplicate(i10* nocapture %input_image_8U3_rows_V_channel_1, i11* nocapture %input_image_8U3_cols_V_channel_1, i8* %input_image_8U3_data_stream_0, i8* %input_image_8U3_data_stream_1, i8* %input_image_8U3_data_stream_2, i8* %input_image_8U3_copy1_data_str, i8* %input_image_8U3_copy1_data_str_1, i8* %input_image_8U3_copy1_data_str_2, i8* %input_image_8U3_copy2_data_str, i8* %input_image_8U3_copy2_data_str_1, i8* %input_image_8U3_copy2_data_str_2)
+
+
+ <State 7>: 0.00ns
+ST_7: stg_69 [2/2] 0.00ns
+codeRepl:124  call fastcc void @pynq_filters_CvtColor.1(i8* %input_image_8U3_copy1_data_str, i8* %input_image_8U3_copy1_data_str_1, i8* %input_image_8U3_copy1_data_str_2, i8* %input_image_8U1_data_stream_0)
+
+ST_7: stg_70 [2/2] 0.00ns
+codeRepl:133  call fastcc void @pynq_filters_convertToSigned.1(i8* %input_image_8U3_copy2_data_str, i8* %input_image_8U3_copy2_data_str_1, i8* %input_image_8U3_copy2_data_str_2, i10* %input_image_10S3_data_stream_0, i10* %input_image_10S3_data_stream_1, i10* %input_image_10S3_data_stream_2)
+
+
+ <State 8>: 0.00ns
+ST_8: stg_71 [1/2] 0.00ns
+codeRepl:124  call fastcc void @pynq_filters_CvtColor.1(i8* %input_image_8U3_copy1_data_str, i8* %input_image_8U3_copy1_data_str_1, i8* %input_image_8U3_copy1_data_str_2, i8* %input_image_8U1_data_stream_0)
+
+ST_8: stg_72 [1/2] 0.00ns
+codeRepl:133  call fastcc void @pynq_filters_convertToSigned.1(i8* %input_image_8U3_copy2_data_str, i8* %input_image_8U3_copy2_data_str_1, i8* %input_image_8U3_copy2_data_str_2, i10* %input_image_10S3_data_stream_0, i10* %input_image_10S3_data_stream_1, i10* %input_image_10S3_data_stream_2)
+
+
+ <State 9>: 0.00ns
+ST_9: stg_73 [2/2] 0.00ns
+codeRepl:125  call fastcc void @pynq_filters_gaussianBlur(i8* %input_image_8U1_data_stream_0, i8* %image_blur_data_stream_0_V)
+
+
+ <State 10>: 0.00ns
+ST_10: stg_74 [1/2] 0.00ns
+codeRepl:125  call fastcc void @pynq_filters_gaussianBlur(i8* %input_image_8U1_data_stream_0, i8* %image_blur_data_stream_0_V)
+
+
+ <State 11>: 0.00ns
+ST_11: stg_75 [2/2] 0.00ns
+codeRepl:126  call fastcc void @pynq_filters_convertToSigned(i8* %image_blur_data_stream_0_V, i10* %image_blur_10S1_data_stream_0)
+
+
+ <State 12>: 0.00ns
+ST_12: stg_76 [1/2] 0.00ns
+codeRepl:126  call fastcc void @pynq_filters_convertToSigned(i8* %image_blur_data_stream_0_V, i10* %image_blur_10S1_data_stream_0)
+
+
+ <State 13>: 0.00ns
+ST_13: stg_77 [2/2] 0.00ns
+codeRepl:127  call fastcc void @pynq_filters_laplacian(i10* %image_blur_10S1_data_stream_0, i10* %image_laplacian_10S1_data_stre)
+
+
+ <State 14>: 0.00ns
+ST_14: stg_78 [1/2] 0.00ns
+codeRepl:127  call fastcc void @pynq_filters_laplacian(i10* %image_blur_10S1_data_stream_0, i10* %image_laplacian_10S1_data_stre)
+
+
+ <State 15>: 0.00ns
+ST_15: stg_79 [2/2] 0.00ns
+codeRepl:131  call fastcc void @"pynq_filters_Scale<480, 640, 9, 9, double>1"(i10* %image_laplacian_10S1_data_stre, i10* %image_laplacian_reduced_10S1_d, double* nocapture %tmp_1_loc_channel)
+
+
+ <State 16>: 0.00ns
+ST_16: stg_80 [1/2] 0.00ns
+codeRepl:131  call fastcc void @"pynq_filters_Scale<480, 640, 9, 9, double>1"(i10* %image_laplacian_10S1_data_stre, i10* %image_laplacian_reduced_10S1_d, double* nocapture %tmp_1_loc_channel)
+
+
+ <State 17>: 0.00ns
+ST_17: stg_81 [2/2] 0.00ns
+codeRepl:132  call fastcc void @pynq_filters_CvtColor(i10* %image_laplacian_reduced_10S1_d, i10* %image_laplacian_10S3_data_stre, i10* %image_laplacian_10S3_data_stre_1, i10* %image_laplacian_10S3_data_stre_2)
+
+
+ <State 18>: 0.00ns
+ST_18: stg_82 [1/2] 0.00ns
+codeRepl:132  call fastcc void @pynq_filters_CvtColor(i10* %image_laplacian_reduced_10S1_d, i10* %image_laplacian_10S3_data_stre, i10* %image_laplacian_10S3_data_stre_1, i10* %image_laplacian_10S3_data_stre_2)
+
+
+ <State 19>: 0.00ns
+ST_19: stg_83 [2/2] 0.00ns
+codeRepl:134  call fastcc void @pynq_filters_AddWeighted(i10* %image_laplacian_10S3_data_stre, i10* %image_laplacian_10S3_data_stre_1, i10* %image_laplacian_10S3_data_stre_2, i10* %input_image_10S3_data_stream_0, i10* %input_image_10S3_data_stream_1, i10* %input_image_10S3_data_stream_2, i10* %ouput_image_10S3_data_stream_0, i10* %ouput_image_10S3_data_stream_1, i10* %ouput_image_10S3_data_stream_2)
+
+
+ <State 20>: 0.00ns
+ST_20: stg_84 [1/2] 0.00ns
+codeRepl:134  call fastcc void @pynq_filters_AddWeighted(i10* %image_laplacian_10S3_data_stre, i10* %image_laplacian_10S3_data_stre_1, i10* %image_laplacian_10S3_data_stre_2, i10* %input_image_10S3_data_stream_0, i10* %input_image_10S3_data_stream_1, i10* %input_image_10S3_data_stream_2, i10* %ouput_image_10S3_data_stream_0, i10* %ouput_image_10S3_data_stream_1, i10* %ouput_image_10S3_data_stream_2)
+
+
+ <State 21>: 0.00ns
+ST_21: stg_85 [2/2] 0.00ns
+codeRepl:135  call fastcc void @pynq_filters_convertToUnsigned(i10* %ouput_image_10S3_data_stream_0, i10* %ouput_image_10S3_data_stream_1, i10* %ouput_image_10S3_data_stream_2, i8* %output_image_8U3_data_stream_0, i8* %output_image_8U3_data_stream_1, i8* %output_image_8U3_data_stream_2)
+
+
+ <State 22>: 0.00ns
+ST_22: stg_86 [1/2] 0.00ns
+codeRepl:135  call fastcc void @pynq_filters_convertToUnsigned(i10* %ouput_image_10S3_data_stream_0, i10* %ouput_image_10S3_data_stream_1, i10* %ouput_image_10S3_data_stream_2, i8* %output_image_8U3_data_stream_0, i8* %output_image_8U3_data_stream_1, i8* %output_image_8U3_data_stream_2)
+
+
+ <State 23>: 0.00ns
+ST_23: stg_87 [2/2] 0.00ns
+codeRepl:136  call fastcc void @pynq_filters_Mat2AXIvideo(i8* %output_image_8U3_data_stream_0, i8* %output_image_8U3_data_stream_1, i8* %output_image_8U3_data_stream_2, i24* %out_data_V_data_V, i3* %out_data_V_keep_V, i3* %out_data_V_strb_V, i1* %out_data_V_user_V, i1* %out_data_V_last_V, i1* %out_data_V_id_V, i1* %out_data_V_dest_V)
+
+
+ <State 24>: 0.00ns
+ST_24: stg_88 [1/2] 0.00ns
+codeRepl:136  call fastcc void @pynq_filters_Mat2AXIvideo(i8* %output_image_8U3_data_stream_0, i8* %output_image_8U3_data_stream_1, i8* %output_image_8U3_data_stream_2, i24* %out_data_V_data_V, i3* %out_data_V_keep_V, i3* %out_data_V_strb_V, i1* %out_data_V_user_V, i1* %out_data_V_last_V, i1* %out_data_V_id_V, i1* %out_data_V_dest_V)
+
+
+ <State 25>: 0.00ns
+ST_25: stg_89 [1/1] 0.00ns
+codeRepl:8  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str1806) nounwind
+
+ST_25: stg_90 [1/1] 0.00ns
+codeRepl:9  call void (...)* @_ssdm_op_SpecBitsMap(i24* %in_data_V_data_V), !map !7
+
+ST_25: stg_91 [1/1] 0.00ns
+codeRepl:10  call void (...)* @_ssdm_op_SpecBitsMap(i3* %in_data_V_keep_V), !map !11
+
+ST_25: stg_92 [1/1] 0.00ns
+codeRepl:11  call void (...)* @_ssdm_op_SpecBitsMap(i3* %in_data_V_strb_V), !map !15
+
+ST_25: stg_93 [1/1] 0.00ns
+codeRepl:12  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_data_V_user_V), !map !19
+
+ST_25: stg_94 [1/1] 0.00ns
+codeRepl:13  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_data_V_last_V), !map !23
+
+ST_25: stg_95 [1/1] 0.00ns
+codeRepl:14  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_data_V_id_V), !map !27
+
+ST_25: stg_96 [1/1] 0.00ns
+codeRepl:15  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_data_V_dest_V), !map !31
+
+ST_25: stg_97 [1/1] 0.00ns
+codeRepl:16  call void (...)* @_ssdm_op_SpecBitsMap(i24* %out_data_V_data_V), !map !35
+
+ST_25: stg_98 [1/1] 0.00ns
+codeRepl:17  call void (...)* @_ssdm_op_SpecBitsMap(i3* %out_data_V_keep_V), !map !39
+
+ST_25: stg_99 [1/1] 0.00ns
+codeRepl:18  call void (...)* @_ssdm_op_SpecBitsMap(i3* %out_data_V_strb_V), !map !43
+
+ST_25: stg_100 [1/1] 0.00ns
+codeRepl:19  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_data_V_user_V), !map !47
+
+ST_25: stg_101 [1/1] 0.00ns
+codeRepl:20  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_data_V_last_V), !map !51
+
+ST_25: stg_102 [1/1] 0.00ns
+codeRepl:21  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_data_V_id_V), !map !55
+
+ST_25: stg_103 [1/1] 0.00ns
+codeRepl:22  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_data_V_dest_V), !map !59
+
+ST_25: stg_104 [1/1] 0.00ns
+codeRepl:23  call void (...)* @_ssdm_op_SpecBitsMap(i32 %reduce), !map !63
+
+ST_25: stg_105 [1/1] 0.00ns
+codeRepl:24  call void (...)* @_ssdm_op_SpecTopModule([13 x i8]* @pynq_filters_str) nounwind
+
+ST_25: empty [1/1] 0.00ns
+codeRepl:26  %empty = call i32 (...)* @_ssdm_op_SpecChannel([33 x i8]* @input_image_8U3_OC_data_stream_2, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i8* %input_image_8U3_data_stream_0, i8* %input_image_8U3_data_stream_0)
+
+ST_25: stg_107 [1/1] 0.00ns
+codeRepl:27  call void (...)* @_ssdm_op_SpecInterface(i8* %input_image_8U3_data_stream_0, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_22 [1/1] 0.00ns
+codeRepl:29  %empty_22 = call i32 (...)* @_ssdm_op_SpecChannel([33 x i8]* @input_image_8U3_OC_data_stream_1, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i8* %input_image_8U3_data_stream_1, i8* %input_image_8U3_data_stream_1)
+
+ST_25: stg_109 [1/1] 0.00ns
+codeRepl:30  call void (...)* @_ssdm_op_SpecInterface(i8* %input_image_8U3_data_stream_1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_23 [1/1] 0.00ns
+codeRepl:32  %empty_23 = call i32 (...)* @_ssdm_op_SpecChannel([33 x i8]* @input_image_8U3_OC_data_stream, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i8* %input_image_8U3_data_stream_2, i8* %input_image_8U3_data_stream_2)
+
+ST_25: stg_111 [1/1] 0.00ns
+codeRepl:33  call void (...)* @_ssdm_op_SpecInterface(i8* %input_image_8U3_data_stream_2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_24 [1/1] 0.00ns
+codeRepl:35  %empty_24 = call i32 (...)* @_ssdm_op_SpecChannel([34 x i8]* @output_image_8U3_OC_data_strea_2, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i8* %output_image_8U3_data_stream_0, i8* %output_image_8U3_data_stream_0)
+
+ST_25: stg_113 [1/1] 0.00ns
+codeRepl:36  call void (...)* @_ssdm_op_SpecInterface(i8* %output_image_8U3_data_stream_0, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_25 [1/1] 0.00ns
+codeRepl:38  %empty_25 = call i32 (...)* @_ssdm_op_SpecChannel([34 x i8]* @output_image_8U3_OC_data_strea_1, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i8* %output_image_8U3_data_stream_1, i8* %output_image_8U3_data_stream_1)
+
+ST_25: stg_115 [1/1] 0.00ns
+codeRepl:39  call void (...)* @_ssdm_op_SpecInterface(i8* %output_image_8U3_data_stream_1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_26 [1/1] 0.00ns
+codeRepl:41  %empty_26 = call i32 (...)* @_ssdm_op_SpecChannel([34 x i8]* @output_image_8U3_OC_data_strea, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i8* %output_image_8U3_data_stream_2, i8* %output_image_8U3_data_stream_2)
+
+ST_25: stg_117 [1/1] 0.00ns
+codeRepl:42  call void (...)* @_ssdm_op_SpecInterface(i8* %output_image_8U3_data_stream_2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_27 [1/1] 0.00ns
+codeRepl:44  %empty_27 = call i32 (...)* @_ssdm_op_SpecChannel([39 x i8]* @input_image_8U3_copy1_OC_data_2, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i8* %input_image_8U3_copy1_data_str, i8* %input_image_8U3_copy1_data_str)
+
+ST_25: stg_119 [1/1] 0.00ns
+codeRepl:45  call void (...)* @_ssdm_op_SpecInterface(i8* %input_image_8U3_copy1_data_str, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_28 [1/1] 0.00ns
+codeRepl:47  %empty_28 = call i32 (...)* @_ssdm_op_SpecChannel([39 x i8]* @input_image_8U3_copy1_OC_data_1, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i8* %input_image_8U3_copy1_data_str_1, i8* %input_image_8U3_copy1_data_str_1)
+
+ST_25: stg_121 [1/1] 0.00ns
+codeRepl:48  call void (...)* @_ssdm_op_SpecInterface(i8* %input_image_8U3_copy1_data_str_1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_29 [1/1] 0.00ns
+codeRepl:50  %empty_29 = call i32 (...)* @_ssdm_op_SpecChannel([39 x i8]* @input_image_8U3_copy1_OC_data_s, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i8* %input_image_8U3_copy1_data_str_2, i8* %input_image_8U3_copy1_data_str_2)
+
+ST_25: stg_123 [1/1] 0.00ns
+codeRepl:51  call void (...)* @_ssdm_op_SpecInterface(i8* %input_image_8U3_copy1_data_str_2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_30 [1/1] 0.00ns
+codeRepl:53  %empty_30 = call i32 (...)* @_ssdm_op_SpecChannel([39 x i8]* @input_image_8U3_copy2_OC_data_2, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 19200, i32 19200, i8* %input_image_8U3_copy2_data_str, i8* %input_image_8U3_copy2_data_str)
+
+ST_25: stg_125 [1/1] 0.00ns
+codeRepl:54  call void (...)* @_ssdm_op_SpecInterface(i8* %input_image_8U3_copy2_data_str, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_31 [1/1] 0.00ns
+codeRepl:56  %empty_31 = call i32 (...)* @_ssdm_op_SpecChannel([39 x i8]* @input_image_8U3_copy2_OC_data_1, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 19200, i32 19200, i8* %input_image_8U3_copy2_data_str_1, i8* %input_image_8U3_copy2_data_str_1)
+
+ST_25: stg_127 [1/1] 0.00ns
+codeRepl:57  call void (...)* @_ssdm_op_SpecInterface(i8* %input_image_8U3_copy2_data_str_1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_32 [1/1] 0.00ns
+codeRepl:59  %empty_32 = call i32 (...)* @_ssdm_op_SpecChannel([39 x i8]* @input_image_8U3_copy2_OC_data_s, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 19200, i32 19200, i8* %input_image_8U3_copy2_data_str_2, i8* %input_image_8U3_copy2_data_str_2)
+
+ST_25: stg_129 [1/1] 0.00ns
+codeRepl:60  call void (...)* @_ssdm_op_SpecInterface(i8* %input_image_8U3_copy2_data_str_2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_33 [1/1] 0.00ns
+codeRepl:62  %empty_33 = call i32 (...)* @_ssdm_op_SpecChannel([28 x i8]* @image_blur_OC_data_stream_LF_0, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i8* %image_blur_data_stream_0_V, i8* %image_blur_data_stream_0_V)
+
+ST_25: stg_131 [1/1] 0.00ns
+codeRepl:63  call void (...)* @_ssdm_op_SpecInterface(i8* %image_blur_data_stream_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_34 [1/1] 0.00ns
+codeRepl:65  %empty_34 = call i32 (...)* @_ssdm_op_SpecChannel([33 x i8]* @input_image_8U1_OC_data_stream, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i8* %input_image_8U1_data_stream_0, i8* %input_image_8U1_data_stream_0)
+
+ST_25: stg_133 [1/1] 0.00ns
+codeRepl:66  call void (...)* @_ssdm_op_SpecInterface(i8* %input_image_8U1_data_stream_0, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_35 [1/1] 0.00ns
+codeRepl:68  %empty_35 = call i32 (...)* @_ssdm_op_SpecChannel([35 x i8]* @image_blur_10S1_OC_data_stream, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i10* %image_blur_10S1_data_stream_0, i10* %image_blur_10S1_data_stream_0)
+
+ST_25: stg_135 [1/1] 0.00ns
+codeRepl:69  call void (...)* @_ssdm_op_SpecInterface(i10* %image_blur_10S1_data_stream_0, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_36 [1/1] 0.00ns
+codeRepl:71  %empty_36 = call i32 (...)* @_ssdm_op_SpecChannel([40 x i8]* @image_laplacian_10S1_OC_data_s, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i10* %image_laplacian_10S1_data_stre, i10* %image_laplacian_10S1_data_stre)
+
+ST_25: stg_137 [1/1] 0.00ns
+codeRepl:72  call void (...)* @_ssdm_op_SpecInterface(i10* %image_laplacian_10S1_data_stre, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_37 [1/1] 0.00ns
+codeRepl:74  %empty_37 = call i32 (...)* @_ssdm_op_SpecChannel([48 x i8]* @image_laplacian_reduced_10S1_O, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i10* %image_laplacian_reduced_10S1_d, i10* %image_laplacian_reduced_10S1_d)
+
+ST_25: stg_139 [1/1] 0.00ns
+codeRepl:75  call void (...)* @_ssdm_op_SpecInterface(i10* %image_laplacian_reduced_10S1_d, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_38 [1/1] 0.00ns
+codeRepl:77  %empty_38 = call i32 (...)* @_ssdm_op_SpecChannel([40 x i8]* @image_laplacian_10S3_OC_data_s_2, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i10* %image_laplacian_10S3_data_stre, i10* %image_laplacian_10S3_data_stre)
+
+ST_25: stg_141 [1/1] 0.00ns
+codeRepl:78  call void (...)* @_ssdm_op_SpecInterface(i10* %image_laplacian_10S3_data_stre, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_39 [1/1] 0.00ns
+codeRepl:80  %empty_39 = call i32 (...)* @_ssdm_op_SpecChannel([40 x i8]* @image_laplacian_10S3_OC_data_s_1, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i10* %image_laplacian_10S3_data_stre_1, i10* %image_laplacian_10S3_data_stre_1)
+
+ST_25: stg_143 [1/1] 0.00ns
+codeRepl:81  call void (...)* @_ssdm_op_SpecInterface(i10* %image_laplacian_10S3_data_stre_1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_40 [1/1] 0.00ns
+codeRepl:83  %empty_40 = call i32 (...)* @_ssdm_op_SpecChannel([40 x i8]* @image_laplacian_10S3_OC_data_s, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i10* %image_laplacian_10S3_data_stre_2, i10* %image_laplacian_10S3_data_stre_2)
+
+ST_25: stg_145 [1/1] 0.00ns
+codeRepl:84  call void (...)* @_ssdm_op_SpecInterface(i10* %image_laplacian_10S3_data_stre_2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_41 [1/1] 0.00ns
+codeRepl:86  %empty_41 = call i32 (...)* @_ssdm_op_SpecChannel([36 x i8]* @input_image_10S3_OC_data_strea_2, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 5000, i32 5000, i10* %input_image_10S3_data_stream_0, i10* %input_image_10S3_data_stream_0)
+
+ST_25: stg_147 [1/1] 0.00ns
+codeRepl:87  call void (...)* @_ssdm_op_SpecInterface(i10* %input_image_10S3_data_stream_0, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_42 [1/1] 0.00ns
+codeRepl:89  %empty_42 = call i32 (...)* @_ssdm_op_SpecChannel([36 x i8]* @input_image_10S3_OC_data_strea_1, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 5000, i32 5000, i10* %input_image_10S3_data_stream_1, i10* %input_image_10S3_data_stream_1)
+
+ST_25: stg_149 [1/1] 0.00ns
+codeRepl:90  call void (...)* @_ssdm_op_SpecInterface(i10* %input_image_10S3_data_stream_1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_43 [1/1] 0.00ns
+codeRepl:92  %empty_43 = call i32 (...)* @_ssdm_op_SpecChannel([36 x i8]* @input_image_10S3_OC_data_strea, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 5000, i32 5000, i10* %input_image_10S3_data_stream_2, i10* %input_image_10S3_data_stream_2)
+
+ST_25: stg_151 [1/1] 0.00ns
+codeRepl:93  call void (...)* @_ssdm_op_SpecInterface(i10* %input_image_10S3_data_stream_2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_44 [1/1] 0.00ns
+codeRepl:95  %empty_44 = call i32 (...)* @_ssdm_op_SpecChannel([36 x i8]* @ouput_image_10S3_OC_data_strea_2, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i10* %ouput_image_10S3_data_stream_0, i10* %ouput_image_10S3_data_stream_0)
+
+ST_25: stg_153 [1/1] 0.00ns
+codeRepl:96  call void (...)* @_ssdm_op_SpecInterface(i10* %ouput_image_10S3_data_stream_0, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_45 [1/1] 0.00ns
+codeRepl:98  %empty_45 = call i32 (...)* @_ssdm_op_SpecChannel([36 x i8]* @ouput_image_10S3_OC_data_strea_1, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i10* %ouput_image_10S3_data_stream_1, i10* %ouput_image_10S3_data_stream_1)
+
+ST_25: stg_155 [1/1] 0.00ns
+codeRepl:99  call void (...)* @_ssdm_op_SpecInterface(i10* %ouput_image_10S3_data_stream_1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_46 [1/1] 0.00ns
+codeRepl:101  %empty_46 = call i32 (...)* @_ssdm_op_SpecChannel([36 x i8]* @ouput_image_10S3_OC_data_strea, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i10* %ouput_image_10S3_data_stream_2, i10* %ouput_image_10S3_data_stream_2)
+
+ST_25: stg_157 [1/1] 0.00ns
+codeRepl:102  call void (...)* @_ssdm_op_SpecInterface(i10* %ouput_image_10S3_data_stream_2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: stg_158 [1/1] 0.00ns
+codeRepl:103  call void (...)* @_ssdm_op_SpecInterface(i24* %in_data_V_data_V, i3* %in_data_V_keep_V, i3* %in_data_V_strb_V, i1* %in_data_V_user_V, i1* %in_data_V_last_V, i1* %in_data_V_id_V, i1* %in_data_V_dest_V, [5 x i8]* @p_str1808, i32 1, i32 1, i32 0, i32 0, [1 x i8]* @p_str1806, [1 x i8]* @p_str1806, [1 x i8]* @p_str1806, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1806) nounwind
+
+ST_25: stg_159 [1/1] 0.00ns
+codeRepl:104  call void (...)* @_ssdm_op_SpecInterface(i24* %out_data_V_data_V, i3* %out_data_V_keep_V, i3* %out_data_V_strb_V, i1* %out_data_V_user_V, i1* %out_data_V_last_V, i1* %out_data_V_id_V, i1* %out_data_V_dest_V, [5 x i8]* @p_str1808, i32 1, i32 1, i32 0, i32 0, [1 x i8]* @p_str1806, [1 x i8]* @p_str1806, [1 x i8]* @p_str1806, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1806) nounwind
+
+ST_25: stg_160 [1/1] 0.00ns
+codeRepl:105  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str1809, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1806, [1 x i8]* @p_str1806, [1 x i8]* @p_str1806, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1806) nounwind
+
+ST_25: stg_161 [1/1] 0.00ns
+codeRepl:106  call void (...)* @_ssdm_op_SpecInterface(i32 %reduce, [10 x i8]* @p_str1810, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @p_str1811, [1 x i8]* @p_str1806, [1 x i8]* @p_str1806, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1806) nounwind
+
+ST_25: empty_47 [1/1] 0.00ns
+codeRepl:107  %empty_47 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @reduce_channel_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i32* %reduce_channel, i32* %reduce_channel)
+
+ST_25: stg_163 [1/1] 0.00ns
+codeRepl:108  call void (...)* @_ssdm_op_SpecInterface(i32* %reduce_channel, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_48 [1/1] 0.00ns
+codeRepl:109  %empty_48 = call i32 (...)* @_ssdm_op_SpecChannel([16 x i8]* @reduce_channel1_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i32* %reduce_channel1, i32* %reduce_channel1)
+
+ST_25: stg_165 [1/1] 0.00ns
+codeRepl:110  call void (...)* @_ssdm_op_SpecInterface(i32* %reduce_channel1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_49 [1/1] 0.00ns
+codeRepl:113  %empty_49 = call i32 (...)* @_ssdm_op_SpecChannel([31 x i8]* @input_image_8U3_OC_rows_OC_V_c_1, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i10* %input_image_8U3_rows_V_channel, i10* %input_image_8U3_rows_V_channel)
+
+ST_25: stg_167 [1/1] 0.00ns
+codeRepl:114  call void (...)* @_ssdm_op_SpecInterface(i10* %input_image_8U3_rows_V_channel, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_50 [1/1] 0.00ns
+codeRepl:115  %empty_50 = call i32 (...)* @_ssdm_op_SpecChannel([31 x i8]* @input_image_8U3_OC_cols_OC_V_c_1, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i11* %input_image_8U3_cols_V_channel, i11* %input_image_8U3_cols_V_channel)
+
+ST_25: stg_169 [1/1] 0.00ns
+codeRepl:116  call void (...)* @_ssdm_op_SpecInterface(i11* %input_image_8U3_cols_V_channel, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_51 [1/1] 0.00ns
+codeRepl:118  %empty_51 = call i32 (...)* @_ssdm_op_SpecChannel([33 x i8]* @input_image_8U3_OC_rows_OC_V_c, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i10* %input_image_8U3_rows_V_channel_1, i10* %input_image_8U3_rows_V_channel_1)
+
+ST_25: stg_171 [1/1] 0.00ns
+codeRepl:119  call void (...)* @_ssdm_op_SpecInterface(i10* %input_image_8U3_rows_V_channel_1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_52 [1/1] 0.00ns
+codeRepl:120  %empty_52 = call i32 (...)* @_ssdm_op_SpecChannel([33 x i8]* @input_image_8U3_OC_cols_OC_V_c, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i11* %input_image_8U3_cols_V_channel_1, i11* %input_image_8U3_cols_V_channel_1)
+
+ST_25: stg_173 [1/1] 0.00ns
+codeRepl:121  call void (...)* @_ssdm_op_SpecInterface(i11* %input_image_8U3_cols_V_channel_1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: empty_53 [1/1] 0.00ns
+codeRepl:128  %empty_53 = call i32 (...)* @_ssdm_op_SpecChannel([18 x i8]* @tmp_OC_1_OC_loc_channel_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 7, i32 0, double* %tmp_1_loc_channel, double* %tmp_1_loc_channel)
+
+ST_25: stg_175 [1/1] 0.00ns
+codeRepl:129  call void (...)* @_ssdm_op_SpecInterface(double* %tmp_1_loc_channel, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_25: stg_176 [1/1] 0.00ns
+codeRepl:137  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

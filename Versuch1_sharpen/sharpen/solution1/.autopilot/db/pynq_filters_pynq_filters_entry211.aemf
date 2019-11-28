@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1574908971315">
+  <ports id="1" name="reduce" type="PortType" coreName="FIFO" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="reduce_out" type="PortType" coreName="FIFO" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="12" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="15" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@ports.1"/>
+  <edges id="16" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <blocks id="9" name="pynq_filters_pynq_filters.entry211" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="reduce_read" bitwidth="32" opcode="read">
+      <dataInputObjs>reduce</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="node_7" opcode="write">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>reduce_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="node_8" opcode="ret"/>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ioNodes realName="reduce_read_read_fu_20">
+    <nodeIds>5</nodeIds>
+  </ioNodes>
+  <ioNodes realName="stg_6_write_fu_26">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioPorts name="reduce">
+    <contents name="read">
+      <nodeIds>5</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="reduce_out">
+    <contents name="write">
+      <nodeIds>7</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="pynq_filters_pynq_filters.entry211" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>9</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

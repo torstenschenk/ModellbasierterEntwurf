@@ -1,0 +1,465 @@
+
+
+================================================================
+== Vivado HLS Report for 'pynq_filters_laplacian'
+================================================================
+* Date:           Thu Nov 28 03:42:37 2019
+
+* Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
+* Project:        sharpen
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      9.40|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  313810|  313810|  313810|  313810|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |   24|   24|         8|          -|          -|     3|    no    |
+        | + Loop 1.1  |    6|    6|         2|          -|          -|     3|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 5
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	5  / (exitcond1)
+	3  / (!exitcond1)
+3 --> 
+	2  / (exitcond)
+	4  / (!exitcond)
+4 --> 
+	3  / true
+5 --> 
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: Sv_val_2_V_2_1 [1/1] 0.00ns
+:0  %Sv_val_2_V_2_1 = alloca i12
+
+ST_1: Sv_val_2_V_2_3 [1/1] 0.00ns
+:1  %Sv_val_2_V_2_3 = alloca i12
+
+ST_1: Sv_val_2_V_2_5 [1/1] 0.00ns
+:2  %Sv_val_2_V_2_5 = alloca i12
+
+ST_1: Sv_val_2_V_2_7 [1/1] 0.00ns
+:3  %Sv_val_2_V_2_7 = alloca i12
+
+ST_1: Sv_val_2_V_2_9 [1/1] 0.00ns
+:4  %Sv_val_2_V_2_9 = alloca i12
+
+ST_1: Sv_val_2_V_2_13 [1/1] 0.00ns
+:5  %Sv_val_2_V_2_13 = alloca i12
+
+ST_1: Sv_val_2_V_2_14 [1/1] 0.00ns
+:6  %Sv_val_2_V_2_14 = alloca i12
+
+ST_1: Sv_val_2_V_2_15 [1/1] 0.00ns
+:7  %Sv_val_2_V_2_15 = alloca i12
+
+ST_1: Sv_val_2_V_2_16 [1/1] 0.00ns
+:8  %Sv_val_2_V_2_16 = alloca i12
+
+ST_1: stg_15 [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecInterface(i10* %img_out_data_stream_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_1: stg_16 [1/1] 0.00ns
+:10  call void (...)* @_ssdm_op_SpecInterface(i10* %img_in_data_stream_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_1: stg_17 [1/1] 1.57ns
+:11  br label %.loopexit
+
+
+ <State 2>: 2.73ns
+ST_2: r [1/1] 0.00ns
+.loopexit:0  %r = phi i2 [ 0, %0 ], [ %r_1, %.preheader ]
+
+ST_2: exitcond1 [1/1] 1.36ns
+.loopexit:1  %exitcond1 = icmp eq i2 %r, -1
+
+ST_2: stg_20 [1/1] 0.00ns
+.loopexit:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)
+
+ST_2: r_1 [1/1] 0.80ns
+.loopexit:3  %r_1 = add i2 %r, 1
+
+ST_2: stg_22 [1/1] 0.00ns
+.loopexit:4  br i1 %exitcond1, label %1, label %.preheader.preheader
+
+ST_2: tmp_cast [1/1] 0.00ns
+.preheader.preheader:0  %tmp_cast = zext i2 %r to i5
+
+ST_2: tmp_s [1/1] 0.00ns
+.preheader.preheader:1  %tmp_s = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %r, i2 0)
+
+ST_2: p_shl_cast [1/1] 0.00ns
+.preheader.preheader:2  %p_shl_cast = zext i4 %tmp_s to i5
+
+ST_2: tmp_31 [1/1] 0.80ns
+.preheader.preheader:3  %tmp_31 = sub i5 %p_shl_cast, %tmp_cast
+
+ST_2: sel_tmp [1/1] 1.36ns
+.preheader.preheader:4  %sel_tmp = icmp eq i2 %r, 0
+
+ST_2: sel_tmp2 [1/1] 1.36ns
+.preheader.preheader:5  %sel_tmp2 = icmp eq i2 %r, 1
+
+ST_2: sel_tmp8 [1/1] 1.36ns
+.preheader.preheader:6  %sel_tmp8 = icmp ne i2 %r, 0
+
+ST_2: sel_tmp10 [1/1] 1.36ns
+.preheader.preheader:7  %sel_tmp10 = icmp ne i2 %r, 1
+
+ST_2: sel_tmp11 [1/1] 1.37ns
+.preheader.preheader:8  %sel_tmp11 = and i1 %sel_tmp8, %sel_tmp10
+
+ST_2: stg_32 [1/1] 1.57ns
+.preheader.preheader:9  br label %.preheader
+
+ST_2: Sv_val_2_V_2_1_load [1/1] 0.00ns
+:0  %Sv_val_2_V_2_1_load = load i12* %Sv_val_2_V_2_1
+
+ST_2: Sv_val_2_V_2_3_load [1/1] 0.00ns
+:1  %Sv_val_2_V_2_3_load = load i12* %Sv_val_2_V_2_3
+
+ST_2: Sv_val_2_V_2_5_load [1/1] 0.00ns
+:2  %Sv_val_2_V_2_5_load = load i12* %Sv_val_2_V_2_5
+
+ST_2: Sv_val_2_V_2_7_load [1/1] 0.00ns
+:3  %Sv_val_2_V_2_7_load = load i12* %Sv_val_2_V_2_7
+
+ST_2: Sv_val_2_V_2_9_load [1/1] 0.00ns
+:4  %Sv_val_2_V_2_9_load = load i12* %Sv_val_2_V_2_9
+
+ST_2: Sv_val_2_V_2_13_load [1/1] 0.00ns
+:5  %Sv_val_2_V_2_13_load = load i12* %Sv_val_2_V_2_13
+
+ST_2: Sv_val_2_V_2_14_load [1/1] 0.00ns
+:6  %Sv_val_2_V_2_14_load = load i12* %Sv_val_2_V_2_14
+
+ST_2: Sv_val_2_V_2_15_load [1/1] 0.00ns
+:7  %Sv_val_2_V_2_15_load = load i12* %Sv_val_2_V_2_15
+
+ST_2: Sv_val_2_V_2_16_load [1/1] 0.00ns
+:8  %Sv_val_2_V_2_16_load = load i12* %Sv_val_2_V_2_16
+
+ST_2: stg_42 [2/2] 0.00ns
+:9  call fastcc void @pynq_filters_Filter2D(i10* %img_in_data_stream_V_V, i10* %img_out_data_stream_V_V, i12 %Sv_val_2_V_2_1_load, i12 %Sv_val_2_V_2_3_load, i12 %Sv_val_2_V_2_5_load, i12 %Sv_val_2_V_2_7_load, i12 %Sv_val_2_V_2_9_load, i12 %Sv_val_2_V_2_13_load, i12 %Sv_val_2_V_2_14_load, i12 %Sv_val_2_V_2_15_load, i12 %Sv_val_2_V_2_16_load)
+
+
+ <State 3>: 4.11ns
+ST_3: c [1/1] 0.00ns
+.preheader:0  %c = phi i2 [ 0, %.preheader.preheader ], [ %c_1, %_ifconv ]
+
+ST_3: exitcond [1/1] 1.36ns
+.preheader:1  %exitcond = icmp eq i2 %c, -1
+
+ST_3: stg_45 [1/1] 0.00ns
+.preheader:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)
+
+ST_3: c_1 [1/1] 0.80ns
+.preheader:3  %c_1 = add i2 %c, 1
+
+ST_3: stg_47 [1/1] 0.00ns
+.preheader:4  br i1 %exitcond, label %.loopexit, label %_ifconv
+
+ST_3: tmp_3_cast [1/1] 0.00ns
+_ifconv:9  %tmp_3_cast = zext i2 %c to i5
+
+ST_3: tmp_32 [1/1] 1.72ns
+_ifconv:10  %tmp_32 = add i5 %tmp_31, %tmp_3_cast
+
+ST_3: tmp_35_cast [1/1] 0.00ns
+_ifconv:11  %tmp_35_cast = sext i5 %tmp_32 to i64
+
+ST_3: coef_v_addr [1/1] 0.00ns
+_ifconv:12  %coef_v_addr = getelementptr [9 x i11]* @coef_v, i64 0, i64 %tmp_35_cast
+
+ST_3: Sv_val_2_V_0 [2/2] 2.39ns
+_ifconv:13  %Sv_val_2_V_0 = load i11* %coef_v_addr, align 2
+
+ST_3: tmp_4 [1/1] 0.00ns (grouped into LUT with out node tmp_5)
+_ifconv:24  %tmp_4 = or i2 %r, %c
+
+ST_3: tmp_5 [1/1] 1.37ns (out node of the LUT)
+_ifconv:25  %tmp_5 = icmp eq i2 %tmp_4, 0
+
+
+ <State 4>: 8.21ns
+ST_4: Sv_val_2_V_2_1_load_1 [1/1] 0.00ns
+_ifconv:0  %Sv_val_2_V_2_1_load_1 = load i12* %Sv_val_2_V_2_1
+
+ST_4: Sv_val_2_V_2_3_load_1 [1/1] 0.00ns
+_ifconv:1  %Sv_val_2_V_2_3_load_1 = load i12* %Sv_val_2_V_2_3
+
+ST_4: Sv_val_2_V_2_5_load_1 [1/1] 0.00ns
+_ifconv:2  %Sv_val_2_V_2_5_load_1 = load i12* %Sv_val_2_V_2_5
+
+ST_4: Sv_val_2_V_2_7_load_1 [1/1] 0.00ns
+_ifconv:3  %Sv_val_2_V_2_7_load_1 = load i12* %Sv_val_2_V_2_7
+
+ST_4: Sv_val_2_V_2_9_load_1 [1/1] 0.00ns
+_ifconv:4  %Sv_val_2_V_2_9_load_1 = load i12* %Sv_val_2_V_2_9
+
+ST_4: Sv_val_2_V_2_13_load_1 [1/1] 0.00ns
+_ifconv:5  %Sv_val_2_V_2_13_load_1 = load i12* %Sv_val_2_V_2_13
+
+ST_4: Sv_val_2_V_2_14_load_1 [1/1] 0.00ns
+_ifconv:6  %Sv_val_2_V_2_14_load_1 = load i12* %Sv_val_2_V_2_14
+
+ST_4: Sv_val_2_V_2_15_load_1 [1/1] 0.00ns
+_ifconv:7  %Sv_val_2_V_2_15_load_1 = load i12* %Sv_val_2_V_2_15
+
+ST_4: Sv_val_2_V_2_16_load_1 [1/1] 0.00ns
+_ifconv:8  %Sv_val_2_V_2_16_load_1 = load i12* %Sv_val_2_V_2_16
+
+ST_4: Sv_val_2_V_0 [1/2] 2.39ns
+_ifconv:13  %Sv_val_2_V_0 = load i11* %coef_v_addr, align 2
+
+ST_4: Sv_val_2_V_0_cast [1/1] 0.00ns
+_ifconv:14  %Sv_val_2_V_0_cast = sext i11 %Sv_val_2_V_0 to i12
+
+ST_4: sel_tmp3 [1/1] 1.36ns
+_ifconv:15  %sel_tmp3 = icmp ne i2 %c, 0
+
+ST_4: sel_tmp5 [1/1] 1.36ns
+_ifconv:16  %sel_tmp5 = icmp ne i2 %c, 1
+
+ST_4: tmp1 [1/1] 1.37ns
+_ifconv:17  %tmp1 = and i1 %sel_tmp3, %sel_tmp5
+
+ST_4: sel_tmp6 [1/1] 0.00ns (grouped into LUT with out node or_cond6)
+_ifconv:18  %sel_tmp6 = and i1 %tmp1, %sel_tmp
+
+ST_4: sel_tmp9 [1/1] 1.36ns
+_ifconv:19  %sel_tmp9 = icmp eq i2 %c, 1
+
+ST_4: sel_tmp1 [1/1] 1.37ns
+_ifconv:20  %sel_tmp1 = and i1 %sel_tmp, %sel_tmp9
+
+ST_4: sel_tmp4 [1/1] 0.00ns (grouped into LUT with out node or_cond2)
+_ifconv:21  %sel_tmp4 = and i1 %tmp1, %sel_tmp2
+
+ST_4: sel_tmp7 [1/1] 1.37ns
+_ifconv:22  %sel_tmp7 = and i1 %sel_tmp2, %sel_tmp9
+
+ST_4: sel_tmp12 [1/1] 0.00ns (grouped into LUT with out node or_cond4)
+_ifconv:23  %sel_tmp12 = and i1 %sel_tmp11, %sel_tmp9
+
+ST_4: sel_tmp13 [1/1] 1.36ns
+_ifconv:26  %sel_tmp13 = icmp eq i2 %c, 0
+
+ST_4: sel_tmp14 [1/1] 1.37ns
+_ifconv:27  %sel_tmp14 = and i1 %sel_tmp2, %sel_tmp13
+
+ST_4: sel_tmp15 [1/1] 1.37ns
+_ifconv:28  %sel_tmp15 = and i1 %sel_tmp11, %sel_tmp13
+
+ST_4: or_cond [1/1] 1.37ns
+_ifconv:29  %or_cond = or i1 %sel_tmp15, %sel_tmp14
+
+ST_4: or_cond1 [1/1] 0.00ns (grouped into LUT with out node or_cond4)
+_ifconv:30  %or_cond1 = or i1 %tmp_5, %sel_tmp12
+
+ST_4: or_cond2 [1/1] 1.37ns (out node of the LUT)
+_ifconv:31  %or_cond2 = or i1 %sel_tmp7, %sel_tmp4
+
+ST_4: or_cond3 [1/1] 0.00ns (grouped into LUT with out node or_cond6)
+_ifconv:32  %or_cond3 = or i1 %sel_tmp1, %sel_tmp6
+
+ST_4: or_cond4 [1/1] 1.37ns (out node of the LUT)
+_ifconv:33  %or_cond4 = or i1 %or_cond, %or_cond1
+
+ST_4: or_cond5 [1/1] 0.00ns (grouped into LUT with out node or_cond6)
+_ifconv:34  %or_cond5 = or i1 %or_cond2, %or_cond3
+
+ST_4: or_cond6 [1/1] 1.37ns (out node of the LUT)
+_ifconv:35  %or_cond6 = or i1 %or_cond4, %or_cond5
+
+ST_4: Sv_val_2_V_2 [1/1] 1.37ns
+_ifconv:36  %Sv_val_2_V_2 = select i1 %or_cond6, i12 %Sv_val_2_V_2_16_load_1, i12 %Sv_val_2_V_0_cast
+
+ST_4: newSel [1/1] 0.00ns (grouped into LUT with out node newSel1)
+_ifconv:37  %newSel = select i1 %tmp_5, i12 %Sv_val_2_V_2_15_load_1, i12 %Sv_val_2_V_0_cast
+
+ST_4: newSel1 [1/1] 1.37ns (out node of the LUT)
+_ifconv:38  %newSel1 = select i1 %or_cond, i12 %Sv_val_2_V_2_15_load_1, i12 %newSel
+
+ST_4: Sv_val_2_V_2_2 [1/1] 1.37ns (out node of the LUT)
+_ifconv:39  %Sv_val_2_V_2_2 = select i1 %or_cond4, i12 %newSel1, i12 %Sv_val_2_V_2_15_load_1
+
+ST_4: Sv_val_2_V_2_4 [1/1] 1.37ns
+_ifconv:40  %Sv_val_2_V_2_4 = select i1 %sel_tmp15, i12 %Sv_val_2_V_0_cast, i12 %Sv_val_2_V_2_14_load_1
+
+ST_4: newSel3 [1/1] 0.00ns (grouped into LUT with out node newSel4)
+_ifconv:41  %newSel3 = select i1 %sel_tmp7, i12 %Sv_val_2_V_2_13_load_1, i12 %Sv_val_2_V_0_cast
+
+ST_4: newSel4 [1/1] 1.37ns (out node of the LUT)
+_ifconv:42  %newSel4 = select i1 %or_cond2, i12 %newSel3, i12 %Sv_val_2_V_2_13_load_1
+
+ST_4: Sv_val_2_V_2_6 [1/1] 1.37ns (out node of the LUT)
+_ifconv:43  %Sv_val_2_V_2_6 = select i1 %or_cond4, i12 %Sv_val_2_V_2_13_load_1, i12 %newSel4
+
+ST_4: newSel6 [1/1] 0.00ns (grouped into LUT with out node Sv_val_2_V_2_8)
+_ifconv:44  %newSel6 = select i1 %sel_tmp7, i12 %Sv_val_2_V_0_cast, i12 %Sv_val_2_V_2_9_load_1
+
+ST_4: Sv_val_2_V_2_8 [1/1] 1.37ns (out node of the LUT)
+_ifconv:45  %Sv_val_2_V_2_8 = select i1 %or_cond4, i12 %Sv_val_2_V_2_9_load_1, i12 %newSel6
+
+ST_4: Sv_val_2_V_2_20 [1/1] 0.00ns (grouped into LUT with out node Sv_val_2_V_2_21)
+_ifconv:46  %Sv_val_2_V_2_20 = select i1 %sel_tmp14, i12 %Sv_val_2_V_0_cast, i12 %Sv_val_2_V_2_7_load_1
+
+ST_4: Sv_val_2_V_2_21 [1/1] 1.37ns (out node of the LUT)
+_ifconv:47  %Sv_val_2_V_2_21 = select i1 %sel_tmp15, i12 %Sv_val_2_V_2_7_load_1, i12 %Sv_val_2_V_2_20
+
+ST_4: newSel8 [1/1] 0.00ns (grouped into LUT with out node newSel9)
+_ifconv:48  %newSel8 = select i1 %sel_tmp1, i12 %Sv_val_2_V_2_5_load_1, i12 %Sv_val_2_V_0_cast
+
+ST_4: newSel9 [1/1] 1.37ns (out node of the LUT)
+_ifconv:49  %newSel9 = select i1 %or_cond2, i12 %Sv_val_2_V_2_5_load_1, i12 %newSel8
+
+ST_4: newSel2 [1/1] 0.00ns (grouped into LUT with out node Sv_val_2_V_2_22)
+_ifconv:50  %newSel2 = select i1 %or_cond4, i12 %Sv_val_2_V_2_5_load_1, i12 %newSel9
+
+ST_4: Sv_val_2_V_2_22 [1/1] 1.37ns (out node of the LUT)
+_ifconv:51  %Sv_val_2_V_2_22 = select i1 %or_cond6, i12 %newSel2, i12 %Sv_val_2_V_2_5_load_1
+
+ST_4: newSel5 [1/1] 0.00ns (grouped into LUT with out node newSel7)
+_ifconv:52  %newSel5 = select i1 %sel_tmp1, i12 %Sv_val_2_V_0_cast, i12 %Sv_val_2_V_2_3_load_1
+
+ST_4: newSel7 [1/1] 1.37ns (out node of the LUT)
+_ifconv:53  %newSel7 = select i1 %or_cond2, i12 %Sv_val_2_V_2_3_load_1, i12 %newSel5
+
+ST_4: Sv_val_2_V_2_23 [1/1] 1.37ns (out node of the LUT)
+_ifconv:54  %Sv_val_2_V_2_23 = select i1 %or_cond4, i12 %Sv_val_2_V_2_3_load_1, i12 %newSel7
+
+ST_4: newSel10 [1/1] 0.00ns (grouped into LUT with out node Sv_val_2_V_2_24)
+_ifconv:55  %newSel10 = select i1 %tmp_5, i12 %Sv_val_2_V_0_cast, i12 %Sv_val_2_V_2_1_load_1
+
+ST_4: Sv_val_2_V_2_24 [1/1] 1.37ns (out node of the LUT)
+_ifconv:56  %Sv_val_2_V_2_24 = select i1 %or_cond, i12 %Sv_val_2_V_2_1_load_1, i12 %newSel10
+
+ST_4: stg_106 [1/1] 0.00ns
+_ifconv:57  store i12 %Sv_val_2_V_2, i12* %Sv_val_2_V_2_16
+
+ST_4: stg_107 [1/1] 0.00ns
+_ifconv:58  store i12 %Sv_val_2_V_2_2, i12* %Sv_val_2_V_2_15
+
+ST_4: stg_108 [1/1] 0.00ns
+_ifconv:59  store i12 %Sv_val_2_V_2_4, i12* %Sv_val_2_V_2_14
+
+ST_4: stg_109 [1/1] 0.00ns
+_ifconv:60  store i12 %Sv_val_2_V_2_6, i12* %Sv_val_2_V_2_13
+
+ST_4: stg_110 [1/1] 0.00ns
+_ifconv:61  store i12 %Sv_val_2_V_2_8, i12* %Sv_val_2_V_2_9
+
+ST_4: stg_111 [1/1] 0.00ns
+_ifconv:62  store i12 %Sv_val_2_V_2_21, i12* %Sv_val_2_V_2_7
+
+ST_4: stg_112 [1/1] 0.00ns
+_ifconv:63  store i12 %Sv_val_2_V_2_22, i12* %Sv_val_2_V_2_5
+
+ST_4: stg_113 [1/1] 0.00ns
+_ifconv:64  store i12 %Sv_val_2_V_2_23, i12* %Sv_val_2_V_2_3
+
+ST_4: stg_114 [1/1] 0.00ns
+_ifconv:65  store i12 %Sv_val_2_V_2_24, i12* %Sv_val_2_V_2_1
+
+ST_4: stg_115 [1/1] 0.00ns
+_ifconv:66  br label %.preheader
+
+
+ <State 5>: 0.00ns
+ST_5: stg_116 [1/2] 0.00ns
+:9  call fastcc void @pynq_filters_Filter2D(i10* %img_in_data_stream_V_V, i10* %img_out_data_stream_V_V, i12 %Sv_val_2_V_2_1_load, i12 %Sv_val_2_V_2_3_load, i12 %Sv_val_2_V_2_5_load, i12 %Sv_val_2_V_2_7_load, i12 %Sv_val_2_V_2_9_load, i12 %Sv_val_2_V_2_13_load, i12 %Sv_val_2_V_2_14_load, i12 %Sv_val_2_V_2_15_load, i12 %Sv_val_2_V_2_16_load)
+
+ST_5: stg_117 [1/1] 0.00ns
+:10  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

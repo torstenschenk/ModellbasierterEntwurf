@@ -627,28 +627,23 @@ Wie im Abschnitt \textbf{\nameref{PMODE_PORTS}} schon erwähnt wurde,
 
 
 \section{HLS Software Implementierung}
-In dieser Sektion wird eine grundlegende Einführung in die High Level Synthesis erläutet. (HLS)\\
- \textbf{Was bedeutet HLS?}\\
+In diesem Abschnitt wird eine kurze Einführung in die HLS \footnote{High Level Synthesis} gegeben, um sie für Pynq-Z1 zu nutzen.\\
+\textbf{Was bedeutet HLS?}\\
  High Level Synthesis wurde eingeführt, um die Elektronikkenntnisse zu reduzieren, die zum Entwerfen von Hardware erforderlich sind. Dies erleichtert auch den Ablauf des Hardware-Designs, wenn es darum geht, ein bestimmtes Verhaltensmodell zu erreichen.\\
  Unter Verwendung einer Programmiersprache wie C / C ++ implementieren wir das Verhaltensmodell in Hardware. \\
  Das HLS-Tool bildet unser Verhaltensmodell in Hardware ab und generiert den HDL-Code dafür und dann wird synthetisiert und danach im letzten Schritt wird  auf einem FPGA implementiert.
 
-
 Wenn wir mit HLS vertraut sind, fahren wir mit dem Beginn der Schritte fort und erzeugen unseren eigenen \textbf{IP Core}.
-\subsection{Mein eigener IP Core}
-Im ersten Schritt werden wir dies Thema nachvollziehen, dass wie ich meinen eigenen IP Core in HLS  erstellen kann!\\
-
+\subsection{IP Core für Pynq}
+Im ersten Schritt wird das Thema einen eigenen IP Core in HLS behandelt!\\
 
 \textbf{Schritt 1:} \textit{Erstellung eines neuen Projekts}\\
-
 - Öffnen wir Vivado HLS und legen wir ein neues Projekt mit dem eigenen Funktionsnamen z.B. \textbf{„XXXX“} an.\\
-
-- Wählen wir ein Bauteil oder eine Entwicklungsplatine aus (wir verwenden PYNQ-Z1) und beenden wir die Erstellung des neuen Projekts.\\
-
+- Wählen wir ein Bauteil oder eine Entwicklungsplatine aus (wir verwenden PYNQ-Z1) und
+ beenden wir die Erstellung des neuen Projekts.\\
+ - Sollte Pynq-Z1 nicht unter Boards angezeigt werden, kann stattdessen der Typ \textbf{xc7z020clg400-1} in der Partliste ausgewählt werden. Die Pin-Belegung und Boardlayout ist für HLS nicht nötig. 
 - Behalten wir vorerst den Standardzeitraum (10ns) bei. (Wir können ihn später ändern, wenn wir wollen.)\\
-
 - Auf der rechten Seite des Fensters sehen wir den ''Explorer'', wie in der folgenden Abbildung.\\
-
 \begin{figure}[H]
 \centering
 \subfloat{\includegraphics[width=6cm]{PIC/Explorer}}
