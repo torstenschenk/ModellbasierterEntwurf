@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog>
+        <logs message="CRITICAL WARNING: [SIM 211-1] 'csim_design' failed: compilation error(s).&#xD;&#xA;4&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/sobel_split/solution1/csim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/sobel_split/solution1/csim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="sobel_split" solutionName="solution1" date="2020-01-07T01:06:56.300+0100" type="Warning"/>
+        <logs message="CRITICAL WARNING: [SIM 211-1] 'csim_design' failed: compilation error(s).&#xD;&#xA;4&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/sobel_split/solution1/csim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/sobel_split/solution1/csim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="sobel_split" solutionName="solution1" date="2020-01-07T01:05:04.807+0100" type="Warning"/>
+        <logs message="CRITICAL WARNING: [SIM 211-1] 'csim_design' failed: compilation error(s).&#xD;&#xA;4&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/sobel_split/solution1/csim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/sobel_split/solution1/csim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="sobel_split" solutionName="solution1" date="2020-01-07T00:46:55.798+0100" type="Warning"/>
+        <logs message="CRITICAL WARNING: [SIM 211-1] 'csim_design' failed: compilation error(s).&#xD;&#xA;4&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/sobel_split/solution1/csim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/sobel_split/solution1/csim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="sobel_split" solutionName="solution1" date="2020-01-07T00:40:40.774+0100" type="Warning"/>
+      </csimLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

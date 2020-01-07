@@ -1,0 +1,6 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+vhdl xil_defaultlib "add_function.autotb.vhd"
+vhdl xil_defaultlib "add_function.vhd"
+vhdl xil_defaultlib "add_function_control_s_axi.vhd"
+vhdl xil_defaultlib "AESL_axi_slave_control.vhd"
+

@@ -1,0 +1,166 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'split_ip_RGB2Gray'" level="0">
+<item name = "Date">Tue Jan 07 22:24:14 2020
+</item>
+<item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
+<item name = "Project">sobelx_or_y</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.40, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">2080081, 2080081, 2080081, 2080081, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- L_row">2080080, 2080080, 1926, -, -, 1080, no</column>
+<column name=" + L_col">1923, 1923, 5, 1, 1, 1920, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, 2, -, -</column>
+<column name="Expression">-, 1, 0, 33</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, -, -</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 30</column>
+<column name="Register">-, -, 107, 1</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">0, 1, ~0, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="split_ip_mac_muladd_8ns_6ns_16ns_16_1_U12">split_ip_mac_muladd_8ns_6ns_16ns_16_1, i0 + i1 * i2</column>
+<column name="split_ip_mac_muladd_8ns_8ns_16ns_16_1_U13">split_ip_mac_muladd_8ns_8ns_16ns_16_1, i0 + i1 * i2</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="p_Val2_3_fu_164_p2">*, 1, 0, 0, 8, 8</column>
+<column name="col_1_fu_155_p2">+, 0, 0, 11, 11, 1</column>
+<column name="row_1_fu_143_p2">+, 0, 0, 11, 11, 1</column>
+<column name="exitcond2_fu_137_p2">icmp, 0, 0, 4, 11, 11</column>
+<column name="exitcond_fu_149_p2">icmp, 0, 0, 4, 11, 9</column>
+<column name="ap_sig_106">or, 0, 0, 1, 1, 1</column>
+<column name="ap_sig_116">or, 0, 0, 1, 1, 1</column>
+<column name="ap_sig_160">or, 0, 0, 1, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">1, 5, 1, 5</column>
+<column name="ap_reg_ppiten_pp0_it4">1, 2, 1, 2</column>
+<column name="col_reg_126">11, 2, 11, 22</column>
+<column name="img_in_data_stream_0_V_blk_n">1, 2, 1, 2</column>
+<column name="img_in_data_stream_1_V_blk_n">1, 2, 1, 2</column>
+<column name="img_in_data_stream_2_V_blk_n">1, 2, 1, 2</column>
+<column name="img_out_data_stream_0_V_blk_n">1, 2, 1, 2</column>
+<column name="img_out_data_stream_1_V_blk_n">1, 2, 1, 2</column>
+<column name="img_out_data_stream_2_V_blk_n">1, 2, 1, 2</column>
+<column name="row_reg_115">11, 2, 11, 22</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it0">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it1">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it2">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it3">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it4">1, 0, 1, 0</column>
+<column name="ap_reg_ppstg_tmp_6_reg_229_pp0_iter2">8, 0, 8, 0</column>
+<column name="ap_reg_ppstg_tmp_8_reg_219_pp0_iter2">8, 0, 8, 0</column>
+<column name="col_reg_126">11, 0, 11, 0</column>
+<column name="exitcond_reg_210">1, 0, 1, 0</column>
+<column name="gray_reg_239">8, 0, 8, 0</column>
+<column name="p_Val2_3_reg_234">15, 0, 16, 1</column>
+<column name="row_1_reg_205">11, 0, 11, 0</column>
+<column name="row_reg_115">11, 0, 11, 0</column>
+<column name="tmp_6_reg_229">8, 0, 8, 0</column>
+<column name="tmp_8_reg_219">8, 0, 8, 0</column>
+<column name="tmp_9_reg_224">8, 0, 8, 0</column>
+<column name="exitcond_reg_210">0, 1, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, split_ip_RGB2Gray, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, split_ip_RGB2Gray, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, split_ip_RGB2Gray, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, split_ip_RGB2Gray, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, split_ip_RGB2Gray, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, split_ip_RGB2Gray, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, split_ip_RGB2Gray, return value</column>
+<column name="img_in_data_stream_0_V_dout">in, 8, ap_fifo, img_in_data_stream_0_V, pointer</column>
+<column name="img_in_data_stream_0_V_empty_n">in, 1, ap_fifo, img_in_data_stream_0_V, pointer</column>
+<column name="img_in_data_stream_0_V_read">out, 1, ap_fifo, img_in_data_stream_0_V, pointer</column>
+<column name="img_in_data_stream_1_V_dout">in, 8, ap_fifo, img_in_data_stream_1_V, pointer</column>
+<column name="img_in_data_stream_1_V_empty_n">in, 1, ap_fifo, img_in_data_stream_1_V, pointer</column>
+<column name="img_in_data_stream_1_V_read">out, 1, ap_fifo, img_in_data_stream_1_V, pointer</column>
+<column name="img_in_data_stream_2_V_dout">in, 8, ap_fifo, img_in_data_stream_2_V, pointer</column>
+<column name="img_in_data_stream_2_V_empty_n">in, 1, ap_fifo, img_in_data_stream_2_V, pointer</column>
+<column name="img_in_data_stream_2_V_read">out, 1, ap_fifo, img_in_data_stream_2_V, pointer</column>
+<column name="img_out_data_stream_0_V_din">out, 8, ap_fifo, img_out_data_stream_0_V, pointer</column>
+<column name="img_out_data_stream_0_V_full_n">in, 1, ap_fifo, img_out_data_stream_0_V, pointer</column>
+<column name="img_out_data_stream_0_V_write">out, 1, ap_fifo, img_out_data_stream_0_V, pointer</column>
+<column name="img_out_data_stream_1_V_din">out, 8, ap_fifo, img_out_data_stream_1_V, pointer</column>
+<column name="img_out_data_stream_1_V_full_n">in, 1, ap_fifo, img_out_data_stream_1_V, pointer</column>
+<column name="img_out_data_stream_1_V_write">out, 1, ap_fifo, img_out_data_stream_1_V, pointer</column>
+<column name="img_out_data_stream_2_V_din">out, 8, ap_fifo, img_out_data_stream_2_V, pointer</column>
+<column name="img_out_data_stream_2_V_full_n">in, 1, ap_fifo, img_out_data_stream_2_V, pointer</column>
+<column name="img_out_data_stream_2_V_write">out, 1, ap_fifo, img_out_data_stream_2_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

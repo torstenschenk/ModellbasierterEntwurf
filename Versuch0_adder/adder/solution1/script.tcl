@@ -14,5 +14,5 @@ create_clock -period 10 -name default
 #source "./adder/solution1/directives.tcl"
 csim_design
 csynth_design
-cosim_design -rtl vhdl
+cosim_design -rtl vhdl -tool modelsim
 export_design -format ip_catalog

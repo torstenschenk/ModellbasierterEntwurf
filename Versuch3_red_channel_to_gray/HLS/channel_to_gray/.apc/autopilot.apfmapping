@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="example_split.cpp" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch3_red_channel_to_gray\HLS\example_split.cpp"/>
+    <originFiles name="example_split.h" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch3_red_channel_to_gray\HLS\example_split.h"/>
+  </source>
+  <testbench>
+    <originFiles name="test.cpp" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch3_red_channel_to_gray\HLS\test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

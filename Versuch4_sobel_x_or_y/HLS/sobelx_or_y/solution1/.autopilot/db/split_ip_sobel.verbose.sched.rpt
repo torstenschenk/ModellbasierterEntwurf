@@ -1,0 +1,157 @@
+
+
+================================================================
+== Vivado HLS Report for 'split_ip_sobel'
+================================================================
+* Date:           Tue Jan 07 22:24:12 2020
+
+* Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
+* Project:        sobelx_or_y
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     11.00|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  2087183|  2087183|  2087183|  2087183|   none  |
+    +---------+---------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 2
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+* FSM state operations: 
+
+ <State 1>: 6.37ns
+ST_1: stg_3 [1/1] 0.00ns
+entry:0  call void (...)* @_ssdm_op_SpecInterface(i8* %img_out_data_stream_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_1: stg_4 [1/1] 0.00ns
+entry:1  call void (...)* @_ssdm_op_SpecInterface(i8* %img_out_data_stream_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_1: stg_5 [1/1] 0.00ns
+entry:2  call void (...)* @_ssdm_op_SpecInterface(i8* %img_out_data_stream_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_1: stg_6 [1/1] 0.00ns
+entry:3  call void (...)* @_ssdm_op_SpecInterface(i8* %img_in_data_stream_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_1: stg_7 [1/1] 0.00ns
+entry:4  call void (...)* @_ssdm_op_SpecInterface(i8* %img_in_data_stream_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_1: stg_8 [1/1] 0.00ns
+entry:5  call void (...)* @_ssdm_op_SpecInterface(i8* %img_in_data_stream_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_1: stg_9 [1/1] 0.00ns
+entry:6  call void (...)* @_ssdm_op_SpecInterface(i8* %direction, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_1: direction_read [1/1] 4.38ns
+entry:7  %direction_read = call i8 @_ssdm_op_Read.ap_fifo.i8P(i8* %direction)
+
+ST_1: tmp_i [1/1] 2.00ns
+entry:8  %tmp_i = icmp eq i8 %direction_read, 1
+
+ST_1: stg_12 [1/1] 0.00ns
+entry:9  br i1 %tmp_i, label %0, label %1
+
+ST_1: stg_13 [2/2] 1.04ns
+:0  call fastcc void @split_ip_Filter2D(i8* %img_in_data_stream_0_V, i8* %img_in_data_stream_1_V, i8* %img_in_data_stream_2_V, i8* %img_out_data_stream_0_V, i8* %img_out_data_stream_1_V, i8* %img_out_data_stream_2_V, i3 -2, i2 -1, i2 0, i3 0, i2 1, i4 2)
+
+ST_1: stg_14 [2/2] 1.04ns
+:0  call fastcc void @split_ip_Filter2D(i8* %img_in_data_stream_0_V, i8* %img_in_data_stream_1_V, i8* %img_in_data_stream_2_V, i8* %img_out_data_stream_0_V, i8* %img_out_data_stream_1_V, i8* %img_out_data_stream_2_V, i3 0, i2 1, i2 -2, i3 2, i2 -1, i4 0)
+
+
+ <State 2>: 0.00ns
+ST_2: stg_15 [1/2] 0.00ns
+:0  call fastcc void @split_ip_Filter2D(i8* %img_in_data_stream_0_V, i8* %img_in_data_stream_1_V, i8* %img_in_data_stream_2_V, i8* %img_out_data_stream_0_V, i8* %img_out_data_stream_1_V, i8* %img_out_data_stream_2_V, i3 -2, i2 -1, i2 0, i3 0, i2 1, i4 2)
+
+ST_2: stg_16 [1/1] 0.00ns
+:1  br label %.exit
+
+ST_2: stg_17 [1/2] 0.00ns
+:0  call fastcc void @split_ip_Filter2D(i8* %img_in_data_stream_0_V, i8* %img_in_data_stream_1_V, i8* %img_in_data_stream_2_V, i8* %img_out_data_stream_0_V, i8* %img_out_data_stream_1_V, i8* %img_out_data_stream_2_V, i3 0, i2 1, i2 -2, i3 2, i2 -1, i4 0)
+
+ST_2: stg_18 [1/1] 0.00ns
+:1  br label %.exit
+
+ST_2: stg_19 [1/1] 0.00ns
+.exit:0  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

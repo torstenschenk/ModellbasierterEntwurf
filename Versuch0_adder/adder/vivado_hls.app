@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="add_function" name="adder">
+<project xmlns="com.autoesl.autopilot.project" name="adder" top="add_function">
     <files>
         <file name="../../test.cpp" sc="0" tb="1" cflags=""/>
         <file name="add_example.cpp" sc="0" tb="false" cflags=""/>
@@ -10,7 +10,8 @@
         <SimFlow name="csim" csimMode="0" lastCsimMode="0"/>
     </Simulation>
     <solutions xmlns="">
-        <solution name="solution1" status="active"/>
+        <solution name="solution1" status="inactive"/>
+        <solution name="solution2" status="active"/>
     </solutions>
 </project>
 
