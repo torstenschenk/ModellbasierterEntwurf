@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="moments.cpp" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch6_moments_calculate\HLS\moments.cpp"/>
+    <originFiles name="moments.h" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch6_moments_calculate\HLS\moments.h"/>
+  </source>
+  <testbench>
+    <originFiles name="test.cpp" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch6_moments_calculate\HLS\test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
