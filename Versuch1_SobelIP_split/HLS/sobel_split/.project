@@ -29,52 +29,47 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/sobel_split/.apc/.src</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch1_SobelIP_split/HLS/sobel_split/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/sobel_split/.apc/.tb</location>
-		</link>
-		<link>
-			<name>.reference/hls_video_imgproc.h</name>
-			<type>1</type>
-			<location>C:/Xilinx/Vivado_HLS/2016.2/include/hls/hls_video_imgproc.h</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch1_SobelIP_split/HLS/sobel_split/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/sobel_split/solution1/.tcls</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch1_SobelIP_split/HLS/sobel_split/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/HLS_filter.cpp</name>
 			<type>1</type>
-			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/HLS_filter.cpp</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch1_SobelIP_split/HLS/HLS_filter.cpp</location>
 		</link>
 		<link>
 			<name>source/HLS_filter.h</name>
 			<type>1</type>
-			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/HLS_filter.h</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch1_SobelIP_split/HLS/HLS_filter.h</location>
 		</link>
 		<link>
 			<name>testbench/test.cpp</name>
 			<type>1</type>
-			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/test.cpp</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch1_SobelIP_split/HLS/test.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/sobel_split/solution1/solution1.directive</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch1_SobelIP_split/HLS/sobel_split/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/sobel_split/solution1/directives.tcl</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch1_SobelIP_split/HLS/sobel_split/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_SobelIP_split/HLS/sobel_split/solution1/script.tcl</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch1_SobelIP_split/HLS/sobel_split/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

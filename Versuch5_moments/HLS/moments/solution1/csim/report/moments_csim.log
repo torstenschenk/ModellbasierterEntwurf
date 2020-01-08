@@ -1,0 +1,5 @@
+   Compiling ../../../../test.cpp in debug mode
+   Compiling ../../../../moments.cpp in debug mode
+   Generating csim.exe
+Result: 0 4095 2.123444
+INFO: [SIM 1] CSim done with 0 errors.

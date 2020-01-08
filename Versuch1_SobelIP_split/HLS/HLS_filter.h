@@ -20,7 +20,7 @@ typedef ap_fixed<10,2, AP_RND, AP_SAT> coeff_type;
 
 
 typedef ap_int<16>           INDEX_T;
-typedef ap_fixed<10,2, AP_RND, AP_SAT> coeff_type;
+// typedef ap_fixed<10,2, AP_RND, AP_SAT> coeff_type;
 
 
 #define INPUT_IMAGE		"test_1080p.bmp"

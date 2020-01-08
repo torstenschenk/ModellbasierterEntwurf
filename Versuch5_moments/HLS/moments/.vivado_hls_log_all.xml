@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog>
+        <logs message="CRITICAL WARNING: [SIM 211-1] 'csim_design' failed: compilation error(s).&#xD;&#xA;4&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_moments/HLS/moments/solution1/csim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_moments/HLS/moments/solution1/csim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="moments" solutionName="solution1" date="2020-01-08T02:10:20.637+0100" type="Warning"/>
+        <logs message="CRITICAL WARNING: [SIM 211-1] 'csim_design' failed: compilation error(s).&#xD;&#xA;4&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_moments/HLS/moments/solution1/csim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch5_moments/HLS/moments/solution1/csim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="moments" solutionName="solution1" date="2020-01-08T01:58:39.765+0100" type="Warning"/>
+      </csimLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="filter" name="sobel_split">
+<project xmlns="com.autoesl.autopilot.project" name="sobel_split" top="filter">
     <files>
         <file name="HLS_filter.cpp" sc="0" tb="false" cflags=""/>
         <file name="HLS_filter.h" sc="0" tb="false" cflags=""/>
