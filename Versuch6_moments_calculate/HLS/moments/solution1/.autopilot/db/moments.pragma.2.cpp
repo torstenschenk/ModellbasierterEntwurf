@@ -57594,21 +57594,34 @@ _ssdm_op_SpecDataflowPipeline(-1, "");
 typedef hls::stream< ap_axiu<24,1,1,1> > AXI_STREAM;
 typedef hls::Mat<1080,1920, (((0) & ((1 << 11) - 1)) + (((3)-1) << 11))> RGB_IMAGE;
 
-typedef hls::Scalar<1, unsigned char> GRAY_PIX;
+//typedef hls::Scalar<1, unsigned char> GRAY_PIX;
 typedef hls::Scalar<3, unsigned char> RGB_PIX;
 
 // output
-typedef ap_uint<12> apint12;
-typedef ap_fixed<15,3, SC_RND, SC_SAT> apfloat; // three bits above decimal point
+typedef ap_uint<21> apuint;
+typedef ap_fixed<43,1, SC_RND, SC_SAT> apfloat; // three bits above decimal point
 
 // internal variables
-typedef ap_uint<21> m00;
+typedef ap_uint<21> apm00;
+typedef ap_uint<32> apm01;
+typedef ap_uint<32> apm10;
+
+typedef ap_uint<42> apm11;
+typedef ap_uint<42> apm02;
+typedef ap_uint<42> apm20;
+
+// used to mult avg values: x*y x*x y*y
+typedef ap_uint<42> ap_mult; // for apuint*apuint
+
+typedef ap_uint<43> apmu; // mu11, mu02, mu20
+
+typedef ap_uint<86> apuint86; // to store apmu*apmu
+typedef ap_int<45> apint45; // to store m20-m02
 
 
 
 
-
-void moments(AXI_STREAM& input, AXI_STREAM& output, int* x, int* y, float* angle);
+void moments(AXI_STREAM& input, AXI_STREAM& output, int* x, int* y, double* angle);
 # 2 "moments.cpp" 2
 
 /*
@@ -57621,52 +57634,79 @@ void moments(AXI_STREAM& input, AXI_STREAM& output, int* x, int* y, float* angle
 void calc(
   RGB_IMAGE& img_in,
   RGB_IMAGE& img_out,
-  apint12& xi,
-  apint12& yi,
-  apfloat& anglei) {
+  apuint& x_center,
+  apuint& y_center,
+  apuint86& mult86,
+  apint45& sub45) {
 
  RGB_PIX pin;
  RGB_PIX pout;
 
+    apm00 m00 = 0;
+    apm01 m01 = 0;
+    apm10 m10 = 0;
+    apm11 m11 = 0;
+    apm02 m02 = 0;
+    apm20 m20 = 0;
+
+    ap_mult xy = 0;
+    ap_mult xx = 0;
+    ap_mult yy = 0;
+
+    apmu mu11 = 0;
+    apmu mu02 = 0;
+    apmu mu20 = 0;
+
 L_row: for(int row = 0; row < 1080; row++) {
-_ssdm_op_SpecLoopTripCount(1, 1080, 540, "");
+_ssdm_op_SpecLoopTripCount(1, 540, 270, "");
+//#pragma HLS UNROLL
+//#pragma HLS PIPELINE
 
  L_col: for(int col = 0; col < 1920; col++) {
-_ssdm_op_SpecLoopTripCount(1, 1920, 960, "");
-_ssdm_SpecLoopFlatten(1, "");
-_ssdm_op_SpecPipeline(1, 1, 1, 0, "");
+//#pragma HLS LOOP_TRIPCOUNT min=860 max=1920
+//#pragma HLS loop_flatten off
 
- img_in >> pin;
+//#pragma HLS PIPELINE II = 1
 
-     if(col <= 500){
-      pout.val[0] = pin.val[0];
-      pout.val[1] = pin.val[1];
-      pout.val[2] = pin.val[2];
+           img_in >> pin;
+
+           if (pin.val[0]>128 || pin.val[1]>128 || pin.val[2]>128) {
+      m00++;
+      m01 += col;
+      m10 += row;
+      m11 += row * col;
+      m02 += col * col;
+      m20 += row * row;
+
+      pout.val[0] = 255;
+      pout.val[1] = 255;
+      pout.val[2] = 255;
+      //pout.val[2] = pin.val[2];
      }
      else{
-      pout.val[0] = 0; //pin.val[0];
-      pout.val[1] = 0; //pin.val[1];
-      pout.val[2] = pin.val[2];
+      pout.val[0] = 0;
+      pout.val[1] = 0;
+      pout.val[2] = 0;
      }
 
            img_out << pout;
         }
     }
- //xi = 4095; // 2047
- //yi = 4096; // 0
- //anglei = 3456;
- //anglei = 1023;
- //anglei = 4095; // returns -1
- //anglei = 4094; // returns -2
- //anglei = 4085; // returns -11
- //anglei = 4000; // returns -90
 
- xi = 0;
- yi = 4095;
- anglei = 2.1234567;
+ x_center = m10/m00; // is inside image
+ y_center = m01/m00; // is inside image
+ xy = x_center * y_center;
+ xx = x_center * x_center;
+ yy = y_center * y_center;
+ mu11 = m11/m00 - xy; // can have one more digit after '+'
+ mu02 = m02/m00 - yy;
+ mu20 = m20/m00 - xx;
+
+ mult86 = mu11 * mu11;
+ sub45 = mu20 - mu02;
 }
 
-void moments(AXI_STREAM& in_data, AXI_STREAM& out_data, int* x, int* y, float* angle) {
+void moments(AXI_STREAM& in_data, AXI_STREAM& out_data, int* x, int* y, double* angle) {
 
 _ssdm_op_SpecInterface(&in_data, "axis", 1, 1, 0, 0, "", "", "", 0, 0, 0, 0, "");
 _ssdm_op_SpecInterface(&out_data, "axis", 1, 1, 0, 0, "", "", "", 0, 0, 0, 0, "");
@@ -57685,15 +57725,21 @@ _ssdm_op_SpecInterface(angle, "s_axilite", 0, 0, 0, 0, "control", "", "", 0, 0, 
  hls::AXIvideo2Mat(in_data, img_0);
 
  //call the calc function
- apint12 xi = 0;
- apint12 yi = 0;
- apfloat ai = 0.0;
+ apuint x_center = 0;
+ apuint y_center = 0;
+ apuint86 mult86 = 0;
+ apint45 sub45 = 0;
+ double multi = 0.0;
+ double subtr = 0.0;
 
- calc(img_0, img_1, xi, yi, ai);
+ calc(img_0, img_1, x_center, y_center, mult86, sub45);
 
- *x = xi.to_int();
- *y = yi.to_int();
- *angle = ai.to_float();
+ multi = (double)mult86;
+ subtr = (double)sub45;
+
+ *x = x_center.to_int();
+ *y = y_center.to_int();
+ *angle = 0.5*hls::atan2(multi,subtr);
 
  //Convert the mat to Axi video stream
  hls::Mat2AXIvideo(img_1, out_data);

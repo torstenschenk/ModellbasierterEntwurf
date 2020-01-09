@@ -116,13 +116,14 @@ u32 XMoments_Get_y_vld(XMoments *InstancePtr) {
     return Data & 0x1;
 }
 
-u32 XMoments_Get_angle(XMoments *InstancePtr) {
-    u32 Data;
+u64 XMoments_Get_angle(XMoments *InstancePtr) {
+    u64 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
     Data = XMoments_ReadReg(InstancePtr->Control_BaseAddress, XMOMENTS_CONTROL_ADDR_ANGLE_DATA);
+    Data += (u64)XMoments_ReadReg(InstancePtr->Control_BaseAddress, XMOMENTS_CONTROL_ADDR_ANGLE_DATA + 4) << 32;
     return Data;
 }
 

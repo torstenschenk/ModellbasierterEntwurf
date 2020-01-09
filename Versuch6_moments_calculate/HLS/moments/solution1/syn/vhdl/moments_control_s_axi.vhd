@@ -45,7 +45,7 @@ port (
     x_ap_vld              :in   STD_LOGIC;
     y                     :in   STD_LOGIC_VECTOR(31 downto 0);
     y_ap_vld              :in   STD_LOGIC;
-    angle                 :in   STD_LOGIC_VECTOR(31 downto 0);
+    angle                 :in   STD_LOGIC_VECTOR(63 downto 0);
     angle_ap_vld          :in   STD_LOGIC
 );
 end entity moments_control_s_axi;
@@ -81,7 +81,9 @@ end entity moments_control_s_axi;
 --        others - reserved
 -- 0x20 : Data signal of angle
 --        bit 31~0 - angle[31:0] (Read)
--- 0x24 : Control signal of angle
+-- 0x24 : Data signal of angle
+--        bit 31~0 - angle[63:32] (Read)
+-- 0x28 : Control signal of angle
 --        bit 0  - angle_ap_vld (Read/COR)
 --        others - reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
@@ -98,7 +100,8 @@ architecture behave of moments_control_s_axi is
     constant ADDR_Y_DATA_0     : INTEGER := 16#18#;
     constant ADDR_Y_CTRL       : INTEGER := 16#1c#;
     constant ADDR_ANGLE_DATA_0 : INTEGER := 16#20#;
-    constant ADDR_ANGLE_CTRL   : INTEGER := 16#24#;
+    constant ADDR_ANGLE_DATA_1 : INTEGER := 16#24#;
+    constant ADDR_ANGLE_CTRL   : INTEGER := 16#28#;
     constant ADDR_BITS         : INTEGER := 6;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
@@ -125,7 +128,7 @@ architecture behave of moments_control_s_axi is
     signal int_x_ap_vld        : STD_LOGIC;
     signal int_y               : UNSIGNED(31 downto 0);
     signal int_y_ap_vld        : STD_LOGIC;
-    signal int_angle           : UNSIGNED(31 downto 0);
+    signal int_angle           : UNSIGNED(63 downto 0);
     signal int_angle_ap_vld    : STD_LOGIC;
 
 
@@ -258,6 +261,8 @@ begin
                         rdata_data <= (0 => int_y_ap_vld, others => '0');
                     when ADDR_ANGLE_DATA_0 =>
                         rdata_data <= RESIZE(int_angle(31 downto 0), 32);
+                    when ADDR_ANGLE_DATA_1 =>
+                        rdata_data <= RESIZE(int_angle(63 downto 32), 32);
                     when ADDR_ANGLE_CTRL =>
                         rdata_data <= (0 => int_angle_ap_vld, others => '0');
                     when others =>

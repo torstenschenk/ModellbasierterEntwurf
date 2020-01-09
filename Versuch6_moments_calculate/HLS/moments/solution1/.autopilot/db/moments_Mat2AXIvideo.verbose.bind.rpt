@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'moments_Mat2AXIvideo'
 ================================================================
-* Date:           Wed Jan 08 21:41:50 2020
+* Date:           Thu Jan 09 04:42:09 2020
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        moments
@@ -172,38 +172,38 @@ operator>>.exit:0  %tmp_user_V_load = load i1* %tmp_user_V
 ST_4: stg_29 [1/1] 0.00ns
 operator>>.exit:1  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str1817) nounwind
 
-ST_4: tmp_1 [1/1] 0.00ns
-operator>>.exit:2  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str1817)
+ST_4: tmp_23 [1/1] 0.00ns
+operator>>.exit:2  %tmp_23 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str1817)
 
 ST_4: stg_31 [1/1] 0.00ns
 operator>>.exit:3  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1806) nounwind
 
-ST_4: tmp_3 [1/1] 0.00ns
-operator>>.exit:5  %tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str1827)
+ST_4: tmp_24 [1/1] 0.00ns
+operator>>.exit:5  %tmp_24 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str1827)
 
 ST_4: stg_33 [1/1] 0.00ns
 operator>>.exit:6  call void (...)* @_ssdm_op_SpecProtocol(i32 0, [1 x i8]* @p_str1806) nounwind
 
-ST_4: tmp_8 [1/1] 4.38ns
-operator>>.exit:7  %tmp_8 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %img_data_stream_0_V)
+ST_4: tmp_54 [1/1] 4.38ns
+operator>>.exit:7  %tmp_54 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %img_data_stream_0_V)
 
-ST_4: tmp_9 [1/1] 4.38ns
-operator>>.exit:8  %tmp_9 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %img_data_stream_1_V)
+ST_4: tmp_55 [1/1] 4.38ns
+operator>>.exit:8  %tmp_55 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %img_data_stream_1_V)
 
-ST_4: tmp_7 [1/1] 4.38ns
-operator>>.exit:9  %tmp_7 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %img_data_stream_2_V)
+ST_4: tmp_53 [1/1] 4.38ns
+operator>>.exit:9  %tmp_53 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %img_data_stream_2_V)
 
 ST_4: empty [1/1] 0.00ns
-operator>>.exit:10  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str1827, i32 %tmp_3)
+operator>>.exit:10  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str1827, i32 %tmp_24)
 
 ST_4: tmp_data_V [1/1] 0.00ns
-operator>>.exit:11  %tmp_data_V = call i24 @_ssdm_op_BitConcatenate.i24.i8.i8.i8(i8 %tmp_7, i8 %tmp_9, i8 %tmp_8)
+operator>>.exit:11  %tmp_data_V = call i24 @_ssdm_op_BitConcatenate.i24.i8.i8.i8(i8 %tmp_53, i8 %tmp_55, i8 %tmp_54)
 
 ST_4: stg_39 [1/1] 0.00ns
 operator>>.exit:12  call void @_ssdm_op_Write.axis.volatile.i24P.i3P.i3P.i1P.i1P.i1P.i1P(i24* %AXI_video_strm_V_data_V, i3* %AXI_video_strm_V_keep_V, i3* %AXI_video_strm_V_strb_V, i1* %AXI_video_strm_V_user_V, i1* %AXI_video_strm_V_last_V, i1* %AXI_video_strm_V_id_V, i1* %AXI_video_strm_V_dest_V, i24 %tmp_data_V, i3 -1, i3 undef, i1 %tmp_user_V_load, i1 %axi_last_V, i1 undef, i1 undef)
 
-ST_4: empty_30 [1/1] 0.00ns
-operator>>.exit:13  %empty_30 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str1817, i32 %tmp_1)
+ST_4: empty_82 [1/1] 0.00ns
+operator>>.exit:13  %empty_82 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str1817, i32 %tmp_23)
 
 ST_4: stg_41 [1/1] 1.57ns
 operator>>.exit:14  store i1 false, i1* %tmp_user_V
@@ -213,8 +213,8 @@ operator>>.exit:15  br label %2
 
 
  <State 5>: 0.00ns
-ST_5: empty_31 [1/1] 0.00ns
-:0  %empty_31 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str1816, i32 %tmp)
+ST_5: empty_83 [1/1] 0.00ns
+:0  %empty_83 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str1816, i32 %tmp)
 
 ST_5: stg_44 [1/1] 0.00ns
 :1  br label %0
@@ -273,20 +273,20 @@ stg_26          (br               ) [ 000000]
 axi_last_V      (icmp             ) [ 000110]
 tmp_user_V_load (load             ) [ 000000]
 stg_29          (specloopname     ) [ 000000]
-tmp_1           (specregionbegin  ) [ 000000]
+tmp_23          (specregionbegin  ) [ 000000]
 stg_31          (specpipeline     ) [ 000000]
-tmp_3           (specregionbegin  ) [ 000000]
+tmp_24          (specregionbegin  ) [ 000000]
 stg_33          (specprotocol     ) [ 000000]
-tmp_8           (read             ) [ 000000]
-tmp_9           (read             ) [ 000000]
-tmp_7           (read             ) [ 000000]
+tmp_54          (read             ) [ 000000]
+tmp_55          (read             ) [ 000000]
+tmp_53          (read             ) [ 000000]
 empty           (specregionend    ) [ 000000]
 tmp_data_V      (bitconcatenate   ) [ 000000]
 stg_39          (write            ) [ 000000]
-empty_30        (specregionend    ) [ 000000]
+empty_82        (specregionend    ) [ 000000]
 stg_41          (store            ) [ 000000]
 stg_42          (br               ) [ 001111]
-empty_31        (specregionend    ) [ 000000]
+empty_83        (specregionend    ) [ 000000]
 stg_44          (br               ) [ 011111]
 </LifeTime>
 
@@ -691,7 +691,7 @@ stg_44          (br               ) [ 011111]
 </bind>
 </comp>
 
-<comp id="90" class="1004" name="tmp_8_read_fu_90">
+<comp id="90" class="1004" name="tmp_54_read_fu_90">
 <pin_list>
 <pin id="91" dir="0" index="0" bw="8" slack="0"/>
 <pin id="92" dir="0" index="1" bw="8" slack="0"/>
@@ -699,11 +699,11 @@ stg_44          (br               ) [ 011111]
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="tmp_8/4 "/>
+<opset="tmp_54/4 "/>
 </bind>
 </comp>
 
-<comp id="96" class="1004" name="tmp_9_read_fu_96">
+<comp id="96" class="1004" name="tmp_55_read_fu_96">
 <pin_list>
 <pin id="97" dir="0" index="0" bw="8" slack="0"/>
 <pin id="98" dir="0" index="1" bw="8" slack="0"/>
@@ -711,11 +711,11 @@ stg_44          (br               ) [ 011111]
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="tmp_9/4 "/>
+<opset="tmp_55/4 "/>
 </bind>
 </comp>
 
-<comp id="102" class="1004" name="tmp_7_read_fu_102">
+<comp id="102" class="1004" name="tmp_53_read_fu_102">
 <pin_list>
 <pin id="103" dir="0" index="0" bw="8" slack="0"/>
 <pin id="104" dir="0" index="1" bw="8" slack="0"/>
@@ -723,7 +723,7 @@ stg_44          (br               ) [ 011111]
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="tmp_7/4 "/>
+<opset="tmp_53/4 "/>
 </bind>
 </comp>
 
@@ -1111,7 +1111,7 @@ stg_44          (br               ) [ 011111]
 	State 4
 		empty : 1
 		stg_39 : 1
-		empty_30 : 1
+		empty_82 : 1
 	State 5
 
 
@@ -1130,9 +1130,9 @@ stg_44          (br               ) [ 011111]
 |   icmp   |   exitcond2_fu_176  |    0    |    4    |
 |          |  axi_last_V_fu_188  |    0    |    4    |
 |----------|---------------------|---------|---------|
-|          |   tmp_8_read_fu_90  |    0    |    0    |
-|   read   |   tmp_9_read_fu_96  |    0    |    0    |
-|          |  tmp_7_read_fu_102  |    0    |    0    |
+|          |  tmp_54_read_fu_90  |    0    |    0    |
+|   read   |  tmp_55_read_fu_96  |    0    |    0    |
+|          |  tmp_53_read_fu_102 |    0    |    0    |
 |----------|---------------------|---------|---------|
 |   write  | stg_39_write_fu_108 |    0    |    0    |
 |----------|---------------------|---------|---------|

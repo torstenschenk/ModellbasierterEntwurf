@@ -91,7 +91,7 @@ u32 XMoments_Get_x(XMoments *InstancePtr);
 u32 XMoments_Get_x_vld(XMoments *InstancePtr);
 u32 XMoments_Get_y(XMoments *InstancePtr);
 u32 XMoments_Get_y_vld(XMoments *InstancePtr);
-u32 XMoments_Get_angle(XMoments *InstancePtr);
+u64 XMoments_Get_angle(XMoments *InstancePtr);
 u32 XMoments_Get_angle_vld(XMoments *InstancePtr);
 
 void XMoments_InterruptGlobalEnable(XMoments *InstancePtr);

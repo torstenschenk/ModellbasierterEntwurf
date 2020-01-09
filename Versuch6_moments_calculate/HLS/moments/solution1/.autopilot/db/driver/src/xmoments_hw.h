@@ -36,7 +36,9 @@
 //        others - reserved
 // 0x20 : Data signal of angle
 //        bit 31~0 - angle[31:0] (Read)
-// 0x24 : Control signal of angle
+// 0x24 : Data signal of angle
+//        bit 31~0 - angle[63:32] (Read)
+// 0x28 : Control signal of angle
 //        bit 0  - angle_ap_vld (Read/COR)
 //        others - reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
@@ -52,6 +54,6 @@
 #define XMOMENTS_CONTROL_BITS_Y_DATA     32
 #define XMOMENTS_CONTROL_ADDR_Y_CTRL     0x1c
 #define XMOMENTS_CONTROL_ADDR_ANGLE_DATA 0x20
-#define XMOMENTS_CONTROL_BITS_ANGLE_DATA 32
-#define XMOMENTS_CONTROL_ADDR_ANGLE_CTRL 0x24
+#define XMOMENTS_CONTROL_BITS_ANGLE_DATA 64
+#define XMOMENTS_CONTROL_ADDR_ANGLE_CTRL 0x28
 

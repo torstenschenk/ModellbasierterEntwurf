@@ -42,7 +42,7 @@ module moments_control_s_axi
     input  wire                          x_ap_vld,
     input  wire [31:0]                   y,
     input  wire                          y_ap_vld,
-    input  wire [31:0]                   angle,
+    input  wire [63:0]                   angle,
     input  wire                          angle_ap_vld
 );
 //------------------------Address Info-------------------
@@ -76,7 +76,9 @@ module moments_control_s_axi
 //        others - reserved
 // 0x20 : Data signal of angle
 //        bit 31~0 - angle[31:0] (Read)
-// 0x24 : Control signal of angle
+// 0x24 : Data signal of angle
+//        bit 31~0 - angle[63:32] (Read)
+// 0x28 : Control signal of angle
 //        bit 0  - angle_ap_vld (Read/COR)
 //        others - reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
@@ -92,7 +94,8 @@ localparam
     ADDR_Y_DATA_0     = 6'h18,
     ADDR_Y_CTRL       = 6'h1c,
     ADDR_ANGLE_DATA_0 = 6'h20,
-    ADDR_ANGLE_CTRL   = 6'h24,
+    ADDR_ANGLE_DATA_1 = 6'h24,
+    ADDR_ANGLE_CTRL   = 6'h28,
     WRIDLE            = 2'd0,
     WRDATA            = 2'd1,
     WRRESP            = 2'd2,
@@ -125,7 +128,7 @@ localparam
     reg                           int_x_ap_vld;
     reg  [31:0]                   int_y;
     reg                           int_y_ap_vld;
-    reg  [31:0]                   int_angle;
+    reg  [63:0]                   int_angle;
     reg                           int_angle_ap_vld;
 
 //------------------------Instantiation------------------
@@ -248,6 +251,9 @@ always @(posedge ACLK) begin
                 end
                 ADDR_ANGLE_DATA_0: begin
                     rdata <= int_angle[31:0];
+                end
+                ADDR_ANGLE_DATA_1: begin
+                    rdata <= int_angle[63:32];
                 end
                 ADDR_ANGLE_CTRL: begin
                     rdata[0] <= int_angle_ap_vld;

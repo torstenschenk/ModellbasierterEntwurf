@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'moments'" level="0">
-<item name = "Date">Wed Jan 08 21:41:52 2020
+<item name = "Date">Thu Jan 09 04:42:16 2020
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">moments</item>
@@ -15,28 +15,28 @@
 <section name = "" level="1">
 <item name = "Target clock period (ns)">10.00</item>
 <item name = "Clock uncertainty (ns)">1.25</item>
-<item name = "Estimated clock period (ns)">5.75</item>
+<item name = "Estimated clock period (ns)">9.32</item>
 </section>
 </item>
 <item name = "Latency (clock cycles)">
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">6232689, 6232689, 6232690, 6232690, none</column>
+<column name="">8304200, 8304200, 8304201, 8304201, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_moments_AXIvideo2Mat_fu_233">moments_AXIvideo2Mat, 2077923, 2077923, 2077923, 2077923, none</column>
-<column name="grp_moments_Mat2AXIvideo_fu_254">moments_Mat2AXIvideo, 2076841, 2076841, 2076841, 2076841, none</column>
+<column name="grp_moments_atan2_cordic_double_s_fu_139">moments_atan2_cordic_double_s, 1, 282, 1, 282, none</column>
+<column name="grp_moments_calc_fu_147">moments_calc, 4149417, 4149417, 4149417, 4149417, none</column>
+<column name="grp_moments_AXIvideo2Mat_fu_157">moments_AXIvideo2Mat, 2077923, 2077923, 2077923, 2077923, none</column>
+<column name="grp_moments_Mat2AXIvideo_fu_178">moments_Mat2AXIvideo, 2076841, 2076841, 2076841, 2076841, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- L_row">2077920, 2077920, 1924, -, -, 1080, no</column>
-<column name=" + L_col">1921, 1921, 3, 1, 1, 1920, yes</column>
 </table>
 </item>
 </section>
@@ -49,23 +49,28 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 68</column>
+<column name="Expression">-, -, 0, 16</column>
 <column name="FIFO">0, -, 30, 120</column>
-<column name="Instance">0, -, 388, 513</column>
+<column name="Instance">4, 31, 9888, 16293</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 74</column>
-<column name="Register">-, -, 170, -</column>
+<column name="Multiplexer">-, -, -, 71</column>
+<column name="Register">-, -, 528, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">0, 0, ~0, 1</specialColumn>
+<specialColumn name="Utilization (%)">1, 14, 9, 31</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="grp_moments_AXIvideo2Mat_fu_233">moments_AXIvideo2Mat, 0, 0, 195, 218</column>
-<column name="grp_moments_Mat2AXIvideo_fu_254">moments_Mat2AXIvideo, 0, 0, 43, 63</column>
-<column name="moments_control_s_axi_U">moments_control_s_axi, 0, 0, 150, 232</column>
+<column name="grp_moments_AXIvideo2Mat_fu_157">moments_AXIvideo2Mat, 0, 0, 195, 218</column>
+<column name="grp_moments_Mat2AXIvideo_fu_178">moments_Mat2AXIvideo, 0, 0, 43, 63</column>
+<column name="grp_moments_atan2_cordic_double_s_fu_139">moments_atan2_cordic_double_s, 4, 3, 5869, 10883</column>
+<column name="grp_moments_calc_fu_147">moments_calc, 0, 17, 2458, 2965</column>
+<column name="moments_control_s_axi_U">moments_control_s_axi, 0, 0, 182, 296</column>
+<column name="moments_dmul_64ns_64ns_64_6_max_dsp_U45">moments_dmul_64ns_64ns_64_6_max_dsp, 0, 11, 317, 578</column>
+<column name="moments_sitodp_64s_64_6_U47">moments_sitodp_64s_64_6, 0, 0, 412, 645</column>
+<column name="moments_uitodp_64ns_64_6_U46">moments_uitodp_64ns_64_6, 0, 0, 412, 645</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -88,9 +93,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="col_fu_293_p2">+, 0, 0, 11, 11, 1</column>
-<column name="row_fu_281_p2">+, 0, 0, 11, 11, 1</column>
-<column name="grp_moments_AXIvideo2Mat_fu_233_in_data_TVALID">and, 0, 0, 1, 1, 1</column>
+<column name="grp_moments_AXIvideo2Mat_fu_157_in_data_TVALID">and, 0, 0, 1, 1, 1</column>
 <column name="out_data_V_data_V_1_sRdy">and, 0, 0, 1, 1, 1</column>
 <column name="out_data_V_dest_V_1_sRdy">and, 0, 0, 1, 1, 1</column>
 <column name="out_data_V_id_V_1_sRdy">and, 0, 0, 1, 1, 1</column>
@@ -98,12 +101,7 @@
 <column name="out_data_V_last_V_1_sRdy">and, 0, 0, 1, 1, 1</column>
 <column name="out_data_V_strb_V_1_sRdy">and, 0, 0, 1, 1, 1</column>
 <column name="out_data_V_user_V_1_sRdy">and, 0, 0, 1, 1, 1</column>
-<column name="exitcond5_i_fu_275_p2">icmp, 0, 0, 4, 11, 11</column>
-<column name="exitcond_i_fu_287_p2">icmp, 0, 0, 4, 11, 9</column>
-<column name="tmp_i_12_fu_299_p2">icmp, 0, 0, 4, 11, 9</column>
-<column name="ap_sig_495">or, 0, 0, 1, 1, 1</column>
-<column name="ap_sig_521">or, 0, 0, 1, 1, 1</column>
-<column name="ap_sig_707">or, 0, 0, 1, 1, 1</column>
+<column name="ap_sig_727">or, 0, 0, 1, 1, 1</column>
 <column name="in_data_V_data_V_0_in_rdy">or, 0, 0, 1, 1, 1</column>
 <column name="in_data_V_dest_V_0_in_rdy">or, 0, 0, 1, 1, 1</column>
 <column name="in_data_V_id_V_0_in_rdy">or, 0, 0, 1, 1, 1</column>
@@ -111,21 +109,23 @@
 <column name="in_data_V_last_V_0_in_rdy">or, 0, 0, 1, 1, 1</column>
 <column name="in_data_V_strb_V_0_in_rdy">or, 0, 0, 1, 1, 1</column>
 <column name="in_data_V_user_V_0_in_rdy">or, 0, 0, 1, 1, 1</column>
-<column name="tmp_1_fu_305_p3">select, 0, 0, 8, 1, 8</column>
-<column name="tmp_2_fu_312_p3">select, 0, 0, 8, 1, 8</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">4, 9, 1, 9</column>
-<column name="ap_reg_ppiten_pp0_it2">1, 2, 1, 2</column>
-<column name="col_i_reg_222">11, 2, 11, 22</column>
+<column name="ap_NS_fsm">18, 21, 1, 21</column>
+<column name="img_0_data_stream_0_V_read">1, 2, 1, 2</column>
 <column name="img_0_data_stream_0_V_write">1, 2, 1, 2</column>
+<column name="img_0_data_stream_1_V_read">1, 2, 1, 2</column>
 <column name="img_0_data_stream_1_V_write">1, 2, 1, 2</column>
+<column name="img_0_data_stream_2_V_read">1, 2, 1, 2</column>
 <column name="img_0_data_stream_2_V_write">1, 2, 1, 2</column>
 <column name="img_1_data_stream_0_V_read">1, 2, 1, 2</column>
+<column name="img_1_data_stream_0_V_write">1, 2, 1, 2</column>
 <column name="img_1_data_stream_1_V_read">1, 2, 1, 2</column>
+<column name="img_1_data_stream_1_V_write">1, 2, 1, 2</column>
 <column name="img_1_data_stream_2_V_read">1, 2, 1, 2</column>
+<column name="img_1_data_stream_2_V_write">1, 2, 1, 2</column>
 <column name="in_data_V_data_V_0_data_out">24, 2, 24, 48</column>
 <column name="in_data_V_data_V_0_has_vld_data_reg_i">1, 3, 1, 3</column>
 <column name="in_data_V_dest_V_0_data_out">1, 2, 1, 2</column>
@@ -140,20 +140,15 @@
 <column name="in_data_V_strb_V_0_has_vld_data_reg_i">1, 3, 1, 3</column>
 <column name="in_data_V_user_V_0_data_out">1, 2, 1, 2</column>
 <column name="in_data_V_user_V_0_has_vld_data_reg_i">1, 3, 1, 3</column>
-<column name="row_i_reg_211">11, 2, 11, 22</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">8, 0, 8, 0</column>
-<column name="ap_reg_grp_moments_AXIvideo2Mat_fu_233_ap_start">1, 0, 1, 0</column>
-<column name="ap_reg_grp_moments_Mat2AXIvideo_fu_254_ap_start">1, 0, 1, 0</column>
-<column name="ap_reg_ppiten_pp0_it0">1, 0, 1, 0</column>
-<column name="ap_reg_ppiten_pp0_it1">1, 0, 1, 0</column>
-<column name="ap_reg_ppiten_pp0_it2">1, 0, 1, 0</column>
-<column name="ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1">1, 0, 1, 0</column>
-<column name="col_i_reg_222">11, 0, 11, 0</column>
-<column name="exitcond_i_reg_364">1, 0, 1, 0</column>
+<column name="ap_CS_fsm">20, 0, 20, 0</column>
+<column name="ap_reg_grp_moments_AXIvideo2Mat_fu_157_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_moments_Mat2AXIvideo_fu_178_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_moments_atan2_cordic_double_s_fu_139_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_moments_calc_fu_147_ap_start">1, 0, 1, 0</column>
 <column name="in_data_V_data_V_0_data_reg">24, 0, 24, 0</column>
 <column name="in_data_V_data_V_0_has_vld_data_reg">1, 0, 1, 0</column>
 <column name="in_data_V_data_V_0_in_rdy">1, 0, 1, 0</column>
@@ -176,6 +171,7 @@
 <column name="in_data_V_user_V_0_data_reg">1, 0, 1, 0</column>
 <column name="in_data_V_user_V_0_has_vld_data_reg">1, 0, 1, 0</column>
 <column name="in_data_V_user_V_0_in_rdy">1, 0, 1, 0</column>
+<column name="multi_reg_303">64, 0, 64, 0</column>
 <column name="out_data_V_data_V_1_areset_d">1, 0, 1, 0</column>
 <column name="out_data_V_data_V_1_data_reg">24, 0, 24, 0</column>
 <column name="out_data_V_data_V_1_mVld">1, 0, 1, 0</column>
@@ -197,12 +193,13 @@
 <column name="out_data_V_user_V_1_areset_d">1, 0, 1, 0</column>
 <column name="out_data_V_user_V_1_data_reg">1, 0, 1, 0</column>
 <column name="out_data_V_user_V_1_mVld">1, 0, 1, 0</column>
-<column name="row_i_reg_211">11, 0, 11, 0</column>
-<column name="row_reg_359">11, 0, 11, 0</column>
-<column name="tmp_1_reg_384">8, 0, 8, 0</column>
-<column name="tmp_2_reg_389">8, 0, 8, 0</column>
-<column name="tmp_i_12_reg_373">1, 0, 1, 0</column>
-<column name="tmp_reg_379">8, 0, 8, 0</column>
+<column name="sub45_V_reg_288">45, 0, 45, 0</column>
+<column name="subtr_reg_308">64, 0, 64, 0</column>
+<column name="tmp_4_reg_318">64, 0, 64, 0</column>
+<column name="tmp_i_i_reg_313">64, 0, 64, 0</column>
+<column name="tmp_reg_293">64, 0, 64, 0</column>
+<column name="x_center_V_reg_278">21, 0, 21, 0</column>
+<column name="y_center_V_reg_283">21, 0, 21, 0</column>
 </table>
 </item>
 </section>
@@ -255,11 +252,10 @@
 </section>
 
 <section name = "Critical Path" level="0">
-<item name = "Max Delay">5.75</item>
+<item name = "Max Delay">8.20</item>
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
-<column name="'tmp', C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_video_core.h:624->C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_video_core.h:656->moments.cpp:28->moments.cpp:81">read, 4.38, 4.38, -, -, -, fifo, read, &apos;img_0.data_stream[0].V&apos;, moments.cpp:69, -, -, -, -, -</column>
-<column name="'tmp', moments.cpp:30->moments.cpp:81">select, 1.37, 5.75, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp_i_i', C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_cordic.h:1101->C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h:641->moments.cpp:118">call, 8.20, 8.20, -, -, -, -, -, -, -, -, -, moments_atan2_cordic&lt;double&gt;, -</column>
 </table>
 </item>
 </section>

@@ -1,0 +1,246 @@
+
+
+================================================================
+== Vivado HLS Report for 'moments_calc'
+================================================================
+* Date:           Thu Jan 09 04:42:12 2020
+
+* Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
+* Project:        moments
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      9.32|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  4149417|  4149417|  4149417|  4149417|   none  |
+    +---------+---------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |      Latency      | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- L_row   |  4149360|  4149360|      3842|          -|          -|  1080|    no    |
+        | + L_col  |     3840|     3840|         2|          -|          -|  1920|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      2|       -|      -|
+|Expression       |        -|      -|       0|    619|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|     15|    1520|   1805|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|    541|
+|Register         |        -|      -|     938|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|     17|    2458|   2965|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      7|       2|      5|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------+----------------------------------+---------+-------+-----+-----+
+    |               Instance               |              Module              | BRAM_18K| DSP48E|  FF | LUT |
+    +--------------------------------------+----------------------------------+---------+-------+-----+-----+
+    |moments_mul_21ns_21ns_42_3_U15        |moments_mul_21ns_21ns_42_3        |        0|      2|    0|    0|
+    |moments_mul_21ns_21ns_42_3_U16        |moments_mul_21ns_21ns_42_3        |        0|      2|    0|    0|
+    |moments_mul_21ns_21ns_42_3_U17        |moments_mul_21ns_21ns_42_3        |        0|      2|    0|    0|
+    |moments_mul_43ns_43ns_86_11_U18       |moments_mul_43ns_43ns_86_11       |        0|      9|    0|    0|
+    |moments_udiv_32ns_21ns_32_36_seq_U13  |moments_udiv_32ns_21ns_32_36_seq  |        0|      0|  256|  304|
+    |moments_udiv_32ns_21ns_32_36_seq_U14  |moments_udiv_32ns_21ns_32_36_seq  |        0|      0|  256|  304|
+    |moments_udiv_42ns_21ns_42_46_seq_U10  |moments_udiv_42ns_21ns_42_46_seq  |        0|      0|  336|  399|
+    |moments_udiv_42ns_21ns_42_46_seq_U11  |moments_udiv_42ns_21ns_42_46_seq  |        0|      0|  336|  399|
+    |moments_udiv_42ns_21ns_42_46_seq_U12  |moments_udiv_42ns_21ns_42_46_seq  |        0|      0|  336|  399|
+    +--------------------------------------+----------------------------------+---------+-------+-----+-----+
+    |Total                                 |                                  |        0|     15| 1520| 1805|
+    +--------------------------------------+----------------------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    +--------------------------------------------+----------------------------------------+--------------+
+    |                  Instance                  |                 Module                 |  Expression  |
+    +--------------------------------------------+----------------------------------------+--------------+
+    |moments_mac_muladd_11ns_11ns_42ns_42_1_U19  |moments_mac_muladd_11ns_11ns_42ns_42_1  | i0 * i0 + i1 |
+    |moments_mul_mul_11ns_11ns_22_1_U20          |moments_mul_mul_11ns_11ns_22_1          |    i0 * i0   |
+    +--------------------------------------------+----------------------------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |col_fu_284_p2        |     +    |      0|  0|  11|          11|           1|
+    |m00_V_fu_325_p2      |     +    |      0|  0|  21|           1|          21|
+    |m01_V_fu_331_p2      |     +    |      0|  0|  32|          32|          32|
+    |m10_V_fu_336_p2      |     +    |      0|  0|  32|          32|          32|
+    |m11_V_fu_345_p2      |     +    |      0|  0|  42|          42|          42|
+    |m20_V_fu_351_p2      |     +    |      0|  0|  42|          42|          42|
+    |next_mul_fu_308_p2   |     +    |      0|  0|  21|          21|          21|
+    |row_fu_239_p2        |     +    |      0|  0|  11|          11|           1|
+    |r_V_12_fu_538_p2     |     -    |      0|  0|  44|          44|          44|
+    |r_V_16_fu_491_p2     |     -    |      0|  0|  43|          43|          43|
+    |r_V_17_fu_504_p2     |     -    |      0|  0|  43|          43|          43|
+    |r_V_18_fu_517_p2     |     -    |      0|  0|  43|          43|          43|
+    |exitcond5_fu_233_p2  |   icmp   |      0|  0|   4|          11|          11|
+    |exitcond_fu_278_p2   |   icmp   |      0|  0|   4|          11|           9|
+    |tmp_8_fu_290_p2      |   icmp   |      0|  0|   3|           8|           9|
+    |tmp_9_fu_296_p2      |   icmp   |      0|  0|   3|           8|           9|
+    |tmp_s_fu_302_p2      |   icmp   |      0|  0|   3|           8|           9|
+    |ap_sig_175           |    or    |      0|  0|   1|           1|           1|
+    |ap_sig_274           |    or    |      0|  0|   1|           1|           1|
+    |sel_tmp_fu_319_p2    |    or    |      0|  0|   1|           1|           1|
+    |tmp5_fu_313_p2       |    or    |      0|  0|   1|           1|           1|
+    |m00_V_1_fu_366_p3    |  select  |      0|  0|  21|           1|          21|
+    |m01_V_1_fu_373_p3    |  select  |      0|  0|  32|           1|          32|
+    |m02_V_1_fu_394_p3    |  select  |      0|  0|  42|           1|          42|
+    |m10_V_1_fu_380_p3    |  select  |      0|  0|  32|           1|          32|
+    |m11_V_1_fu_387_p3    |  select  |      0|  0|  42|           1|          42|
+    |m20_V_1_fu_400_p3    |  select  |      0|  0|  42|           1|          42|
+    |tmp_6_fu_356_p3      |  select  |      0|  0|   2|           1|           2|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |Total                |          |      0|  0| 619|         422|         629|
+    +---------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+-----+-----------+-----+-----------+
+    |              Name             | LUT | Input Size| Bits| Total Bits|
+    +-------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                      |  108|         61|    1|         61|
+    |ap_return_0                    |   21|          2|   21|         42|
+    |ap_return_1                    |   21|          2|   21|         42|
+    |ap_return_2                    |   86|          2|   86|        172|
+    |ap_return_3                    |   45|          2|   45|         90|
+    |img_in_data_stream_0_V_blk_n   |    1|          2|    1|          2|
+    |img_in_data_stream_1_V_blk_n   |    1|          2|    1|          2|
+    |img_in_data_stream_2_V_blk_n   |    1|          2|    1|          2|
+    |img_out_data_stream_0_V_blk_n  |    1|          2|    1|          2|
+    |img_out_data_stream_1_V_blk_n  |    1|          2|    1|          2|
+    |img_out_data_stream_2_V_blk_n  |    1|          2|    1|          2|
+    |m00_V_2_fu_96                  |   21|          2|   21|         42|
+    |m01_V_2_fu_92                  |   32|          2|   32|         64|
+    |m02_V_2_fu_80                  |   42|          2|   42|         84|
+    |m10_V_2_fu_88                  |   32|          2|   32|         64|
+    |m11_V_2_fu_84                  |   42|          2|   42|         84|
+    |m20_V_2_fu_76                  |   42|          2|   42|         84|
+    |op2_assign_1_reg_139           |   11|          2|   11|         22|
+    |op2_assign_reg_150             |   11|          2|   11|         22|
+    |phi_mul_reg_161                |   21|          2|   21|         42|
+    +-------------------------------+-----+-----------+-----+-----------+
+    |Total                          |  541|         99|  434|        927|
+    +-------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------+----+----+-----+-----------+
+    |               Name              | FF | LUT| Bits| Const Bits|
+    +---------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                        |  60|   0|   60|          0|
+    |ap_return_0_preg                 |  21|   0|   21|          0|
+    |ap_return_1_preg                 |  21|   0|   21|          0|
+    |ap_return_2_preg                 |  86|   0|   86|          0|
+    |ap_return_3_preg                 |  45|   0|   45|          0|
+    |col_reg_689                      |  11|   0|   11|          0|
+    |m00_V_2_fu_96                    |  21|   0|   21|          0|
+    |m01_V_2_fu_92                    |  32|   0|   32|          0|
+    |m02_V_2_fu_80                    |  42|   0|   42|          0|
+    |m10_V_2_fu_88                    |  32|   0|   32|          0|
+    |m11_V_2_fu_84                    |  42|   0|   42|          0|
+    |m20_V_2_fu_76                    |  42|   0|   42|          0|
+    |next_mul_reg_694                 |  21|   0|   21|          0|
+    |op2_assign_1_cast1_cast_reg_630  |  11|   0|   21|         10|
+    |op2_assign_1_cast_reg_625        |  11|   0|   32|         21|
+    |op2_assign_1_reg_139             |  11|   0|   11|          0|
+    |op2_assign_cast1_reg_681         |  11|   0|   32|         21|
+    |op2_assign_cast_reg_675          |  11|   0|   22|         11|
+    |op2_assign_reg_150               |  11|   0|   11|          0|
+    |phi_mul_reg_161                  |  21|   0|   21|          0|
+    |r_V_12_reg_788                   |  44|   0|   44|          0|
+    |r_V_13_reg_752                   |  42|   0|   42|          0|
+    |r_V_14_reg_757                   |  42|   0|   42|          0|
+    |r_V_15_reg_762                   |  42|   0|   42|          0|
+    |r_V_16_reg_767                   |  43|   0|   43|          0|
+    |r_V_17_reg_772                   |  43|   0|   43|          0|
+    |r_V_18_reg_777                   |  43|   0|   43|          0|
+    |row_reg_638                      |  11|   0|   11|          0|
+    |sel_tmp_reg_699                  |   1|   0|    1|          0|
+    |tmp_3_reg_643                    |  22|   0|   42|         20|
+    |tmp_4_reg_726                    |  21|   0|   21|          0|
+    |tmp_5_reg_732                    |  21|   0|   21|          0|
+    +---------------------------------+----+----+-----+-----------+
+    |Total                            | 938|   0| 1021|         83|
+    +---------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------+-----+-----+------------+-------------------------+--------------+
+|            RTL Ports           | Dir | Bits|  Protocol  |      Source Object      |    C Type    |
++--------------------------------+-----+-----+------------+-------------------------+--------------+
+|ap_clk                          |  in |    1| ap_ctrl_hs |       moments_calc      | return value |
+|ap_rst                          |  in |    1| ap_ctrl_hs |       moments_calc      | return value |
+|ap_start                        |  in |    1| ap_ctrl_hs |       moments_calc      | return value |
+|ap_done                         | out |    1| ap_ctrl_hs |       moments_calc      | return value |
+|ap_idle                         | out |    1| ap_ctrl_hs |       moments_calc      | return value |
+|ap_ready                        | out |    1| ap_ctrl_hs |       moments_calc      | return value |
+|ap_return_0                     | out |   21| ap_ctrl_hs |       moments_calc      | return value |
+|ap_return_1                     | out |   21| ap_ctrl_hs |       moments_calc      | return value |
+|ap_return_2                     | out |   86| ap_ctrl_hs |       moments_calc      | return value |
+|ap_return_3                     | out |   45| ap_ctrl_hs |       moments_calc      | return value |
+|img_in_data_stream_0_V_dout     |  in |    8|   ap_fifo  |  img_in_data_stream_0_V |    pointer   |
+|img_in_data_stream_0_V_empty_n  |  in |    1|   ap_fifo  |  img_in_data_stream_0_V |    pointer   |
+|img_in_data_stream_0_V_read     | out |    1|   ap_fifo  |  img_in_data_stream_0_V |    pointer   |
+|img_in_data_stream_1_V_dout     |  in |    8|   ap_fifo  |  img_in_data_stream_1_V |    pointer   |
+|img_in_data_stream_1_V_empty_n  |  in |    1|   ap_fifo  |  img_in_data_stream_1_V |    pointer   |
+|img_in_data_stream_1_V_read     | out |    1|   ap_fifo  |  img_in_data_stream_1_V |    pointer   |
+|img_in_data_stream_2_V_dout     |  in |    8|   ap_fifo  |  img_in_data_stream_2_V |    pointer   |
+|img_in_data_stream_2_V_empty_n  |  in |    1|   ap_fifo  |  img_in_data_stream_2_V |    pointer   |
+|img_in_data_stream_2_V_read     | out |    1|   ap_fifo  |  img_in_data_stream_2_V |    pointer   |
+|img_out_data_stream_0_V_din     | out |    8|   ap_fifo  | img_out_data_stream_0_V |    pointer   |
+|img_out_data_stream_0_V_full_n  |  in |    1|   ap_fifo  | img_out_data_stream_0_V |    pointer   |
+|img_out_data_stream_0_V_write   | out |    1|   ap_fifo  | img_out_data_stream_0_V |    pointer   |
+|img_out_data_stream_1_V_din     | out |    8|   ap_fifo  | img_out_data_stream_1_V |    pointer   |
+|img_out_data_stream_1_V_full_n  |  in |    1|   ap_fifo  | img_out_data_stream_1_V |    pointer   |
+|img_out_data_stream_1_V_write   | out |    1|   ap_fifo  | img_out_data_stream_1_V |    pointer   |
+|img_out_data_stream_2_V_din     | out |    8|   ap_fifo  | img_out_data_stream_2_V |    pointer   |
+|img_out_data_stream_2_V_full_n  |  in |    1|   ap_fifo  | img_out_data_stream_2_V |    pointer   |
+|img_out_data_stream_2_V_write   | out |    1|   ap_fifo  | img_out_data_stream_2_V |    pointer   |
++--------------------------------+-----+-----+------------+-------------------------+--------------+
+

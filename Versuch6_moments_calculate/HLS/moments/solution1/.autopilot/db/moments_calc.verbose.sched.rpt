@@ -1,0 +1,1462 @@
+
+
+================================================================
+== Vivado HLS Report for 'moments_calc'
+================================================================
+* Date:           Thu Jan 09 04:42:06 2020
+
+* Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
+* Project:        moments
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      9.32|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  4149417|  4149417|  4149417|  4149417|   none  |
+    +---------+---------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |      Latency      | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- L_row   |  4149360|  4149360|      3842|          -|          -|  1080|    no    |
+        | + L_col  |     3840|     3840|         2|          -|          -|  1920|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 60
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	5  / (exitcond5)
+	3  / (!exitcond5)
+3 --> 
+	4  / (!exitcond)
+	2  / (exitcond)
+4 --> 
+	3  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: m20_V_2 [1/1] 0.00ns
+:0  %m20_V_2 = alloca i42
+
+ST_1: m02_V_2 [1/1] 0.00ns
+:1  %m02_V_2 = alloca i42
+
+ST_1: m11_V_2 [1/1] 0.00ns
+:2  %m11_V_2 = alloca i42
+
+ST_1: m10_V_2 [1/1] 0.00ns
+:3  %m10_V_2 = alloca i32
+
+ST_1: m01_V_2 [1/1] 0.00ns
+:4  %m01_V_2 = alloca i32
+
+ST_1: m00_V_2 [1/1] 0.00ns
+:5  %m00_V_2 = alloca i21
+
+ST_1: stg_67 [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecInterface(i8* %img_out_data_stream_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_1: stg_68 [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecInterface(i8* %img_out_data_stream_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_1: stg_69 [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecInterface(i8* %img_out_data_stream_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_1: stg_70 [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecInterface(i8* %img_in_data_stream_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_1: stg_71 [1/1] 0.00ns
+:10  call void (...)* @_ssdm_op_SpecInterface(i8* %img_in_data_stream_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_1: stg_72 [1/1] 0.00ns
+:11  call void (...)* @_ssdm_op_SpecInterface(i8* %img_in_data_stream_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_1: stg_73 [1/1] 1.57ns
+:12  store i21 0, i21* %m00_V_2
+
+ST_1: stg_74 [1/1] 1.57ns
+:13  store i32 0, i32* %m01_V_2
+
+ST_1: stg_75 [1/1] 1.57ns
+:14  store i32 0, i32* %m10_V_2
+
+ST_1: stg_76 [1/1] 1.57ns
+:15  store i42 0, i42* %m11_V_2
+
+ST_1: stg_77 [1/1] 1.57ns
+:16  store i42 0, i42* %m02_V_2
+
+ST_1: stg_78 [1/1] 1.57ns
+:17  store i42 0, i42* %m20_V_2
+
+ST_1: stg_79 [1/1] 1.57ns
+:18  br label %1
+
+
+ <State 2>: 6.38ns
+ST_2: op2_assign_1 [1/1] 0.00ns
+:0  %op2_assign_1 = phi i11 [ 0, %0 ], [ %row, %4 ]
+
+ST_2: op2_assign_1_cast [1/1] 0.00ns
+:1  %op2_assign_1_cast = zext i11 %op2_assign_1 to i32
+
+ST_2: op2_assign_1_cast1 [1/1] 0.00ns
+:2  %op2_assign_1_cast1 = zext i11 %op2_assign_1 to i22
+
+ST_2: op2_assign_1_cast1_cast [1/1] 0.00ns
+:3  %op2_assign_1_cast1_cast = zext i11 %op2_assign_1 to i21
+
+ST_2: exitcond5 [1/1] 2.11ns
+:4  %exitcond5 = icmp eq i11 %op2_assign_1, -968
+
+ST_2: stg_85 [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1080, i64 1080, i64 1080)
+
+ST_2: row [1/1] 1.84ns
+:6  %row = add i11 %op2_assign_1, 1
+
+ST_2: stg_87 [1/1] 0.00ns
+:7  br i1 %exitcond5, label %5, label %2
+
+ST_2: stg_88 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str1805) nounwind
+
+ST_2: tmp_2 [1/1] 0.00ns
+:1  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([6 x i8]* @p_str1805)
+
+ST_2: op2_assign_4 [1/1] 6.38ns
+:2  %op2_assign_4 = mul i22 %op2_assign_1_cast1, %op2_assign_1_cast1
+
+ST_2: tmp_3 [1/1] 0.00ns
+:3  %tmp_3 = zext i22 %op2_assign_4 to i42
+
+ST_2: stg_92 [1/1] 1.57ns
+:4  br label %3
+
+ST_2: m20_V_2_load [1/1] 0.00ns
+:0  %m20_V_2_load = load i42* %m20_V_2
+
+ST_2: m02_V_2_load [1/1] 0.00ns
+:1  %m02_V_2_load = load i42* %m02_V_2
+
+ST_2: m11_V_2_load [1/1] 0.00ns
+:2  %m11_V_2_load = load i42* %m11_V_2
+
+ST_2: m00_V_2_load [1/1] 0.00ns
+:5  %m00_V_2_load = load i21* %m00_V_2
+
+ST_2: tmp_1 [1/1] 0.00ns
+:16  %tmp_1 = zext i21 %m00_V_2_load to i42
+
+ST_2: r_V_5 [46/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_2: r_V_7 [46/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_2: r_V_9 [46/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 3>: 7.74ns
+ST_3: op2_assign [1/1] 0.00ns
+:0  %op2_assign = phi i11 [ 0, %2 ], [ %col, %"operator>>.exit_ifconv" ]
+
+ST_3: phi_mul [1/1] 0.00ns
+:1  %phi_mul = phi i21 [ 0, %2 ], [ %next_mul, %"operator>>.exit_ifconv" ]
+
+ST_3: op2_assign_cast [1/1] 0.00ns
+:2  %op2_assign_cast = zext i11 %op2_assign to i22
+
+ST_3: op2_assign_cast1 [1/1] 0.00ns
+:3  %op2_assign_cast1 = zext i11 %op2_assign to i32
+
+ST_3: exitcond [1/1] 2.11ns
+:4  %exitcond = icmp eq i11 %op2_assign, -128
+
+ST_3: stg_106 [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1920, i64 1920, i64 1920)
+
+ST_3: col [1/1] 1.84ns
+:6  %col = add i11 %op2_assign, 1
+
+ST_3: stg_108 [1/1] 0.00ns
+:7  br i1 %exitcond, label %4, label %"operator>>.exit_ifconv"
+
+ST_3: tmp_7 [1/1] 0.00ns
+operator>>.exit_ifconv:7  %tmp_7 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str1827)
+
+ST_3: stg_110 [1/1] 0.00ns
+operator>>.exit_ifconv:8  call void (...)* @_ssdm_op_SpecProtocol(i32 0, [1 x i8]* @p_str1806) nounwind
+
+ST_3: tmp_17 [1/1] 4.38ns
+operator>>.exit_ifconv:9  %tmp_17 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %img_in_data_stream_0_V)
+
+ST_3: tmp_18 [1/1] 4.38ns
+operator>>.exit_ifconv:10  %tmp_18 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %img_in_data_stream_1_V)
+
+ST_3: tmp_16 [1/1] 4.38ns
+operator>>.exit_ifconv:11  %tmp_16 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %img_in_data_stream_2_V)
+
+ST_3: empty [1/1] 0.00ns
+operator>>.exit_ifconv:12  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str1827, i32 %tmp_7)
+
+ST_3: tmp_8 [1/1] 2.00ns
+operator>>.exit_ifconv:13  %tmp_8 = icmp ugt i8 %tmp_17, -128
+
+ST_3: tmp_9 [1/1] 2.00ns
+operator>>.exit_ifconv:14  %tmp_9 = icmp ugt i8 %tmp_18, -128
+
+ST_3: tmp_s [1/1] 2.00ns
+operator>>.exit_ifconv:15  %tmp_s = icmp ugt i8 %tmp_16, -128
+
+ST_3: next_mul [1/1] 2.20ns
+operator>>.exit_ifconv:19  %next_mul = add i21 %op2_assign_1_cast1_cast, %phi_mul
+
+ST_3: tmp5 [1/1] 0.00ns (grouped into LUT with out node sel_tmp)
+operator>>.exit_ifconv:26  %tmp5 = or i1 %tmp_s, %tmp_8
+
+ST_3: sel_tmp [1/1] 1.37ns (out node of the LUT)
+operator>>.exit_ifconv:27  %sel_tmp = or i1 %tmp5, %tmp_9
+
+ST_3: empty_24 [1/1] 0.00ns
+:0  %empty_24 = call i32 (...)* @_ssdm_op_SpecRegionEnd([6 x i8]* @p_str1805, i32 %tmp_2)
+
+ST_3: stg_122 [1/1] 0.00ns
+:1  br label %1
+
+
+ <State 4>: 9.32ns
+ST_4: m20_V_2_load_1 [1/1] 0.00ns
+operator>>.exit_ifconv:0  %m20_V_2_load_1 = load i42* %m20_V_2
+
+ST_4: m02_V_2_load_1 [1/1] 0.00ns
+operator>>.exit_ifconv:1  %m02_V_2_load_1 = load i42* %m02_V_2
+
+ST_4: m11_V_2_load_1 [1/1] 0.00ns
+operator>>.exit_ifconv:2  %m11_V_2_load_1 = load i42* %m11_V_2
+
+ST_4: m10_V_2_load_1 [1/1] 0.00ns
+operator>>.exit_ifconv:3  %m10_V_2_load_1 = load i32* %m10_V_2
+
+ST_4: m01_V_2_load_1 [1/1] 0.00ns
+operator>>.exit_ifconv:4  %m01_V_2_load_1 = load i32* %m01_V_2
+
+ST_4: m00_V_2_load_1 [1/1] 0.00ns
+operator>>.exit_ifconv:5  %m00_V_2_load_1 = load i21* %m00_V_2
+
+ST_4: stg_129 [1/1] 0.00ns
+operator>>.exit_ifconv:6  call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str1807) nounwind
+
+ST_4: m00_V [1/1] 2.20ns
+operator>>.exit_ifconv:16  %m00_V = add i21 1, %m00_V_2_load_1
+
+ST_4: m01_V [1/1] 2.44ns
+operator>>.exit_ifconv:17  %m01_V = add i32 %op2_assign_cast1, %m01_V_2_load_1
+
+ST_4: m10_V [1/1] 2.44ns
+operator>>.exit_ifconv:18  %m10_V = add i32 %m10_V_2_load_1, %op2_assign_1_cast
+
+ST_4: tmp_10 [1/1] 0.00ns
+operator>>.exit_ifconv:20  %tmp_10 = zext i21 %phi_mul to i42
+
+ST_4: m11_V [1/1] 2.80ns
+operator>>.exit_ifconv:21  %m11_V = add i42 %tmp_10, %m11_V_2_load_1
+
+ST_4: op2_assign_3 [1/1] 3.36ns
+operator>>.exit_ifconv:22  %op2_assign_3 = mul i22 %op2_assign_cast, %op2_assign_cast
+
+ST_4: tmp_11 [1/1] 0.00ns
+operator>>.exit_ifconv:23  %tmp_11 = zext i22 %op2_assign_3 to i42
+
+ST_4: m02_V [1/1] 3.02ns
+operator>>.exit_ifconv:24  %m02_V = add i42 %tmp_11, %m02_V_2_load_1
+
+ST_4: m20_V [1/1] 2.80ns
+operator>>.exit_ifconv:25  %m20_V = add i42 %tmp_3, %m20_V_2_load_1
+
+ST_4: tmp_6 [1/1] 1.37ns
+operator>>.exit_ifconv:28  %tmp_6 = select i1 %sel_tmp, i8 -1, i8 0
+
+ST_4: m00_V_1 [1/1] 1.37ns
+operator>>.exit_ifconv:29  %m00_V_1 = select i1 %sel_tmp, i21 %m00_V, i21 %m00_V_2_load_1
+
+ST_4: m01_V_1 [1/1] 1.37ns
+operator>>.exit_ifconv:30  %m01_V_1 = select i1 %sel_tmp, i32 %m01_V, i32 %m01_V_2_load_1
+
+ST_4: m10_V_1 [1/1] 1.37ns
+operator>>.exit_ifconv:31  %m10_V_1 = select i1 %sel_tmp, i32 %m10_V, i32 %m10_V_2_load_1
+
+ST_4: m11_V_1 [1/1] 1.37ns
+operator>>.exit_ifconv:32  %m11_V_1 = select i1 %sel_tmp, i42 %m11_V, i42 %m11_V_2_load_1
+
+ST_4: m02_V_1 [1/1] 1.37ns
+operator>>.exit_ifconv:33  %m02_V_1 = select i1 %sel_tmp, i42 %m02_V, i42 %m02_V_2_load_1
+
+ST_4: m20_V_1 [1/1] 1.37ns
+operator>>.exit_ifconv:34  %m20_V_1 = select i1 %sel_tmp, i42 %m20_V, i42 %m20_V_2_load_1
+
+ST_4: tmp_12 [1/1] 0.00ns
+operator>>.exit_ifconv:35  %tmp_12 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str1825)
+
+ST_4: stg_147 [1/1] 0.00ns
+operator>>.exit_ifconv:36  call void (...)* @_ssdm_op_SpecProtocol(i32 0, [1 x i8]* @p_str1806) nounwind
+
+ST_4: stg_148 [1/1] 4.38ns
+operator>>.exit_ifconv:37  call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %img_out_data_stream_0_V, i8 %tmp_6)
+
+ST_4: stg_149 [1/1] 4.38ns
+operator>>.exit_ifconv:38  call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %img_out_data_stream_1_V, i8 %tmp_6)
+
+ST_4: stg_150 [1/1] 4.38ns
+operator>>.exit_ifconv:39  call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %img_out_data_stream_2_V, i8 %tmp_6)
+
+ST_4: empty_23 [1/1] 0.00ns
+operator>>.exit_ifconv:40  %empty_23 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str1825, i32 %tmp_12)
+
+ST_4: stg_152 [1/1] 1.57ns
+operator>>.exit_ifconv:41  store i21 %m00_V_1, i21* %m00_V_2
+
+ST_4: stg_153 [1/1] 1.57ns
+operator>>.exit_ifconv:42  store i32 %m01_V_1, i32* %m01_V_2
+
+ST_4: stg_154 [1/1] 1.57ns
+operator>>.exit_ifconv:43  store i32 %m10_V_1, i32* %m10_V_2
+
+ST_4: stg_155 [1/1] 1.57ns
+operator>>.exit_ifconv:44  store i42 %m11_V_1, i42* %m11_V_2
+
+ST_4: stg_156 [1/1] 1.57ns
+operator>>.exit_ifconv:45  store i42 %m02_V_1, i42* %m02_V_2
+
+ST_4: stg_157 [1/1] 1.57ns
+operator>>.exit_ifconv:46  store i42 %m20_V_1, i42* %m20_V_2
+
+ST_4: stg_158 [1/1] 0.00ns
+operator>>.exit_ifconv:47  br label %3
+
+
+ <State 5>: 5.88ns
+ST_5: r_V_5 [45/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_5: r_V_7 [45/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_5: r_V_9 [45/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 6>: 5.88ns
+ST_6: r_V_5 [44/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_6: r_V_7 [44/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_6: r_V_9 [44/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 7>: 5.88ns
+ST_7: r_V_5 [43/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_7: r_V_7 [43/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_7: r_V_9 [43/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 8>: 5.88ns
+ST_8: r_V_5 [42/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_8: r_V_7 [42/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_8: r_V_9 [42/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 9>: 5.88ns
+ST_9: r_V_5 [41/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_9: r_V_7 [41/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_9: r_V_9 [41/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 10>: 5.88ns
+ST_10: m10_V_2_load [1/1] 0.00ns
+:3  %m10_V_2_load = load i32* %m10_V_2
+
+ST_10: m01_V_2_load [1/1] 0.00ns
+:4  %m01_V_2_load = load i32* %m01_V_2
+
+ST_10: tmp [1/1] 0.00ns
+:6  %tmp = zext i21 %m00_V_2_load to i32
+
+ST_10: r_V [36/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_10: r_V_1 [36/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_10: r_V_5 [40/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_10: r_V_7 [40/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_10: r_V_9 [40/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 11>: 5.88ns
+ST_11: r_V [35/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_11: r_V_1 [35/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_11: r_V_5 [39/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_11: r_V_7 [39/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_11: r_V_9 [39/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 12>: 5.88ns
+ST_12: r_V [34/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_12: r_V_1 [34/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_12: r_V_5 [38/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_12: r_V_7 [38/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_12: r_V_9 [38/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 13>: 5.88ns
+ST_13: r_V [33/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_13: r_V_1 [33/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_13: r_V_5 [37/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_13: r_V_7 [37/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_13: r_V_9 [37/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 14>: 5.88ns
+ST_14: r_V [32/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_14: r_V_1 [32/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_14: r_V_5 [36/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_14: r_V_7 [36/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_14: r_V_9 [36/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 15>: 5.88ns
+ST_15: r_V [31/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_15: r_V_1 [31/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_15: r_V_5 [35/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_15: r_V_7 [35/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_15: r_V_9 [35/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 16>: 5.88ns
+ST_16: r_V [30/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_16: r_V_1 [30/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_16: r_V_5 [34/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_16: r_V_7 [34/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_16: r_V_9 [34/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 17>: 5.88ns
+ST_17: r_V [29/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_17: r_V_1 [29/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_17: r_V_5 [33/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_17: r_V_7 [33/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_17: r_V_9 [33/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 18>: 5.88ns
+ST_18: r_V [28/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_18: r_V_1 [28/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_18: r_V_5 [32/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_18: r_V_7 [32/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_18: r_V_9 [32/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 19>: 5.88ns
+ST_19: r_V [27/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_19: r_V_1 [27/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_19: r_V_5 [31/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_19: r_V_7 [31/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_19: r_V_9 [31/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 20>: 5.88ns
+ST_20: r_V [26/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_20: r_V_1 [26/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_20: r_V_5 [30/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_20: r_V_7 [30/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_20: r_V_9 [30/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 21>: 5.88ns
+ST_21: r_V [25/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_21: r_V_1 [25/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_21: r_V_5 [29/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_21: r_V_7 [29/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_21: r_V_9 [29/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 22>: 5.88ns
+ST_22: r_V [24/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_22: r_V_1 [24/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_22: r_V_5 [28/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_22: r_V_7 [28/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_22: r_V_9 [28/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 23>: 5.88ns
+ST_23: r_V [23/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_23: r_V_1 [23/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_23: r_V_5 [27/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_23: r_V_7 [27/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_23: r_V_9 [27/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 24>: 5.88ns
+ST_24: r_V [22/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_24: r_V_1 [22/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_24: r_V_5 [26/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_24: r_V_7 [26/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_24: r_V_9 [26/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 25>: 5.88ns
+ST_25: r_V [21/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_25: r_V_1 [21/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_25: r_V_5 [25/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_25: r_V_7 [25/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_25: r_V_9 [25/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 26>: 5.88ns
+ST_26: r_V [20/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_26: r_V_1 [20/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_26: r_V_5 [24/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_26: r_V_7 [24/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_26: r_V_9 [24/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 27>: 5.88ns
+ST_27: r_V [19/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_27: r_V_1 [19/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_27: r_V_5 [23/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_27: r_V_7 [23/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_27: r_V_9 [23/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 28>: 5.88ns
+ST_28: r_V [18/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_28: r_V_1 [18/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_28: r_V_5 [22/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_28: r_V_7 [22/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_28: r_V_9 [22/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 29>: 5.88ns
+ST_29: r_V [17/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_29: r_V_1 [17/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_29: r_V_5 [21/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_29: r_V_7 [21/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_29: r_V_9 [21/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 30>: 5.88ns
+ST_30: r_V [16/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_30: r_V_1 [16/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_30: r_V_5 [20/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_30: r_V_7 [20/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_30: r_V_9 [20/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 31>: 5.88ns
+ST_31: r_V [15/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_31: r_V_1 [15/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_31: r_V_5 [19/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_31: r_V_7 [19/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_31: r_V_9 [19/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 32>: 5.88ns
+ST_32: r_V [14/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_32: r_V_1 [14/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_32: r_V_5 [18/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_32: r_V_7 [18/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_32: r_V_9 [18/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 33>: 5.88ns
+ST_33: r_V [13/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_33: r_V_1 [13/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_33: r_V_5 [17/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_33: r_V_7 [17/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_33: r_V_9 [17/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 34>: 5.88ns
+ST_34: r_V [12/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_34: r_V_1 [12/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_34: r_V_5 [16/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_34: r_V_7 [16/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_34: r_V_9 [16/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 35>: 5.88ns
+ST_35: r_V [11/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_35: r_V_1 [11/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_35: r_V_5 [15/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_35: r_V_7 [15/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_35: r_V_9 [15/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 36>: 5.88ns
+ST_36: r_V [10/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_36: r_V_1 [10/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_36: r_V_5 [14/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_36: r_V_7 [14/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_36: r_V_9 [14/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 37>: 5.88ns
+ST_37: r_V [9/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_37: r_V_1 [9/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_37: r_V_5 [13/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_37: r_V_7 [13/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_37: r_V_9 [13/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 38>: 5.88ns
+ST_38: r_V [8/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_38: r_V_1 [8/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_38: r_V_5 [12/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_38: r_V_7 [12/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_38: r_V_9 [12/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 39>: 5.88ns
+ST_39: r_V [7/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_39: r_V_1 [7/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_39: r_V_5 [11/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_39: r_V_7 [11/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_39: r_V_9 [11/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 40>: 5.88ns
+ST_40: r_V [6/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_40: r_V_1 [6/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_40: r_V_5 [10/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_40: r_V_7 [10/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_40: r_V_9 [10/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 41>: 5.88ns
+ST_41: r_V [5/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_41: r_V_1 [5/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_41: r_V_5 [9/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_41: r_V_7 [9/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_41: r_V_9 [9/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 42>: 5.88ns
+ST_42: r_V [4/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_42: r_V_1 [4/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_42: r_V_5 [8/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_42: r_V_7 [8/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_42: r_V_9 [8/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 43>: 5.88ns
+ST_43: r_V [3/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_43: r_V_1 [3/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_43: r_V_5 [7/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_43: r_V_7 [7/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_43: r_V_9 [7/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 44>: 5.88ns
+ST_44: r_V [2/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_44: r_V_1 [2/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_44: r_V_5 [6/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_44: r_V_7 [6/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_44: r_V_9 [6/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 45>: 5.88ns
+ST_45: r_V [1/36] 5.41ns
+:7  %r_V = udiv i32 %m10_V_2_load, %tmp
+
+ST_45: tmp_4 [1/1] 0.00ns
+:8  %tmp_4 = trunc i32 %r_V to i21
+
+ST_45: r_V_1 [1/36] 5.41ns
+:9  %r_V_1 = udiv i32 %m01_V_2_load, %tmp
+
+ST_45: tmp_5 [1/1] 0.00ns
+:10  %tmp_5 = trunc i32 %r_V_1 to i21
+
+ST_45: r_V_5 [5/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_45: r_V_7 [5/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_45: r_V_9 [5/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 46>: 6.08ns
+ST_46: lhs_V_7 [1/1] 0.00ns
+:11  %lhs_V_7 = zext i21 %tmp_4 to i42
+
+ST_46: rhs_V_7 [1/1] 0.00ns
+:12  %rhs_V_7 = zext i21 %tmp_5 to i42
+
+ST_46: r_V_13 [3/3] 6.08ns
+:13  %r_V_13 = mul i42 %rhs_V_7, %lhs_V_7
+
+ST_46: r_V_14 [3/3] 6.08ns
+:14  %r_V_14 = mul i42 %lhs_V_7, %lhs_V_7
+
+ST_46: r_V_15 [3/3] 6.08ns
+:15  %r_V_15 = mul i42 %rhs_V_7, %rhs_V_7
+
+ST_46: r_V_5 [4/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_46: r_V_7 [4/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_46: r_V_9 [4/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 47>: 6.08ns
+ST_47: r_V_13 [2/3] 6.08ns
+:13  %r_V_13 = mul i42 %rhs_V_7, %lhs_V_7
+
+ST_47: r_V_14 [2/3] 6.08ns
+:14  %r_V_14 = mul i42 %lhs_V_7, %lhs_V_7
+
+ST_47: r_V_15 [2/3] 6.08ns
+:15  %r_V_15 = mul i42 %rhs_V_7, %rhs_V_7
+
+ST_47: r_V_5 [3/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_47: r_V_7 [3/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_47: r_V_9 [3/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 48>: 6.08ns
+ST_48: r_V_13 [1/3] 6.08ns
+:13  %r_V_13 = mul i42 %rhs_V_7, %lhs_V_7
+
+ST_48: r_V_14 [1/3] 6.08ns
+:14  %r_V_14 = mul i42 %lhs_V_7, %lhs_V_7
+
+ST_48: r_V_15 [1/3] 6.08ns
+:15  %r_V_15 = mul i42 %rhs_V_7, %rhs_V_7
+
+ST_48: r_V_5 [2/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_48: r_V_7 [2/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_48: r_V_9 [2/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+
+ <State 49>: 8.68ns
+ST_49: r_V_5 [1/46] 5.88ns
+:17  %r_V_5 = udiv i42 %m11_V_2_load, %tmp_1
+
+ST_49: lhs_V [1/1] 0.00ns
+:18  %lhs_V = zext i42 %r_V_5 to i43
+
+ST_49: rhs_V [1/1] 0.00ns
+:19  %rhs_V = zext i42 %r_V_13 to i43
+
+ST_49: r_V_16 [1/1] 2.80ns
+:20  %r_V_16 = sub nsw i43 %lhs_V, %rhs_V
+
+ST_49: r_V_7 [1/46] 5.88ns
+:21  %r_V_7 = udiv i42 %m02_V_2_load, %tmp_1
+
+ST_49: lhs_V_2 [1/1] 0.00ns
+:22  %lhs_V_2 = zext i42 %r_V_7 to i43
+
+ST_49: rhs_V_2 [1/1] 0.00ns
+:23  %rhs_V_2 = zext i42 %r_V_15 to i43
+
+ST_49: r_V_17 [1/1] 2.80ns
+:24  %r_V_17 = sub nsw i43 %lhs_V_2, %rhs_V_2
+
+ST_49: r_V_9 [1/46] 5.88ns
+:25  %r_V_9 = udiv i42 %m20_V_2_load, %tmp_1
+
+ST_49: lhs_V_3 [1/1] 0.00ns
+:26  %lhs_V_3 = zext i42 %r_V_9 to i43
+
+ST_49: rhs_V_3 [1/1] 0.00ns
+:27  %rhs_V_3 = zext i42 %r_V_14 to i43
+
+ST_49: r_V_18 [1/1] 2.80ns
+:28  %r_V_18 = sub nsw i43 %lhs_V_3, %rhs_V_3
+
+
+ <State 50>: 6.08ns
+ST_50: lhs_V_8 [1/1] 0.00ns
+:29  %lhs_V_8 = zext i43 %r_V_16 to i86
+
+ST_50: r_V_11 [11/11] 6.08ns
+:30  %r_V_11 = mul i86 %lhs_V_8, %lhs_V_8
+
+ST_50: lhs_V_5 [1/1] 0.00ns
+:31  %lhs_V_5 = zext i43 %r_V_18 to i44
+
+ST_50: rhs_V_5 [1/1] 0.00ns
+:32  %rhs_V_5 = zext i43 %r_V_17 to i44
+
+ST_50: r_V_12 [1/1] 2.80ns
+:33  %r_V_12 = sub nsw i44 %lhs_V_5, %rhs_V_5
+
+
+ <State 51>: 6.08ns
+ST_51: r_V_11 [10/11] 6.08ns
+:30  %r_V_11 = mul i86 %lhs_V_8, %lhs_V_8
+
+
+ <State 52>: 6.08ns
+ST_52: r_V_11 [9/11] 6.08ns
+:30  %r_V_11 = mul i86 %lhs_V_8, %lhs_V_8
+
+
+ <State 53>: 6.08ns
+ST_53: r_V_11 [8/11] 6.08ns
+:30  %r_V_11 = mul i86 %lhs_V_8, %lhs_V_8
+
+
+ <State 54>: 6.08ns
+ST_54: r_V_11 [7/11] 6.08ns
+:30  %r_V_11 = mul i86 %lhs_V_8, %lhs_V_8
+
+
+ <State 55>: 6.08ns
+ST_55: r_V_11 [6/11] 6.08ns
+:30  %r_V_11 = mul i86 %lhs_V_8, %lhs_V_8
+
+
+ <State 56>: 6.08ns
+ST_56: r_V_11 [5/11] 6.08ns
+:30  %r_V_11 = mul i86 %lhs_V_8, %lhs_V_8
+
+
+ <State 57>: 6.08ns
+ST_57: r_V_11 [4/11] 6.08ns
+:30  %r_V_11 = mul i86 %lhs_V_8, %lhs_V_8
+
+
+ <State 58>: 6.08ns
+ST_58: r_V_11 [3/11] 6.08ns
+:30  %r_V_11 = mul i86 %lhs_V_8, %lhs_V_8
+
+
+ <State 59>: 6.08ns
+ST_59: r_V_11 [2/11] 6.08ns
+:30  %r_V_11 = mul i86 %lhs_V_8, %lhs_V_8
+
+
+ <State 60>: 6.08ns
+ST_60: r_V_11 [1/11] 6.08ns
+:30  %r_V_11 = mul i86 %lhs_V_8, %lhs_V_8
+
+ST_60: ssdm_int_V_write_assign_1 [1/1] 0.00ns
+:34  %ssdm_int_V_write_assign_1 = sext i44 %r_V_12 to i45
+
+ST_60: mrv [1/1] 0.00ns
+:35  %mrv = insertvalue { i21, i21, i86, i45 } undef, i21 %tmp_4, 0
+
+ST_60: mrv_1 [1/1] 0.00ns
+:36  %mrv_1 = insertvalue { i21, i21, i86, i45 } %mrv, i21 %tmp_5, 1
+
+ST_60: mrv_2 [1/1] 0.00ns
+:37  %mrv_2 = insertvalue { i21, i21, i86, i45 } %mrv_1, i86 %r_V_11, 2
+
+ST_60: mrv_3 [1/1] 0.00ns
+:38  %mrv_3 = insertvalue { i21, i21, i86, i45 } %mrv_2, i45 %ssdm_int_V_write_assign_1, 3
+
+ST_60: stg_411 [1/1] 0.00ns
+:39  ret { i21, i21, i86, i45 } %mrv_3
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 4>: 9.32ns
+The critical path consists of the following:
+	'mul' operation ('op2', moments.cpp:54) (3.36 ns)
+	'add' operation ('m02.V', moments.cpp:54) (3.02 ns)
+	'select' operation ('m02.V', moments.cpp:49) (1.37 ns)
+	'store' operation (moments.cpp:54) of variable 'm02.V', moments.cpp:49 on local variable 'm02.V' (1.57 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

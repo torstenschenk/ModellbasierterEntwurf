@@ -25,7 +25,7 @@ int main(int argc, char** argv){
 	IplImage2AXIvideo(src, src_axi);
 
 	int x=0, y=0;
-	float angle=0.0;
+	double angle=0.0;
 	moments(src_axi, dst_axi, &x, &y, &angle);
 
 	AXIvideo2IplImage(dst_axi, dst);

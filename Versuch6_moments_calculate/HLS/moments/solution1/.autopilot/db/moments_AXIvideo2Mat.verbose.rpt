@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'moments_AXIvideo2Mat'
 ================================================================
-* Date:           Wed Jan 08 21:41:51 2020
+* Date:           Thu Jan 09 04:42:11 2020
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        moments
@@ -155,9 +155,9 @@
     |p_Val2_s_reg_220       |  24|   0|   24|          0|
     |p_s_reg_151            |  11|   0|   11|          0|
     |sof_1_fu_88            |   1|   0|    1|          0|
-    |tmp_10_reg_389         |   8|   0|    8|          0|
-    |tmp_5_reg_394          |   8|   0|    8|          0|
-    |tmp_6_reg_399          |   8|   0|    8|          0|
+    |tmp_4_reg_394          |   8|   0|    8|          0|
+    |tmp_56_reg_389         |   8|   0|    8|          0|
+    |tmp_5_reg_399          |   8|   0|    8|          0|
     |tmp_data_V_reg_347     |  24|   0|   24|          0|
     |tmp_last_V_reg_355     |   1|   0|    1|          0|
     +-----------------------+----+----+-----+-----------+
@@ -301,8 +301,8 @@ ST_2: tmp_user_V [1/1] 0.00ns
 ST_2: tmp_last_V [1/1] 0.00ns
 ._crit_edge188:7  %tmp_last_V = extractvalue { i24, i3, i3, i1, i1, i1, i1 } %empty, 4
 
-ST_2: empty_32 [1/1] 0.00ns
-._crit_edge188:8  %empty_32 = call i32 (...)* @_ssdm_op_SpecRegionEnd([20 x i8]* @p_str1821, i32 %tmp)
+ST_2: empty_84 [1/1] 0.00ns
+._crit_edge188:8  %empty_84 = call i32 (...)* @_ssdm_op_SpecRegionEnd([20 x i8]* @p_str1821, i32 %tmp)
 
 ST_2: stg_23 [1/1] 0.00ns
 ._crit_edge188:9  br i1 %tmp_user_V, label %.preheader187.preheader, label %._crit_edge188
@@ -344,8 +344,8 @@ ST_4: stg_33 [1/1] 0.00ns
 ST_4: stg_34 [1/1] 0.00ns
 :0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str1816) nounwind
 
-ST_4: tmp_s [1/1] 0.00ns
-:1  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str1816)
+ST_4: tmp_31 [1/1] 0.00ns
+:1  %tmp_31 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str1816)
 
 ST_4: stg_36 [1/1] 1.57ns
 :2  br label %1
@@ -388,14 +388,14 @@ ST_5: brmerge [1/1] 1.37ns
 ST_5: stg_48 [1/1] 1.57ns
 :5  br i1 %brmerge, label %._crit_edge189, label %3
 
-ST_5: empty_33 [1/1] 0.00ns
-:0  %empty_33 = call { i24, i3, i3, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i3P.i3P.i1P.i1P.i1P.i1P(i24* %AXI_video_strm_V_data_V, i3* %AXI_video_strm_V_keep_V, i3* %AXI_video_strm_V_strb_V, i1* %AXI_video_strm_V_user_V, i1* %AXI_video_strm_V_last_V, i1* %AXI_video_strm_V_id_V, i1* %AXI_video_strm_V_dest_V)
+ST_5: empty_85 [1/1] 0.00ns
+:0  %empty_85 = call { i24, i3, i3, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i3P.i3P.i1P.i1P.i1P.i1P(i24* %AXI_video_strm_V_data_V, i3* %AXI_video_strm_V_keep_V, i3* %AXI_video_strm_V_strb_V, i1* %AXI_video_strm_V_user_V, i1* %AXI_video_strm_V_last_V, i1* %AXI_video_strm_V_id_V, i1* %AXI_video_strm_V_dest_V)
 
 ST_5: tmp_data_V_1 [1/1] 0.00ns
-:1  %tmp_data_V_1 = extractvalue { i24, i3, i3, i1, i1, i1, i1 } %empty_33, 0
+:1  %tmp_data_V_1 = extractvalue { i24, i3, i3, i1, i1, i1, i1 } %empty_85, 0
 
 ST_5: tmp_last_V_1 [1/1] 0.00ns
-:2  %tmp_last_V_1 = extractvalue { i24, i3, i3, i1, i1, i1, i1 } %empty_33, 4
+:2  %tmp_last_V_1 = extractvalue { i24, i3, i3, i1, i1, i1, i1 } %empty_85, 4
 
 ST_5: stg_52 [1/1] 1.57ns
 :3  br label %._crit_edge189
@@ -406,14 +406,14 @@ ST_5: axi_last_V_2 [1/1] 0.00ns
 ST_5: p_Val2_s [1/1] 0.00ns
 ._crit_edge189:1  %p_Val2_s = phi i24 [ %tmp_data_V_1, %3 ], [ %axi_data_V_1, %2 ]
 
-ST_5: tmp_10 [1/1] 0.00ns
-._crit_edge189:2  %tmp_10 = trunc i24 %p_Val2_s to i8
+ST_5: tmp_56 [1/1] 0.00ns
+._crit_edge189:2  %tmp_56 = trunc i24 %p_Val2_s to i8
+
+ST_5: tmp_4 [1/1] 0.00ns
+._crit_edge189:3  %tmp_4 = call i8 @_ssdm_op_PartSelect.i8.i24.i32.i32(i24 %p_Val2_s, i32 8, i32 15)
 
 ST_5: tmp_5 [1/1] 0.00ns
-._crit_edge189:3  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i24.i32.i32(i24 %p_Val2_s, i32 8, i32 15)
-
-ST_5: tmp_6 [1/1] 0.00ns
-._crit_edge189:4  %tmp_6 = call i8 @_ssdm_op_PartSelect.i8.i24.i32.i32(i24 %p_Val2_s, i32 16, i32 23)
+._crit_edge189:4  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i24.i32.i32(i24 %p_Val2_s, i32 16, i32 23)
 
 ST_5: stg_58 [1/1] 1.57ns
 ._crit_edge189:12  store i1 false, i1* %sof_1
@@ -423,32 +423,32 @@ ST_5: stg_58 [1/1] 1.57ns
 ST_6: stg_59 [1/1] 0.00ns
 :1  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str1817) nounwind
 
-ST_6: tmp_1 [1/1] 0.00ns
-:2  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str1817)
+ST_6: tmp_32 [1/1] 0.00ns
+:2  %tmp_32 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str1817)
 
 ST_6: stg_61 [1/1] 0.00ns
 :3  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1806) nounwind
 
-ST_6: tmp_7 [1/1] 0.00ns
-._crit_edge189:5  %tmp_7 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str1825)
+ST_6: tmp_s [1/1] 0.00ns
+._crit_edge189:5  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str1825)
 
 ST_6: stg_63 [1/1] 0.00ns
 ._crit_edge189:6  call void (...)* @_ssdm_op_SpecProtocol(i32 0, [1 x i8]* @p_str1806) nounwind
 
 ST_6: stg_64 [1/1] 4.38ns
-._crit_edge189:7  call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %img_data_stream_0_V, i8 %tmp_10)
+._crit_edge189:7  call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %img_data_stream_0_V, i8 %tmp_56)
 
 ST_6: stg_65 [1/1] 4.38ns
-._crit_edge189:8  call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %img_data_stream_1_V, i8 %tmp_5)
+._crit_edge189:8  call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %img_data_stream_1_V, i8 %tmp_4)
 
 ST_6: stg_66 [1/1] 4.38ns
-._crit_edge189:9  call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %img_data_stream_2_V, i8 %tmp_6)
+._crit_edge189:9  call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %img_data_stream_2_V, i8 %tmp_5)
 
-ST_6: empty_34 [1/1] 0.00ns
-._crit_edge189:10  %empty_34 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str1825, i32 %tmp_7)
+ST_6: empty_86 [1/1] 0.00ns
+._crit_edge189:10  %empty_86 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str1825, i32 %tmp_s)
 
-ST_6: empty_35 [1/1] 0.00ns
-._crit_edge189:11  %empty_35 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str1817, i32 %tmp_1)
+ST_6: empty_87 [1/1] 0.00ns
+._crit_edge189:11  %empty_87 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str1817, i32 %tmp_32)
 
 ST_6: stg_69 [1/1] 0.00ns
 ._crit_edge189:13  br label %1
@@ -470,8 +470,8 @@ ST_7: stg_73 [1/1] 0.00ns
 ST_7: stg_74 [1/1] 0.00ns
 :0  call void (...)* @_ssdm_op_SpecLoopName([18 x i8]* @p_str1822) nounwind
 
-ST_7: tmp_2 [1/1] 0.00ns
-:1  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([18 x i8]* @p_str1822)
+ST_7: tmp_33 [1/1] 0.00ns
+:1  %tmp_33 = call i32 (...)* @_ssdm_op_SpecRegionBegin([18 x i8]* @p_str1822)
 
 ST_7: stg_76 [1/1] 0.00ns
 :2  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1806) nounwind
@@ -479,25 +479,25 @@ ST_7: stg_76 [1/1] 0.00ns
 ST_7: stg_77 [1/1] 0.00ns
 :3  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 0, i32 0, i32 0, [1 x i8]* @p_str1806) nounwind
 
-ST_7: empty_36 [1/1] 0.00ns
-:4  %empty_36 = call { i24, i3, i3, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i3P.i3P.i1P.i1P.i1P.i1P(i24* %AXI_video_strm_V_data_V, i3* %AXI_video_strm_V_keep_V, i3* %AXI_video_strm_V_strb_V, i1* %AXI_video_strm_V_user_V, i1* %AXI_video_strm_V_last_V, i1* %AXI_video_strm_V_id_V, i1* %AXI_video_strm_V_dest_V)
+ST_7: empty_88 [1/1] 0.00ns
+:4  %empty_88 = call { i24, i3, i3, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i3P.i3P.i1P.i1P.i1P.i1P(i24* %AXI_video_strm_V_data_V, i3* %AXI_video_strm_V_keep_V, i3* %AXI_video_strm_V_strb_V, i1* %AXI_video_strm_V_user_V, i1* %AXI_video_strm_V_last_V, i1* %AXI_video_strm_V_id_V, i1* %AXI_video_strm_V_dest_V)
 
 ST_7: tmp_data_V_2 [1/1] 0.00ns
-:5  %tmp_data_V_2 = extractvalue { i24, i3, i3, i1, i1, i1, i1 } %empty_36, 0
+:5  %tmp_data_V_2 = extractvalue { i24, i3, i3, i1, i1, i1, i1 } %empty_88, 0
 
 ST_7: tmp_last_V_2 [1/1] 0.00ns
-:6  %tmp_last_V_2 = extractvalue { i24, i3, i3, i1, i1, i1, i1 } %empty_36, 4
+:6  %tmp_last_V_2 = extractvalue { i24, i3, i3, i1, i1, i1, i1 } %empty_88, 4
 
-ST_7: empty_37 [1/1] 0.00ns
-:7  %empty_37 = call i32 (...)* @_ssdm_op_SpecRegionEnd([18 x i8]* @p_str1822, i32 %tmp_2)
+ST_7: empty_89 [1/1] 0.00ns
+:7  %empty_89 = call i32 (...)* @_ssdm_op_SpecRegionEnd([18 x i8]* @p_str1822, i32 %tmp_33)
 
 ST_7: stg_82 [1/1] 0.00ns
 :8  br label %.preheader
 
 
  <State 8>: 0.00ns
-ST_8: empty_38 [1/1] 0.00ns
-:0  %empty_38 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str1816, i32 %tmp_s)
+ST_8: empty_90 [1/1] 0.00ns
+:0  %empty_90 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str1816, i32 %tmp_31)
 
 ST_8: stg_84 [1/1] 0.00ns
 :1  br label %.preheader187
@@ -545,7 +545,7 @@ empty        (read             ) [ 000000000]
 tmp_data_V   (extractvalue     ) [ 000111111]
 tmp_user_V   (extractvalue     ) [ 001000000]
 tmp_last_V   (extractvalue     ) [ 000111111]
-empty_32     (specregionend    ) [ 000000000]
+empty_84     (specregionend    ) [ 000000000]
 stg_23       (br               ) [ 000000000]
 sof_1        (alloca           ) [ 000111111]
 stg_25       (store            ) [ 000000000]
@@ -558,7 +558,7 @@ stg_31       (speclooptripcount) [ 000000000]
 i_V          (add              ) [ 000111111]
 stg_33       (br               ) [ 000000000]
 stg_34       (specloopname     ) [ 000000000]
-tmp_s        (specregionbegin  ) [ 000001111]
+tmp_31       (specregionbegin  ) [ 000001111]
 stg_36       (br               ) [ 000011111]
 stg_37       (ret              ) [ 000000000]
 eol_1        (phi              ) [ 000001010]
@@ -572,41 +572,41 @@ stg_45       (br               ) [ 000011111]
 sof_1_load   (load             ) [ 000000000]
 brmerge      (or               ) [ 000011111]
 stg_48       (br               ) [ 000000000]
-empty_33     (read             ) [ 000000000]
+empty_85     (read             ) [ 000000000]
 tmp_data_V_1 (extractvalue     ) [ 000000000]
 tmp_last_V_1 (extractvalue     ) [ 000000000]
 stg_52       (br               ) [ 000000000]
 axi_last_V_2 (phi              ) [ 000011111]
 p_Val2_s     (phi              ) [ 000011111]
-tmp_10       (trunc            ) [ 000001100]
+tmp_56       (trunc            ) [ 000001100]
+tmp_4        (partselect       ) [ 000001100]
 tmp_5        (partselect       ) [ 000001100]
-tmp_6        (partselect       ) [ 000001100]
 stg_58       (store            ) [ 000000000]
 stg_59       (specloopname     ) [ 000000000]
-tmp_1        (specregionbegin  ) [ 000000000]
+tmp_32       (specregionbegin  ) [ 000000000]
 stg_61       (specpipeline     ) [ 000000000]
-tmp_7        (specregionbegin  ) [ 000000000]
+tmp_s        (specregionbegin  ) [ 000000000]
 stg_63       (specprotocol     ) [ 000000000]
 stg_64       (write            ) [ 000000000]
 stg_65       (write            ) [ 000000000]
 stg_66       (write            ) [ 000000000]
-empty_34     (specregionend    ) [ 000000000]
-empty_35     (specregionend    ) [ 000000000]
+empty_86     (specregionend    ) [ 000000000]
+empty_87     (specregionend    ) [ 000000000]
 stg_69       (br               ) [ 000011111]
 axi_last_V_3 (phi              ) [ 000110011]
 axi_data_V_3 (phi              ) [ 000110011]
 eol_2        (phi              ) [ 000000010]
 stg_73       (br               ) [ 000000000]
 stg_74       (specloopname     ) [ 000000000]
-tmp_2        (specregionbegin  ) [ 000000000]
+tmp_33       (specregionbegin  ) [ 000000000]
 stg_76       (specpipeline     ) [ 000000000]
 stg_77       (speclooptripcount) [ 000000000]
-empty_36     (read             ) [ 000000000]
+empty_88     (read             ) [ 000000000]
 tmp_data_V_2 (extractvalue     ) [ 000011111]
 tmp_last_V_2 (extractvalue     ) [ 000011111]
-empty_37     (specregionend    ) [ 000000000]
+empty_89     (specregionend    ) [ 000000000]
 stg_82       (br               ) [ 000011111]
-empty_38     (specregionend    ) [ 000000000]
+empty_90     (specregionend    ) [ 000000000]
 stg_84       (br               ) [ 000111111]
 </LifeTime>
 
@@ -1034,7 +1034,7 @@ stg_84       (br               ) [ 000111111]
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="empty/2 empty_33/5 empty_36/7 "/>
+<opset="empty/2 empty_85/5 empty_88/7 "/>
 </bind>
 </comp>
 
@@ -1481,18 +1481,18 @@ stg_84       (br               ) [ 000111111]
 </bind>
 </comp>
 
-<comp id="318" class="1004" name="tmp_10_fu_318">
+<comp id="318" class="1004" name="tmp_56_fu_318">
 <pin_list>
 <pin id="319" dir="0" index="0" bw="24" slack="0"/>
 <pin id="320" dir="1" index="1" bw="8" slack="1"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="tmp_10/5 "/>
+<opset="tmp_56/5 "/>
 </bind>
 </comp>
 
-<comp id="322" class="1004" name="tmp_5_fu_322">
+<comp id="322" class="1004" name="tmp_4_fu_322">
 <pin_list>
 <pin id="323" dir="0" index="0" bw="8" slack="0"/>
 <pin id="324" dir="0" index="1" bw="24" slack="0"/>
@@ -1502,11 +1502,11 @@ stg_84       (br               ) [ 000111111]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_5/5 "/>
+<opset="tmp_4/5 "/>
 </bind>
 </comp>
 
-<comp id="332" class="1004" name="tmp_6_fu_332">
+<comp id="332" class="1004" name="tmp_5_fu_332">
 <pin_list>
 <pin id="333" dir="0" index="0" bw="8" slack="0"/>
 <pin id="334" dir="0" index="1" bw="24" slack="0"/>
@@ -1516,7 +1516,7 @@ stg_84       (br               ) [ 000111111]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_6/5 "/>
+<opset="tmp_5/5 "/>
 </bind>
 </comp>
 
@@ -1612,33 +1612,33 @@ stg_84       (br               ) [ 000111111]
 </bind>
 </comp>
 
-<comp id="389" class="1005" name="tmp_10_reg_389">
+<comp id="389" class="1005" name="tmp_56_reg_389">
 <pin_list>
 <pin id="390" dir="0" index="0" bw="8" slack="1"/>
 <pin id="391" dir="1" index="1" bw="8" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_10 "/>
+<opset="tmp_56 "/>
 </bind>
 </comp>
 
-<comp id="394" class="1005" name="tmp_5_reg_394">
+<comp id="394" class="1005" name="tmp_4_reg_394">
 <pin_list>
 <pin id="395" dir="0" index="0" bw="8" slack="1"/>
 <pin id="396" dir="1" index="1" bw="8" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_5 "/>
+<opset="tmp_4 "/>
 </bind>
 </comp>
 
-<comp id="399" class="1005" name="tmp_6_reg_399">
+<comp id="399" class="1005" name="tmp_5_reg_399">
 <pin_list>
 <pin id="400" dir="0" index="0" bw="8" slack="1"/>
 <pin id="401" dir="1" index="1" bw="8" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_6 "/>
+<opset="tmp_5 "/>
 </bind>
 </comp>
 
@@ -1881,7 +1881,7 @@ stg_84       (br               ) [ 000111111]
   - Chain level:
 	State 1
 	State 2
-		empty_32 : 1
+		empty_84 : 1
 		stg_23 : 1
 	State 3
 		stg_25 : 1
@@ -1897,15 +1897,15 @@ stg_84       (br               ) [ 000111111]
 		stg_48 : 1
 		axi_last_V_2 : 2
 		p_Val2_s : 2
-		tmp_10 : 3
+		tmp_56 : 3
+		tmp_4 : 3
 		tmp_5 : 3
-		tmp_6 : 3
 	State 6
-		empty_34 : 1
-		empty_35 : 1
+		empty_86 : 1
+		empty_87 : 1
 	State 7
 		stg_73 : 1
-		empty_37 : 1
+		empty_89 : 1
 	State 8
 
 
@@ -1935,10 +1935,10 @@ stg_84       (br               ) [ 000111111]
 |extractvalue|      grp_fu_271     |    0    |    0    |
 |          |  tmp_user_V_fu_276  |    0    |    0    |
 |----------|---------------------|---------|---------|
-|   trunc  |    tmp_10_fu_318    |    0    |    0    |
+|   trunc  |    tmp_56_fu_318    |    0    |    0    |
 |----------|---------------------|---------|---------|
-|partselect|     tmp_5_fu_322    |    0    |    0    |
-|          |     tmp_6_fu_332    |    0    |    0    |
+|partselect|     tmp_4_fu_322    |    0    |    0    |
+|          |     tmp_5_fu_332    |    0    |    0    |
 |----------|---------------------|---------|---------|
 |   Total  |                     |    0    |    31   |
 |----------|---------------------|---------|---------|
@@ -1968,9 +1968,9 @@ N/A
 |  p_Val2_s_reg_220  |   24   |
 |     p_s_reg_151    |   11   |
 |    sof_1_reg_360   |    1   |
-|   tmp_10_reg_389   |    8   |
-|    tmp_5_reg_394   |    8   |
-|    tmp_6_reg_399   |    8   |
+|    tmp_4_reg_394   |    8   |
+|   tmp_56_reg_389   |    8   |
+|    tmp_5_reg_399   |    8   |
 |tmp_data_V_2_reg_404|   24   |
 | tmp_data_V_reg_347 |   24   |
 |tmp_last_V_2_reg_409|    1   |

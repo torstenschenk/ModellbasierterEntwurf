@@ -194,7 +194,7 @@ moments_AXIvideo2Mat::moments_AXIvideo2Mat(sc_module_name name) : sc_module(name
     sensitive << ( exitcond4_reg_376 );
     sensitive << ( ap_sig_127 );
     sensitive << ( ap_sig_137 );
-    sensitive << ( tmp_10_reg_389 );
+    sensitive << ( tmp_56_reg_389 );
 
     SC_METHOD(thread_img_data_stream_0_V_write);
     sensitive << ( ap_sig_cseq_ST_pp1_stg0_fsm_4 );
@@ -217,7 +217,7 @@ moments_AXIvideo2Mat::moments_AXIvideo2Mat(sc_module_name name) : sc_module(name
     sensitive << ( exitcond4_reg_376 );
     sensitive << ( ap_sig_127 );
     sensitive << ( ap_sig_137 );
-    sensitive << ( tmp_5_reg_394 );
+    sensitive << ( tmp_4_reg_394 );
 
     SC_METHOD(thread_img_data_stream_1_V_write);
     sensitive << ( ap_sig_cseq_ST_pp1_stg0_fsm_4 );
@@ -240,7 +240,7 @@ moments_AXIvideo2Mat::moments_AXIvideo2Mat(sc_module_name name) : sc_module(name
     sensitive << ( exitcond4_reg_376 );
     sensitive << ( ap_sig_127 );
     sensitive << ( ap_sig_137 );
-    sensitive << ( tmp_6_reg_399 );
+    sensitive << ( tmp_5_reg_399 );
 
     SC_METHOD(thread_img_data_stream_2_V_write);
     sensitive << ( ap_sig_cseq_ST_pp1_stg0_fsm_4 );
@@ -284,7 +284,7 @@ moments_AXIvideo2Mat::moments_AXIvideo2Mat(sc_module_name name) : sc_module(name
     sensitive << ( ap_reg_phiprechg_p_Val2_s_reg_220pp1_it0 );
     sensitive << ( ap_sig_215 );
 
-    SC_METHOD(thread_tmp_10_fu_318_p1);
+    SC_METHOD(thread_tmp_56_fu_318_p1);
     sensitive << ( p_Val2_s_phi_fu_224_p4 );
 
     SC_METHOD(thread_tmp_user_V_fu_276_p1);
@@ -375,10 +375,10 @@ moments_AXIvideo2Mat::moments_AXIvideo2Mat(sc_module_name name) : sc_module(name
     sc_trace(mVcdFile, ap_sig_127, "ap_sig_127");
     sc_trace(mVcdFile, ap_sig_137, "ap_sig_137");
     sc_trace(mVcdFile, j_V_fu_303_p2, "j_V_fu_303_p2");
-    sc_trace(mVcdFile, tmp_10_fu_318_p1, "tmp_10_fu_318_p1");
-    sc_trace(mVcdFile, tmp_10_reg_389, "tmp_10_reg_389");
-    sc_trace(mVcdFile, tmp_5_reg_394, "tmp_5_reg_394");
-    sc_trace(mVcdFile, tmp_6_reg_399, "tmp_6_reg_399");
+    sc_trace(mVcdFile, tmp_56_fu_318_p1, "tmp_56_fu_318_p1");
+    sc_trace(mVcdFile, tmp_56_reg_389, "tmp_56_reg_389");
+    sc_trace(mVcdFile, tmp_4_reg_394, "tmp_4_reg_394");
+    sc_trace(mVcdFile, tmp_5_reg_399, "tmp_5_reg_399");
     sc_trace(mVcdFile, ap_sig_155, "ap_sig_155");
     sc_trace(mVcdFile, axi_last_V_3_reg_232, "axi_last_V_3_reg_232");
     sc_trace(mVcdFile, axi_last_V1_reg_131, "axi_last_V1_reg_131");
@@ -587,9 +587,9 @@ void moments_AXIvideo2Mat::thread_ap_clk_no_reset_() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_pp1_stg0_fsm_4.read()) && esl_seteq<1,1,1>(exitcond4_fu_297_p2.read(), ap_const_lv1_0) && !((esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ppiten_pp1_it0.read()) && 
   ap_sig_127.read()) || (esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ppiten_pp1_it1.read()) && 
   ap_sig_137.read())))) {
-        tmp_10_reg_389 = tmp_10_fu_318_p1.read();
-        tmp_5_reg_394 = p_Val2_s_phi_fu_224_p4.read().range(15, 8);
-        tmp_6_reg_399 = p_Val2_s_phi_fu_224_p4.read().range(23, 16);
+        tmp_4_reg_394 = p_Val2_s_phi_fu_224_p4.read().range(15, 8);
+        tmp_56_reg_389 = tmp_56_fu_318_p1.read();
+        tmp_5_reg_399 = p_Val2_s_phi_fu_224_p4.read().range(23, 16);
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_st2_fsm_1.read()) && !esl_seteq<1,1,1>(in_data_TVALID.read(), ap_const_logic_0))) {
         tmp_data_V_reg_347 = in_data_TDATA.read();
@@ -808,7 +808,7 @@ void moments_AXIvideo2Mat::thread_img_data_stream_0_V_blk_n() {
 }
 
 void moments_AXIvideo2Mat::thread_img_data_stream_0_V_din() {
-    img_data_stream_0_V_din = tmp_10_reg_389.read();
+    img_data_stream_0_V_din = tmp_56_reg_389.read();
 }
 
 void moments_AXIvideo2Mat::thread_img_data_stream_0_V_write() {
@@ -835,7 +835,7 @@ void moments_AXIvideo2Mat::thread_img_data_stream_1_V_blk_n() {
 }
 
 void moments_AXIvideo2Mat::thread_img_data_stream_1_V_din() {
-    img_data_stream_1_V_din = tmp_5_reg_394.read();
+    img_data_stream_1_V_din = tmp_4_reg_394.read();
 }
 
 void moments_AXIvideo2Mat::thread_img_data_stream_1_V_write() {
@@ -862,7 +862,7 @@ void moments_AXIvideo2Mat::thread_img_data_stream_2_V_blk_n() {
 }
 
 void moments_AXIvideo2Mat::thread_img_data_stream_2_V_din() {
-    img_data_stream_2_V_din = tmp_6_reg_399.read();
+    img_data_stream_2_V_din = tmp_5_reg_399.read();
 }
 
 void moments_AXIvideo2Mat::thread_img_data_stream_2_V_write() {
@@ -929,8 +929,8 @@ void moments_AXIvideo2Mat::thread_p_Val2_s_phi_fu_224_p4() {
     }
 }
 
-void moments_AXIvideo2Mat::thread_tmp_10_fu_318_p1() {
-    tmp_10_fu_318_p1 = p_Val2_s_phi_fu_224_p4.read().range(8-1, 0);
+void moments_AXIvideo2Mat::thread_tmp_56_fu_318_p1() {
+    tmp_56_fu_318_p1 = p_Val2_s_phi_fu_224_p4.read().range(8-1, 0);
 }
 
 void moments_AXIvideo2Mat::thread_tmp_user_V_fu_276_p1() {

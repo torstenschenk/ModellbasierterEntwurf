@@ -247,7 +247,7 @@ set Pointer4 "1"
 set Reference4 "0"
 set Dims4 [list 0]
 set Interface4 "wire"
-set DataType4 "float"
+set DataType4 "double"
 set Port4 [list $PortName4 $Interface4 $DataType4 $Pointer4 $Dims4 $Const4 $Volatile4 $ArrayOpt4]
 lappend PortList $Port4
 set globalAPint "" 

@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="moments,hls_ip_2016_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=5.745000,HLS_SYN_LAT=6232689,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=588,HLS_SYN_LUT=775}" *)
+(* CORE_GENERATION_INFO="moments,hls_ip_2016_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=9.321000,HLS_SYN_LAT=8304200,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=31,HLS_SYN_FF=10446,HLS_SYN_LUT=16500}" *)
 
 module moments (
         ap_clk,
@@ -50,34 +50,43 @@ module moments (
         interrupt
 );
 
-parameter    ap_ST_st1_fsm_0 = 8'b1;
-parameter    ap_ST_st2_fsm_1 = 8'b10;
-parameter    ap_ST_st3_fsm_2 = 8'b100;
-parameter    ap_ST_st4_fsm_3 = 8'b1000;
-parameter    ap_ST_pp0_stg0_fsm_4 = 8'b10000;
-parameter    ap_ST_st8_fsm_5 = 8'b100000;
-parameter    ap_ST_st9_fsm_6 = 8'b1000000;
-parameter    ap_ST_st10_fsm_7 = 8'b10000000;
+parameter    ap_ST_st1_fsm_0 = 20'b1;
+parameter    ap_ST_st2_fsm_1 = 20'b10;
+parameter    ap_ST_st3_fsm_2 = 20'b100;
+parameter    ap_ST_st4_fsm_3 = 20'b1000;
+parameter    ap_ST_st5_fsm_4 = 20'b10000;
+parameter    ap_ST_st6_fsm_5 = 20'b100000;
+parameter    ap_ST_st7_fsm_6 = 20'b1000000;
+parameter    ap_ST_st8_fsm_7 = 20'b10000000;
+parameter    ap_ST_st9_fsm_8 = 20'b100000000;
+parameter    ap_ST_st10_fsm_9 = 20'b1000000000;
+parameter    ap_ST_st11_fsm_10 = 20'b10000000000;
+parameter    ap_ST_st12_fsm_11 = 20'b100000000000;
+parameter    ap_ST_st13_fsm_12 = 20'b1000000000000;
+parameter    ap_ST_st14_fsm_13 = 20'b10000000000000;
+parameter    ap_ST_st15_fsm_14 = 20'b100000000000000;
+parameter    ap_ST_st16_fsm_15 = 20'b1000000000000000;
+parameter    ap_ST_st17_fsm_16 = 20'b10000000000000000;
+parameter    ap_ST_st18_fsm_17 = 20'b100000000000000000;
+parameter    ap_ST_st19_fsm_18 = 20'b1000000000000000000;
+parameter    ap_ST_st20_fsm_19 = 20'b10000000000000000000;
 parameter    ap_const_lv32_0 = 32'b00000000000000000000000000000000;
 parameter    C_S_AXI_CONTROL_DATA_WIDTH = 32;
 parameter    ap_const_int64_8 = 8;
 parameter    C_S_AXI_CONTROL_ADDR_WIDTH = 6;
 parameter    C_S_AXI_DATA_WIDTH = 32;
-parameter    ap_const_lv32_3 = 32'b11;
 parameter    ap_const_lv32_4 = 32'b100;
-parameter    ap_const_lv11_0 = 11'b00000000000;
-parameter    ap_const_lv32_2 = 32'b10;
 parameter    ap_const_lv32_5 = 32'b101;
+parameter    ap_const_lv32_A = 32'b1010;
+parameter    ap_const_lv32_C = 32'b1100;
+parameter    ap_const_lv32_12 = 32'b10010;
+parameter    ap_const_lv32_B = 32'b1011;
+parameter    ap_const_lv32_3 = 32'b11;
 parameter    ap_const_lv32_1 = 32'b1;
-parameter    ap_const_lv32_6 = 32'b110;
-parameter    ap_const_lv32_7 = 32'b111;
-parameter    ap_const_lv32_FFF = 32'b111111111111;
-parameter    ap_const_lv32_4007E800 = 32'b1000000000001111110100000000000;
-parameter    ap_const_lv11_438 = 11'b10000111000;
-parameter    ap_const_lv11_1 = 11'b1;
-parameter    ap_const_lv11_780 = 11'b11110000000;
-parameter    ap_const_lv11_1F5 = 11'b111110101;
-parameter    ap_const_lv8_0 = 8'b00000000;
+parameter    ap_const_lv32_2 = 32'b10;
+parameter    ap_const_lv32_13 = 32'b10011;
+parameter    ap_const_lv64_3FE0000000000000 = 64'b11111111100000000000000000000000000000000000000000000000000000;
+parameter    ap_const_lv32_D = 32'b1101;
 
 parameter C_S_AXI_CONTROL_WSTRB_WIDTH = (C_S_AXI_CONTROL_DATA_WIDTH / ap_const_int64_8);
 parameter C_S_AXI_WSTRB_WIDTH = (C_S_AXI_DATA_WIDTH / ap_const_int64_8);
@@ -125,9 +134,9 @@ reg    ap_rst_n_inv;
 wire    ap_start;
 reg    ap_done;
 reg    ap_idle;
-(* fsm_encoding = "none" *) reg   [7:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [19:0] ap_CS_fsm;
 reg    ap_sig_cseq_ST_st1_fsm_0;
-reg    ap_sig_25;
+reg    ap_sig_37;
 reg    ap_ready;
 reg   [23:0] in_data_V_data_V_0_data_out;
 wire    in_data_V_data_V_0_vld_in;
@@ -221,20 +230,88 @@ reg   [0:0] out_data_V_dest_V_1_data_reg;
 reg    out_data_V_dest_V_1_sRdy;
 reg    out_data_V_dest_V_1_mVld;
 reg    out_data_V_dest_V_1_areset_d;
+wire   [31:0] x;
 reg    x_ap_vld;
+wire   [31:0] y;
 reg    y_ap_vld;
 reg    angle_ap_vld;
-reg   [10:0] col_i_reg_222;
-wire   [0:0] exitcond5_i_fu_275_p2;
+reg   [20:0] x_center_V_reg_278;
+reg    ap_sig_cseq_ST_st5_fsm_4;
+reg    ap_sig_468;
+wire    grp_moments_calc_fu_147_ap_done;
+reg   [20:0] y_center_V_reg_283;
+reg   [44:0] sub45_V_reg_288;
+wire   [63:0] tmp_fu_226_p1;
+reg   [63:0] tmp_reg_293;
+reg    ap_sig_cseq_ST_st6_fsm_5;
+reg    ap_sig_487;
+wire   [63:0] grp_fu_204_p1;
+reg   [63:0] multi_reg_303;
+reg    ap_sig_cseq_ST_st11_fsm_10;
+reg    ap_sig_496;
+wire   [63:0] grp_fu_207_p1;
+reg   [63:0] subtr_reg_308;
+wire   [63:0] grp_moments_atan2_cordic_double_s_fu_139_ap_return;
+reg   [63:0] tmp_i_i_reg_313;
+reg    ap_sig_cseq_ST_st13_fsm_12;
+reg    ap_sig_507;
+wire    grp_moments_atan2_cordic_double_s_fu_139_ap_done;
+wire    grp_moments_Mat2AXIvideo_fu_178_ap_done;
+wire   [63:0] grp_fu_199_p2;
+reg   [63:0] tmp_4_reg_318;
+reg    ap_sig_cseq_ST_st19_fsm_18;
+reg    ap_sig_523;
+wire    grp_moments_atan2_cordic_double_s_fu_139_ap_start;
+wire    grp_moments_atan2_cordic_double_s_fu_139_ap_idle;
+wire    grp_moments_atan2_cordic_double_s_fu_139_ap_ready;
+wire    grp_moments_calc_fu_147_ap_start;
+wire    grp_moments_calc_fu_147_ap_idle;
+wire    grp_moments_calc_fu_147_ap_ready;
+wire    grp_moments_calc_fu_147_img_in_data_stream_0_V_read;
+wire    grp_moments_calc_fu_147_img_in_data_stream_1_V_read;
+wire    grp_moments_calc_fu_147_img_in_data_stream_2_V_read;
+wire   [7:0] grp_moments_calc_fu_147_img_out_data_stream_0_V_din;
+wire    grp_moments_calc_fu_147_img_out_data_stream_0_V_write;
+wire   [7:0] grp_moments_calc_fu_147_img_out_data_stream_1_V_din;
+wire    grp_moments_calc_fu_147_img_out_data_stream_1_V_write;
+wire   [7:0] grp_moments_calc_fu_147_img_out_data_stream_2_V_din;
+wire    grp_moments_calc_fu_147_img_out_data_stream_2_V_write;
+wire   [20:0] grp_moments_calc_fu_147_ap_return_0;
+wire   [20:0] grp_moments_calc_fu_147_ap_return_1;
+wire   [85:0] grp_moments_calc_fu_147_ap_return_2;
+wire   [44:0] grp_moments_calc_fu_147_ap_return_3;
+wire    grp_moments_AXIvideo2Mat_fu_157_ap_start;
+wire    grp_moments_AXIvideo2Mat_fu_157_ap_done;
+wire    grp_moments_AXIvideo2Mat_fu_157_ap_idle;
+wire    grp_moments_AXIvideo2Mat_fu_157_ap_ready;
+wire    grp_moments_AXIvideo2Mat_fu_157_in_data_TVALID;
+wire    grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY;
+wire   [7:0] grp_moments_AXIvideo2Mat_fu_157_img_data_stream_0_V_din;
+wire    grp_moments_AXIvideo2Mat_fu_157_img_data_stream_0_V_write;
+wire   [7:0] grp_moments_AXIvideo2Mat_fu_157_img_data_stream_1_V_din;
+wire    grp_moments_AXIvideo2Mat_fu_157_img_data_stream_1_V_write;
+wire   [7:0] grp_moments_AXIvideo2Mat_fu_157_img_data_stream_2_V_din;
+wire    grp_moments_AXIvideo2Mat_fu_157_img_data_stream_2_V_write;
+wire    grp_moments_Mat2AXIvideo_fu_178_ap_start;
+wire    grp_moments_Mat2AXIvideo_fu_178_ap_idle;
+wire    grp_moments_Mat2AXIvideo_fu_178_ap_ready;
+wire    grp_moments_Mat2AXIvideo_fu_178_img_data_stream_0_V_read;
+wire    grp_moments_Mat2AXIvideo_fu_178_img_data_stream_1_V_read;
+wire    grp_moments_Mat2AXIvideo_fu_178_img_data_stream_2_V_read;
+wire   [23:0] grp_moments_Mat2AXIvideo_fu_178_out_data_TDATA;
+wire    grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID;
+wire   [2:0] grp_moments_Mat2AXIvideo_fu_178_out_data_TKEEP;
+wire   [2:0] grp_moments_Mat2AXIvideo_fu_178_out_data_TSTRB;
+wire   [0:0] grp_moments_Mat2AXIvideo_fu_178_out_data_TUSER;
+wire   [0:0] grp_moments_Mat2AXIvideo_fu_178_out_data_TLAST;
+wire   [0:0] grp_moments_Mat2AXIvideo_fu_178_out_data_TID;
+wire   [0:0] grp_moments_Mat2AXIvideo_fu_178_out_data_TDEST;
+reg    ap_reg_grp_moments_atan2_cordic_double_s_fu_139_ap_start;
+reg    ap_sig_cseq_ST_st12_fsm_11;
+reg    ap_sig_613;
+reg    ap_reg_grp_moments_calc_fu_147_ap_start;
 reg    ap_sig_cseq_ST_st4_fsm_3;
-reg    ap_sig_458;
-wire   [10:0] row_fu_281_p2;
-reg   [10:0] row_reg_359;
-wire   [0:0] exitcond_i_fu_287_p2;
-reg   [0:0] exitcond_i_reg_364;
-reg    ap_sig_cseq_ST_pp0_stg0_fsm_4;
-reg    ap_sig_469;
-reg    ap_reg_ppiten_pp0_it0;
+reg    ap_sig_630;
 wire   [7:0] img_0_data_stream_0_V_dout;
 wire    img_0_data_stream_0_V_empty_n;
 reg    img_0_data_stream_0_V_read;
@@ -244,86 +321,44 @@ reg    img_0_data_stream_1_V_read;
 wire   [7:0] img_0_data_stream_2_V_dout;
 wire    img_0_data_stream_2_V_empty_n;
 reg    img_0_data_stream_2_V_read;
-reg    ap_sig_495;
-reg    ap_reg_ppiten_pp0_it1;
 wire    img_1_data_stream_0_V_full_n;
 reg    img_1_data_stream_0_V_write;
-reg   [0:0] ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1;
 wire    img_1_data_stream_1_V_full_n;
 reg    img_1_data_stream_1_V_write;
 wire    img_1_data_stream_2_V_full_n;
 reg    img_1_data_stream_2_V_write;
-reg    ap_sig_521;
-reg    ap_reg_ppiten_pp0_it2;
-wire   [10:0] col_fu_293_p2;
-wire   [0:0] tmp_i_12_fu_299_p2;
-reg   [0:0] tmp_i_12_reg_373;
-reg   [7:0] tmp_reg_379;
-wire   [7:0] tmp_1_fu_305_p3;
-reg   [7:0] tmp_1_reg_384;
-wire   [7:0] tmp_2_fu_312_p3;
-reg   [7:0] tmp_2_reg_389;
-wire    grp_moments_AXIvideo2Mat_fu_233_ap_start;
-wire    grp_moments_AXIvideo2Mat_fu_233_ap_done;
-wire    grp_moments_AXIvideo2Mat_fu_233_ap_idle;
-wire    grp_moments_AXIvideo2Mat_fu_233_ap_ready;
-wire    grp_moments_AXIvideo2Mat_fu_233_in_data_TVALID;
-wire    grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY;
-wire   [7:0] grp_moments_AXIvideo2Mat_fu_233_img_data_stream_0_V_din;
-wire    grp_moments_AXIvideo2Mat_fu_233_img_data_stream_0_V_write;
-wire   [7:0] grp_moments_AXIvideo2Mat_fu_233_img_data_stream_1_V_din;
-wire    grp_moments_AXIvideo2Mat_fu_233_img_data_stream_1_V_write;
-wire   [7:0] grp_moments_AXIvideo2Mat_fu_233_img_data_stream_2_V_din;
-wire    grp_moments_AXIvideo2Mat_fu_233_img_data_stream_2_V_write;
-wire    grp_moments_Mat2AXIvideo_fu_254_ap_start;
-wire    grp_moments_Mat2AXIvideo_fu_254_ap_done;
-wire    grp_moments_Mat2AXIvideo_fu_254_ap_idle;
-wire    grp_moments_Mat2AXIvideo_fu_254_ap_ready;
-wire    grp_moments_Mat2AXIvideo_fu_254_img_data_stream_0_V_read;
-wire    grp_moments_Mat2AXIvideo_fu_254_img_data_stream_1_V_read;
-wire    grp_moments_Mat2AXIvideo_fu_254_img_data_stream_2_V_read;
-wire   [23:0] grp_moments_Mat2AXIvideo_fu_254_out_data_TDATA;
-wire    grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID;
-wire   [2:0] grp_moments_Mat2AXIvideo_fu_254_out_data_TKEEP;
-wire   [2:0] grp_moments_Mat2AXIvideo_fu_254_out_data_TSTRB;
-wire   [0:0] grp_moments_Mat2AXIvideo_fu_254_out_data_TUSER;
-wire   [0:0] grp_moments_Mat2AXIvideo_fu_254_out_data_TLAST;
-wire   [0:0] grp_moments_Mat2AXIvideo_fu_254_out_data_TID;
-wire   [0:0] grp_moments_Mat2AXIvideo_fu_254_out_data_TDEST;
-reg   [10:0] row_i_reg_211;
-reg    ap_sig_cseq_ST_st3_fsm_2;
-reg    ap_sig_605;
-reg    ap_sig_cseq_ST_st8_fsm_5;
-reg    ap_sig_615;
-reg    ap_reg_grp_moments_AXIvideo2Mat_fu_233_ap_start;
+reg    ap_reg_grp_moments_AXIvideo2Mat_fu_157_ap_start;
 reg    ap_sig_cseq_ST_st2_fsm_1;
-reg    ap_sig_626;
+reg    ap_sig_663;
+reg    ap_sig_cseq_ST_st3_fsm_2;
+reg    ap_sig_670;
 wire    img_0_data_stream_0_V_full_n;
 reg    img_0_data_stream_0_V_write;
 wire    img_0_data_stream_1_V_full_n;
 reg    img_0_data_stream_1_V_write;
 wire    img_0_data_stream_2_V_full_n;
 reg    img_0_data_stream_2_V_write;
-reg    ap_reg_grp_moments_Mat2AXIvideo_fu_254_ap_start;
+reg    ap_reg_grp_moments_Mat2AXIvideo_fu_178_ap_start;
 wire   [7:0] img_1_data_stream_0_V_dout;
 wire    img_1_data_stream_0_V_empty_n;
 reg    img_1_data_stream_0_V_read;
-reg    ap_sig_cseq_ST_st9_fsm_6;
-reg    ap_sig_653;
 wire   [7:0] img_1_data_stream_1_V_dout;
 wire    img_1_data_stream_1_V_empty_n;
 reg    img_1_data_stream_1_V_read;
 wire   [7:0] img_1_data_stream_2_V_dout;
 wire    img_1_data_stream_2_V_empty_n;
 reg    img_1_data_stream_2_V_read;
-reg    ap_sig_cseq_ST_st10_fsm_7;
-reg    ap_sig_692;
-reg    ap_sig_707;
-reg   [7:0] ap_NS_fsm;
+reg    ap_sig_cseq_ST_st20_fsm_19;
+reg    ap_sig_712;
+reg    ap_sig_727;
+reg    ap_sig_cseq_ST_st14_fsm_13;
+reg    ap_sig_746;
+wire  signed [63:0] grp_fu_207_p0;
+reg   [19:0] ap_NS_fsm;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 8'b1;
+#0 ap_CS_fsm = 20'b1;
 #0 in_data_V_data_V_0_in_rdy = 1'b0;
 #0 in_data_V_data_V_0_has_vld_data_reg = 1'b0;
 #0 in_data_V_keep_V_0_in_rdy = 1'b0;
@@ -345,11 +380,10 @@ initial begin
 #0 out_data_V_last_V_1_mVld = 1'b0;
 #0 out_data_V_id_V_1_mVld = 1'b0;
 #0 out_data_V_dest_V_1_mVld = 1'b0;
-#0 ap_reg_ppiten_pp0_it0 = 1'b0;
-#0 ap_reg_ppiten_pp0_it1 = 1'b0;
-#0 ap_reg_ppiten_pp0_it2 = 1'b0;
-#0 ap_reg_grp_moments_AXIvideo2Mat_fu_233_ap_start = 1'b0;
-#0 ap_reg_grp_moments_Mat2AXIvideo_fu_254_ap_start = 1'b0;
+#0 ap_reg_grp_moments_atan2_cordic_double_s_fu_139_ap_start = 1'b0;
+#0 ap_reg_grp_moments_calc_fu_147_ap_start = 1'b0;
+#0 ap_reg_grp_moments_AXIvideo2Mat_fu_157_ap_start = 1'b0;
+#0 ap_reg_grp_moments_Mat2AXIvideo_fu_178_ap_start = 1'b0;
 end
 
 moments_control_s_axi #(
@@ -381,66 +415,150 @@ moments_control_s_axi_U(
     .ap_ready(ap_ready),
     .ap_done(ap_done),
     .ap_idle(ap_idle),
-    .x(ap_const_lv32_0),
+    .x(x),
     .x_ap_vld(x_ap_vld),
-    .y(ap_const_lv32_FFF),
+    .y(y),
     .y_ap_vld(y_ap_vld),
-    .angle(ap_const_lv32_4007E800),
+    .angle(tmp_4_reg_318),
     .angle_ap_vld(angle_ap_vld)
 );
 
-moments_AXIvideo2Mat grp_moments_AXIvideo2Mat_fu_233(
+moments_atan2_cordic_double_s grp_moments_atan2_cordic_double_s_fu_139(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_moments_AXIvideo2Mat_fu_233_ap_start),
-    .ap_done(grp_moments_AXIvideo2Mat_fu_233_ap_done),
-    .ap_idle(grp_moments_AXIvideo2Mat_fu_233_ap_idle),
-    .ap_ready(grp_moments_AXIvideo2Mat_fu_233_ap_ready),
+    .ap_start(grp_moments_atan2_cordic_double_s_fu_139_ap_start),
+    .ap_done(grp_moments_atan2_cordic_double_s_fu_139_ap_done),
+    .ap_idle(grp_moments_atan2_cordic_double_s_fu_139_ap_idle),
+    .ap_ready(grp_moments_atan2_cordic_double_s_fu_139_ap_ready),
+    .y_in(multi_reg_303),
+    .x_in(subtr_reg_308),
+    .ap_return(grp_moments_atan2_cordic_double_s_fu_139_ap_return)
+);
+
+moments_calc grp_moments_calc_fu_147(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(grp_moments_calc_fu_147_ap_start),
+    .ap_done(grp_moments_calc_fu_147_ap_done),
+    .ap_idle(grp_moments_calc_fu_147_ap_idle),
+    .ap_ready(grp_moments_calc_fu_147_ap_ready),
+    .img_in_data_stream_0_V_dout(img_0_data_stream_0_V_dout),
+    .img_in_data_stream_0_V_empty_n(img_0_data_stream_0_V_empty_n),
+    .img_in_data_stream_0_V_read(grp_moments_calc_fu_147_img_in_data_stream_0_V_read),
+    .img_in_data_stream_1_V_dout(img_0_data_stream_1_V_dout),
+    .img_in_data_stream_1_V_empty_n(img_0_data_stream_1_V_empty_n),
+    .img_in_data_stream_1_V_read(grp_moments_calc_fu_147_img_in_data_stream_1_V_read),
+    .img_in_data_stream_2_V_dout(img_0_data_stream_2_V_dout),
+    .img_in_data_stream_2_V_empty_n(img_0_data_stream_2_V_empty_n),
+    .img_in_data_stream_2_V_read(grp_moments_calc_fu_147_img_in_data_stream_2_V_read),
+    .img_out_data_stream_0_V_din(grp_moments_calc_fu_147_img_out_data_stream_0_V_din),
+    .img_out_data_stream_0_V_full_n(img_1_data_stream_0_V_full_n),
+    .img_out_data_stream_0_V_write(grp_moments_calc_fu_147_img_out_data_stream_0_V_write),
+    .img_out_data_stream_1_V_din(grp_moments_calc_fu_147_img_out_data_stream_1_V_din),
+    .img_out_data_stream_1_V_full_n(img_1_data_stream_1_V_full_n),
+    .img_out_data_stream_1_V_write(grp_moments_calc_fu_147_img_out_data_stream_1_V_write),
+    .img_out_data_stream_2_V_din(grp_moments_calc_fu_147_img_out_data_stream_2_V_din),
+    .img_out_data_stream_2_V_full_n(img_1_data_stream_2_V_full_n),
+    .img_out_data_stream_2_V_write(grp_moments_calc_fu_147_img_out_data_stream_2_V_write),
+    .ap_return_0(grp_moments_calc_fu_147_ap_return_0),
+    .ap_return_1(grp_moments_calc_fu_147_ap_return_1),
+    .ap_return_2(grp_moments_calc_fu_147_ap_return_2),
+    .ap_return_3(grp_moments_calc_fu_147_ap_return_3)
+);
+
+moments_AXIvideo2Mat grp_moments_AXIvideo2Mat_fu_157(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(grp_moments_AXIvideo2Mat_fu_157_ap_start),
+    .ap_done(grp_moments_AXIvideo2Mat_fu_157_ap_done),
+    .ap_idle(grp_moments_AXIvideo2Mat_fu_157_ap_idle),
+    .ap_ready(grp_moments_AXIvideo2Mat_fu_157_ap_ready),
     .in_data_TDATA(in_data_V_data_V_0_data_out),
-    .in_data_TVALID(grp_moments_AXIvideo2Mat_fu_233_in_data_TVALID),
-    .in_data_TREADY(grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY),
+    .in_data_TVALID(grp_moments_AXIvideo2Mat_fu_157_in_data_TVALID),
+    .in_data_TREADY(grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY),
     .in_data_TKEEP(in_data_V_keep_V_0_data_out),
     .in_data_TSTRB(in_data_V_strb_V_0_data_out),
     .in_data_TUSER(in_data_V_user_V_0_data_out),
     .in_data_TLAST(in_data_V_last_V_0_data_out),
     .in_data_TID(in_data_V_id_V_0_data_out),
     .in_data_TDEST(in_data_V_dest_V_0_data_out),
-    .img_data_stream_0_V_din(grp_moments_AXIvideo2Mat_fu_233_img_data_stream_0_V_din),
+    .img_data_stream_0_V_din(grp_moments_AXIvideo2Mat_fu_157_img_data_stream_0_V_din),
     .img_data_stream_0_V_full_n(img_0_data_stream_0_V_full_n),
-    .img_data_stream_0_V_write(grp_moments_AXIvideo2Mat_fu_233_img_data_stream_0_V_write),
-    .img_data_stream_1_V_din(grp_moments_AXIvideo2Mat_fu_233_img_data_stream_1_V_din),
+    .img_data_stream_0_V_write(grp_moments_AXIvideo2Mat_fu_157_img_data_stream_0_V_write),
+    .img_data_stream_1_V_din(grp_moments_AXIvideo2Mat_fu_157_img_data_stream_1_V_din),
     .img_data_stream_1_V_full_n(img_0_data_stream_1_V_full_n),
-    .img_data_stream_1_V_write(grp_moments_AXIvideo2Mat_fu_233_img_data_stream_1_V_write),
-    .img_data_stream_2_V_din(grp_moments_AXIvideo2Mat_fu_233_img_data_stream_2_V_din),
+    .img_data_stream_1_V_write(grp_moments_AXIvideo2Mat_fu_157_img_data_stream_1_V_write),
+    .img_data_stream_2_V_din(grp_moments_AXIvideo2Mat_fu_157_img_data_stream_2_V_din),
     .img_data_stream_2_V_full_n(img_0_data_stream_2_V_full_n),
-    .img_data_stream_2_V_write(grp_moments_AXIvideo2Mat_fu_233_img_data_stream_2_V_write)
+    .img_data_stream_2_V_write(grp_moments_AXIvideo2Mat_fu_157_img_data_stream_2_V_write)
 );
 
-moments_Mat2AXIvideo grp_moments_Mat2AXIvideo_fu_254(
+moments_Mat2AXIvideo grp_moments_Mat2AXIvideo_fu_178(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_moments_Mat2AXIvideo_fu_254_ap_start),
-    .ap_done(grp_moments_Mat2AXIvideo_fu_254_ap_done),
-    .ap_idle(grp_moments_Mat2AXIvideo_fu_254_ap_idle),
-    .ap_ready(grp_moments_Mat2AXIvideo_fu_254_ap_ready),
+    .ap_start(grp_moments_Mat2AXIvideo_fu_178_ap_start),
+    .ap_done(grp_moments_Mat2AXIvideo_fu_178_ap_done),
+    .ap_idle(grp_moments_Mat2AXIvideo_fu_178_ap_idle),
+    .ap_ready(grp_moments_Mat2AXIvideo_fu_178_ap_ready),
     .img_data_stream_0_V_dout(img_1_data_stream_0_V_dout),
     .img_data_stream_0_V_empty_n(img_1_data_stream_0_V_empty_n),
-    .img_data_stream_0_V_read(grp_moments_Mat2AXIvideo_fu_254_img_data_stream_0_V_read),
+    .img_data_stream_0_V_read(grp_moments_Mat2AXIvideo_fu_178_img_data_stream_0_V_read),
     .img_data_stream_1_V_dout(img_1_data_stream_1_V_dout),
     .img_data_stream_1_V_empty_n(img_1_data_stream_1_V_empty_n),
-    .img_data_stream_1_V_read(grp_moments_Mat2AXIvideo_fu_254_img_data_stream_1_V_read),
+    .img_data_stream_1_V_read(grp_moments_Mat2AXIvideo_fu_178_img_data_stream_1_V_read),
     .img_data_stream_2_V_dout(img_1_data_stream_2_V_dout),
     .img_data_stream_2_V_empty_n(img_1_data_stream_2_V_empty_n),
-    .img_data_stream_2_V_read(grp_moments_Mat2AXIvideo_fu_254_img_data_stream_2_V_read),
-    .out_data_TDATA(grp_moments_Mat2AXIvideo_fu_254_out_data_TDATA),
-    .out_data_TVALID(grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID),
+    .img_data_stream_2_V_read(grp_moments_Mat2AXIvideo_fu_178_img_data_stream_2_V_read),
+    .out_data_TDATA(grp_moments_Mat2AXIvideo_fu_178_out_data_TDATA),
+    .out_data_TVALID(grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID),
     .out_data_TREADY(out_data_V_dest_V_1_sRdy),
-    .out_data_TKEEP(grp_moments_Mat2AXIvideo_fu_254_out_data_TKEEP),
-    .out_data_TSTRB(grp_moments_Mat2AXIvideo_fu_254_out_data_TSTRB),
-    .out_data_TUSER(grp_moments_Mat2AXIvideo_fu_254_out_data_TUSER),
-    .out_data_TLAST(grp_moments_Mat2AXIvideo_fu_254_out_data_TLAST),
-    .out_data_TID(grp_moments_Mat2AXIvideo_fu_254_out_data_TID),
-    .out_data_TDEST(grp_moments_Mat2AXIvideo_fu_254_out_data_TDEST)
+    .out_data_TKEEP(grp_moments_Mat2AXIvideo_fu_178_out_data_TKEEP),
+    .out_data_TSTRB(grp_moments_Mat2AXIvideo_fu_178_out_data_TSTRB),
+    .out_data_TUSER(grp_moments_Mat2AXIvideo_fu_178_out_data_TUSER),
+    .out_data_TLAST(grp_moments_Mat2AXIvideo_fu_178_out_data_TLAST),
+    .out_data_TID(grp_moments_Mat2AXIvideo_fu_178_out_data_TID),
+    .out_data_TDEST(grp_moments_Mat2AXIvideo_fu_178_out_data_TDEST)
+);
+
+moments_dmul_64ns_64ns_64_6_max_dsp #(
+    .ID( 1 ),
+    .NUM_STAGE( 6 ),
+    .din0_WIDTH( 64 ),
+    .din1_WIDTH( 64 ),
+    .dout_WIDTH( 64 ))
+moments_dmul_64ns_64ns_64_6_max_dsp_U45(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .din0(tmp_i_i_reg_313),
+    .din1(ap_const_lv64_3FE0000000000000),
+    .ce(1'b1),
+    .dout(grp_fu_199_p2)
+);
+
+moments_uitodp_64ns_64_6 #(
+    .ID( 1 ),
+    .NUM_STAGE( 6 ),
+    .din0_WIDTH( 64 ),
+    .dout_WIDTH( 64 ))
+moments_uitodp_64ns_64_6_U46(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .din0(tmp_reg_293),
+    .ce(1'b1),
+    .dout(grp_fu_204_p1)
+);
+
+moments_sitodp_64s_64_6 #(
+    .ID( 1 ),
+    .NUM_STAGE( 6 ),
+    .din0_WIDTH( 64 ),
+    .dout_WIDTH( 64 ))
+moments_sitodp_64s_64_6_U47(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .din0(grp_fu_207_p0),
+    .ce(1'b1),
+    .dout(grp_fu_207_p1)
 );
 
 FIFO_moments_img_0_data_stream_0_V img_0_data_stream_0_V_img_0_data_stream_0_V_fifo_U(
@@ -448,7 +566,7 @@ FIFO_moments_img_0_data_stream_0_V img_0_data_stream_0_V_img_0_data_stream_0_V_f
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(grp_moments_AXIvideo2Mat_fu_233_img_data_stream_0_V_din),
+    .if_din(grp_moments_AXIvideo2Mat_fu_157_img_data_stream_0_V_din),
     .if_full_n(img_0_data_stream_0_V_full_n),
     .if_write(img_0_data_stream_0_V_write),
     .if_dout(img_0_data_stream_0_V_dout),
@@ -461,7 +579,7 @@ FIFO_moments_img_0_data_stream_1_V img_0_data_stream_1_V_img_0_data_stream_1_V_f
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(grp_moments_AXIvideo2Mat_fu_233_img_data_stream_1_V_din),
+    .if_din(grp_moments_AXIvideo2Mat_fu_157_img_data_stream_1_V_din),
     .if_full_n(img_0_data_stream_1_V_full_n),
     .if_write(img_0_data_stream_1_V_write),
     .if_dout(img_0_data_stream_1_V_dout),
@@ -474,7 +592,7 @@ FIFO_moments_img_0_data_stream_2_V img_0_data_stream_2_V_img_0_data_stream_2_V_f
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(grp_moments_AXIvideo2Mat_fu_233_img_data_stream_2_V_din),
+    .if_din(grp_moments_AXIvideo2Mat_fu_157_img_data_stream_2_V_din),
     .if_full_n(img_0_data_stream_2_V_full_n),
     .if_write(img_0_data_stream_2_V_write),
     .if_dout(img_0_data_stream_2_V_dout),
@@ -487,7 +605,7 @@ FIFO_moments_img_1_data_stream_0_V img_1_data_stream_0_V_img_1_data_stream_0_V_f
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(tmp_1_reg_384),
+    .if_din(grp_moments_calc_fu_147_img_out_data_stream_0_V_din),
     .if_full_n(img_1_data_stream_0_V_full_n),
     .if_write(img_1_data_stream_0_V_write),
     .if_dout(img_1_data_stream_0_V_dout),
@@ -500,7 +618,7 @@ FIFO_moments_img_1_data_stream_1_V img_1_data_stream_1_V_img_1_data_stream_1_V_f
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(tmp_2_reg_389),
+    .if_din(grp_moments_calc_fu_147_img_out_data_stream_1_V_din),
     .if_full_n(img_1_data_stream_1_V_full_n),
     .if_write(img_1_data_stream_1_V_write),
     .if_dout(img_1_data_stream_1_V_dout),
@@ -513,7 +631,7 @@ FIFO_moments_img_1_data_stream_2_V img_1_data_stream_2_V_img_1_data_stream_2_V_f
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(tmp_reg_379),
+    .if_din(grp_moments_calc_fu_147_img_out_data_stream_2_V_din),
     .if_full_n(img_1_data_stream_2_V_full_n),
     .if_write(img_1_data_stream_2_V_write),
     .if_dout(img_1_data_stream_2_V_dout),
@@ -531,60 +649,48 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        ap_reg_grp_moments_AXIvideo2Mat_fu_233_ap_start <= 1'b0;
+        ap_reg_grp_moments_AXIvideo2Mat_fu_157_ap_start <= 1'b0;
     end else begin
         if ((1'b1 == ap_sig_cseq_ST_st2_fsm_1)) begin
-            ap_reg_grp_moments_AXIvideo2Mat_fu_233_ap_start <= 1'b1;
-        end else if ((1'b1 == grp_moments_AXIvideo2Mat_fu_233_ap_ready)) begin
-            ap_reg_grp_moments_AXIvideo2Mat_fu_233_ap_start <= 1'b0;
+            ap_reg_grp_moments_AXIvideo2Mat_fu_157_ap_start <= 1'b1;
+        end else if ((1'b1 == grp_moments_AXIvideo2Mat_fu_157_ap_ready)) begin
+            ap_reg_grp_moments_AXIvideo2Mat_fu_157_ap_start <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        ap_reg_grp_moments_Mat2AXIvideo_fu_254_ap_start <= 1'b0;
+        ap_reg_grp_moments_Mat2AXIvideo_fu_178_ap_start <= 1'b0;
     end else begin
-        if (((1'b1 == ap_sig_cseq_ST_st4_fsm_3) & ~(exitcond5_i_fu_275_p2 == 1'b0))) begin
-            ap_reg_grp_moments_Mat2AXIvideo_fu_254_ap_start <= 1'b1;
-        end else if ((1'b1 == grp_moments_Mat2AXIvideo_fu_254_ap_ready)) begin
-            ap_reg_grp_moments_Mat2AXIvideo_fu_254_ap_start <= 1'b0;
+        if ((1'b1 == ap_sig_cseq_ST_st12_fsm_11)) begin
+            ap_reg_grp_moments_Mat2AXIvideo_fu_178_ap_start <= 1'b1;
+        end else if ((1'b1 == grp_moments_Mat2AXIvideo_fu_178_ap_ready)) begin
+            ap_reg_grp_moments_Mat2AXIvideo_fu_178_ap_start <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        ap_reg_ppiten_pp0_it0 <= 1'b0;
+        ap_reg_grp_moments_atan2_cordic_double_s_fu_139_ap_start <= 1'b0;
     end else begin
-        if (((1'b1 == ap_sig_cseq_ST_pp0_stg0_fsm_4) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))) & ~(exitcond_i_fu_287_p2 == 1'b0))) begin
-            ap_reg_ppiten_pp0_it0 <= 1'b0;
-        end else if (((1'b1 == ap_sig_cseq_ST_st4_fsm_3) & (exitcond5_i_fu_275_p2 == 1'b0))) begin
-            ap_reg_ppiten_pp0_it0 <= 1'b1;
+        if ((1'b1 == ap_sig_cseq_ST_st12_fsm_11)) begin
+            ap_reg_grp_moments_atan2_cordic_double_s_fu_139_ap_start <= 1'b1;
+        end else if ((1'b1 == grp_moments_atan2_cordic_double_s_fu_139_ap_ready)) begin
+            ap_reg_grp_moments_atan2_cordic_double_s_fu_139_ap_start <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        ap_reg_ppiten_pp0_it1 <= 1'b0;
+        ap_reg_grp_moments_calc_fu_147_ap_start <= 1'b0;
     end else begin
-        if (((1'b1 == ap_sig_cseq_ST_pp0_stg0_fsm_4) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))) & (exitcond_i_fu_287_p2 == 1'b0))) begin
-            ap_reg_ppiten_pp0_it1 <= 1'b1;
-        end else if ((((1'b1 == ap_sig_cseq_ST_st4_fsm_3) & (exitcond5_i_fu_275_p2 == 1'b0)) | ((1'b1 == ap_sig_cseq_ST_pp0_stg0_fsm_4) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))) & ~(exitcond_i_fu_287_p2 == 1'b0)))) begin
-            ap_reg_ppiten_pp0_it1 <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        ap_reg_ppiten_pp0_it2 <= 1'b0;
-    end else begin
-        if (~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2)))) begin
-            ap_reg_ppiten_pp0_it2 <= ap_reg_ppiten_pp0_it1;
-        end else if (((1'b1 == ap_sig_cseq_ST_st4_fsm_3) & (exitcond5_i_fu_275_p2 == 1'b0))) begin
-            ap_reg_ppiten_pp0_it2 <= 1'b0;
+        if ((1'b1 == ap_sig_cseq_ST_st4_fsm_3)) begin
+            ap_reg_grp_moments_calc_fu_147_ap_start <= 1'b1;
+        end else if ((1'b1 == grp_moments_calc_fu_147_ap_ready)) begin
+            ap_reg_grp_moments_calc_fu_147_ap_start <= 1'b0;
         end
     end
 end
@@ -786,29 +892,6 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_sig_cseq_ST_pp0_stg0_fsm_4) & (1'b1 == ap_reg_ppiten_pp0_it0) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))) & (exitcond_i_fu_287_p2 == 1'b0))) begin
-        col_i_reg_222 <= col_fu_293_p2;
-    end else if (((1'b1 == ap_sig_cseq_ST_st4_fsm_3) & (exitcond5_i_fu_275_p2 == 1'b0))) begin
-        col_i_reg_222 <= ap_const_lv11_0;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_sig_cseq_ST_st8_fsm_5)) begin
-        row_i_reg_211 <= row_reg_359;
-    end else if (((1'b1 == ap_sig_cseq_ST_st3_fsm_2) & ~(1'b0 == grp_moments_AXIvideo2Mat_fu_233_ap_done))) begin
-        row_i_reg_211 <= ap_const_lv11_0;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_sig_cseq_ST_pp0_stg0_fsm_4) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))))) begin
-        ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1 <= exitcond_i_reg_364;
-        exitcond_i_reg_364 <= exitcond_i_fu_287_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
     if (((1'b1 == in_data_V_data_V_0_vld_in) & (1'b1 == in_data_V_data_V_0_in_rdy))) begin
         in_data_V_data_V_0_data_reg <= in_data_TDATA;
     end
@@ -864,69 +947,77 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_sig_cseq_ST_st11_fsm_10)) begin
+        multi_reg_303 <= grp_fu_204_p1;
+        subtr_reg_308 <= grp_fu_207_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
     if (((1'b1 == out_data_V_data_V_1_vld_in) & (1'b1 == out_data_V_data_V_1_sRdy))) begin
-        out_data_V_data_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_254_out_data_TDATA;
+        out_data_V_data_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_178_out_data_TDATA;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == out_data_V_dest_V_1_vld_in) & (1'b1 == out_data_V_dest_V_1_sRdy))) begin
-        out_data_V_dest_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_254_out_data_TDEST;
+        out_data_V_dest_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_178_out_data_TDEST;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == out_data_V_id_V_1_vld_in) & (1'b1 == out_data_V_id_V_1_sRdy))) begin
-        out_data_V_id_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_254_out_data_TID;
+        out_data_V_id_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_178_out_data_TID;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == out_data_V_keep_V_1_vld_in) & (1'b1 == out_data_V_keep_V_1_sRdy))) begin
-        out_data_V_keep_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_254_out_data_TKEEP;
+        out_data_V_keep_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_178_out_data_TKEEP;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == out_data_V_last_V_1_vld_in) & (1'b1 == out_data_V_last_V_1_sRdy))) begin
-        out_data_V_last_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_254_out_data_TLAST;
+        out_data_V_last_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_178_out_data_TLAST;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == out_data_V_strb_V_1_vld_in) & (1'b1 == out_data_V_strb_V_1_sRdy))) begin
-        out_data_V_strb_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_254_out_data_TSTRB;
+        out_data_V_strb_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_178_out_data_TSTRB;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == out_data_V_user_V_1_vld_in) & (1'b1 == out_data_V_user_V_1_sRdy))) begin
-        out_data_V_user_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_254_out_data_TUSER;
+        out_data_V_user_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_178_out_data_TUSER;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_sig_cseq_ST_st4_fsm_3)) begin
-        row_reg_359 <= row_fu_281_p2;
+    if (((1'b1 == ap_sig_cseq_ST_st5_fsm_4) & ~(1'b0 == grp_moments_calc_fu_147_ap_done))) begin
+        sub45_V_reg_288 <= grp_moments_calc_fu_147_ap_return_3;
+        tmp_reg_293 <= tmp_fu_226_p1;
+        x_center_V_reg_278 <= grp_moments_calc_fu_147_ap_return_0;
+        y_center_V_reg_283 <= grp_moments_calc_fu_147_ap_return_1;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_sig_cseq_ST_pp0_stg0_fsm_4) & (exitcond_i_reg_364 == 1'b0) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))))) begin
-        tmp_1_reg_384 <= tmp_1_fu_305_p3;
-        tmp_2_reg_389 <= tmp_2_fu_312_p3;
-        tmp_reg_379 <= img_0_data_stream_2_V_dout;
+    if ((1'b1 == ap_sig_cseq_ST_st19_fsm_18)) begin
+        tmp_4_reg_318 <= grp_fu_199_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_sig_cseq_ST_pp0_stg0_fsm_4) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))) & (exitcond_i_fu_287_p2 == 1'b0))) begin
-        tmp_i_12_reg_373 <= tmp_i_12_fu_299_p2;
+    if (((1'b1 == ap_sig_cseq_ST_st13_fsm_12) & ~((1'b0 == grp_moments_atan2_cordic_double_s_fu_139_ap_done) | (1'b0 == grp_moments_Mat2AXIvideo_fu_178_ap_done)))) begin
+        tmp_i_i_reg_313 <= grp_moments_atan2_cordic_double_s_fu_139_ap_return;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_sig_cseq_ST_st10_fsm_7) & ~ap_sig_707)) begin
+    if (((1'b1 == ap_sig_cseq_ST_st20_fsm_19) & ~ap_sig_727)) begin
         angle_ap_vld = 1'b1;
     end else begin
         angle_ap_vld = 1'b0;
@@ -934,7 +1025,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_sig_cseq_ST_st10_fsm_7) & ~ap_sig_707)) begin
+    if (((1'b1 == ap_sig_cseq_ST_st20_fsm_19) & ~ap_sig_727)) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -950,7 +1041,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_sig_cseq_ST_st10_fsm_7) & ~ap_sig_707)) begin
+    if (((1'b1 == ap_sig_cseq_ST_st20_fsm_19) & ~ap_sig_727)) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -958,23 +1049,47 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (ap_sig_469) begin
-        ap_sig_cseq_ST_pp0_stg0_fsm_4 = 1'b1;
+    if (ap_sig_496) begin
+        ap_sig_cseq_ST_st11_fsm_10 = 1'b1;
     end else begin
-        ap_sig_cseq_ST_pp0_stg0_fsm_4 = 1'b0;
+        ap_sig_cseq_ST_st11_fsm_10 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (ap_sig_692) begin
-        ap_sig_cseq_ST_st10_fsm_7 = 1'b1;
+    if (ap_sig_613) begin
+        ap_sig_cseq_ST_st12_fsm_11 = 1'b1;
     end else begin
-        ap_sig_cseq_ST_st10_fsm_7 = 1'b0;
+        ap_sig_cseq_ST_st12_fsm_11 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (ap_sig_25) begin
+    if (ap_sig_507) begin
+        ap_sig_cseq_ST_st13_fsm_12 = 1'b1;
+    end else begin
+        ap_sig_cseq_ST_st13_fsm_12 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (ap_sig_746) begin
+        ap_sig_cseq_ST_st14_fsm_13 = 1'b1;
+    end else begin
+        ap_sig_cseq_ST_st14_fsm_13 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (ap_sig_523) begin
+        ap_sig_cseq_ST_st19_fsm_18 = 1'b1;
+    end else begin
+        ap_sig_cseq_ST_st19_fsm_18 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (ap_sig_37) begin
         ap_sig_cseq_ST_st1_fsm_0 = 1'b1;
     end else begin
         ap_sig_cseq_ST_st1_fsm_0 = 1'b0;
@@ -982,7 +1097,15 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (ap_sig_626) begin
+    if (ap_sig_712) begin
+        ap_sig_cseq_ST_st20_fsm_19 = 1'b1;
+    end else begin
+        ap_sig_cseq_ST_st20_fsm_19 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (ap_sig_663) begin
         ap_sig_cseq_ST_st2_fsm_1 = 1'b1;
     end else begin
         ap_sig_cseq_ST_st2_fsm_1 = 1'b0;
@@ -990,7 +1113,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (ap_sig_605) begin
+    if (ap_sig_670) begin
         ap_sig_cseq_ST_st3_fsm_2 = 1'b1;
     end else begin
         ap_sig_cseq_ST_st3_fsm_2 = 1'b0;
@@ -998,7 +1121,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (ap_sig_458) begin
+    if (ap_sig_630) begin
         ap_sig_cseq_ST_st4_fsm_3 = 1'b1;
     end else begin
         ap_sig_cseq_ST_st4_fsm_3 = 1'b0;
@@ -1006,24 +1129,24 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (ap_sig_615) begin
-        ap_sig_cseq_ST_st8_fsm_5 = 1'b1;
+    if (ap_sig_468) begin
+        ap_sig_cseq_ST_st5_fsm_4 = 1'b1;
     end else begin
-        ap_sig_cseq_ST_st8_fsm_5 = 1'b0;
+        ap_sig_cseq_ST_st5_fsm_4 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (ap_sig_653) begin
-        ap_sig_cseq_ST_st9_fsm_6 = 1'b1;
+    if (ap_sig_487) begin
+        ap_sig_cseq_ST_st6_fsm_5 = 1'b1;
     end else begin
-        ap_sig_cseq_ST_st9_fsm_6 = 1'b0;
+        ap_sig_cseq_ST_st6_fsm_5 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_sig_cseq_ST_pp0_stg0_fsm_4) & (exitcond_i_reg_364 == 1'b0) & (1'b1 == ap_reg_ppiten_pp0_it1) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))))) begin
-        img_0_data_stream_0_V_read = 1'b1;
+    if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
+        img_0_data_stream_0_V_read = grp_moments_calc_fu_147_img_in_data_stream_0_V_read;
     end else begin
         img_0_data_stream_0_V_read = 1'b0;
     end
@@ -1031,15 +1154,15 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        img_0_data_stream_0_V_write = grp_moments_AXIvideo2Mat_fu_233_img_data_stream_0_V_write;
+        img_0_data_stream_0_V_write = grp_moments_AXIvideo2Mat_fu_157_img_data_stream_0_V_write;
     end else begin
         img_0_data_stream_0_V_write = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_sig_cseq_ST_pp0_stg0_fsm_4) & (exitcond_i_reg_364 == 1'b0) & (1'b1 == ap_reg_ppiten_pp0_it1) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))))) begin
-        img_0_data_stream_1_V_read = 1'b1;
+    if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
+        img_0_data_stream_1_V_read = grp_moments_calc_fu_147_img_in_data_stream_1_V_read;
     end else begin
         img_0_data_stream_1_V_read = 1'b0;
     end
@@ -1047,15 +1170,15 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        img_0_data_stream_1_V_write = grp_moments_AXIvideo2Mat_fu_233_img_data_stream_1_V_write;
+        img_0_data_stream_1_V_write = grp_moments_AXIvideo2Mat_fu_157_img_data_stream_1_V_write;
     end else begin
         img_0_data_stream_1_V_write = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_sig_cseq_ST_pp0_stg0_fsm_4) & (exitcond_i_reg_364 == 1'b0) & (1'b1 == ap_reg_ppiten_pp0_it1) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))))) begin
-        img_0_data_stream_2_V_read = 1'b1;
+    if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
+        img_0_data_stream_2_V_read = grp_moments_calc_fu_147_img_in_data_stream_2_V_read;
     end else begin
         img_0_data_stream_2_V_read = 1'b0;
     end
@@ -1063,55 +1186,55 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        img_0_data_stream_2_V_write = grp_moments_AXIvideo2Mat_fu_233_img_data_stream_2_V_write;
+        img_0_data_stream_2_V_write = grp_moments_AXIvideo2Mat_fu_157_img_data_stream_2_V_write;
     end else begin
         img_0_data_stream_2_V_write = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_sig_cseq_ST_st9_fsm_6)) begin
-        img_1_data_stream_0_V_read = grp_moments_Mat2AXIvideo_fu_254_img_data_stream_0_V_read;
+    if ((1'b1 == ap_sig_cseq_ST_st13_fsm_12)) begin
+        img_1_data_stream_0_V_read = grp_moments_Mat2AXIvideo_fu_178_img_data_stream_0_V_read;
     end else begin
         img_1_data_stream_0_V_read = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1) & (1'b1 == ap_reg_ppiten_pp0_it2) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))))) begin
-        img_1_data_stream_0_V_write = 1'b1;
+    if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
+        img_1_data_stream_0_V_write = grp_moments_calc_fu_147_img_out_data_stream_0_V_write;
     end else begin
         img_1_data_stream_0_V_write = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_sig_cseq_ST_st9_fsm_6)) begin
-        img_1_data_stream_1_V_read = grp_moments_Mat2AXIvideo_fu_254_img_data_stream_1_V_read;
+    if ((1'b1 == ap_sig_cseq_ST_st13_fsm_12)) begin
+        img_1_data_stream_1_V_read = grp_moments_Mat2AXIvideo_fu_178_img_data_stream_1_V_read;
     end else begin
         img_1_data_stream_1_V_read = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1) & (1'b1 == ap_reg_ppiten_pp0_it2) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))))) begin
-        img_1_data_stream_1_V_write = 1'b1;
+    if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
+        img_1_data_stream_1_V_write = grp_moments_calc_fu_147_img_out_data_stream_1_V_write;
     end else begin
         img_1_data_stream_1_V_write = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_sig_cseq_ST_st9_fsm_6)) begin
-        img_1_data_stream_2_V_read = grp_moments_Mat2AXIvideo_fu_254_img_data_stream_2_V_read;
+    if ((1'b1 == ap_sig_cseq_ST_st13_fsm_12)) begin
+        img_1_data_stream_2_V_read = grp_moments_Mat2AXIvideo_fu_178_img_data_stream_2_V_read;
     end else begin
         img_1_data_stream_2_V_read = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1) & (1'b1 == ap_reg_ppiten_pp0_it2) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))))) begin
-        img_1_data_stream_2_V_write = 1'b1;
+    if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
+        img_1_data_stream_2_V_write = grp_moments_calc_fu_147_img_out_data_stream_2_V_write;
     end else begin
         img_1_data_stream_2_V_write = 1'b0;
     end
@@ -1244,7 +1367,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_sig_cseq_ST_st10_fsm_7) & ~ap_sig_707)) begin
+    if (((1'b1 == ap_sig_cseq_ST_st20_fsm_19) & ~ap_sig_727)) begin
         x_ap_vld = 1'b1;
     end else begin
         x_ap_vld = 1'b0;
@@ -1252,7 +1375,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_sig_cseq_ST_st10_fsm_7) & ~ap_sig_707)) begin
+    if (((1'b1 == ap_sig_cseq_ST_st20_fsm_19) & ~ap_sig_727)) begin
         y_ap_vld = 1'b1;
     end else begin
         y_ap_vld = 1'b0;
@@ -1272,43 +1395,73 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_st3_fsm_2;
         end
         ap_ST_st3_fsm_2 : begin
-            if (~(1'b0 == grp_moments_AXIvideo2Mat_fu_233_ap_done)) begin
+            if (~(1'b0 == grp_moments_AXIvideo2Mat_fu_157_ap_done)) begin
                 ap_NS_fsm = ap_ST_st4_fsm_3;
             end else begin
                 ap_NS_fsm = ap_ST_st3_fsm_2;
             end
         end
         ap_ST_st4_fsm_3 : begin
-            if ((exitcond5_i_fu_275_p2 == 1'b0)) begin
-                ap_NS_fsm = ap_ST_pp0_stg0_fsm_4;
+            ap_NS_fsm = ap_ST_st5_fsm_4;
+        end
+        ap_ST_st5_fsm_4 : begin
+            if (~(1'b0 == grp_moments_calc_fu_147_ap_done)) begin
+                ap_NS_fsm = ap_ST_st6_fsm_5;
             end else begin
-                ap_NS_fsm = ap_ST_st9_fsm_6;
+                ap_NS_fsm = ap_ST_st5_fsm_4;
             end
         end
-        ap_ST_pp0_stg0_fsm_4 : begin
-            if ((~((1'b1 == ap_reg_ppiten_pp0_it2) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))) & ~(1'b1 == ap_reg_ppiten_pp0_it1)) & ~((1'b1 == ap_reg_ppiten_pp0_it0) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))) & ~(exitcond_i_fu_287_p2 == 1'b0) & ~(1'b1 == ap_reg_ppiten_pp0_it1)))) begin
-                ap_NS_fsm = ap_ST_pp0_stg0_fsm_4;
-            end else if ((((1'b1 == ap_reg_ppiten_pp0_it2) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))) & ~(1'b1 == ap_reg_ppiten_pp0_it1)) | ((1'b1 == ap_reg_ppiten_pp0_it0) & ~((ap_sig_495 & (1'b1 == ap_reg_ppiten_pp0_it1)) | (ap_sig_521 & (1'b1 == ap_reg_ppiten_pp0_it2))) & ~(exitcond_i_fu_287_p2 == 1'b0) & ~(1'b1 == ap_reg_ppiten_pp0_it1)))) begin
-                ap_NS_fsm = ap_ST_st8_fsm_5;
+        ap_ST_st6_fsm_5 : begin
+            ap_NS_fsm = ap_ST_st7_fsm_6;
+        end
+        ap_ST_st7_fsm_6 : begin
+            ap_NS_fsm = ap_ST_st8_fsm_7;
+        end
+        ap_ST_st8_fsm_7 : begin
+            ap_NS_fsm = ap_ST_st9_fsm_8;
+        end
+        ap_ST_st9_fsm_8 : begin
+            ap_NS_fsm = ap_ST_st10_fsm_9;
+        end
+        ap_ST_st10_fsm_9 : begin
+            ap_NS_fsm = ap_ST_st11_fsm_10;
+        end
+        ap_ST_st11_fsm_10 : begin
+            ap_NS_fsm = ap_ST_st12_fsm_11;
+        end
+        ap_ST_st12_fsm_11 : begin
+            ap_NS_fsm = ap_ST_st13_fsm_12;
+        end
+        ap_ST_st13_fsm_12 : begin
+            if (~((1'b0 == grp_moments_atan2_cordic_double_s_fu_139_ap_done) | (1'b0 == grp_moments_Mat2AXIvideo_fu_178_ap_done))) begin
+                ap_NS_fsm = ap_ST_st14_fsm_13;
             end else begin
-                ap_NS_fsm = ap_ST_pp0_stg0_fsm_4;
+                ap_NS_fsm = ap_ST_st13_fsm_12;
             end
         end
-        ap_ST_st8_fsm_5 : begin
-            ap_NS_fsm = ap_ST_st4_fsm_3;
+        ap_ST_st14_fsm_13 : begin
+            ap_NS_fsm = ap_ST_st15_fsm_14;
         end
-        ap_ST_st9_fsm_6 : begin
-            if (~(1'b0 == grp_moments_Mat2AXIvideo_fu_254_ap_done)) begin
-                ap_NS_fsm = ap_ST_st10_fsm_7;
-            end else begin
-                ap_NS_fsm = ap_ST_st9_fsm_6;
-            end
+        ap_ST_st15_fsm_14 : begin
+            ap_NS_fsm = ap_ST_st16_fsm_15;
         end
-        ap_ST_st10_fsm_7 : begin
-            if (~ap_sig_707) begin
+        ap_ST_st16_fsm_15 : begin
+            ap_NS_fsm = ap_ST_st17_fsm_16;
+        end
+        ap_ST_st17_fsm_16 : begin
+            ap_NS_fsm = ap_ST_st18_fsm_17;
+        end
+        ap_ST_st18_fsm_17 : begin
+            ap_NS_fsm = ap_ST_st19_fsm_18;
+        end
+        ap_ST_st19_fsm_18 : begin
+            ap_NS_fsm = ap_ST_st20_fsm_19;
+        end
+        ap_ST_st20_fsm_19 : begin
+            if (~ap_sig_727) begin
                 ap_NS_fsm = ap_ST_st1_fsm_0;
             end else begin
-                ap_NS_fsm = ap_ST_st10_fsm_7;
+                ap_NS_fsm = ap_ST_st20_fsm_19;
             end
         end
         default : begin
@@ -1322,88 +1475,96 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    ap_sig_25 = (ap_CS_fsm[ap_const_lv32_0] == 1'b1);
+    ap_sig_37 = (ap_CS_fsm[ap_const_lv32_0] == 1'b1);
 end
 
 always @ (*) begin
-    ap_sig_458 = (1'b1 == ap_CS_fsm[ap_const_lv32_3]);
+    ap_sig_468 = (1'b1 == ap_CS_fsm[ap_const_lv32_4]);
 end
 
 always @ (*) begin
-    ap_sig_469 = (1'b1 == ap_CS_fsm[ap_const_lv32_4]);
+    ap_sig_487 = (1'b1 == ap_CS_fsm[ap_const_lv32_5]);
 end
 
 always @ (*) begin
-    ap_sig_495 = (((img_0_data_stream_0_V_empty_n == 1'b0) & (exitcond_i_reg_364 == 1'b0)) | ((exitcond_i_reg_364 == 1'b0) & (img_0_data_stream_1_V_empty_n == 1'b0)) | ((exitcond_i_reg_364 == 1'b0) & (img_0_data_stream_2_V_empty_n == 1'b0)));
+    ap_sig_496 = (1'b1 == ap_CS_fsm[ap_const_lv32_A]);
 end
 
 always @ (*) begin
-    ap_sig_521 = (((img_1_data_stream_0_V_full_n == 1'b0) & (1'b0 == ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1)) | ((1'b0 == ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1) & (img_1_data_stream_1_V_full_n == 1'b0)) | ((1'b0 == ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1) & (img_1_data_stream_2_V_full_n == 1'b0)));
+    ap_sig_507 = (1'b1 == ap_CS_fsm[ap_const_lv32_C]);
 end
 
 always @ (*) begin
-    ap_sig_605 = (1'b1 == ap_CS_fsm[ap_const_lv32_2]);
+    ap_sig_523 = (1'b1 == ap_CS_fsm[ap_const_lv32_12]);
 end
 
 always @ (*) begin
-    ap_sig_615 = (1'b1 == ap_CS_fsm[ap_const_lv32_5]);
+    ap_sig_613 = (1'b1 == ap_CS_fsm[ap_const_lv32_B]);
 end
 
 always @ (*) begin
-    ap_sig_626 = (1'b1 == ap_CS_fsm[ap_const_lv32_1]);
+    ap_sig_630 = (1'b1 == ap_CS_fsm[ap_const_lv32_3]);
 end
 
 always @ (*) begin
-    ap_sig_653 = (1'b1 == ap_CS_fsm[ap_const_lv32_6]);
+    ap_sig_663 = (1'b1 == ap_CS_fsm[ap_const_lv32_1]);
 end
 
 always @ (*) begin
-    ap_sig_692 = (1'b1 == ap_CS_fsm[ap_const_lv32_7]);
+    ap_sig_670 = (1'b1 == ap_CS_fsm[ap_const_lv32_2]);
 end
 
 always @ (*) begin
-    ap_sig_707 = ((out_data_V_data_V_1_sRdy == 1'b0) | (out_data_V_keep_V_1_sRdy == 1'b0) | (out_data_V_strb_V_1_sRdy == 1'b0) | (out_data_V_user_V_1_sRdy == 1'b0) | (out_data_V_last_V_1_sRdy == 1'b0) | (out_data_V_id_V_1_sRdy == 1'b0) | (out_data_V_dest_V_1_sRdy == 1'b0));
+    ap_sig_712 = (1'b1 == ap_CS_fsm[ap_const_lv32_13]);
 end
 
-assign col_fu_293_p2 = (col_i_reg_222 + ap_const_lv11_1);
+always @ (*) begin
+    ap_sig_727 = ((out_data_V_data_V_1_sRdy == 1'b0) | (out_data_V_keep_V_1_sRdy == 1'b0) | (out_data_V_strb_V_1_sRdy == 1'b0) | (out_data_V_user_V_1_sRdy == 1'b0) | (out_data_V_last_V_1_sRdy == 1'b0) | (out_data_V_id_V_1_sRdy == 1'b0) | (out_data_V_dest_V_1_sRdy == 1'b0));
+end
 
-assign exitcond5_i_fu_275_p2 = ((row_i_reg_211 == ap_const_lv11_438) ? 1'b1 : 1'b0);
+always @ (*) begin
+    ap_sig_746 = (1'b1 == ap_CS_fsm[ap_const_lv32_D]);
+end
 
-assign exitcond_i_fu_287_p2 = ((col_i_reg_222 == ap_const_lv11_780) ? 1'b1 : 1'b0);
+assign grp_fu_207_p0 = $signed(sub45_V_reg_288);
 
-assign grp_moments_AXIvideo2Mat_fu_233_ap_start = ap_reg_grp_moments_AXIvideo2Mat_fu_233_ap_start;
+assign grp_moments_AXIvideo2Mat_fu_157_ap_start = ap_reg_grp_moments_AXIvideo2Mat_fu_157_ap_start;
 
-assign grp_moments_AXIvideo2Mat_fu_233_in_data_TVALID = ((in_data_TVALID | in_data_V_dest_V_0_has_vld_data_reg) & ~in_data_V_dest_V_0_areset_d);
+assign grp_moments_AXIvideo2Mat_fu_157_in_data_TVALID = ((in_data_TVALID | in_data_V_dest_V_0_has_vld_data_reg) & ~in_data_V_dest_V_0_areset_d);
 
-assign grp_moments_Mat2AXIvideo_fu_254_ap_start = ap_reg_grp_moments_Mat2AXIvideo_fu_254_ap_start;
+assign grp_moments_Mat2AXIvideo_fu_178_ap_start = ap_reg_grp_moments_Mat2AXIvideo_fu_178_ap_start;
+
+assign grp_moments_atan2_cordic_double_s_fu_139_ap_start = ap_reg_grp_moments_atan2_cordic_double_s_fu_139_ap_start;
+
+assign grp_moments_calc_fu_147_ap_start = ap_reg_grp_moments_calc_fu_147_ap_start;
 
 assign in_data_TREADY = in_data_V_dest_V_0_in_rdy;
 
-assign in_data_V_data_V_0_ack_out = grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY;
+assign in_data_V_data_V_0_ack_out = grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY;
 
 assign in_data_V_data_V_0_vld_in = in_data_TVALID;
 
-assign in_data_V_dest_V_0_ack_out = grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY;
+assign in_data_V_dest_V_0_ack_out = grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY;
 
 assign in_data_V_dest_V_0_vld_in = in_data_TVALID;
 
-assign in_data_V_id_V_0_ack_out = grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY;
+assign in_data_V_id_V_0_ack_out = grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY;
 
 assign in_data_V_id_V_0_vld_in = in_data_TVALID;
 
-assign in_data_V_keep_V_0_ack_out = grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY;
+assign in_data_V_keep_V_0_ack_out = grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY;
 
 assign in_data_V_keep_V_0_vld_in = in_data_TVALID;
 
-assign in_data_V_last_V_0_ack_out = grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY;
+assign in_data_V_last_V_0_ack_out = grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY;
 
 assign in_data_V_last_V_0_vld_in = in_data_TVALID;
 
-assign in_data_V_strb_V_0_ack_out = grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY;
+assign in_data_V_strb_V_0_ack_out = grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY;
 
 assign in_data_V_strb_V_0_vld_in = in_data_TVALID;
 
-assign in_data_V_user_V_0_ack_out = grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY;
+assign in_data_V_user_V_0_ack_out = grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY;
 
 assign in_data_V_user_V_0_vld_in = in_data_TVALID;
 
@@ -1429,7 +1590,7 @@ always @ (*) begin
     out_data_V_data_V_1_sRdy = (~out_data_V_data_V_1_areset_d & (out_data_TREADY | ~out_data_V_data_V_1_mVld));
 end
 
-assign out_data_V_data_V_1_vld_in = grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID;
+assign out_data_V_data_V_1_vld_in = grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID;
 
 assign out_data_V_dest_V_1_ack_out = out_data_TREADY;
 
@@ -1437,7 +1598,7 @@ always @ (*) begin
     out_data_V_dest_V_1_sRdy = (~out_data_V_dest_V_1_areset_d & (out_data_TREADY | ~out_data_V_dest_V_1_mVld));
 end
 
-assign out_data_V_dest_V_1_vld_in = grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID;
+assign out_data_V_dest_V_1_vld_in = grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID;
 
 assign out_data_V_id_V_1_ack_out = out_data_TREADY;
 
@@ -1445,7 +1606,7 @@ always @ (*) begin
     out_data_V_id_V_1_sRdy = (~out_data_V_id_V_1_areset_d & (out_data_TREADY | ~out_data_V_id_V_1_mVld));
 end
 
-assign out_data_V_id_V_1_vld_in = grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID;
+assign out_data_V_id_V_1_vld_in = grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID;
 
 assign out_data_V_keep_V_1_ack_out = out_data_TREADY;
 
@@ -1453,7 +1614,7 @@ always @ (*) begin
     out_data_V_keep_V_1_sRdy = (~out_data_V_keep_V_1_areset_d & (out_data_TREADY | ~out_data_V_keep_V_1_mVld));
 end
 
-assign out_data_V_keep_V_1_vld_in = grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID;
+assign out_data_V_keep_V_1_vld_in = grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID;
 
 assign out_data_V_last_V_1_ack_out = out_data_TREADY;
 
@@ -1461,7 +1622,7 @@ always @ (*) begin
     out_data_V_last_V_1_sRdy = (~out_data_V_last_V_1_areset_d & (out_data_TREADY | ~out_data_V_last_V_1_mVld));
 end
 
-assign out_data_V_last_V_1_vld_in = grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID;
+assign out_data_V_last_V_1_vld_in = grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID;
 
 assign out_data_V_strb_V_1_ack_out = out_data_TREADY;
 
@@ -1469,7 +1630,7 @@ always @ (*) begin
     out_data_V_strb_V_1_sRdy = (~out_data_V_strb_V_1_areset_d & (out_data_TREADY | ~out_data_V_strb_V_1_mVld));
 end
 
-assign out_data_V_strb_V_1_vld_in = grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID;
+assign out_data_V_strb_V_1_vld_in = grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID;
 
 assign out_data_V_user_V_1_ack_out = out_data_TREADY;
 
@@ -1477,14 +1638,12 @@ always @ (*) begin
     out_data_V_user_V_1_sRdy = (~out_data_V_user_V_1_areset_d & (out_data_TREADY | ~out_data_V_user_V_1_mVld));
 end
 
-assign out_data_V_user_V_1_vld_in = grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID;
+assign out_data_V_user_V_1_vld_in = grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID;
 
-assign row_fu_281_p2 = (row_i_reg_211 + ap_const_lv11_1);
+assign tmp_fu_226_p1 = grp_moments_calc_fu_147_ap_return_2[63:0];
 
-assign tmp_1_fu_305_p3 = ((tmp_i_12_reg_373[0:0] === 1'b1) ? img_0_data_stream_0_V_dout : ap_const_lv8_0);
+assign x = x_center_V_reg_278;
 
-assign tmp_2_fu_312_p3 = ((tmp_i_12_reg_373[0:0] === 1'b1) ? img_0_data_stream_1_V_dout : ap_const_lv8_0);
-
-assign tmp_i_12_fu_299_p2 = ((col_i_reg_222 < ap_const_lv11_1F5) ? 1'b1 : 1'b0);
+assign y = y_center_V_reg_283;
 
 endmodule //moments

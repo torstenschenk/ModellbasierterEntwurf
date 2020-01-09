@@ -58,47 +58,55 @@ end;
 architecture behav of moments is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "moments,hls_ip_2016_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=5.745000,HLS_SYN_LAT=6232689,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=588,HLS_SYN_LUT=775}";
+    "moments,hls_ip_2016_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=9.321000,HLS_SYN_LAT=8304200,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=31,HLS_SYN_FF=10446,HLS_SYN_LUT=16500}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
-    constant ap_ST_st1_fsm_0 : STD_LOGIC_VECTOR (7 downto 0) := "00000001";
-    constant ap_ST_st2_fsm_1 : STD_LOGIC_VECTOR (7 downto 0) := "00000010";
-    constant ap_ST_st3_fsm_2 : STD_LOGIC_VECTOR (7 downto 0) := "00000100";
-    constant ap_ST_st4_fsm_3 : STD_LOGIC_VECTOR (7 downto 0) := "00001000";
-    constant ap_ST_pp0_stg0_fsm_4 : STD_LOGIC_VECTOR (7 downto 0) := "00010000";
-    constant ap_ST_st8_fsm_5 : STD_LOGIC_VECTOR (7 downto 0) := "00100000";
-    constant ap_ST_st9_fsm_6 : STD_LOGIC_VECTOR (7 downto 0) := "01000000";
-    constant ap_ST_st10_fsm_7 : STD_LOGIC_VECTOR (7 downto 0) := "10000000";
+    constant ap_ST_st1_fsm_0 : STD_LOGIC_VECTOR (19 downto 0) := "00000000000000000001";
+    constant ap_ST_st2_fsm_1 : STD_LOGIC_VECTOR (19 downto 0) := "00000000000000000010";
+    constant ap_ST_st3_fsm_2 : STD_LOGIC_VECTOR (19 downto 0) := "00000000000000000100";
+    constant ap_ST_st4_fsm_3 : STD_LOGIC_VECTOR (19 downto 0) := "00000000000000001000";
+    constant ap_ST_st5_fsm_4 : STD_LOGIC_VECTOR (19 downto 0) := "00000000000000010000";
+    constant ap_ST_st6_fsm_5 : STD_LOGIC_VECTOR (19 downto 0) := "00000000000000100000";
+    constant ap_ST_st7_fsm_6 : STD_LOGIC_VECTOR (19 downto 0) := "00000000000001000000";
+    constant ap_ST_st8_fsm_7 : STD_LOGIC_VECTOR (19 downto 0) := "00000000000010000000";
+    constant ap_ST_st9_fsm_8 : STD_LOGIC_VECTOR (19 downto 0) := "00000000000100000000";
+    constant ap_ST_st10_fsm_9 : STD_LOGIC_VECTOR (19 downto 0) := "00000000001000000000";
+    constant ap_ST_st11_fsm_10 : STD_LOGIC_VECTOR (19 downto 0) := "00000000010000000000";
+    constant ap_ST_st12_fsm_11 : STD_LOGIC_VECTOR (19 downto 0) := "00000000100000000000";
+    constant ap_ST_st13_fsm_12 : STD_LOGIC_VECTOR (19 downto 0) := "00000001000000000000";
+    constant ap_ST_st14_fsm_13 : STD_LOGIC_VECTOR (19 downto 0) := "00000010000000000000";
+    constant ap_ST_st15_fsm_14 : STD_LOGIC_VECTOR (19 downto 0) := "00000100000000000000";
+    constant ap_ST_st16_fsm_15 : STD_LOGIC_VECTOR (19 downto 0) := "00001000000000000000";
+    constant ap_ST_st17_fsm_16 : STD_LOGIC_VECTOR (19 downto 0) := "00010000000000000000";
+    constant ap_ST_st18_fsm_17 : STD_LOGIC_VECTOR (19 downto 0) := "00100000000000000000";
+    constant ap_ST_st19_fsm_18 : STD_LOGIC_VECTOR (19 downto 0) := "01000000000000000000";
+    constant ap_ST_st20_fsm_19 : STD_LOGIC_VECTOR (19 downto 0) := "10000000000000000000";
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_lv1_1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
     constant ap_true : BOOLEAN := true;
     constant C_S_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
-    constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
     constant ap_const_lv32_4 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000100";
-    constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
-    constant ap_const_lv11_0 : STD_LOGIC_VECTOR (10 downto 0) := "00000000000";
-    constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
     constant ap_const_lv32_5 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000101";
+    constant ap_const_lv32_A : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001010";
+    constant ap_const_lv32_C : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001100";
+    constant ap_const_lv32_12 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010010";
+    constant ap_const_lv32_B : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001011";
+    constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
-    constant ap_const_lv32_6 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000110";
-    constant ap_const_lv32_7 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000111";
-    constant ap_const_lv32_FFF : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000111111111111";
-    constant ap_const_lv32_4007E800 : STD_LOGIC_VECTOR (31 downto 0) := "01000000000001111110100000000000";
-    constant ap_const_lv11_438 : STD_LOGIC_VECTOR (10 downto 0) := "10000111000";
-    constant ap_const_lv11_1 : STD_LOGIC_VECTOR (10 downto 0) := "00000000001";
-    constant ap_const_lv11_780 : STD_LOGIC_VECTOR (10 downto 0) := "11110000000";
-    constant ap_const_lv11_1F5 : STD_LOGIC_VECTOR (10 downto 0) := "00111110101";
-    constant ap_const_lv8_0 : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
+    constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
+    constant ap_const_lv32_13 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010011";
+    constant ap_const_lv64_3FE0000000000000 : STD_LOGIC_VECTOR (63 downto 0) := "0011111111100000000000000000000000000000000000000000000000000000";
+    constant ap_const_lv32_D : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001101";
 
     signal ap_rst_n_inv : STD_LOGIC;
     signal ap_start : STD_LOGIC;
     signal ap_done : STD_LOGIC;
     signal ap_idle : STD_LOGIC;
-    signal ap_CS_fsm : STD_LOGIC_VECTOR (7 downto 0) := "00000001";
+    signal ap_CS_fsm : STD_LOGIC_VECTOR (19 downto 0) := "00000000000000000001";
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_sig_cseq_ST_st1_fsm_0 : STD_LOGIC;
-    signal ap_sig_25 : BOOLEAN;
+    signal ap_sig_37 : BOOLEAN;
     signal ap_ready : STD_LOGIC;
     signal in_data_V_data_V_0_data_out : STD_LOGIC_VECTOR (23 downto 0);
     signal in_data_V_data_V_0_vld_in : STD_LOGIC;
@@ -192,20 +200,88 @@ architecture behav of moments is
     signal out_data_V_dest_V_1_sRdy : STD_LOGIC;
     signal out_data_V_dest_V_1_mVld : STD_LOGIC := '0';
     signal out_data_V_dest_V_1_areset_d : STD_LOGIC;
+    signal x : STD_LOGIC_VECTOR (31 downto 0);
     signal x_ap_vld : STD_LOGIC;
+    signal y : STD_LOGIC_VECTOR (31 downto 0);
     signal y_ap_vld : STD_LOGIC;
     signal angle_ap_vld : STD_LOGIC;
-    signal col_i_reg_222 : STD_LOGIC_VECTOR (10 downto 0);
-    signal exitcond5_i_fu_275_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal x_center_V_reg_278 : STD_LOGIC_VECTOR (20 downto 0);
+    signal ap_sig_cseq_ST_st5_fsm_4 : STD_LOGIC;
+    signal ap_sig_468 : BOOLEAN;
+    signal grp_moments_calc_fu_147_ap_done : STD_LOGIC;
+    signal y_center_V_reg_283 : STD_LOGIC_VECTOR (20 downto 0);
+    signal sub45_V_reg_288 : STD_LOGIC_VECTOR (44 downto 0);
+    signal tmp_fu_226_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_reg_293 : STD_LOGIC_VECTOR (63 downto 0);
+    signal ap_sig_cseq_ST_st6_fsm_5 : STD_LOGIC;
+    signal ap_sig_487 : BOOLEAN;
+    signal grp_fu_204_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal multi_reg_303 : STD_LOGIC_VECTOR (63 downto 0);
+    signal ap_sig_cseq_ST_st11_fsm_10 : STD_LOGIC;
+    signal ap_sig_496 : BOOLEAN;
+    signal grp_fu_207_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal subtr_reg_308 : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_moments_atan2_cordic_double_s_fu_139_ap_return : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_i_i_reg_313 : STD_LOGIC_VECTOR (63 downto 0);
+    signal ap_sig_cseq_ST_st13_fsm_12 : STD_LOGIC;
+    signal ap_sig_507 : BOOLEAN;
+    signal grp_moments_atan2_cordic_double_s_fu_139_ap_done : STD_LOGIC;
+    signal grp_moments_Mat2AXIvideo_fu_178_ap_done : STD_LOGIC;
+    signal grp_fu_199_p2 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_4_reg_318 : STD_LOGIC_VECTOR (63 downto 0);
+    signal ap_sig_cseq_ST_st19_fsm_18 : STD_LOGIC;
+    signal ap_sig_523 : BOOLEAN;
+    signal grp_moments_atan2_cordic_double_s_fu_139_ap_start : STD_LOGIC;
+    signal grp_moments_atan2_cordic_double_s_fu_139_ap_idle : STD_LOGIC;
+    signal grp_moments_atan2_cordic_double_s_fu_139_ap_ready : STD_LOGIC;
+    signal grp_moments_calc_fu_147_ap_start : STD_LOGIC;
+    signal grp_moments_calc_fu_147_ap_idle : STD_LOGIC;
+    signal grp_moments_calc_fu_147_ap_ready : STD_LOGIC;
+    signal grp_moments_calc_fu_147_img_in_data_stream_0_V_read : STD_LOGIC;
+    signal grp_moments_calc_fu_147_img_in_data_stream_1_V_read : STD_LOGIC;
+    signal grp_moments_calc_fu_147_img_in_data_stream_2_V_read : STD_LOGIC;
+    signal grp_moments_calc_fu_147_img_out_data_stream_0_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_moments_calc_fu_147_img_out_data_stream_0_V_write : STD_LOGIC;
+    signal grp_moments_calc_fu_147_img_out_data_stream_1_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_moments_calc_fu_147_img_out_data_stream_1_V_write : STD_LOGIC;
+    signal grp_moments_calc_fu_147_img_out_data_stream_2_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_moments_calc_fu_147_img_out_data_stream_2_V_write : STD_LOGIC;
+    signal grp_moments_calc_fu_147_ap_return_0 : STD_LOGIC_VECTOR (20 downto 0);
+    signal grp_moments_calc_fu_147_ap_return_1 : STD_LOGIC_VECTOR (20 downto 0);
+    signal grp_moments_calc_fu_147_ap_return_2 : STD_LOGIC_VECTOR (85 downto 0);
+    signal grp_moments_calc_fu_147_ap_return_3 : STD_LOGIC_VECTOR (44 downto 0);
+    signal grp_moments_AXIvideo2Mat_fu_157_ap_start : STD_LOGIC;
+    signal grp_moments_AXIvideo2Mat_fu_157_ap_done : STD_LOGIC;
+    signal grp_moments_AXIvideo2Mat_fu_157_ap_idle : STD_LOGIC;
+    signal grp_moments_AXIvideo2Mat_fu_157_ap_ready : STD_LOGIC;
+    signal grp_moments_AXIvideo2Mat_fu_157_in_data_TVALID : STD_LOGIC;
+    signal grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY : STD_LOGIC;
+    signal grp_moments_AXIvideo2Mat_fu_157_img_data_stream_0_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_moments_AXIvideo2Mat_fu_157_img_data_stream_0_V_write : STD_LOGIC;
+    signal grp_moments_AXIvideo2Mat_fu_157_img_data_stream_1_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_moments_AXIvideo2Mat_fu_157_img_data_stream_1_V_write : STD_LOGIC;
+    signal grp_moments_AXIvideo2Mat_fu_157_img_data_stream_2_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_moments_AXIvideo2Mat_fu_157_img_data_stream_2_V_write : STD_LOGIC;
+    signal grp_moments_Mat2AXIvideo_fu_178_ap_start : STD_LOGIC;
+    signal grp_moments_Mat2AXIvideo_fu_178_ap_idle : STD_LOGIC;
+    signal grp_moments_Mat2AXIvideo_fu_178_ap_ready : STD_LOGIC;
+    signal grp_moments_Mat2AXIvideo_fu_178_img_data_stream_0_V_read : STD_LOGIC;
+    signal grp_moments_Mat2AXIvideo_fu_178_img_data_stream_1_V_read : STD_LOGIC;
+    signal grp_moments_Mat2AXIvideo_fu_178_img_data_stream_2_V_read : STD_LOGIC;
+    signal grp_moments_Mat2AXIvideo_fu_178_out_data_TDATA : STD_LOGIC_VECTOR (23 downto 0);
+    signal grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID : STD_LOGIC;
+    signal grp_moments_Mat2AXIvideo_fu_178_out_data_TKEEP : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_moments_Mat2AXIvideo_fu_178_out_data_TSTRB : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_moments_Mat2AXIvideo_fu_178_out_data_TUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_moments_Mat2AXIvideo_fu_178_out_data_TLAST : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_moments_Mat2AXIvideo_fu_178_out_data_TID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_moments_Mat2AXIvideo_fu_178_out_data_TDEST : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_grp_moments_atan2_cordic_double_s_fu_139_ap_start : STD_LOGIC := '0';
+    signal ap_sig_cseq_ST_st12_fsm_11 : STD_LOGIC;
+    signal ap_sig_613 : BOOLEAN;
+    signal ap_reg_grp_moments_calc_fu_147_ap_start : STD_LOGIC := '0';
     signal ap_sig_cseq_ST_st4_fsm_3 : STD_LOGIC;
-    signal ap_sig_458 : BOOLEAN;
-    signal row_fu_281_p2 : STD_LOGIC_VECTOR (10 downto 0);
-    signal row_reg_359 : STD_LOGIC_VECTOR (10 downto 0);
-    signal exitcond_i_fu_287_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal exitcond_i_reg_364 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_sig_cseq_ST_pp0_stg0_fsm_4 : STD_LOGIC;
-    signal ap_sig_469 : BOOLEAN;
-    signal ap_reg_ppiten_pp0_it0 : STD_LOGIC := '0';
+    signal ap_sig_630 : BOOLEAN;
     signal img_0_data_stream_0_V_dout : STD_LOGIC_VECTOR (7 downto 0);
     signal img_0_data_stream_0_V_empty_n : STD_LOGIC;
     signal img_0_data_stream_0_V_read : STD_LOGIC;
@@ -215,82 +291,87 @@ architecture behav of moments is
     signal img_0_data_stream_2_V_dout : STD_LOGIC_VECTOR (7 downto 0);
     signal img_0_data_stream_2_V_empty_n : STD_LOGIC;
     signal img_0_data_stream_2_V_read : STD_LOGIC;
-    signal ap_sig_495 : BOOLEAN;
-    signal ap_reg_ppiten_pp0_it1 : STD_LOGIC := '0';
     signal img_1_data_stream_0_V_full_n : STD_LOGIC;
     signal img_1_data_stream_0_V_write : STD_LOGIC;
-    signal ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1 : STD_LOGIC_VECTOR (0 downto 0);
     signal img_1_data_stream_1_V_full_n : STD_LOGIC;
     signal img_1_data_stream_1_V_write : STD_LOGIC;
     signal img_1_data_stream_2_V_full_n : STD_LOGIC;
     signal img_1_data_stream_2_V_write : STD_LOGIC;
-    signal ap_sig_521 : BOOLEAN;
-    signal ap_reg_ppiten_pp0_it2 : STD_LOGIC := '0';
-    signal col_fu_293_p2 : STD_LOGIC_VECTOR (10 downto 0);
-    signal tmp_i_12_fu_299_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_i_12_reg_373 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_reg_379 : STD_LOGIC_VECTOR (7 downto 0);
-    signal tmp_1_fu_305_p3 : STD_LOGIC_VECTOR (7 downto 0);
-    signal tmp_1_reg_384 : STD_LOGIC_VECTOR (7 downto 0);
-    signal tmp_2_fu_312_p3 : STD_LOGIC_VECTOR (7 downto 0);
-    signal tmp_2_reg_389 : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_moments_AXIvideo2Mat_fu_233_ap_start : STD_LOGIC;
-    signal grp_moments_AXIvideo2Mat_fu_233_ap_done : STD_LOGIC;
-    signal grp_moments_AXIvideo2Mat_fu_233_ap_idle : STD_LOGIC;
-    signal grp_moments_AXIvideo2Mat_fu_233_ap_ready : STD_LOGIC;
-    signal grp_moments_AXIvideo2Mat_fu_233_in_data_TVALID : STD_LOGIC;
-    signal grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY : STD_LOGIC;
-    signal grp_moments_AXIvideo2Mat_fu_233_img_data_stream_0_V_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_moments_AXIvideo2Mat_fu_233_img_data_stream_0_V_write : STD_LOGIC;
-    signal grp_moments_AXIvideo2Mat_fu_233_img_data_stream_1_V_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_moments_AXIvideo2Mat_fu_233_img_data_stream_1_V_write : STD_LOGIC;
-    signal grp_moments_AXIvideo2Mat_fu_233_img_data_stream_2_V_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_moments_AXIvideo2Mat_fu_233_img_data_stream_2_V_write : STD_LOGIC;
-    signal grp_moments_Mat2AXIvideo_fu_254_ap_start : STD_LOGIC;
-    signal grp_moments_Mat2AXIvideo_fu_254_ap_done : STD_LOGIC;
-    signal grp_moments_Mat2AXIvideo_fu_254_ap_idle : STD_LOGIC;
-    signal grp_moments_Mat2AXIvideo_fu_254_ap_ready : STD_LOGIC;
-    signal grp_moments_Mat2AXIvideo_fu_254_img_data_stream_0_V_read : STD_LOGIC;
-    signal grp_moments_Mat2AXIvideo_fu_254_img_data_stream_1_V_read : STD_LOGIC;
-    signal grp_moments_Mat2AXIvideo_fu_254_img_data_stream_2_V_read : STD_LOGIC;
-    signal grp_moments_Mat2AXIvideo_fu_254_out_data_TDATA : STD_LOGIC_VECTOR (23 downto 0);
-    signal grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID : STD_LOGIC;
-    signal grp_moments_Mat2AXIvideo_fu_254_out_data_TKEEP : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_moments_Mat2AXIvideo_fu_254_out_data_TSTRB : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_moments_Mat2AXIvideo_fu_254_out_data_TUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_moments_Mat2AXIvideo_fu_254_out_data_TLAST : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_moments_Mat2AXIvideo_fu_254_out_data_TID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_moments_Mat2AXIvideo_fu_254_out_data_TDEST : STD_LOGIC_VECTOR (0 downto 0);
-    signal row_i_reg_211 : STD_LOGIC_VECTOR (10 downto 0);
-    signal ap_sig_cseq_ST_st3_fsm_2 : STD_LOGIC;
-    signal ap_sig_605 : BOOLEAN;
-    signal ap_sig_cseq_ST_st8_fsm_5 : STD_LOGIC;
-    signal ap_sig_615 : BOOLEAN;
-    signal ap_reg_grp_moments_AXIvideo2Mat_fu_233_ap_start : STD_LOGIC := '0';
+    signal ap_reg_grp_moments_AXIvideo2Mat_fu_157_ap_start : STD_LOGIC := '0';
     signal ap_sig_cseq_ST_st2_fsm_1 : STD_LOGIC;
-    signal ap_sig_626 : BOOLEAN;
+    signal ap_sig_663 : BOOLEAN;
+    signal ap_sig_cseq_ST_st3_fsm_2 : STD_LOGIC;
+    signal ap_sig_670 : BOOLEAN;
     signal img_0_data_stream_0_V_full_n : STD_LOGIC;
     signal img_0_data_stream_0_V_write : STD_LOGIC;
     signal img_0_data_stream_1_V_full_n : STD_LOGIC;
     signal img_0_data_stream_1_V_write : STD_LOGIC;
     signal img_0_data_stream_2_V_full_n : STD_LOGIC;
     signal img_0_data_stream_2_V_write : STD_LOGIC;
-    signal ap_reg_grp_moments_Mat2AXIvideo_fu_254_ap_start : STD_LOGIC := '0';
+    signal ap_reg_grp_moments_Mat2AXIvideo_fu_178_ap_start : STD_LOGIC := '0';
     signal img_1_data_stream_0_V_dout : STD_LOGIC_VECTOR (7 downto 0);
     signal img_1_data_stream_0_V_empty_n : STD_LOGIC;
     signal img_1_data_stream_0_V_read : STD_LOGIC;
-    signal ap_sig_cseq_ST_st9_fsm_6 : STD_LOGIC;
-    signal ap_sig_653 : BOOLEAN;
     signal img_1_data_stream_1_V_dout : STD_LOGIC_VECTOR (7 downto 0);
     signal img_1_data_stream_1_V_empty_n : STD_LOGIC;
     signal img_1_data_stream_1_V_read : STD_LOGIC;
     signal img_1_data_stream_2_V_dout : STD_LOGIC_VECTOR (7 downto 0);
     signal img_1_data_stream_2_V_empty_n : STD_LOGIC;
     signal img_1_data_stream_2_V_read : STD_LOGIC;
-    signal ap_sig_cseq_ST_st10_fsm_7 : STD_LOGIC;
-    signal ap_sig_692 : BOOLEAN;
-    signal ap_sig_707 : BOOLEAN;
-    signal ap_NS_fsm : STD_LOGIC_VECTOR (7 downto 0);
+    signal ap_sig_cseq_ST_st20_fsm_19 : STD_LOGIC;
+    signal ap_sig_712 : BOOLEAN;
+    signal ap_sig_727 : BOOLEAN;
+    signal ap_sig_cseq_ST_st14_fsm_13 : STD_LOGIC;
+    signal ap_sig_746 : BOOLEAN;
+    signal grp_fu_207_p0 : STD_LOGIC_VECTOR (63 downto 0);
+    signal ap_NS_fsm : STD_LOGIC_VECTOR (19 downto 0);
+
+    component moments_atan2_cordic_double_s IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
+        y_in : IN STD_LOGIC_VECTOR (63 downto 0);
+        x_in : IN STD_LOGIC_VECTOR (63 downto 0);
+        ap_return : OUT STD_LOGIC_VECTOR (63 downto 0) );
+    end component;
+
+
+    component moments_calc IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
+        img_in_data_stream_0_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        img_in_data_stream_0_V_empty_n : IN STD_LOGIC;
+        img_in_data_stream_0_V_read : OUT STD_LOGIC;
+        img_in_data_stream_1_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        img_in_data_stream_1_V_empty_n : IN STD_LOGIC;
+        img_in_data_stream_1_V_read : OUT STD_LOGIC;
+        img_in_data_stream_2_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        img_in_data_stream_2_V_empty_n : IN STD_LOGIC;
+        img_in_data_stream_2_V_read : OUT STD_LOGIC;
+        img_out_data_stream_0_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        img_out_data_stream_0_V_full_n : IN STD_LOGIC;
+        img_out_data_stream_0_V_write : OUT STD_LOGIC;
+        img_out_data_stream_1_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        img_out_data_stream_1_V_full_n : IN STD_LOGIC;
+        img_out_data_stream_1_V_write : OUT STD_LOGIC;
+        img_out_data_stream_2_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        img_out_data_stream_2_V_full_n : IN STD_LOGIC;
+        img_out_data_stream_2_V_write : OUT STD_LOGIC;
+        ap_return_0 : OUT STD_LOGIC_VECTOR (20 downto 0);
+        ap_return_1 : OUT STD_LOGIC_VECTOR (20 downto 0);
+        ap_return_2 : OUT STD_LOGIC_VECTOR (85 downto 0);
+        ap_return_3 : OUT STD_LOGIC_VECTOR (44 downto 0) );
+    end component;
+
 
     component moments_AXIvideo2Mat IS
     port (
@@ -347,6 +428,53 @@ architecture behav of moments is
         out_data_TLAST : OUT STD_LOGIC_VECTOR (0 downto 0);
         out_data_TID : OUT STD_LOGIC_VECTOR (0 downto 0);
         out_data_TDEST : OUT STD_LOGIC_VECTOR (0 downto 0) );
+    end component;
+
+
+    component moments_dmul_64ns_64ns_64_6_max_dsp IS
+    generic (
+        ID : INTEGER;
+        NUM_STAGE : INTEGER;
+        din0_WIDTH : INTEGER;
+        din1_WIDTH : INTEGER;
+        dout_WIDTH : INTEGER );
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        din0 : IN STD_LOGIC_VECTOR (63 downto 0);
+        din1 : IN STD_LOGIC_VECTOR (63 downto 0);
+        ce : IN STD_LOGIC;
+        dout : OUT STD_LOGIC_VECTOR (63 downto 0) );
+    end component;
+
+
+    component moments_uitodp_64ns_64_6 IS
+    generic (
+        ID : INTEGER;
+        NUM_STAGE : INTEGER;
+        din0_WIDTH : INTEGER;
+        dout_WIDTH : INTEGER );
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        din0 : IN STD_LOGIC_VECTOR (63 downto 0);
+        ce : IN STD_LOGIC;
+        dout : OUT STD_LOGIC_VECTOR (63 downto 0) );
+    end component;
+
+
+    component moments_sitodp_64s_64_6 IS
+    generic (
+        ID : INTEGER;
+        NUM_STAGE : INTEGER;
+        din0_WIDTH : INTEGER;
+        dout_WIDTH : INTEGER );
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        din0 : IN STD_LOGIC_VECTOR (63 downto 0);
+        ce : IN STD_LOGIC;
+        dout : OUT STD_LOGIC_VECTOR (63 downto 0) );
     end component;
 
 
@@ -474,7 +602,7 @@ architecture behav of moments is
         x_ap_vld : IN STD_LOGIC;
         y : IN STD_LOGIC_VECTOR (31 downto 0);
         y_ap_vld : IN STD_LOGIC;
-        angle : IN STD_LOGIC_VECTOR (31 downto 0);
+        angle : IN STD_LOGIC_VECTOR (63 downto 0);
         angle_ap_vld : IN STD_LOGIC );
     end component;
 
@@ -511,66 +639,150 @@ begin
         ap_ready => ap_ready,
         ap_done => ap_done,
         ap_idle => ap_idle,
-        x => ap_const_lv32_0,
+        x => x,
         x_ap_vld => x_ap_vld,
-        y => ap_const_lv32_FFF,
+        y => y,
         y_ap_vld => y_ap_vld,
-        angle => ap_const_lv32_4007E800,
+        angle => tmp_4_reg_318,
         angle_ap_vld => angle_ap_vld);
 
-    grp_moments_AXIvideo2Mat_fu_233 : component moments_AXIvideo2Mat
+    grp_moments_atan2_cordic_double_s_fu_139 : component moments_atan2_cordic_double_s
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => grp_moments_AXIvideo2Mat_fu_233_ap_start,
-        ap_done => grp_moments_AXIvideo2Mat_fu_233_ap_done,
-        ap_idle => grp_moments_AXIvideo2Mat_fu_233_ap_idle,
-        ap_ready => grp_moments_AXIvideo2Mat_fu_233_ap_ready,
+        ap_start => grp_moments_atan2_cordic_double_s_fu_139_ap_start,
+        ap_done => grp_moments_atan2_cordic_double_s_fu_139_ap_done,
+        ap_idle => grp_moments_atan2_cordic_double_s_fu_139_ap_idle,
+        ap_ready => grp_moments_atan2_cordic_double_s_fu_139_ap_ready,
+        y_in => multi_reg_303,
+        x_in => subtr_reg_308,
+        ap_return => grp_moments_atan2_cordic_double_s_fu_139_ap_return);
+
+    grp_moments_calc_fu_147 : component moments_calc
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst_n_inv,
+        ap_start => grp_moments_calc_fu_147_ap_start,
+        ap_done => grp_moments_calc_fu_147_ap_done,
+        ap_idle => grp_moments_calc_fu_147_ap_idle,
+        ap_ready => grp_moments_calc_fu_147_ap_ready,
+        img_in_data_stream_0_V_dout => img_0_data_stream_0_V_dout,
+        img_in_data_stream_0_V_empty_n => img_0_data_stream_0_V_empty_n,
+        img_in_data_stream_0_V_read => grp_moments_calc_fu_147_img_in_data_stream_0_V_read,
+        img_in_data_stream_1_V_dout => img_0_data_stream_1_V_dout,
+        img_in_data_stream_1_V_empty_n => img_0_data_stream_1_V_empty_n,
+        img_in_data_stream_1_V_read => grp_moments_calc_fu_147_img_in_data_stream_1_V_read,
+        img_in_data_stream_2_V_dout => img_0_data_stream_2_V_dout,
+        img_in_data_stream_2_V_empty_n => img_0_data_stream_2_V_empty_n,
+        img_in_data_stream_2_V_read => grp_moments_calc_fu_147_img_in_data_stream_2_V_read,
+        img_out_data_stream_0_V_din => grp_moments_calc_fu_147_img_out_data_stream_0_V_din,
+        img_out_data_stream_0_V_full_n => img_1_data_stream_0_V_full_n,
+        img_out_data_stream_0_V_write => grp_moments_calc_fu_147_img_out_data_stream_0_V_write,
+        img_out_data_stream_1_V_din => grp_moments_calc_fu_147_img_out_data_stream_1_V_din,
+        img_out_data_stream_1_V_full_n => img_1_data_stream_1_V_full_n,
+        img_out_data_stream_1_V_write => grp_moments_calc_fu_147_img_out_data_stream_1_V_write,
+        img_out_data_stream_2_V_din => grp_moments_calc_fu_147_img_out_data_stream_2_V_din,
+        img_out_data_stream_2_V_full_n => img_1_data_stream_2_V_full_n,
+        img_out_data_stream_2_V_write => grp_moments_calc_fu_147_img_out_data_stream_2_V_write,
+        ap_return_0 => grp_moments_calc_fu_147_ap_return_0,
+        ap_return_1 => grp_moments_calc_fu_147_ap_return_1,
+        ap_return_2 => grp_moments_calc_fu_147_ap_return_2,
+        ap_return_3 => grp_moments_calc_fu_147_ap_return_3);
+
+    grp_moments_AXIvideo2Mat_fu_157 : component moments_AXIvideo2Mat
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst_n_inv,
+        ap_start => grp_moments_AXIvideo2Mat_fu_157_ap_start,
+        ap_done => grp_moments_AXIvideo2Mat_fu_157_ap_done,
+        ap_idle => grp_moments_AXIvideo2Mat_fu_157_ap_idle,
+        ap_ready => grp_moments_AXIvideo2Mat_fu_157_ap_ready,
         in_data_TDATA => in_data_V_data_V_0_data_out,
-        in_data_TVALID => grp_moments_AXIvideo2Mat_fu_233_in_data_TVALID,
-        in_data_TREADY => grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY,
+        in_data_TVALID => grp_moments_AXIvideo2Mat_fu_157_in_data_TVALID,
+        in_data_TREADY => grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY,
         in_data_TKEEP => in_data_V_keep_V_0_data_out,
         in_data_TSTRB => in_data_V_strb_V_0_data_out,
         in_data_TUSER => in_data_V_user_V_0_data_out,
         in_data_TLAST => in_data_V_last_V_0_data_out,
         in_data_TID => in_data_V_id_V_0_data_out,
         in_data_TDEST => in_data_V_dest_V_0_data_out,
-        img_data_stream_0_V_din => grp_moments_AXIvideo2Mat_fu_233_img_data_stream_0_V_din,
+        img_data_stream_0_V_din => grp_moments_AXIvideo2Mat_fu_157_img_data_stream_0_V_din,
         img_data_stream_0_V_full_n => img_0_data_stream_0_V_full_n,
-        img_data_stream_0_V_write => grp_moments_AXIvideo2Mat_fu_233_img_data_stream_0_V_write,
-        img_data_stream_1_V_din => grp_moments_AXIvideo2Mat_fu_233_img_data_stream_1_V_din,
+        img_data_stream_0_V_write => grp_moments_AXIvideo2Mat_fu_157_img_data_stream_0_V_write,
+        img_data_stream_1_V_din => grp_moments_AXIvideo2Mat_fu_157_img_data_stream_1_V_din,
         img_data_stream_1_V_full_n => img_0_data_stream_1_V_full_n,
-        img_data_stream_1_V_write => grp_moments_AXIvideo2Mat_fu_233_img_data_stream_1_V_write,
-        img_data_stream_2_V_din => grp_moments_AXIvideo2Mat_fu_233_img_data_stream_2_V_din,
+        img_data_stream_1_V_write => grp_moments_AXIvideo2Mat_fu_157_img_data_stream_1_V_write,
+        img_data_stream_2_V_din => grp_moments_AXIvideo2Mat_fu_157_img_data_stream_2_V_din,
         img_data_stream_2_V_full_n => img_0_data_stream_2_V_full_n,
-        img_data_stream_2_V_write => grp_moments_AXIvideo2Mat_fu_233_img_data_stream_2_V_write);
+        img_data_stream_2_V_write => grp_moments_AXIvideo2Mat_fu_157_img_data_stream_2_V_write);
 
-    grp_moments_Mat2AXIvideo_fu_254 : component moments_Mat2AXIvideo
+    grp_moments_Mat2AXIvideo_fu_178 : component moments_Mat2AXIvideo
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => grp_moments_Mat2AXIvideo_fu_254_ap_start,
-        ap_done => grp_moments_Mat2AXIvideo_fu_254_ap_done,
-        ap_idle => grp_moments_Mat2AXIvideo_fu_254_ap_idle,
-        ap_ready => grp_moments_Mat2AXIvideo_fu_254_ap_ready,
+        ap_start => grp_moments_Mat2AXIvideo_fu_178_ap_start,
+        ap_done => grp_moments_Mat2AXIvideo_fu_178_ap_done,
+        ap_idle => grp_moments_Mat2AXIvideo_fu_178_ap_idle,
+        ap_ready => grp_moments_Mat2AXIvideo_fu_178_ap_ready,
         img_data_stream_0_V_dout => img_1_data_stream_0_V_dout,
         img_data_stream_0_V_empty_n => img_1_data_stream_0_V_empty_n,
-        img_data_stream_0_V_read => grp_moments_Mat2AXIvideo_fu_254_img_data_stream_0_V_read,
+        img_data_stream_0_V_read => grp_moments_Mat2AXIvideo_fu_178_img_data_stream_0_V_read,
         img_data_stream_1_V_dout => img_1_data_stream_1_V_dout,
         img_data_stream_1_V_empty_n => img_1_data_stream_1_V_empty_n,
-        img_data_stream_1_V_read => grp_moments_Mat2AXIvideo_fu_254_img_data_stream_1_V_read,
+        img_data_stream_1_V_read => grp_moments_Mat2AXIvideo_fu_178_img_data_stream_1_V_read,
         img_data_stream_2_V_dout => img_1_data_stream_2_V_dout,
         img_data_stream_2_V_empty_n => img_1_data_stream_2_V_empty_n,
-        img_data_stream_2_V_read => grp_moments_Mat2AXIvideo_fu_254_img_data_stream_2_V_read,
-        out_data_TDATA => grp_moments_Mat2AXIvideo_fu_254_out_data_TDATA,
-        out_data_TVALID => grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID,
+        img_data_stream_2_V_read => grp_moments_Mat2AXIvideo_fu_178_img_data_stream_2_V_read,
+        out_data_TDATA => grp_moments_Mat2AXIvideo_fu_178_out_data_TDATA,
+        out_data_TVALID => grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID,
         out_data_TREADY => out_data_V_dest_V_1_sRdy,
-        out_data_TKEEP => grp_moments_Mat2AXIvideo_fu_254_out_data_TKEEP,
-        out_data_TSTRB => grp_moments_Mat2AXIvideo_fu_254_out_data_TSTRB,
-        out_data_TUSER => grp_moments_Mat2AXIvideo_fu_254_out_data_TUSER,
-        out_data_TLAST => grp_moments_Mat2AXIvideo_fu_254_out_data_TLAST,
-        out_data_TID => grp_moments_Mat2AXIvideo_fu_254_out_data_TID,
-        out_data_TDEST => grp_moments_Mat2AXIvideo_fu_254_out_data_TDEST);
+        out_data_TKEEP => grp_moments_Mat2AXIvideo_fu_178_out_data_TKEEP,
+        out_data_TSTRB => grp_moments_Mat2AXIvideo_fu_178_out_data_TSTRB,
+        out_data_TUSER => grp_moments_Mat2AXIvideo_fu_178_out_data_TUSER,
+        out_data_TLAST => grp_moments_Mat2AXIvideo_fu_178_out_data_TLAST,
+        out_data_TID => grp_moments_Mat2AXIvideo_fu_178_out_data_TID,
+        out_data_TDEST => grp_moments_Mat2AXIvideo_fu_178_out_data_TDEST);
+
+    moments_dmul_64ns_64ns_64_6_max_dsp_U45 : component moments_dmul_64ns_64ns_64_6_max_dsp
+    generic map (
+        ID => 1,
+        NUM_STAGE => 6,
+        din0_WIDTH => 64,
+        din1_WIDTH => 64,
+        dout_WIDTH => 64)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        din0 => tmp_i_i_reg_313,
+        din1 => ap_const_lv64_3FE0000000000000,
+        ce => ap_const_logic_1,
+        dout => grp_fu_199_p2);
+
+    moments_uitodp_64ns_64_6_U46 : component moments_uitodp_64ns_64_6
+    generic map (
+        ID => 1,
+        NUM_STAGE => 6,
+        din0_WIDTH => 64,
+        dout_WIDTH => 64)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        din0 => tmp_reg_293,
+        ce => ap_const_logic_1,
+        dout => grp_fu_204_p1);
+
+    moments_sitodp_64s_64_6_U47 : component moments_sitodp_64s_64_6
+    generic map (
+        ID => 1,
+        NUM_STAGE => 6,
+        din0_WIDTH => 64,
+        dout_WIDTH => 64)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        din0 => grp_fu_207_p0,
+        ce => ap_const_logic_1,
+        dout => grp_fu_207_p1);
 
     img_0_data_stream_0_V_img_0_data_stream_0_V_fifo_U : component FIFO_moments_img_0_data_stream_0_V
     port map (
@@ -578,7 +790,7 @@ begin
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => grp_moments_AXIvideo2Mat_fu_233_img_data_stream_0_V_din,
+        if_din => grp_moments_AXIvideo2Mat_fu_157_img_data_stream_0_V_din,
         if_full_n => img_0_data_stream_0_V_full_n,
         if_write => img_0_data_stream_0_V_write,
         if_dout => img_0_data_stream_0_V_dout,
@@ -591,7 +803,7 @@ begin
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => grp_moments_AXIvideo2Mat_fu_233_img_data_stream_1_V_din,
+        if_din => grp_moments_AXIvideo2Mat_fu_157_img_data_stream_1_V_din,
         if_full_n => img_0_data_stream_1_V_full_n,
         if_write => img_0_data_stream_1_V_write,
         if_dout => img_0_data_stream_1_V_dout,
@@ -604,7 +816,7 @@ begin
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => grp_moments_AXIvideo2Mat_fu_233_img_data_stream_2_V_din,
+        if_din => grp_moments_AXIvideo2Mat_fu_157_img_data_stream_2_V_din,
         if_full_n => img_0_data_stream_2_V_full_n,
         if_write => img_0_data_stream_2_V_write,
         if_dout => img_0_data_stream_2_V_dout,
@@ -617,7 +829,7 @@ begin
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => tmp_1_reg_384,
+        if_din => grp_moments_calc_fu_147_img_out_data_stream_0_V_din,
         if_full_n => img_1_data_stream_0_V_full_n,
         if_write => img_1_data_stream_0_V_write,
         if_dout => img_1_data_stream_0_V_dout,
@@ -630,7 +842,7 @@ begin
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => tmp_2_reg_389,
+        if_din => grp_moments_calc_fu_147_img_out_data_stream_1_V_din,
         if_full_n => img_1_data_stream_1_V_full_n,
         if_write => img_1_data_stream_1_V_write,
         if_dout => img_1_data_stream_1_V_dout,
@@ -643,7 +855,7 @@ begin
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => tmp_reg_379,
+        if_din => grp_moments_calc_fu_147_img_out_data_stream_2_V_din,
         if_full_n => img_1_data_stream_2_V_full_n,
         if_write => img_1_data_stream_2_V_write,
         if_dout => img_1_data_stream_2_V_dout,
@@ -666,80 +878,64 @@ begin
     end process;
 
 
-    ap_reg_grp_moments_AXIvideo2Mat_fu_233_ap_start_assign_proc : process(ap_clk)
+    ap_reg_grp_moments_AXIvideo2Mat_fu_157_ap_start_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                ap_reg_grp_moments_AXIvideo2Mat_fu_233_ap_start <= ap_const_logic_0;
+                ap_reg_grp_moments_AXIvideo2Mat_fu_157_ap_start <= ap_const_logic_0;
             else
                 if ((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1)) then 
-                    ap_reg_grp_moments_AXIvideo2Mat_fu_233_ap_start <= ap_const_logic_1;
-                elsif ((ap_const_logic_1 = grp_moments_AXIvideo2Mat_fu_233_ap_ready)) then 
-                    ap_reg_grp_moments_AXIvideo2Mat_fu_233_ap_start <= ap_const_logic_0;
+                    ap_reg_grp_moments_AXIvideo2Mat_fu_157_ap_start <= ap_const_logic_1;
+                elsif ((ap_const_logic_1 = grp_moments_AXIvideo2Mat_fu_157_ap_ready)) then 
+                    ap_reg_grp_moments_AXIvideo2Mat_fu_157_ap_start <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    ap_reg_grp_moments_Mat2AXIvideo_fu_254_ap_start_assign_proc : process(ap_clk)
+    ap_reg_grp_moments_Mat2AXIvideo_fu_178_ap_start_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                ap_reg_grp_moments_Mat2AXIvideo_fu_254_ap_start <= ap_const_logic_0;
+                ap_reg_grp_moments_Mat2AXIvideo_fu_178_ap_start <= ap_const_logic_0;
             else
-                if (((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3) and not((exitcond5_i_fu_275_p2 = ap_const_lv1_0)))) then 
-                    ap_reg_grp_moments_Mat2AXIvideo_fu_254_ap_start <= ap_const_logic_1;
-                elsif ((ap_const_logic_1 = grp_moments_Mat2AXIvideo_fu_254_ap_ready)) then 
-                    ap_reg_grp_moments_Mat2AXIvideo_fu_254_ap_start <= ap_const_logic_0;
+                if ((ap_const_logic_1 = ap_sig_cseq_ST_st12_fsm_11)) then 
+                    ap_reg_grp_moments_Mat2AXIvideo_fu_178_ap_start <= ap_const_logic_1;
+                elsif ((ap_const_logic_1 = grp_moments_Mat2AXIvideo_fu_178_ap_ready)) then 
+                    ap_reg_grp_moments_Mat2AXIvideo_fu_178_ap_start <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    ap_reg_ppiten_pp0_it0_assign_proc : process(ap_clk)
+    ap_reg_grp_moments_atan2_cordic_double_s_fu_139_ap_start_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                ap_reg_ppiten_pp0_it0 <= ap_const_logic_0;
+                ap_reg_grp_moments_atan2_cordic_double_s_fu_139_ap_start <= ap_const_logic_0;
             else
-                if (((ap_const_logic_1 = ap_sig_cseq_ST_pp0_stg0_fsm_4) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))) and not((exitcond_i_fu_287_p2 = ap_const_lv1_0)))) then 
-                    ap_reg_ppiten_pp0_it0 <= ap_const_logic_0;
-                elsif (((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3) and (exitcond5_i_fu_275_p2 = ap_const_lv1_0))) then 
-                    ap_reg_ppiten_pp0_it0 <= ap_const_logic_1;
+                if ((ap_const_logic_1 = ap_sig_cseq_ST_st12_fsm_11)) then 
+                    ap_reg_grp_moments_atan2_cordic_double_s_fu_139_ap_start <= ap_const_logic_1;
+                elsif ((ap_const_logic_1 = grp_moments_atan2_cordic_double_s_fu_139_ap_ready)) then 
+                    ap_reg_grp_moments_atan2_cordic_double_s_fu_139_ap_start <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    ap_reg_ppiten_pp0_it1_assign_proc : process(ap_clk)
+    ap_reg_grp_moments_calc_fu_147_ap_start_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                ap_reg_ppiten_pp0_it1 <= ap_const_logic_0;
+                ap_reg_grp_moments_calc_fu_147_ap_start <= ap_const_logic_0;
             else
-                if (((ap_const_logic_1 = ap_sig_cseq_ST_pp0_stg0_fsm_4) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))) and (exitcond_i_fu_287_p2 = ap_const_lv1_0))) then 
-                    ap_reg_ppiten_pp0_it1 <= ap_const_logic_1;
-                elsif ((((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3) and (exitcond5_i_fu_275_p2 = ap_const_lv1_0)) or ((ap_const_logic_1 = ap_sig_cseq_ST_pp0_stg0_fsm_4) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))) and not((exitcond_i_fu_287_p2 = ap_const_lv1_0))))) then 
-                    ap_reg_ppiten_pp0_it1 <= ap_const_logic_0;
-                end if; 
-            end if;
-        end if;
-    end process;
-
-
-    ap_reg_ppiten_pp0_it2_assign_proc : process(ap_clk)
-    begin
-        if (ap_clk'event and ap_clk =  '1') then
-            if (ap_rst_n_inv = '1') then
-                ap_reg_ppiten_pp0_it2 <= ap_const_logic_0;
-            else
-                if (not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2))))) then 
-                    ap_reg_ppiten_pp0_it2 <= ap_reg_ppiten_pp0_it1;
-                elsif (((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3) and (exitcond5_i_fu_275_p2 = ap_const_lv1_0))) then 
-                    ap_reg_ppiten_pp0_it2 <= ap_const_logic_0;
+                if ((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3)) then 
+                    ap_reg_grp_moments_calc_fu_147_ap_start <= ap_const_logic_1;
+                elsif ((ap_const_logic_1 = grp_moments_calc_fu_147_ap_ready)) then 
+                    ap_reg_grp_moments_calc_fu_147_ap_start <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -1025,37 +1221,6 @@ begin
         end if;
     end process;
 
-
-    col_i_reg_222_assign_proc : process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_sig_cseq_ST_pp0_stg0_fsm_4) and (ap_const_logic_1 = ap_reg_ppiten_pp0_it0) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))) and (exitcond_i_fu_287_p2 = ap_const_lv1_0))) then 
-                col_i_reg_222 <= col_fu_293_p2;
-            elsif (((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3) and (exitcond5_i_fu_275_p2 = ap_const_lv1_0))) then 
-                col_i_reg_222 <= ap_const_lv11_0;
-            end if; 
-        end if;
-    end process;
-
-    row_i_reg_211_assign_proc : process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_sig_cseq_ST_st8_fsm_5)) then 
-                row_i_reg_211 <= row_reg_359;
-            elsif (((ap_const_logic_1 = ap_sig_cseq_ST_st3_fsm_2) and not((ap_const_logic_0 = grp_moments_AXIvideo2Mat_fu_233_ap_done)))) then 
-                row_i_reg_211 <= ap_const_lv11_0;
-            end if; 
-        end if;
-    end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_sig_cseq_ST_pp0_stg0_fsm_4) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))))) then
-                ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1 <= exitcond_i_reg_364;
-                exitcond_i_reg_364 <= exitcond_i_fu_287_p2;
-            end if;
-        end if;
-    end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
@@ -1130,8 +1295,17 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
+            if ((ap_const_logic_1 = ap_sig_cseq_ST_st11_fsm_10)) then
+                multi_reg_303 <= grp_fu_204_p1;
+                subtr_reg_308 <= grp_fu_207_p1;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = out_data_V_data_V_1_vld_in) and (ap_const_logic_1 = out_data_V_data_V_1_sRdy))) then
-                out_data_V_data_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_254_out_data_TDATA;
+                out_data_V_data_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_178_out_data_TDATA;
             end if;
         end if;
     end process;
@@ -1139,7 +1313,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = out_data_V_dest_V_1_vld_in) and (ap_const_logic_1 = out_data_V_dest_V_1_sRdy))) then
-                out_data_V_dest_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_254_out_data_TDEST;
+                out_data_V_dest_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_178_out_data_TDEST;
             end if;
         end if;
     end process;
@@ -1147,7 +1321,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = out_data_V_id_V_1_vld_in) and (ap_const_logic_1 = out_data_V_id_V_1_sRdy))) then
-                out_data_V_id_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_254_out_data_TID;
+                out_data_V_id_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_178_out_data_TID;
             end if;
         end if;
     end process;
@@ -1155,7 +1329,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = out_data_V_keep_V_1_vld_in) and (ap_const_logic_1 = out_data_V_keep_V_1_sRdy))) then
-                out_data_V_keep_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_254_out_data_TKEEP;
+                out_data_V_keep_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_178_out_data_TKEEP;
             end if;
         end if;
     end process;
@@ -1163,7 +1337,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = out_data_V_last_V_1_vld_in) and (ap_const_logic_1 = out_data_V_last_V_1_sRdy))) then
-                out_data_V_last_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_254_out_data_TLAST;
+                out_data_V_last_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_178_out_data_TLAST;
             end if;
         end if;
     end process;
@@ -1171,7 +1345,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = out_data_V_strb_V_1_vld_in) and (ap_const_logic_1 = out_data_V_strb_V_1_sRdy))) then
-                out_data_V_strb_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_254_out_data_TSTRB;
+                out_data_V_strb_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_178_out_data_TSTRB;
             end if;
         end if;
     end process;
@@ -1179,38 +1353,39 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = out_data_V_user_V_1_vld_in) and (ap_const_logic_1 = out_data_V_user_V_1_sRdy))) then
-                out_data_V_user_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_254_out_data_TUSER;
+                out_data_V_user_V_1_data_reg <= grp_moments_Mat2AXIvideo_fu_178_out_data_TUSER;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3)) then
-                row_reg_359 <= row_fu_281_p2;
+            if (((ap_const_logic_1 = ap_sig_cseq_ST_st5_fsm_4) and not((ap_const_logic_0 = grp_moments_calc_fu_147_ap_done)))) then
+                sub45_V_reg_288 <= grp_moments_calc_fu_147_ap_return_3;
+                tmp_reg_293 <= tmp_fu_226_p1;
+                x_center_V_reg_278 <= grp_moments_calc_fu_147_ap_return_0;
+                y_center_V_reg_283 <= grp_moments_calc_fu_147_ap_return_1;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_sig_cseq_ST_pp0_stg0_fsm_4) and (exitcond_i_reg_364 = ap_const_lv1_0) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))))) then
-                tmp_1_reg_384 <= tmp_1_fu_305_p3;
-                tmp_2_reg_389 <= tmp_2_fu_312_p3;
-                tmp_reg_379 <= img_0_data_stream_2_V_dout;
+            if ((ap_const_logic_1 = ap_sig_cseq_ST_st19_fsm_18)) then
+                tmp_4_reg_318 <= grp_fu_199_p2;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_sig_cseq_ST_pp0_stg0_fsm_4) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))) and (exitcond_i_fu_287_p2 = ap_const_lv1_0))) then
-                tmp_i_12_reg_373 <= tmp_i_12_fu_299_p2;
+            if (((ap_const_logic_1 = ap_sig_cseq_ST_st13_fsm_12) and not(((ap_const_logic_0 = grp_moments_atan2_cordic_double_s_fu_139_ap_done) or (ap_const_logic_0 = grp_moments_Mat2AXIvideo_fu_178_ap_done))))) then
+                tmp_i_i_reg_313 <= grp_moments_atan2_cordic_double_s_fu_139_ap_return;
             end if;
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, exitcond5_i_fu_275_p2, exitcond_i_fu_287_p2, ap_reg_ppiten_pp0_it0, ap_sig_495, ap_reg_ppiten_pp0_it1, ap_sig_521, ap_reg_ppiten_pp0_it2, grp_moments_AXIvideo2Mat_fu_233_ap_done, grp_moments_Mat2AXIvideo_fu_254_ap_done, ap_sig_707)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, grp_moments_calc_fu_147_ap_done, grp_moments_atan2_cordic_double_s_fu_139_ap_done, grp_moments_Mat2AXIvideo_fu_178_ap_done, grp_moments_AXIvideo2Mat_fu_157_ap_done, ap_sig_727)
     begin
         case ap_CS_fsm is
             when ap_ST_st1_fsm_0 => 
@@ -1222,47 +1397,65 @@ begin
             when ap_ST_st2_fsm_1 => 
                 ap_NS_fsm <= ap_ST_st3_fsm_2;
             when ap_ST_st3_fsm_2 => 
-                if (not((ap_const_logic_0 = grp_moments_AXIvideo2Mat_fu_233_ap_done))) then
+                if (not((ap_const_logic_0 = grp_moments_AXIvideo2Mat_fu_157_ap_done))) then
                     ap_NS_fsm <= ap_ST_st4_fsm_3;
                 else
                     ap_NS_fsm <= ap_ST_st3_fsm_2;
                 end if;
             when ap_ST_st4_fsm_3 => 
-                if ((exitcond5_i_fu_275_p2 = ap_const_lv1_0)) then
-                    ap_NS_fsm <= ap_ST_pp0_stg0_fsm_4;
+                ap_NS_fsm <= ap_ST_st5_fsm_4;
+            when ap_ST_st5_fsm_4 => 
+                if (not((ap_const_logic_0 = grp_moments_calc_fu_147_ap_done))) then
+                    ap_NS_fsm <= ap_ST_st6_fsm_5;
                 else
-                    ap_NS_fsm <= ap_ST_st9_fsm_6;
+                    ap_NS_fsm <= ap_ST_st5_fsm_4;
                 end if;
-            when ap_ST_pp0_stg0_fsm_4 => 
-                if ((not(((ap_const_logic_1 = ap_reg_ppiten_pp0_it2) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))) and not((ap_const_logic_1 = ap_reg_ppiten_pp0_it1)))) and not(((ap_const_logic_1 = ap_reg_ppiten_pp0_it0) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))) and not((exitcond_i_fu_287_p2 = ap_const_lv1_0)) and not((ap_const_logic_1 = ap_reg_ppiten_pp0_it1)))))) then
-                    ap_NS_fsm <= ap_ST_pp0_stg0_fsm_4;
-                elsif ((((ap_const_logic_1 = ap_reg_ppiten_pp0_it2) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))) and not((ap_const_logic_1 = ap_reg_ppiten_pp0_it1))) or ((ap_const_logic_1 = ap_reg_ppiten_pp0_it0) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))) and not((exitcond_i_fu_287_p2 = ap_const_lv1_0)) and not((ap_const_logic_1 = ap_reg_ppiten_pp0_it1))))) then
-                    ap_NS_fsm <= ap_ST_st8_fsm_5;
+            when ap_ST_st6_fsm_5 => 
+                ap_NS_fsm <= ap_ST_st7_fsm_6;
+            when ap_ST_st7_fsm_6 => 
+                ap_NS_fsm <= ap_ST_st8_fsm_7;
+            when ap_ST_st8_fsm_7 => 
+                ap_NS_fsm <= ap_ST_st9_fsm_8;
+            when ap_ST_st9_fsm_8 => 
+                ap_NS_fsm <= ap_ST_st10_fsm_9;
+            when ap_ST_st10_fsm_9 => 
+                ap_NS_fsm <= ap_ST_st11_fsm_10;
+            when ap_ST_st11_fsm_10 => 
+                ap_NS_fsm <= ap_ST_st12_fsm_11;
+            when ap_ST_st12_fsm_11 => 
+                ap_NS_fsm <= ap_ST_st13_fsm_12;
+            when ap_ST_st13_fsm_12 => 
+                if (not(((ap_const_logic_0 = grp_moments_atan2_cordic_double_s_fu_139_ap_done) or (ap_const_logic_0 = grp_moments_Mat2AXIvideo_fu_178_ap_done)))) then
+                    ap_NS_fsm <= ap_ST_st14_fsm_13;
                 else
-                    ap_NS_fsm <= ap_ST_pp0_stg0_fsm_4;
+                    ap_NS_fsm <= ap_ST_st13_fsm_12;
                 end if;
-            when ap_ST_st8_fsm_5 => 
-                ap_NS_fsm <= ap_ST_st4_fsm_3;
-            when ap_ST_st9_fsm_6 => 
-                if (not((ap_const_logic_0 = grp_moments_Mat2AXIvideo_fu_254_ap_done))) then
-                    ap_NS_fsm <= ap_ST_st10_fsm_7;
-                else
-                    ap_NS_fsm <= ap_ST_st9_fsm_6;
-                end if;
-            when ap_ST_st10_fsm_7 => 
-                if (not(ap_sig_707)) then
+            when ap_ST_st14_fsm_13 => 
+                ap_NS_fsm <= ap_ST_st15_fsm_14;
+            when ap_ST_st15_fsm_14 => 
+                ap_NS_fsm <= ap_ST_st16_fsm_15;
+            when ap_ST_st16_fsm_15 => 
+                ap_NS_fsm <= ap_ST_st17_fsm_16;
+            when ap_ST_st17_fsm_16 => 
+                ap_NS_fsm <= ap_ST_st18_fsm_17;
+            when ap_ST_st18_fsm_17 => 
+                ap_NS_fsm <= ap_ST_st19_fsm_18;
+            when ap_ST_st19_fsm_18 => 
+                ap_NS_fsm <= ap_ST_st20_fsm_19;
+            when ap_ST_st20_fsm_19 => 
+                if (not(ap_sig_727)) then
                     ap_NS_fsm <= ap_ST_st1_fsm_0;
                 else
-                    ap_NS_fsm <= ap_ST_st10_fsm_7;
+                    ap_NS_fsm <= ap_ST_st20_fsm_19;
                 end if;
             when others =>  
-                ap_NS_fsm <= "XXXXXXXX";
+                ap_NS_fsm <= "XXXXXXXXXXXXXXXXXXXX";
         end case;
     end process;
 
-    angle_ap_vld_assign_proc : process(ap_sig_cseq_ST_st10_fsm_7, ap_sig_707)
+    angle_ap_vld_assign_proc : process(ap_sig_cseq_ST_st20_fsm_19, ap_sig_727)
     begin
-        if (((ap_const_logic_1 = ap_sig_cseq_ST_st10_fsm_7) and not(ap_sig_707))) then 
+        if (((ap_const_logic_1 = ap_sig_cseq_ST_st20_fsm_19) and not(ap_sig_727))) then 
             angle_ap_vld <= ap_const_logic_1;
         else 
             angle_ap_vld <= ap_const_logic_0;
@@ -1270,9 +1463,9 @@ begin
     end process;
 
 
-    ap_done_assign_proc : process(ap_sig_cseq_ST_st10_fsm_7, ap_sig_707)
+    ap_done_assign_proc : process(ap_sig_cseq_ST_st20_fsm_19, ap_sig_727)
     begin
-        if (((ap_const_logic_1 = ap_sig_cseq_ST_st10_fsm_7) and not(ap_sig_707))) then 
+        if (((ap_const_logic_1 = ap_sig_cseq_ST_st20_fsm_19) and not(ap_sig_727))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_const_logic_0;
@@ -1290,9 +1483,9 @@ begin
     end process;
 
 
-    ap_ready_assign_proc : process(ap_sig_cseq_ST_st10_fsm_7, ap_sig_707)
+    ap_ready_assign_proc : process(ap_sig_cseq_ST_st20_fsm_19, ap_sig_727)
     begin
-        if (((ap_const_logic_1 = ap_sig_cseq_ST_st10_fsm_7) and not(ap_sig_707))) then 
+        if (((ap_const_logic_1 = ap_sig_cseq_ST_st20_fsm_19) and not(ap_sig_727))) then 
             ap_ready <= ap_const_logic_1;
         else 
             ap_ready <= ap_const_logic_0;
@@ -1306,95 +1499,137 @@ begin
     end process;
 
 
-    ap_sig_25_assign_proc : process(ap_CS_fsm)
+    ap_sig_37_assign_proc : process(ap_CS_fsm)
     begin
-                ap_sig_25 <= (ap_CS_fsm(0 downto 0) = ap_const_lv1_1);
+                ap_sig_37 <= (ap_CS_fsm(0 downto 0) = ap_const_lv1_1);
     end process;
 
 
-    ap_sig_458_assign_proc : process(ap_CS_fsm)
+    ap_sig_468_assign_proc : process(ap_CS_fsm)
     begin
-                ap_sig_458 <= (ap_const_lv1_1 = ap_CS_fsm(3 downto 3));
+                ap_sig_468 <= (ap_const_lv1_1 = ap_CS_fsm(4 downto 4));
     end process;
 
 
-    ap_sig_469_assign_proc : process(ap_CS_fsm)
+    ap_sig_487_assign_proc : process(ap_CS_fsm)
     begin
-                ap_sig_469 <= (ap_const_lv1_1 = ap_CS_fsm(4 downto 4));
+                ap_sig_487 <= (ap_const_lv1_1 = ap_CS_fsm(5 downto 5));
     end process;
 
 
-    ap_sig_495_assign_proc : process(exitcond_i_reg_364, img_0_data_stream_0_V_empty_n, img_0_data_stream_1_V_empty_n, img_0_data_stream_2_V_empty_n)
+    ap_sig_496_assign_proc : process(ap_CS_fsm)
     begin
-                ap_sig_495 <= (((img_0_data_stream_0_V_empty_n = ap_const_logic_0) and (exitcond_i_reg_364 = ap_const_lv1_0)) or ((exitcond_i_reg_364 = ap_const_lv1_0) and (img_0_data_stream_1_V_empty_n = ap_const_logic_0)) or ((exitcond_i_reg_364 = ap_const_lv1_0) and (img_0_data_stream_2_V_empty_n = ap_const_logic_0)));
+                ap_sig_496 <= (ap_const_lv1_1 = ap_CS_fsm(10 downto 10));
     end process;
 
 
-    ap_sig_521_assign_proc : process(img_1_data_stream_0_V_full_n, ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1, img_1_data_stream_1_V_full_n, img_1_data_stream_2_V_full_n)
+    ap_sig_507_assign_proc : process(ap_CS_fsm)
     begin
-                ap_sig_521 <= (((img_1_data_stream_0_V_full_n = ap_const_logic_0) and (ap_const_lv1_0 = ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1)) or ((ap_const_lv1_0 = ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1) and (img_1_data_stream_1_V_full_n = ap_const_logic_0)) or ((ap_const_lv1_0 = ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1) and (img_1_data_stream_2_V_full_n = ap_const_logic_0)));
+                ap_sig_507 <= (ap_const_lv1_1 = ap_CS_fsm(12 downto 12));
     end process;
 
 
-    ap_sig_605_assign_proc : process(ap_CS_fsm)
+    ap_sig_523_assign_proc : process(ap_CS_fsm)
     begin
-                ap_sig_605 <= (ap_const_lv1_1 = ap_CS_fsm(2 downto 2));
+                ap_sig_523 <= (ap_const_lv1_1 = ap_CS_fsm(18 downto 18));
     end process;
 
 
-    ap_sig_615_assign_proc : process(ap_CS_fsm)
+    ap_sig_613_assign_proc : process(ap_CS_fsm)
     begin
-                ap_sig_615 <= (ap_const_lv1_1 = ap_CS_fsm(5 downto 5));
+                ap_sig_613 <= (ap_const_lv1_1 = ap_CS_fsm(11 downto 11));
     end process;
 
 
-    ap_sig_626_assign_proc : process(ap_CS_fsm)
+    ap_sig_630_assign_proc : process(ap_CS_fsm)
     begin
-                ap_sig_626 <= (ap_const_lv1_1 = ap_CS_fsm(1 downto 1));
+                ap_sig_630 <= (ap_const_lv1_1 = ap_CS_fsm(3 downto 3));
     end process;
 
 
-    ap_sig_653_assign_proc : process(ap_CS_fsm)
+    ap_sig_663_assign_proc : process(ap_CS_fsm)
     begin
-                ap_sig_653 <= (ap_const_lv1_1 = ap_CS_fsm(6 downto 6));
+                ap_sig_663 <= (ap_const_lv1_1 = ap_CS_fsm(1 downto 1));
     end process;
 
 
-    ap_sig_692_assign_proc : process(ap_CS_fsm)
+    ap_sig_670_assign_proc : process(ap_CS_fsm)
     begin
-                ap_sig_692 <= (ap_const_lv1_1 = ap_CS_fsm(7 downto 7));
+                ap_sig_670 <= (ap_const_lv1_1 = ap_CS_fsm(2 downto 2));
     end process;
 
 
-    ap_sig_707_assign_proc : process(out_data_V_data_V_1_sRdy, out_data_V_keep_V_1_sRdy, out_data_V_strb_V_1_sRdy, out_data_V_user_V_1_sRdy, out_data_V_last_V_1_sRdy, out_data_V_id_V_1_sRdy, out_data_V_dest_V_1_sRdy)
+    ap_sig_712_assign_proc : process(ap_CS_fsm)
     begin
-                ap_sig_707 <= ((out_data_V_data_V_1_sRdy = ap_const_logic_0) or (out_data_V_keep_V_1_sRdy = ap_const_logic_0) or (out_data_V_strb_V_1_sRdy = ap_const_logic_0) or (out_data_V_user_V_1_sRdy = ap_const_logic_0) or (out_data_V_last_V_1_sRdy = ap_const_logic_0) or (out_data_V_id_V_1_sRdy = ap_const_logic_0) or (out_data_V_dest_V_1_sRdy = ap_const_logic_0));
+                ap_sig_712 <= (ap_const_lv1_1 = ap_CS_fsm(19 downto 19));
     end process;
 
 
-    ap_sig_cseq_ST_pp0_stg0_fsm_4_assign_proc : process(ap_sig_469)
+    ap_sig_727_assign_proc : process(out_data_V_data_V_1_sRdy, out_data_V_keep_V_1_sRdy, out_data_V_strb_V_1_sRdy, out_data_V_user_V_1_sRdy, out_data_V_last_V_1_sRdy, out_data_V_id_V_1_sRdy, out_data_V_dest_V_1_sRdy)
     begin
-        if (ap_sig_469) then 
-            ap_sig_cseq_ST_pp0_stg0_fsm_4 <= ap_const_logic_1;
+                ap_sig_727 <= ((out_data_V_data_V_1_sRdy = ap_const_logic_0) or (out_data_V_keep_V_1_sRdy = ap_const_logic_0) or (out_data_V_strb_V_1_sRdy = ap_const_logic_0) or (out_data_V_user_V_1_sRdy = ap_const_logic_0) or (out_data_V_last_V_1_sRdy = ap_const_logic_0) or (out_data_V_id_V_1_sRdy = ap_const_logic_0) or (out_data_V_dest_V_1_sRdy = ap_const_logic_0));
+    end process;
+
+
+    ap_sig_746_assign_proc : process(ap_CS_fsm)
+    begin
+                ap_sig_746 <= (ap_const_lv1_1 = ap_CS_fsm(13 downto 13));
+    end process;
+
+
+    ap_sig_cseq_ST_st11_fsm_10_assign_proc : process(ap_sig_496)
+    begin
+        if (ap_sig_496) then 
+            ap_sig_cseq_ST_st11_fsm_10 <= ap_const_logic_1;
         else 
-            ap_sig_cseq_ST_pp0_stg0_fsm_4 <= ap_const_logic_0;
+            ap_sig_cseq_ST_st11_fsm_10 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    ap_sig_cseq_ST_st10_fsm_7_assign_proc : process(ap_sig_692)
+    ap_sig_cseq_ST_st12_fsm_11_assign_proc : process(ap_sig_613)
     begin
-        if (ap_sig_692) then 
-            ap_sig_cseq_ST_st10_fsm_7 <= ap_const_logic_1;
+        if (ap_sig_613) then 
+            ap_sig_cseq_ST_st12_fsm_11 <= ap_const_logic_1;
         else 
-            ap_sig_cseq_ST_st10_fsm_7 <= ap_const_logic_0;
+            ap_sig_cseq_ST_st12_fsm_11 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    ap_sig_cseq_ST_st1_fsm_0_assign_proc : process(ap_sig_25)
+    ap_sig_cseq_ST_st13_fsm_12_assign_proc : process(ap_sig_507)
     begin
-        if (ap_sig_25) then 
+        if (ap_sig_507) then 
+            ap_sig_cseq_ST_st13_fsm_12 <= ap_const_logic_1;
+        else 
+            ap_sig_cseq_ST_st13_fsm_12 <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    ap_sig_cseq_ST_st14_fsm_13_assign_proc : process(ap_sig_746)
+    begin
+        if (ap_sig_746) then 
+            ap_sig_cseq_ST_st14_fsm_13 <= ap_const_logic_1;
+        else 
+            ap_sig_cseq_ST_st14_fsm_13 <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    ap_sig_cseq_ST_st19_fsm_18_assign_proc : process(ap_sig_523)
+    begin
+        if (ap_sig_523) then 
+            ap_sig_cseq_ST_st19_fsm_18 <= ap_const_logic_1;
+        else 
+            ap_sig_cseq_ST_st19_fsm_18 <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    ap_sig_cseq_ST_st1_fsm_0_assign_proc : process(ap_sig_37)
+    begin
+        if (ap_sig_37) then 
             ap_sig_cseq_ST_st1_fsm_0 <= ap_const_logic_1;
         else 
             ap_sig_cseq_ST_st1_fsm_0 <= ap_const_logic_0;
@@ -1402,9 +1637,19 @@ begin
     end process;
 
 
-    ap_sig_cseq_ST_st2_fsm_1_assign_proc : process(ap_sig_626)
+    ap_sig_cseq_ST_st20_fsm_19_assign_proc : process(ap_sig_712)
     begin
-        if (ap_sig_626) then 
+        if (ap_sig_712) then 
+            ap_sig_cseq_ST_st20_fsm_19 <= ap_const_logic_1;
+        else 
+            ap_sig_cseq_ST_st20_fsm_19 <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    ap_sig_cseq_ST_st2_fsm_1_assign_proc : process(ap_sig_663)
+    begin
+        if (ap_sig_663) then 
             ap_sig_cseq_ST_st2_fsm_1 <= ap_const_logic_1;
         else 
             ap_sig_cseq_ST_st2_fsm_1 <= ap_const_logic_0;
@@ -1412,9 +1657,9 @@ begin
     end process;
 
 
-    ap_sig_cseq_ST_st3_fsm_2_assign_proc : process(ap_sig_605)
+    ap_sig_cseq_ST_st3_fsm_2_assign_proc : process(ap_sig_670)
     begin
-        if (ap_sig_605) then 
+        if (ap_sig_670) then 
             ap_sig_cseq_ST_st3_fsm_2 <= ap_const_logic_1;
         else 
             ap_sig_cseq_ST_st3_fsm_2 <= ap_const_logic_0;
@@ -1422,9 +1667,9 @@ begin
     end process;
 
 
-    ap_sig_cseq_ST_st4_fsm_3_assign_proc : process(ap_sig_458)
+    ap_sig_cseq_ST_st4_fsm_3_assign_proc : process(ap_sig_630)
     begin
-        if (ap_sig_458) then 
+        if (ap_sig_630) then 
             ap_sig_cseq_ST_st4_fsm_3 <= ap_const_logic_1;
         else 
             ap_sig_cseq_ST_st4_fsm_3 <= ap_const_logic_0;
@@ -1432,153 +1677,154 @@ begin
     end process;
 
 
-    ap_sig_cseq_ST_st8_fsm_5_assign_proc : process(ap_sig_615)
+    ap_sig_cseq_ST_st5_fsm_4_assign_proc : process(ap_sig_468)
     begin
-        if (ap_sig_615) then 
-            ap_sig_cseq_ST_st8_fsm_5 <= ap_const_logic_1;
+        if (ap_sig_468) then 
+            ap_sig_cseq_ST_st5_fsm_4 <= ap_const_logic_1;
         else 
-            ap_sig_cseq_ST_st8_fsm_5 <= ap_const_logic_0;
+            ap_sig_cseq_ST_st5_fsm_4 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    ap_sig_cseq_ST_st9_fsm_6_assign_proc : process(ap_sig_653)
+    ap_sig_cseq_ST_st6_fsm_5_assign_proc : process(ap_sig_487)
     begin
-        if (ap_sig_653) then 
-            ap_sig_cseq_ST_st9_fsm_6 <= ap_const_logic_1;
+        if (ap_sig_487) then 
+            ap_sig_cseq_ST_st6_fsm_5 <= ap_const_logic_1;
         else 
-            ap_sig_cseq_ST_st9_fsm_6 <= ap_const_logic_0;
+            ap_sig_cseq_ST_st6_fsm_5 <= ap_const_logic_0;
         end if; 
     end process;
 
-    col_fu_293_p2 <= std_logic_vector(unsigned(col_i_reg_222) + unsigned(ap_const_lv11_1));
-    exitcond5_i_fu_275_p2 <= "1" when (row_i_reg_211 = ap_const_lv11_438) else "0";
-    exitcond_i_fu_287_p2 <= "1" when (col_i_reg_222 = ap_const_lv11_780) else "0";
-    grp_moments_AXIvideo2Mat_fu_233_ap_start <= ap_reg_grp_moments_AXIvideo2Mat_fu_233_ap_start;
-    grp_moments_AXIvideo2Mat_fu_233_in_data_TVALID <= ((in_data_TVALID or in_data_V_dest_V_0_has_vld_data_reg) and not(in_data_V_dest_V_0_areset_d));
-    grp_moments_Mat2AXIvideo_fu_254_ap_start <= ap_reg_grp_moments_Mat2AXIvideo_fu_254_ap_start;
+        grp_fu_207_p0 <= std_logic_vector(resize(signed(sub45_V_reg_288),64));
 
-    img_0_data_stream_0_V_read_assign_proc : process(exitcond_i_reg_364, ap_sig_cseq_ST_pp0_stg0_fsm_4, ap_sig_495, ap_reg_ppiten_pp0_it1, ap_sig_521, ap_reg_ppiten_pp0_it2)
+    grp_moments_AXIvideo2Mat_fu_157_ap_start <= ap_reg_grp_moments_AXIvideo2Mat_fu_157_ap_start;
+    grp_moments_AXIvideo2Mat_fu_157_in_data_TVALID <= ((in_data_TVALID or in_data_V_dest_V_0_has_vld_data_reg) and not(in_data_V_dest_V_0_areset_d));
+    grp_moments_Mat2AXIvideo_fu_178_ap_start <= ap_reg_grp_moments_Mat2AXIvideo_fu_178_ap_start;
+    grp_moments_atan2_cordic_double_s_fu_139_ap_start <= ap_reg_grp_moments_atan2_cordic_double_s_fu_139_ap_start;
+    grp_moments_calc_fu_147_ap_start <= ap_reg_grp_moments_calc_fu_147_ap_start;
+
+    img_0_data_stream_0_V_read_assign_proc : process(ap_sig_cseq_ST_st5_fsm_4, grp_moments_calc_fu_147_img_in_data_stream_0_V_read)
     begin
-        if (((ap_const_logic_1 = ap_sig_cseq_ST_pp0_stg0_fsm_4) and (exitcond_i_reg_364 = ap_const_lv1_0) and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))))) then 
-            img_0_data_stream_0_V_read <= ap_const_logic_1;
+        if ((ap_const_logic_1 = ap_sig_cseq_ST_st5_fsm_4)) then 
+            img_0_data_stream_0_V_read <= grp_moments_calc_fu_147_img_in_data_stream_0_V_read;
         else 
             img_0_data_stream_0_V_read <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    img_0_data_stream_0_V_write_assign_proc : process(grp_moments_AXIvideo2Mat_fu_233_img_data_stream_0_V_write, ap_sig_cseq_ST_st3_fsm_2)
+    img_0_data_stream_0_V_write_assign_proc : process(grp_moments_AXIvideo2Mat_fu_157_img_data_stream_0_V_write, ap_sig_cseq_ST_st3_fsm_2)
     begin
         if ((ap_const_logic_1 = ap_sig_cseq_ST_st3_fsm_2)) then 
-            img_0_data_stream_0_V_write <= grp_moments_AXIvideo2Mat_fu_233_img_data_stream_0_V_write;
+            img_0_data_stream_0_V_write <= grp_moments_AXIvideo2Mat_fu_157_img_data_stream_0_V_write;
         else 
             img_0_data_stream_0_V_write <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    img_0_data_stream_1_V_read_assign_proc : process(exitcond_i_reg_364, ap_sig_cseq_ST_pp0_stg0_fsm_4, ap_sig_495, ap_reg_ppiten_pp0_it1, ap_sig_521, ap_reg_ppiten_pp0_it2)
+    img_0_data_stream_1_V_read_assign_proc : process(ap_sig_cseq_ST_st5_fsm_4, grp_moments_calc_fu_147_img_in_data_stream_1_V_read)
     begin
-        if (((ap_const_logic_1 = ap_sig_cseq_ST_pp0_stg0_fsm_4) and (exitcond_i_reg_364 = ap_const_lv1_0) and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))))) then 
-            img_0_data_stream_1_V_read <= ap_const_logic_1;
+        if ((ap_const_logic_1 = ap_sig_cseq_ST_st5_fsm_4)) then 
+            img_0_data_stream_1_V_read <= grp_moments_calc_fu_147_img_in_data_stream_1_V_read;
         else 
             img_0_data_stream_1_V_read <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    img_0_data_stream_1_V_write_assign_proc : process(grp_moments_AXIvideo2Mat_fu_233_img_data_stream_1_V_write, ap_sig_cseq_ST_st3_fsm_2)
+    img_0_data_stream_1_V_write_assign_proc : process(grp_moments_AXIvideo2Mat_fu_157_img_data_stream_1_V_write, ap_sig_cseq_ST_st3_fsm_2)
     begin
         if ((ap_const_logic_1 = ap_sig_cseq_ST_st3_fsm_2)) then 
-            img_0_data_stream_1_V_write <= grp_moments_AXIvideo2Mat_fu_233_img_data_stream_1_V_write;
+            img_0_data_stream_1_V_write <= grp_moments_AXIvideo2Mat_fu_157_img_data_stream_1_V_write;
         else 
             img_0_data_stream_1_V_write <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    img_0_data_stream_2_V_read_assign_proc : process(exitcond_i_reg_364, ap_sig_cseq_ST_pp0_stg0_fsm_4, ap_sig_495, ap_reg_ppiten_pp0_it1, ap_sig_521, ap_reg_ppiten_pp0_it2)
+    img_0_data_stream_2_V_read_assign_proc : process(ap_sig_cseq_ST_st5_fsm_4, grp_moments_calc_fu_147_img_in_data_stream_2_V_read)
     begin
-        if (((ap_const_logic_1 = ap_sig_cseq_ST_pp0_stg0_fsm_4) and (exitcond_i_reg_364 = ap_const_lv1_0) and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))))) then 
-            img_0_data_stream_2_V_read <= ap_const_logic_1;
+        if ((ap_const_logic_1 = ap_sig_cseq_ST_st5_fsm_4)) then 
+            img_0_data_stream_2_V_read <= grp_moments_calc_fu_147_img_in_data_stream_2_V_read;
         else 
             img_0_data_stream_2_V_read <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    img_0_data_stream_2_V_write_assign_proc : process(grp_moments_AXIvideo2Mat_fu_233_img_data_stream_2_V_write, ap_sig_cseq_ST_st3_fsm_2)
+    img_0_data_stream_2_V_write_assign_proc : process(grp_moments_AXIvideo2Mat_fu_157_img_data_stream_2_V_write, ap_sig_cseq_ST_st3_fsm_2)
     begin
         if ((ap_const_logic_1 = ap_sig_cseq_ST_st3_fsm_2)) then 
-            img_0_data_stream_2_V_write <= grp_moments_AXIvideo2Mat_fu_233_img_data_stream_2_V_write;
+            img_0_data_stream_2_V_write <= grp_moments_AXIvideo2Mat_fu_157_img_data_stream_2_V_write;
         else 
             img_0_data_stream_2_V_write <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    img_1_data_stream_0_V_read_assign_proc : process(grp_moments_Mat2AXIvideo_fu_254_img_data_stream_0_V_read, ap_sig_cseq_ST_st9_fsm_6)
+    img_1_data_stream_0_V_read_assign_proc : process(ap_sig_cseq_ST_st13_fsm_12, grp_moments_Mat2AXIvideo_fu_178_img_data_stream_0_V_read)
     begin
-        if ((ap_const_logic_1 = ap_sig_cseq_ST_st9_fsm_6)) then 
-            img_1_data_stream_0_V_read <= grp_moments_Mat2AXIvideo_fu_254_img_data_stream_0_V_read;
+        if ((ap_const_logic_1 = ap_sig_cseq_ST_st13_fsm_12)) then 
+            img_1_data_stream_0_V_read <= grp_moments_Mat2AXIvideo_fu_178_img_data_stream_0_V_read;
         else 
             img_1_data_stream_0_V_read <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    img_1_data_stream_0_V_write_assign_proc : process(ap_sig_495, ap_reg_ppiten_pp0_it1, ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1, ap_sig_521, ap_reg_ppiten_pp0_it2)
+    img_1_data_stream_0_V_write_assign_proc : process(ap_sig_cseq_ST_st5_fsm_4, grp_moments_calc_fu_147_img_out_data_stream_0_V_write)
     begin
-        if (((ap_const_lv1_0 = ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1) and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))))) then 
-            img_1_data_stream_0_V_write <= ap_const_logic_1;
+        if ((ap_const_logic_1 = ap_sig_cseq_ST_st5_fsm_4)) then 
+            img_1_data_stream_0_V_write <= grp_moments_calc_fu_147_img_out_data_stream_0_V_write;
         else 
             img_1_data_stream_0_V_write <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    img_1_data_stream_1_V_read_assign_proc : process(grp_moments_Mat2AXIvideo_fu_254_img_data_stream_1_V_read, ap_sig_cseq_ST_st9_fsm_6)
+    img_1_data_stream_1_V_read_assign_proc : process(ap_sig_cseq_ST_st13_fsm_12, grp_moments_Mat2AXIvideo_fu_178_img_data_stream_1_V_read)
     begin
-        if ((ap_const_logic_1 = ap_sig_cseq_ST_st9_fsm_6)) then 
-            img_1_data_stream_1_V_read <= grp_moments_Mat2AXIvideo_fu_254_img_data_stream_1_V_read;
+        if ((ap_const_logic_1 = ap_sig_cseq_ST_st13_fsm_12)) then 
+            img_1_data_stream_1_V_read <= grp_moments_Mat2AXIvideo_fu_178_img_data_stream_1_V_read;
         else 
             img_1_data_stream_1_V_read <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    img_1_data_stream_1_V_write_assign_proc : process(ap_sig_495, ap_reg_ppiten_pp0_it1, ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1, ap_sig_521, ap_reg_ppiten_pp0_it2)
+    img_1_data_stream_1_V_write_assign_proc : process(ap_sig_cseq_ST_st5_fsm_4, grp_moments_calc_fu_147_img_out_data_stream_1_V_write)
     begin
-        if (((ap_const_lv1_0 = ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1) and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))))) then 
-            img_1_data_stream_1_V_write <= ap_const_logic_1;
+        if ((ap_const_logic_1 = ap_sig_cseq_ST_st5_fsm_4)) then 
+            img_1_data_stream_1_V_write <= grp_moments_calc_fu_147_img_out_data_stream_1_V_write;
         else 
             img_1_data_stream_1_V_write <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    img_1_data_stream_2_V_read_assign_proc : process(grp_moments_Mat2AXIvideo_fu_254_img_data_stream_2_V_read, ap_sig_cseq_ST_st9_fsm_6)
+    img_1_data_stream_2_V_read_assign_proc : process(ap_sig_cseq_ST_st13_fsm_12, grp_moments_Mat2AXIvideo_fu_178_img_data_stream_2_V_read)
     begin
-        if ((ap_const_logic_1 = ap_sig_cseq_ST_st9_fsm_6)) then 
-            img_1_data_stream_2_V_read <= grp_moments_Mat2AXIvideo_fu_254_img_data_stream_2_V_read;
+        if ((ap_const_logic_1 = ap_sig_cseq_ST_st13_fsm_12)) then 
+            img_1_data_stream_2_V_read <= grp_moments_Mat2AXIvideo_fu_178_img_data_stream_2_V_read;
         else 
             img_1_data_stream_2_V_read <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    img_1_data_stream_2_V_write_assign_proc : process(ap_sig_495, ap_reg_ppiten_pp0_it1, ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1, ap_sig_521, ap_reg_ppiten_pp0_it2)
+    img_1_data_stream_2_V_write_assign_proc : process(ap_sig_cseq_ST_st5_fsm_4, grp_moments_calc_fu_147_img_out_data_stream_2_V_write)
     begin
-        if (((ap_const_lv1_0 = ap_reg_ppstg_exitcond_i_reg_364_pp0_iter1) and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2) and not(((ap_sig_495 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it1)) or (ap_sig_521 and (ap_const_logic_1 = ap_reg_ppiten_pp0_it2)))))) then 
-            img_1_data_stream_2_V_write <= ap_const_logic_1;
+        if ((ap_const_logic_1 = ap_sig_cseq_ST_st5_fsm_4)) then 
+            img_1_data_stream_2_V_write <= grp_moments_calc_fu_147_img_out_data_stream_2_V_write;
         else 
             img_1_data_stream_2_V_write <= ap_const_logic_0;
         end if; 
     end process;
 
     in_data_TREADY <= in_data_V_dest_V_0_in_rdy;
-    in_data_V_data_V_0_ack_out <= grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY;
+    in_data_V_data_V_0_ack_out <= grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY;
 
     in_data_V_data_V_0_data_out_assign_proc : process(in_data_TDATA, in_data_V_data_V_0_data_reg, in_data_V_data_V_0_has_vld_data_reg)
     begin
@@ -1602,7 +1848,7 @@ begin
     end process;
 
     in_data_V_data_V_0_vld_in <= in_data_TVALID;
-    in_data_V_dest_V_0_ack_out <= grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY;
+    in_data_V_dest_V_0_ack_out <= grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY;
 
     in_data_V_dest_V_0_data_out_assign_proc : process(in_data_TDEST, in_data_V_dest_V_0_data_reg, in_data_V_dest_V_0_has_vld_data_reg)
     begin
@@ -1626,7 +1872,7 @@ begin
     end process;
 
     in_data_V_dest_V_0_vld_in <= in_data_TVALID;
-    in_data_V_id_V_0_ack_out <= grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY;
+    in_data_V_id_V_0_ack_out <= grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY;
 
     in_data_V_id_V_0_data_out_assign_proc : process(in_data_TID, in_data_V_id_V_0_data_reg, in_data_V_id_V_0_has_vld_data_reg)
     begin
@@ -1650,7 +1896,7 @@ begin
     end process;
 
     in_data_V_id_V_0_vld_in <= in_data_TVALID;
-    in_data_V_keep_V_0_ack_out <= grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY;
+    in_data_V_keep_V_0_ack_out <= grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY;
 
     in_data_V_keep_V_0_data_out_assign_proc : process(in_data_TKEEP, in_data_V_keep_V_0_data_reg, in_data_V_keep_V_0_has_vld_data_reg)
     begin
@@ -1674,7 +1920,7 @@ begin
     end process;
 
     in_data_V_keep_V_0_vld_in <= in_data_TVALID;
-    in_data_V_last_V_0_ack_out <= grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY;
+    in_data_V_last_V_0_ack_out <= grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY;
 
     in_data_V_last_V_0_data_out_assign_proc : process(in_data_TLAST, in_data_V_last_V_0_data_reg, in_data_V_last_V_0_has_vld_data_reg)
     begin
@@ -1698,7 +1944,7 @@ begin
     end process;
 
     in_data_V_last_V_0_vld_in <= in_data_TVALID;
-    in_data_V_strb_V_0_ack_out <= grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY;
+    in_data_V_strb_V_0_ack_out <= grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY;
 
     in_data_V_strb_V_0_data_out_assign_proc : process(in_data_TSTRB, in_data_V_strb_V_0_data_reg, in_data_V_strb_V_0_has_vld_data_reg)
     begin
@@ -1722,7 +1968,7 @@ begin
     end process;
 
     in_data_V_strb_V_0_vld_in <= in_data_TVALID;
-    in_data_V_user_V_0_ack_out <= grp_moments_AXIvideo2Mat_fu_233_in_data_TREADY;
+    in_data_V_user_V_0_ack_out <= grp_moments_AXIvideo2Mat_fu_157_in_data_TREADY;
 
     in_data_V_user_V_0_data_out_assign_proc : process(in_data_TUSER, in_data_V_user_V_0_data_reg, in_data_V_user_V_0_has_vld_data_reg)
     begin
@@ -1761,7 +2007,7 @@ begin
         out_data_V_data_V_1_sRdy <= (not(out_data_V_data_V_1_areset_d) and (out_data_TREADY or not(out_data_V_data_V_1_mVld)));
     end process;
 
-    out_data_V_data_V_1_vld_in <= grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID;
+    out_data_V_data_V_1_vld_in <= grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID;
     out_data_V_dest_V_1_ack_out <= out_data_TREADY;
 
     out_data_V_dest_V_1_sRdy_assign_proc : process(out_data_TREADY, out_data_V_dest_V_1_mVld, out_data_V_dest_V_1_areset_d)
@@ -1769,7 +2015,7 @@ begin
         out_data_V_dest_V_1_sRdy <= (not(out_data_V_dest_V_1_areset_d) and (out_data_TREADY or not(out_data_V_dest_V_1_mVld)));
     end process;
 
-    out_data_V_dest_V_1_vld_in <= grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID;
+    out_data_V_dest_V_1_vld_in <= grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID;
     out_data_V_id_V_1_ack_out <= out_data_TREADY;
 
     out_data_V_id_V_1_sRdy_assign_proc : process(out_data_TREADY, out_data_V_id_V_1_mVld, out_data_V_id_V_1_areset_d)
@@ -1777,7 +2023,7 @@ begin
         out_data_V_id_V_1_sRdy <= (not(out_data_V_id_V_1_areset_d) and (out_data_TREADY or not(out_data_V_id_V_1_mVld)));
     end process;
 
-    out_data_V_id_V_1_vld_in <= grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID;
+    out_data_V_id_V_1_vld_in <= grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID;
     out_data_V_keep_V_1_ack_out <= out_data_TREADY;
 
     out_data_V_keep_V_1_sRdy_assign_proc : process(out_data_TREADY, out_data_V_keep_V_1_mVld, out_data_V_keep_V_1_areset_d)
@@ -1785,7 +2031,7 @@ begin
         out_data_V_keep_V_1_sRdy <= (not(out_data_V_keep_V_1_areset_d) and (out_data_TREADY or not(out_data_V_keep_V_1_mVld)));
     end process;
 
-    out_data_V_keep_V_1_vld_in <= grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID;
+    out_data_V_keep_V_1_vld_in <= grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID;
     out_data_V_last_V_1_ack_out <= out_data_TREADY;
 
     out_data_V_last_V_1_sRdy_assign_proc : process(out_data_TREADY, out_data_V_last_V_1_mVld, out_data_V_last_V_1_areset_d)
@@ -1793,7 +2039,7 @@ begin
         out_data_V_last_V_1_sRdy <= (not(out_data_V_last_V_1_areset_d) and (out_data_TREADY or not(out_data_V_last_V_1_mVld)));
     end process;
 
-    out_data_V_last_V_1_vld_in <= grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID;
+    out_data_V_last_V_1_vld_in <= grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID;
     out_data_V_strb_V_1_ack_out <= out_data_TREADY;
 
     out_data_V_strb_V_1_sRdy_assign_proc : process(out_data_TREADY, out_data_V_strb_V_1_mVld, out_data_V_strb_V_1_areset_d)
@@ -1801,7 +2047,7 @@ begin
         out_data_V_strb_V_1_sRdy <= (not(out_data_V_strb_V_1_areset_d) and (out_data_TREADY or not(out_data_V_strb_V_1_mVld)));
     end process;
 
-    out_data_V_strb_V_1_vld_in <= grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID;
+    out_data_V_strb_V_1_vld_in <= grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID;
     out_data_V_user_V_1_ack_out <= out_data_TREADY;
 
     out_data_V_user_V_1_sRdy_assign_proc : process(out_data_TREADY, out_data_V_user_V_1_mVld, out_data_V_user_V_1_areset_d)
@@ -1809,29 +2055,24 @@ begin
         out_data_V_user_V_1_sRdy <= (not(out_data_V_user_V_1_areset_d) and (out_data_TREADY or not(out_data_V_user_V_1_mVld)));
     end process;
 
-    out_data_V_user_V_1_vld_in <= grp_moments_Mat2AXIvideo_fu_254_out_data_TVALID;
-    row_fu_281_p2 <= std_logic_vector(unsigned(row_i_reg_211) + unsigned(ap_const_lv11_1));
-    tmp_1_fu_305_p3 <= 
-        img_0_data_stream_0_V_dout when (tmp_i_12_reg_373(0) = '1') else 
-        ap_const_lv8_0;
-    tmp_2_fu_312_p3 <= 
-        img_0_data_stream_1_V_dout when (tmp_i_12_reg_373(0) = '1') else 
-        ap_const_lv8_0;
-    tmp_i_12_fu_299_p2 <= "1" when (unsigned(col_i_reg_222) < unsigned(ap_const_lv11_1F5)) else "0";
+    out_data_V_user_V_1_vld_in <= grp_moments_Mat2AXIvideo_fu_178_out_data_TVALID;
+    tmp_fu_226_p1 <= grp_moments_calc_fu_147_ap_return_2(64 - 1 downto 0);
+    x <= std_logic_vector(resize(unsigned(x_center_V_reg_278),32));
 
-    x_ap_vld_assign_proc : process(ap_sig_cseq_ST_st10_fsm_7, ap_sig_707)
+    x_ap_vld_assign_proc : process(ap_sig_cseq_ST_st20_fsm_19, ap_sig_727)
     begin
-        if (((ap_const_logic_1 = ap_sig_cseq_ST_st10_fsm_7) and not(ap_sig_707))) then 
+        if (((ap_const_logic_1 = ap_sig_cseq_ST_st20_fsm_19) and not(ap_sig_727))) then 
             x_ap_vld <= ap_const_logic_1;
         else 
             x_ap_vld <= ap_const_logic_0;
         end if; 
     end process;
 
+    y <= std_logic_vector(resize(unsigned(y_center_V_reg_283),32));
 
-    y_ap_vld_assign_proc : process(ap_sig_cseq_ST_st10_fsm_7, ap_sig_707)
+    y_ap_vld_assign_proc : process(ap_sig_cseq_ST_st20_fsm_19, ap_sig_727)
     begin
-        if (((ap_const_logic_1 = ap_sig_cseq_ST_st10_fsm_7) and not(ap_sig_707))) then 
+        if (((ap_const_logic_1 = ap_sig_cseq_ST_st20_fsm_19) and not(ap_sig_727))) then 
             y_ap_vld <= ap_const_logic_1;
         else 
             y_ap_vld <= ap_const_logic_0;

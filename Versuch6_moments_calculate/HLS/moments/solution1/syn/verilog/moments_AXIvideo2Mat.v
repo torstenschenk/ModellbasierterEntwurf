@@ -124,10 +124,10 @@ reg   [10:0] i_V_reg_371;
 reg    ap_sig_127;
 reg    ap_sig_137;
 wire   [10:0] j_V_fu_303_p2;
-wire   [7:0] tmp_10_fu_318_p1;
-reg   [7:0] tmp_10_reg_389;
-reg   [7:0] tmp_5_reg_394;
-reg   [7:0] tmp_6_reg_399;
+wire   [7:0] tmp_56_fu_318_p1;
+reg   [7:0] tmp_56_reg_389;
+reg   [7:0] tmp_4_reg_394;
+reg   [7:0] tmp_5_reg_399;
 reg    ap_sig_155;
 reg   [0:0] axi_last_V_3_reg_232;
 reg   [0:0] axi_last_V1_reg_131;
@@ -318,9 +318,9 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_sig_cseq_ST_pp1_stg0_fsm_4) & (exitcond4_fu_297_p2 == 1'b0) & ~(((1'b1 == ap_reg_ppiten_pp1_it0) & ap_sig_127) | ((1'b1 == ap_reg_ppiten_pp1_it1) & ap_sig_137)))) begin
-        tmp_10_reg_389 <= tmp_10_fu_318_p1;
-        tmp_5_reg_394 <= {{p_Val2_s_phi_fu_224_p4[ap_const_lv32_F : ap_const_lv32_8]}};
-        tmp_6_reg_399 <= {{p_Val2_s_phi_fu_224_p4[ap_const_lv32_17 : ap_const_lv32_10]}};
+        tmp_4_reg_394 <= {{p_Val2_s_phi_fu_224_p4[ap_const_lv32_F : ap_const_lv32_8]}};
+        tmp_56_reg_389 <= tmp_56_fu_318_p1;
+        tmp_5_reg_399 <= {{p_Val2_s_phi_fu_224_p4[ap_const_lv32_17 : ap_const_lv32_10]}};
     end
 end
 
@@ -636,15 +636,15 @@ assign exitcond4_fu_297_p2 = ((p_3_reg_184 == ap_const_lv11_780) ? 1'b1 : 1'b0);
 
 assign i_V_fu_291_p2 = (p_s_reg_151 + ap_const_lv11_1);
 
-assign img_data_stream_0_V_din = tmp_10_reg_389;
+assign img_data_stream_0_V_din = tmp_56_reg_389;
 
-assign img_data_stream_1_V_din = tmp_5_reg_394;
+assign img_data_stream_1_V_din = tmp_4_reg_394;
 
-assign img_data_stream_2_V_din = tmp_6_reg_399;
+assign img_data_stream_2_V_din = tmp_5_reg_399;
 
 assign j_V_fu_303_p2 = (p_3_reg_184 + ap_const_lv11_1);
 
-assign tmp_10_fu_318_p1 = p_Val2_s_phi_fu_224_p4[7:0];
+assign tmp_56_fu_318_p1 = p_Val2_s_phi_fu_224_p4[7:0];
 
 assign tmp_user_V_fu_276_p1 = in_data_TUSER;
 

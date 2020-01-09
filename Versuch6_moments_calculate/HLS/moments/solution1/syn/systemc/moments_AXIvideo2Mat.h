@@ -84,10 +84,10 @@ struct moments_AXIvideo2Mat : public sc_module {
     sc_signal< bool > ap_sig_127;
     sc_signal< bool > ap_sig_137;
     sc_signal< sc_lv<11> > j_V_fu_303_p2;
-    sc_signal< sc_lv<8> > tmp_10_fu_318_p1;
-    sc_signal< sc_lv<8> > tmp_10_reg_389;
-    sc_signal< sc_lv<8> > tmp_5_reg_394;
-    sc_signal< sc_lv<8> > tmp_6_reg_399;
+    sc_signal< sc_lv<8> > tmp_56_fu_318_p1;
+    sc_signal< sc_lv<8> > tmp_56_reg_389;
+    sc_signal< sc_lv<8> > tmp_4_reg_394;
+    sc_signal< sc_lv<8> > tmp_5_reg_399;
     sc_signal< bool > ap_sig_155;
     sc_signal< sc_lv<1> > axi_last_V_3_reg_232;
     sc_signal< sc_lv<1> > axi_last_V1_reg_131;
@@ -187,7 +187,7 @@ struct moments_AXIvideo2Mat : public sc_module {
     void thread_in_data_TREADY();
     void thread_j_V_fu_303_p2();
     void thread_p_Val2_s_phi_fu_224_p4();
-    void thread_tmp_10_fu_318_p1();
+    void thread_tmp_56_fu_318_p1();
     void thread_tmp_user_V_fu_276_p1();
     void thread_ap_NS_fsm();
 };

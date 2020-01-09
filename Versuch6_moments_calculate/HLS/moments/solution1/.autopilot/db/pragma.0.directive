@@ -3,23 +3,7 @@
 <directive functionLabel="" functionName="calc" label="">
 <pragma name="LOOP_TRIPCOUNT">
 <option name="min" value="1"/>
-<option name="max" value="1080"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="calc" label="">
-<pragma name="LOOP_TRIPCOUNT">
-<option name="min" value="1"/>
-<option name="max" value="1920"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="calc" label="">
-<pragma name="LOOP_FLATTEN">
-<option name="off" positionalBoolean="1" value=""/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="calc" label="">
-<pragma name="PIPELINE">
-<option name="II" value="1"/>
+<option name="max" value="540"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="moments" label="">

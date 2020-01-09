@@ -103,10 +103,10 @@ architecture behav of moments_AXIvideo2Mat is
     signal ap_sig_127 : BOOLEAN;
     signal ap_sig_137 : BOOLEAN;
     signal j_V_fu_303_p2 : STD_LOGIC_VECTOR (10 downto 0);
-    signal tmp_10_fu_318_p1 : STD_LOGIC_VECTOR (7 downto 0);
-    signal tmp_10_reg_389 : STD_LOGIC_VECTOR (7 downto 0);
-    signal tmp_5_reg_394 : STD_LOGIC_VECTOR (7 downto 0);
-    signal tmp_6_reg_399 : STD_LOGIC_VECTOR (7 downto 0);
+    signal tmp_56_fu_318_p1 : STD_LOGIC_VECTOR (7 downto 0);
+    signal tmp_56_reg_389 : STD_LOGIC_VECTOR (7 downto 0);
+    signal tmp_4_reg_394 : STD_LOGIC_VECTOR (7 downto 0);
+    signal tmp_5_reg_399 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_sig_155 : BOOLEAN;
     signal axi_last_V_3_reg_232 : STD_LOGIC_VECTOR (0 downto 0);
     signal axi_last_V1_reg_131 : STD_LOGIC_VECTOR (0 downto 0);
@@ -352,9 +352,9 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_sig_cseq_ST_pp1_stg0_fsm_4) and (exitcond4_fu_297_p2 = ap_const_lv1_0) and not((((ap_const_logic_1 = ap_reg_ppiten_pp1_it0) and ap_sig_127) or ((ap_const_logic_1 = ap_reg_ppiten_pp1_it1) and ap_sig_137))))) then
-                tmp_10_reg_389 <= tmp_10_fu_318_p1;
-                tmp_5_reg_394 <= p_Val2_s_phi_fu_224_p4(15 downto 8);
-                tmp_6_reg_399 <= p_Val2_s_phi_fu_224_p4(23 downto 16);
+                tmp_4_reg_394 <= p_Val2_s_phi_fu_224_p4(15 downto 8);
+                tmp_56_reg_389 <= tmp_56_fu_318_p1;
+                tmp_5_reg_399 <= p_Val2_s_phi_fu_224_p4(23 downto 16);
             end if;
         end if;
     end process;
@@ -645,7 +645,7 @@ begin
         end if; 
     end process;
 
-    img_data_stream_0_V_din <= tmp_10_reg_389;
+    img_data_stream_0_V_din <= tmp_56_reg_389;
 
     img_data_stream_0_V_write_assign_proc : process(ap_sig_cseq_ST_pp1_stg0_fsm_4, ap_reg_ppiten_pp1_it0, ap_reg_ppiten_pp1_it1, exitcond4_reg_376, ap_sig_127, ap_sig_137)
     begin
@@ -666,7 +666,7 @@ begin
         end if; 
     end process;
 
-    img_data_stream_1_V_din <= tmp_5_reg_394;
+    img_data_stream_1_V_din <= tmp_4_reg_394;
 
     img_data_stream_1_V_write_assign_proc : process(ap_sig_cseq_ST_pp1_stg0_fsm_4, ap_reg_ppiten_pp1_it0, ap_reg_ppiten_pp1_it1, exitcond4_reg_376, ap_sig_127, ap_sig_137)
     begin
@@ -687,7 +687,7 @@ begin
         end if; 
     end process;
 
-    img_data_stream_2_V_din <= tmp_6_reg_399;
+    img_data_stream_2_V_din <= tmp_5_reg_399;
 
     img_data_stream_2_V_write_assign_proc : process(ap_sig_cseq_ST_pp1_stg0_fsm_4, ap_reg_ppiten_pp1_it0, ap_reg_ppiten_pp1_it1, exitcond4_reg_376, ap_sig_127, ap_sig_137)
     begin
@@ -735,6 +735,6 @@ begin
         end if; 
     end process;
 
-    tmp_10_fu_318_p1 <= p_Val2_s_phi_fu_224_p4(8 - 1 downto 0);
+    tmp_56_fu_318_p1 <= p_Val2_s_phi_fu_224_p4(8 - 1 downto 0);
     tmp_user_V_fu_276_p1 <= in_data_TUSER;
 end behav;

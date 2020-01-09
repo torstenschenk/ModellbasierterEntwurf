@@ -1310,7 +1310,7 @@
             <Obj>
               <type>0</type>
               <id>60</id>
-              <name>empty_33</name>
+              <name>empty_85</name>
               <fileName>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_video_io.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>81</lineNumber>
@@ -1528,7 +1528,7 @@
             <Obj>
               <type>0</type>
               <id>67</id>
-              <name>tmp_10</name>
+              <name>tmp_56</name>
               <fileName>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_axi_io.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>49</lineNumber>
@@ -1559,7 +1559,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>tmp</originalName>
-              <rtlName>tmp_10_fu_318_p1</rtlName>
+              <rtlName>tmp_56_fu_318_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1576,6 +1576,57 @@
             <Obj>
               <type>0</type>
               <id>68</id>
+              <name>tmp_4</name>
+              <fileName>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_axi_io.h</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>49</lineNumber>
+              <contextFuncName>AXIGetBitFields&amp;lt;24, unsigned char&amp;gt;</contextFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch6_moments_calculate\HLS</first>
+                  <second>
+                    <count>2</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_axi_io.h</first>
+                        <second>AXIGetBitFields&amp;lt;24, unsigned char&amp;gt;</second>
+                      </first>
+                      <second>49</second>
+                    </item>
+                    <item>
+                      <first>
+                        <first>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_video_io.h</first>
+                        <second>AXIvideo2Mat&amp;lt;24, 1080, 1920, 4096&amp;gt;</second>
+                      </first>
+                      <second>92</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName>tmp</originalName>
+              <rtlName>tmp_4_reg_394</rtlName>
+              <coreName/>
+            </Obj>
+            <bitwidth>8</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>197</item>
+            <item>198</item>
+            <item>200</item>
+            <item>202</item>
+          </oprand_edges>
+          <opcode>partselect</opcode>
+        </item>
+        <item class_id_reference="9" object_id="_45">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>69</id>
               <name>tmp_5</name>
               <fileName>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_axi_io.h</fileName>
               <fileDirectory>..</fileDirectory>
@@ -1607,58 +1658,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>tmp</originalName>
-              <rtlName>tmp_5_reg_394</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>197</item>
-            <item>198</item>
-            <item>200</item>
-            <item>202</item>
-          </oprand_edges>
-          <opcode>partselect</opcode>
-        </item>
-        <item class_id_reference="9" object_id="_45">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>69</id>
-              <name>tmp_6</name>
-              <fileName>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_axi_io.h</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>49</lineNumber>
-              <contextFuncName>AXIGetBitFields&amp;lt;24, unsigned char&amp;gt;</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch6_moments_calculate\HLS</first>
-                  <second>
-                    <count>2</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_axi_io.h</first>
-                        <second>AXIGetBitFields&amp;lt;24, unsigned char&amp;gt;</second>
-                      </first>
-                      <second>49</second>
-                    </item>
-                    <item>
-                      <first>
-                        <first>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_video_io.h</first>
-                        <second>AXIvideo2Mat&amp;lt;24, 1080, 1920, 4096&amp;gt;</second>
-                      </first>
-                      <second>92</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>tmp</originalName>
-              <rtlName>tmp_6_reg_399</rtlName>
+              <rtlName>tmp_5_reg_399</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -2053,7 +2053,7 @@
             <Obj>
               <type>0</type>
               <id>89</id>
-              <name>empty_36</name>
+              <name>empty_88</name>
               <fileName>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_video_io.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>100</lineNumber>
@@ -5806,7 +5806,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_10_reg_389</first>
+          <first>tmp_4_reg_394</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -5825,7 +5825,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_5_reg_394</first>
+          <first>tmp_56_reg_389</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -5844,7 +5844,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_6_reg_399</first>
+          <first>tmp_5_reg_399</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -6411,7 +6411,59 @@
       <count>4</count>
       <item_version>0</item_version>
       <item class_id="50" tracking_level="1" version="0" object_id="_341">
-        <region_name>hls_label_19</region_name>
+        <region_name>loop_width</region_name>
+        <basic_blocks>
+          <count>4</count>
+          <item_version>0</item_version>
+          <item>52</item>
+          <item>59</item>
+          <item>64</item>
+          <item>79</item>
+        </basic_blocks>
+        <nodes>
+          <count>0</count>
+          <item_version>0</item_version>
+        </nodes>
+        <anchor_node>-1</anchor_node>
+        <region_type>8</region_type>
+        <interval>1</interval>
+        <pipe_depth>2</pipe_depth>
+      </item>
+      <item class_id_reference="50" object_id="_342">
+        <region_name>loop_wait_for_eol</region_name>
+        <basic_blocks>
+          <count>2</count>
+          <item_version>0</item_version>
+          <item>84</item>
+          <item>94</item>
+        </basic_blocks>
+        <nodes>
+          <count>0</count>
+          <item_version>0</item_version>
+        </nodes>
+        <anchor_node>-1</anchor_node>
+        <region_type>8</region_type>
+        <interval>1</interval>
+        <pipe_depth>1</pipe_depth>
+      </item>
+      <item class_id_reference="50" object_id="_343">
+        <region_name>loop_wait_for_start</region_name>
+        <basic_blocks>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>27</item>
+        </basic_blocks>
+        <nodes>
+          <count>0</count>
+          <item_version>0</item_version>
+        </nodes>
+        <anchor_node>-1</anchor_node>
+        <region_type>8</region_type>
+        <interval>1</interval>
+        <pipe_depth>1</pipe_depth>
+      </item>
+      <item class_id_reference="50" object_id="_344">
+        <region_name>hls_label_20</region_name>
         <basic_blocks>
           <count>1</count>
           <item_version>0</item_version>
@@ -6431,58 +6483,6 @@
         <region_type>1</region_type>
         <interval>0</interval>
         <pipe_depth>0</pipe_depth>
-      </item>
-      <item class_id_reference="50" object_id="_342">
-        <region_name>loop_width</region_name>
-        <basic_blocks>
-          <count>4</count>
-          <item_version>0</item_version>
-          <item>52</item>
-          <item>59</item>
-          <item>64</item>
-          <item>79</item>
-        </basic_blocks>
-        <nodes>
-          <count>0</count>
-          <item_version>0</item_version>
-        </nodes>
-        <anchor_node>-1</anchor_node>
-        <region_type>8</region_type>
-        <interval>1</interval>
-        <pipe_depth>2</pipe_depth>
-      </item>
-      <item class_id_reference="50" object_id="_343">
-        <region_name>loop_wait_for_eol</region_name>
-        <basic_blocks>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>84</item>
-          <item>94</item>
-        </basic_blocks>
-        <nodes>
-          <count>0</count>
-          <item_version>0</item_version>
-        </nodes>
-        <anchor_node>-1</anchor_node>
-        <region_type>8</region_type>
-        <interval>1</interval>
-        <pipe_depth>1</pipe_depth>
-      </item>
-      <item class_id_reference="50" object_id="_344">
-        <region_name>loop_wait_for_start</region_name>
-        <basic_blocks>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>27</item>
-        </basic_blocks>
-        <nodes>
-          <count>0</count>
-          <item_version>0</item_version>
-        </nodes>
-        <anchor_node>-1</anchor_node>
-        <region_type>8</region_type>
-        <interval>1</interval>
-        <pipe_depth>1</pipe_depth>
       </item>
     </regions>
     <dp_fu_nodes class_id="51" tracking_level="0" version="0">
@@ -6911,15 +6911,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_10_fu_318</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>67</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_5_fu_322</first>
+        <first>tmp_4_fu_322</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -6927,7 +6919,15 @@
         </second>
       </item>
       <item>
-        <first>tmp_6_fu_332</first>
+        <first>tmp_56_fu_318</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>67</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_5_fu_332</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7369,15 +7369,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_10_reg_389</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>67</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_5_reg_394</first>
+        <first>tmp_4_reg_394</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7385,7 +7377,15 @@
         </second>
       </item>
       <item>
-        <first>tmp_6_reg_399</first>
+        <first>tmp_56_reg_389</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>67</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_5_reg_399</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

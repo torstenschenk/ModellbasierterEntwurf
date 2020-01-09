@@ -1310,7 +1310,7 @@
 					<Obj>
 						<type>0</type>
 						<id>60</id>
-						<name>empty_33</name>
+						<name>empty_85</name>
 						<fileName>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_video_io.h</fileName>
 						<fileDirectory>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch6_moments_calculate\HLS</fileDirectory>
 						<lineNumber>81</lineNumber>
@@ -1528,7 +1528,7 @@
 					<Obj>
 						<type>0</type>
 						<id>67</id>
-						<name>tmp_10</name>
+						<name>tmp_56</name>
 						<fileName>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_axi_io.h</fileName>
 						<fileDirectory>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch6_moments_calculate\HLS</fileDirectory>
 						<lineNumber>49</lineNumber>
@@ -1576,7 +1576,7 @@
 					<Obj>
 						<type>0</type>
 						<id>68</id>
-						<name>tmp_5</name>
+						<name>tmp_4</name>
 						<fileName>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_axi_io.h</fileName>
 						<fileDirectory>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch6_moments_calculate\HLS</fileDirectory>
 						<lineNumber>49</lineNumber>
@@ -1627,7 +1627,7 @@
 					<Obj>
 						<type>0</type>
 						<id>69</id>
-						<name>tmp_6</name>
+						<name>tmp_5</name>
 						<fileName>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_axi_io.h</fileName>
 						<fileDirectory>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch6_moments_calculate\HLS</fileDirectory>
 						<lineNumber>49</lineNumber>
@@ -2053,7 +2053,7 @@
 					<Obj>
 						<type>0</type>
 						<id>89</id>
-						<name>empty_36</name>
+						<name>empty_88</name>
 						<fileName>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_video_io.h</fileName>
 						<fileDirectory>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\Versuch6_moments_calculate\HLS</fileDirectory>
 						<lineNumber>100</lineNumber>
@@ -4475,7 +4475,59 @@
 		<count>4</count>
 		<item_version>0</item_version>
 		<item class_id="33" tracking_level="1" version="0" object_id="_244">
-			<region_name>hls_label_19</region_name>
+			<region_name>loop_width</region_name>
+			<basic_blocks>
+				<count>4</count>
+				<item_version>0</item_version>
+				<item>52</item>
+				<item>59</item>
+				<item>64</item>
+				<item>79</item>
+			</basic_blocks>
+			<nodes>
+				<count>0</count>
+				<item_version>0</item_version>
+			</nodes>
+			<anchor_node>-1</anchor_node>
+			<region_type>8</region_type>
+			<interval>1</interval>
+			<pipe_depth>2</pipe_depth>
+		</item>
+		<item class_id_reference="33" object_id="_245">
+			<region_name>loop_wait_for_eol</region_name>
+			<basic_blocks>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>84</item>
+				<item>94</item>
+			</basic_blocks>
+			<nodes>
+				<count>0</count>
+				<item_version>0</item_version>
+			</nodes>
+			<anchor_node>-1</anchor_node>
+			<region_type>8</region_type>
+			<interval>1</interval>
+			<pipe_depth>1</pipe_depth>
+		</item>
+		<item class_id_reference="33" object_id="_246">
+			<region_name>loop_wait_for_start</region_name>
+			<basic_blocks>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>27</item>
+			</basic_blocks>
+			<nodes>
+				<count>0</count>
+				<item_version>0</item_version>
+			</nodes>
+			<anchor_node>-1</anchor_node>
+			<region_type>8</region_type>
+			<interval>1</interval>
+			<pipe_depth>1</pipe_depth>
+		</item>
+		<item class_id_reference="33" object_id="_247">
+			<region_name>hls_label_20</region_name>
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4495,58 +4547,6 @@
 			<region_type>1</region_type>
 			<interval>0</interval>
 			<pipe_depth>0</pipe_depth>
-		</item>
-		<item class_id_reference="33" object_id="_245">
-			<region_name>loop_width</region_name>
-			<basic_blocks>
-				<count>4</count>
-				<item_version>0</item_version>
-				<item>52</item>
-				<item>59</item>
-				<item>64</item>
-				<item>79</item>
-			</basic_blocks>
-			<nodes>
-				<count>0</count>
-				<item_version>0</item_version>
-			</nodes>
-			<anchor_node>-1</anchor_node>
-			<region_type>8</region_type>
-			<interval>1</interval>
-			<pipe_depth>2</pipe_depth>
-		</item>
-		<item class_id_reference="33" object_id="_246">
-			<region_name>loop_wait_for_eol</region_name>
-			<basic_blocks>
-				<count>2</count>
-				<item_version>0</item_version>
-				<item>84</item>
-				<item>94</item>
-			</basic_blocks>
-			<nodes>
-				<count>0</count>
-				<item_version>0</item_version>
-			</nodes>
-			<anchor_node>-1</anchor_node>
-			<region_type>8</region_type>
-			<interval>1</interval>
-			<pipe_depth>1</pipe_depth>
-		</item>
-		<item class_id_reference="33" object_id="_247">
-			<region_name>loop_wait_for_start</region_name>
-			<basic_blocks>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>27</item>
-			</basic_blocks>
-			<nodes>
-				<count>0</count>
-				<item_version>0</item_version>
-			</nodes>
-			<anchor_node>-1</anchor_node>
-			<region_type>8</region_type>
-			<interval>1</interval>
-			<pipe_depth>1</pipe_depth>
 		</item>
 	</regions>
 	<dp_fu_nodes class_id="34" tracking_level="0" version="0">

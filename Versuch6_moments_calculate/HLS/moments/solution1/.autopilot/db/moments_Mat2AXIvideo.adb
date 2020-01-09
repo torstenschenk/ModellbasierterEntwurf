@@ -834,7 +834,7 @@
             <Obj>
               <type>0</type>
               <id>42</id>
-              <name>tmp_8</name>
+              <name>tmp_54</name>
               <fileName>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>624</lineNumber>
@@ -890,7 +890,7 @@
             <Obj>
               <type>0</type>
               <id>43</id>
-              <name>tmp_9</name>
+              <name>tmp_55</name>
               <fileName>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>624</lineNumber>
@@ -946,7 +946,7 @@
             <Obj>
               <type>0</type>
               <id>44</id>
-              <name>tmp_7</name>
+              <name>tmp_53</name>
               <fileName>C:/Xilinx/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_video_core.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>624</lineNumber>
@@ -3406,7 +3406,24 @@
       <count>2</count>
       <item_version>0</item_version>
       <item class_id="50" tracking_level="1" version="0" object_id="_176">
-        <region_name>hls_label_18</region_name>
+        <region_name>loop_width</region_name>
+        <basic_blocks>
+          <count>2</count>
+          <item_version>0</item_version>
+          <item>34</item>
+          <item>51</item>
+        </basic_blocks>
+        <nodes>
+          <count>0</count>
+          <item_version>0</item_version>
+        </nodes>
+        <anchor_node>-1</anchor_node>
+        <region_type>8</region_type>
+        <interval>1</interval>
+        <pipe_depth>2</pipe_depth>
+      </item>
+      <item class_id_reference="50" object_id="_177">
+        <region_name>hls_label_17</region_name>
         <basic_blocks>
           <count>1</count>
           <item_version>0</item_version>
@@ -3426,23 +3443,6 @@
         <region_type>1</region_type>
         <interval>0</interval>
         <pipe_depth>0</pipe_depth>
-      </item>
-      <item class_id_reference="50" object_id="_177">
-        <region_name>loop_width</region_name>
-        <basic_blocks>
-          <count>2</count>
-          <item_version>0</item_version>
-          <item>34</item>
-          <item>51</item>
-        </basic_blocks>
-        <nodes>
-          <count>0</count>
-          <item_version>0</item_version>
-        </nodes>
-        <anchor_node>-1</anchor_node>
-        <region_type>8</region_type>
-        <interval>1</interval>
-        <pipe_depth>2</pipe_depth>
       </item>
     </regions>
     <dp_fu_nodes class_id="51" tracking_level="0" version="0">
@@ -3685,7 +3685,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_7_read_fu_102</first>
+        <first>tmp_53_read_fu_102</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3693,7 +3693,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_8_read_fu_90</first>
+        <first>tmp_54_read_fu_90</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3701,7 +3701,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_9_read_fu_96</first>
+        <first>tmp_55_read_fu_96</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

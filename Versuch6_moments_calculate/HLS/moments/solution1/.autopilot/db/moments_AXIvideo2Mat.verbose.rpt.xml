@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'moments_AXIvideo2Mat'" level="0">
-<item name = "Date">Wed Jan 08 21:41:51 2020
+<item name = "Date">Thu Jan 09 04:42:11 2020
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">moments</item>
@@ -140,9 +140,9 @@
 <column name="p_Val2_s_reg_220">24, 0, 24, 0</column>
 <column name="p_s_reg_151">11, 0, 11, 0</column>
 <column name="sof_1_fu_88">1, 0, 1, 0</column>
-<column name="tmp_10_reg_389">8, 0, 8, 0</column>
-<column name="tmp_5_reg_394">8, 0, 8, 0</column>
-<column name="tmp_6_reg_399">8, 0, 8, 0</column>
+<column name="tmp_4_reg_394">8, 0, 8, 0</column>
+<column name="tmp_56_reg_389">8, 0, 8, 0</column>
+<column name="tmp_5_reg_399">8, 0, 8, 0</column>
 <column name="tmp_data_V_reg_347">24, 0, 24, 0</column>
 <column name="tmp_last_V_reg_355">1, 0, 1, 0</column>
 </table>
