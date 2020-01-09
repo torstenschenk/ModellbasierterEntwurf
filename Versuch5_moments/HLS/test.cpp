@@ -5,8 +5,10 @@
 int main(int argc, char** argv){
 
 	IplImage* src = cvLoadImage(INPUT_IMAGE);
+	if (src==0) {printf("Error: Input image NULL"); exit(-1);}
 	IplImage* dst = cvCreateImage(cvGetSize(src), src->depth, src->nChannels);
-
+	if (dst==0) {printf("Error: Out of memory"); exit(-1);}
+	
 	AXI_STREAM src_axi, dst_axi;
 	IplImage2AXIvideo(src, src_axi);
 
