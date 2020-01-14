@@ -1118,6 +1118,132 @@ plt.show()
 
 \end{lstlisting}
 
+\subsection{IP Core Moments in Auszügen}
+
+\begin{lstlisting}[language=C++, caption=IP Core]
+--------------- top function --------------
+void moments_accel (axis_t *src, axis_t *dst, int inval,
+	 int* xc_out, int* yc_out, int* anglexcomp, int* angleycomp) {
+	
+int src_rows = 360;
+int src_cols = 640;
+int dst_rows = 180;
+int dst_cols = 320;
+
+#pragma HLS INTERFACE axis port=src depth=384*288 
+// Added depth for C/RTL cosimulation
+#pragma HLS INTERFACE axis port=dst depth=192*144
+ // Added depth for C/RTL cosimulation
+#pragma HLS INTERFACE s_axilite port=inval
+#pragma HLS INTERFACE s_axilite port=xc_out
+#pragma HLS INTERFACE s_axilite port=yc_out
+#pragma HLS INTERFACE s_axilite port=anglexcomp
+#pragma HLS INTERFACE s_axilite port=angleycomp
+#pragma HLS INTERFACE s_axilite port=return
+
+	xf::Mat<TYPE, HEIGHT, WIDTH, NPC1> _src(src_rows, src_cols);
+	xf::Mat<TYPE, HEIGHT, WIDTH, NPC1> _dst(dst_rows, dst_cols);
+#pragma HLS stream variable=_src.data depth=150
+#pragma HLS stream variable=_dst.data depth=150
+
+#pragma HLS dataflow
+	
+	axis2xfMat(_src, src, src_rows, src_cols);	
+
+	xf::moments <INTERPOLATION, TYPE, HEIGHT, WIDTH, HEIGHT, WIDTH, 
+	   NPC1, 2> (_src, _dst, xc_out, yc_out, anglexcomp, angleycomp);
+
+	xfMat2axis(_dst, dst, dst_rows, dst_cols);	
+}
+
+---------------- algorithm  variablen initialisation ------------------
+...
+#pragma HLS ARRAY_PARTITION variable=Wy complete dim=1
+
+	char N;
+	ap_uint<13> x=0,i=0,j,k=0, out_i=0, out_j=0;
+	ap_int<14> Yoffset=0;
+	uint16_t start_index=0,count=0;
+	int32_t offset_temp0,offset_temp1;
+	uint32_t offset_temp0_fixed,offset_temp1_fixed;
+	uint32_t Xscale,Yscale;
+	uint32_t cellWidth,inv_cellWidth,overlaptemp;
+	int32_t Xtemp0 = 0,Xtemp1 = 0,Ytemp0 = 0,Ytemp1 = 0,temp;
+
+	ap_uint<13> block_start,read_offset;
+	uint16_t weight_index = 0, ylimit;
+
+	int countpx = 0;
+	unsigned int tmppx = 0;
+	
+	int row = 0;
+	int col = 0;
+
+	int m0 = 0;
+	int m1 = 0;
+	int m2 = 0;
+	int m3 = 0;
+	int m4 = 0;
+	int m5 = 0;
+
+	int centercol = 0; // center col
+	int centerrow = 0; // center row
+
+	int mu11 = 0;
+	int mu02 = 0;
+	int mu20 = 0;
+
+	Xscale = xFUdivResizeDow....
+...
+---------------- algorithm calc moments ------------------
+...
+XF_TNAME(DEPTH,NPC) out_pix = ProcessBlockArea
+	<DEPTH,NPC,WORDWIDTH,DST_COLS,PLANES>
+	(Hoffset,Hweight,Hreq,Wy,D0,D1,D2,D3,D4,block_start,out_i);
+
+	countpx++; // count all px
+	if (out_pix>>24 & 0x80 || out_pix>>16 & 0x80 || out_pix>>8 & 0x80) {
+		row = countpx/320;
+		col = countpx%320;
+
+		m0++;
+		m1 += row;
+		m2 += col;
+		m3 += row*col;
+		m4 += row*row;
+		m5 += col*col;
+
+		out_pix = 0xFFFFFF;
+	} else
+		out_pix = 0;
+
+	resize_out.write(out_pix);
+	out_i += 1<<XF_BITSHIFT(NPC);
+}
+...
+---------------- algorithm finalize and return ------------------
+...
+	if (m0 > 0) {
+		centercol = m2/m0;
+		centerrow = m1/m0;
+		mu11 = m3/m0 - centercol*centerrow;
+		mu02 = m4/m0 - centerrow*centerrow;
+		mu20 = m5/m0 - centercol*centercol;
+
+		*xc_out = centercol;
+		*yc_out = centerrow;
+		*angleycomp = 2*mu11;   // first parameter atan2
+		*anglexcomp = mu20-mu02;   // second parameter atan2
+	} else {
+		*xc_out = 0;
+	    *yc_out = 0;
+	    *angleycomp = 0;
+	    *anglexcomp = 0;
+	}
+...
+
+\end{lstlisting}[language=C++, caption=IP Core]
+
 %------------------------------------------------
 %	Literaturverzeichnis
 %------------------------------------------------
