@@ -1,0 +1,707 @@
+
+
+================================================================
+== Vivado HLS Report for 'resize'
+================================================================
+* Date:           Mon Jan 13 23:46:15 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        moments
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.400|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+----------+
+    |     Latency     |     Interval    | Pipeline |
+    |   min  |   max  |   min  |   max  |   Type   |
+    +--------+--------+--------+--------+----------+
+    |  491301|  497838|  491302|  497839| dataflow |
+    +--------+--------+--------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+----------------------+--------+--------+--------+--------+---------+
+        |                         |                      |     Latency     |     Interval    | Pipeline|
+        |         Instance        |        Module        |   min  |   max  |   min  |   max  |   Type  |
+        +-------------------------+----------------------+--------+--------+--------+--------+---------+
+        |xFresize60_U0            |xFresize60            |  491301|  497838|  491301|  497838|   none  |
+        |resize_Loop_1_proc59_U0  |resize_Loop_1_proc59  |  231481|  231481|  231481|  231481|   none  |
+        |resize_Loop_2_proc61_U0  |resize_Loop_2_proc61  |   58141|   58141|   58141|   58141|   none  |
+        +-------------------------+----------------------+--------+--------+--------+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|      6|
+|FIFO             |        0|      -|      10|     72|
+|Instance         |       33|    118|   13222|  14991|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      9|
+|Register         |        -|      -|       1|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |       33|    118|   13233|  15078|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |       11|     53|      12|     28|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+-------+-------+
+    |         Instance        |        Module        | BRAM_18K| DSP48E|   FF  |  LUT  |
+    +-------------------------+----------------------+---------+-------+-------+-------+
+    |resize_Loop_1_proc59_U0  |resize_Loop_1_proc59  |        0|      0|     37|    161|
+    |resize_Loop_2_proc61_U0  |resize_Loop_2_proc61  |        0|      0|     33|    151|
+    |xFresize60_U0            |xFresize60            |       33|    118|  13152|  14679|
+    +-------------------------+----------------------+---------+-------+-------+-------+
+    |Total                    |                      |       33|    118|  13222|  14991|
+    +-------------------------+----------------------+---------+-------+-------+-------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-----------------+---------+---+----+------+-----+---------+
+    |       Name      | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +-----------------+---------+---+----+------+-----+---------+
+    |in_image_V_V_U   |        0|  5|  36|     2|   24|       48|
+    |out_image_V_V_U  |        0|  5|  36|     2|   24|       48|
+    +-----------------+---------+---+----+------+-----+---------+
+    |Total            |        0| 10|  72|     4|   48|       96|
+    +-----------------+---------+---+----+------+-----+---------+
+
+    * Expression: 
+    +------------------+----------+-------+---+----+------------+------------+
+    |   Variable Name  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------+----------+-------+---+----+------------+------------+
+    |ap_idle           |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_continue  |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_done      |    and   |      0|  0|   2|           1|           1|
+    +------------------+----------+-------+---+----+------------+------------+
+    |Total             |          |      0|  0|   6|           3|           3|
+    +------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------+----+-----------+-----+-----------+
+    |    Name    | LUT| Input Size| Bits| Total Bits|
+    +------------+----+-----------+-----+-----------+
+    |real_start  |   9|          2|    1|          2|
+    +------------+----+-----------+-----+-----------+
+    |Total       |   9|          2|    1|          2|
+    +------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+---+----+-----+-----------+
+    |      Name      | FF| LUT| Bits| Const Bits|
+    +----------------+---+----+-----+-----------+
+    |start_once_reg  |  1|   0|    1|          0|
+    +----------------+---+----+-----+-----------+
+    |Total           |  1|   0|    1|          0|
+    +----------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------------------+-----+-----+------------+--------------+--------------+
+|ap_start              |  in |    1| ap_ctrl_hs |    resize    | return value |
+|start_full_n          |  in |    1| ap_ctrl_hs |    resize    | return value |
+|start_out             | out |    1| ap_ctrl_hs |    resize    | return value |
+|start_write           | out |    1| ap_ctrl_hs |    resize    | return value |
+|ap_clk                |  in |    1| ap_ctrl_hs |    resize    | return value |
+|ap_rst                |  in |    1| ap_ctrl_hs |    resize    | return value |
+|ap_done               | out |    1| ap_ctrl_hs |    resize    | return value |
+|ap_ready              | out |    1| ap_ctrl_hs |    resize    | return value |
+|ap_idle               | out |    1| ap_ctrl_hs |    resize    | return value |
+|ap_continue           |  in |    1| ap_ctrl_hs |    resize    | return value |
+|p_src_data_V_dout     |  in |   24|   ap_fifo  | p_src_data_V |    pointer   |
+|p_src_data_V_empty_n  |  in |    1|   ap_fifo  | p_src_data_V |    pointer   |
+|p_src_data_V_read     | out |    1|   ap_fifo  | p_src_data_V |    pointer   |
+|p_dst_data_V_din      | out |   24|   ap_fifo  | p_dst_data_V |    pointer   |
+|p_dst_data_V_full_n   |  in |    1|   ap_fifo  | p_dst_data_V |    pointer   |
+|p_dst_data_V_write    | out |    1|   ap_fifo  | p_dst_data_V |    pointer   |
+|xc_out                | out |   32|   ap_vld   |    xc_out    |    pointer   |
+|xc_out_ap_vld         | out |    1|   ap_vld   |    xc_out    |    pointer   |
+|yc_out                | out |   32|   ap_vld   |    yc_out    |    pointer   |
+|yc_out_ap_vld         | out |    1|   ap_vld   |    yc_out    |    pointer   |
+|anglexcomp            | out |   32|   ap_vld   |  anglexcomp  |    pointer   |
+|anglexcomp_ap_vld     | out |    1|   ap_vld   |  anglexcomp  |    pointer   |
+|angleycomp            | out |   32|   ap_vld   |  angleycomp  |    pointer   |
+|angleycomp_ap_vld     | out |    1|   ap_vld   |  angleycomp  |    pointer   |
++----------------------+-----+-----+------------+--------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 6, States = { 1 2 3 4 5 6 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%in_image_V_V = alloca i24, align 4" [./include/imgproc/xf_resize.hpp:95]   --->   Operation 7 'alloca' 'in_image_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 2> <FIFO>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%out_image_V_V = alloca i24, align 4" [./include/imgproc/xf_resize.hpp:96]   --->   Operation 8 'alloca' 'out_image_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 2> <FIFO>
+ST_1 : Operation 9 [2/2] (0.00ns)   --->   "call fastcc void @resize_Loop_1_proc59(i24* %p_src_data_V, i24* %in_image_V_V)"   --->   Operation 9 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 10 [1/2] (0.00ns)   --->   "call fastcc void @resize_Loop_1_proc59(i24* %p_src_data_V, i24* %in_image_V_V)"   --->   Operation 10 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 11 [2/2] (0.00ns)   --->   "call fastcc void @xFresize60(i24* %in_image_V_V, i24* %out_image_V_V, i32* %xc_out, i32* %yc_out, i32* %anglexcomp, i32* %angleycomp) noinline" [./include/imgproc/xf_resize.hpp:110]   --->   Operation 11 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 12 [1/2] (0.00ns)   --->   "call fastcc void @xFresize60(i24* %in_image_V_V, i24* %out_image_V_V, i32* %xc_out, i32* %yc_out, i32* %anglexcomp, i32* %angleycomp) noinline" [./include/imgproc/xf_resize.hpp:110]   --->   Operation 12 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 13 [2/2] (0.00ns)   --->   "call fastcc void @resize_Loop_2_proc61(i24* %out_image_V_V, i24* %p_dst_data_V)"   --->   Operation 13 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %p_dst_data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 14 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %p_src_data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 15 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str) nounwind" [./include/imgproc/xf_resize.hpp:86]   --->   Operation 16 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 17 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @in_image_OC_V_OC_V_s, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i24* %in_image_V_V, i24* %in_image_V_V)"   --->   Operation 17 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %in_image_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 18 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 19 [1/1] (0.00ns)   --->   "%empty_32 = call i32 (...)* @_ssdm_op_SpecChannel([14 x i8]* @out_image_OC_V_OC_V_s, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i24* %out_image_V_V, i24* %out_image_V_V)"   --->   Operation 19 'specchannel' 'empty_32' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %out_image_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 20 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 21 [1/2] (0.00ns)   --->   "call fastcc void @resize_Loop_2_proc61(i24* %out_image_V_V, i24* %p_dst_data_V)"   --->   Operation 21 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 22 [1/1] (0.00ns)   --->   "ret void" [./include/imgproc/xf_resize.hpp:124]   --->   Operation 22 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ p_src_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ p_dst_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ xc_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ yc_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ anglexcomp]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ angleycomp]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ xf_division_lut]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ ic]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+in_image_V_V  (alloca              ) [ 0111111]
+out_image_V_V (alloca              ) [ 0011111]
+StgValue_10   (call                ) [ 0000000]
+StgValue_12   (call                ) [ 0000000]
+StgValue_14   (specinterface       ) [ 0000000]
+StgValue_15   (specinterface       ) [ 0000000]
+StgValue_16   (specdataflowpipeline) [ 0000000]
+empty         (specchannel         ) [ 0000000]
+StgValue_18   (specinterface       ) [ 0000000]
+empty_32      (specchannel         ) [ 0000000]
+StgValue_20   (specinterface       ) [ 0000000]
+StgValue_21   (call                ) [ 0000000]
+StgValue_22   (ret                 ) [ 0000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="p_src_data_V">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_src_data_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="p_dst_data_V">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_dst_data_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="xc_out">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="xc_out"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="yc_out">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="yc_out"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="anglexcomp">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="anglexcomp"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="angleycomp">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="angleycomp"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="xf_division_lut">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="xf_division_lut"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="ic">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ic"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="resize_Loop_1_proc59"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="xFresize60"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="resize_Loop_2_proc61"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ap_fifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecDataflowPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecChannel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="in_image_OC_V_OC_V_s"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="out_image_OC_V_OC_V_s"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1004" name="in_image_V_V_fu_48">
+<pin_list>
+<pin id="49" dir="0" index="0" bw="1" slack="0"/>
+<pin id="50" dir="1" index="1" bw="24" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="in_image_V_V/1 "/>
+</bind>
+</comp>
+
+<comp id="52" class="1004" name="out_image_V_V_fu_52">
+<pin_list>
+<pin id="53" dir="0" index="0" bw="1" slack="0"/>
+<pin id="54" dir="1" index="1" bw="24" slack="2"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="out_image_V_V/1 "/>
+</bind>
+</comp>
+
+<comp id="56" class="1004" name="grp_xFresize60_fu_56">
+<pin_list>
+<pin id="57" dir="0" index="0" bw="0" slack="0"/>
+<pin id="58" dir="0" index="1" bw="24" slack="2"/>
+<pin id="59" dir="0" index="2" bw="24" slack="2"/>
+<pin id="60" dir="0" index="3" bw="32" slack="0"/>
+<pin id="61" dir="0" index="4" bw="32" slack="0"/>
+<pin id="62" dir="0" index="5" bw="32" slack="0"/>
+<pin id="63" dir="0" index="6" bw="32" slack="0"/>
+<pin id="64" dir="0" index="7" bw="16" slack="0"/>
+<pin id="65" dir="0" index="8" bw="32" slack="0"/>
+<pin id="66" dir="1" index="9" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_11/3 "/>
+</bind>
+</comp>
+
+<comp id="74" class="1004" name="grp_resize_Loop_1_proc59_fu_74">
+<pin_list>
+<pin id="75" dir="0" index="0" bw="0" slack="0"/>
+<pin id="76" dir="0" index="1" bw="24" slack="0"/>
+<pin id="77" dir="0" index="2" bw="24" slack="0"/>
+<pin id="78" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_9/1 "/>
+</bind>
+</comp>
+
+<comp id="81" class="1004" name="grp_resize_Loop_2_proc61_fu_81">
+<pin_list>
+<pin id="82" dir="0" index="0" bw="0" slack="0"/>
+<pin id="83" dir="0" index="1" bw="24" slack="4"/>
+<pin id="84" dir="0" index="2" bw="24" slack="0"/>
+<pin id="85" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_13/5 "/>
+</bind>
+</comp>
+
+<comp id="88" class="1005" name="in_image_V_V_reg_88">
+<pin_list>
+<pin id="89" dir="0" index="0" bw="24" slack="0"/>
+<pin id="90" dir="1" index="1" bw="24" slack="0"/>
+</pin_list>
+<bind>
+<opset="in_image_V_V "/>
+</bind>
+</comp>
+
+<comp id="94" class="1005" name="out_image_V_V_reg_94">
+<pin_list>
+<pin id="95" dir="0" index="0" bw="24" slack="2"/>
+<pin id="96" dir="1" index="1" bw="24" slack="2"/>
+</pin_list>
+<bind>
+<opset="out_image_V_V "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="51"><net_src comp="16" pin="0"/><net_sink comp="48" pin=0"/></net>
+
+<net id="55"><net_src comp="16" pin="0"/><net_sink comp="52" pin=0"/></net>
+
+<net id="67"><net_src comp="20" pin="0"/><net_sink comp="56" pin=0"/></net>
+
+<net id="68"><net_src comp="4" pin="0"/><net_sink comp="56" pin=3"/></net>
+
+<net id="69"><net_src comp="6" pin="0"/><net_sink comp="56" pin=4"/></net>
+
+<net id="70"><net_src comp="8" pin="0"/><net_sink comp="56" pin=5"/></net>
+
+<net id="71"><net_src comp="10" pin="0"/><net_sink comp="56" pin=6"/></net>
+
+<net id="72"><net_src comp="12" pin="0"/><net_sink comp="56" pin=7"/></net>
+
+<net id="73"><net_src comp="14" pin="0"/><net_sink comp="56" pin=8"/></net>
+
+<net id="79"><net_src comp="18" pin="0"/><net_sink comp="74" pin=0"/></net>
+
+<net id="80"><net_src comp="0" pin="0"/><net_sink comp="74" pin=1"/></net>
+
+<net id="86"><net_src comp="22" pin="0"/><net_sink comp="81" pin=0"/></net>
+
+<net id="87"><net_src comp="2" pin="0"/><net_sink comp="81" pin=2"/></net>
+
+<net id="91"><net_src comp="48" pin="1"/><net_sink comp="88" pin=0"/></net>
+
+<net id="92"><net_src comp="88" pin="1"/><net_sink comp="74" pin=2"/></net>
+
+<net id="93"><net_src comp="88" pin="1"/><net_sink comp="56" pin=1"/></net>
+
+<net id="97"><net_src comp="52" pin="1"/><net_sink comp="94" pin=0"/></net>
+
+<net id="98"><net_src comp="94" pin="1"/><net_sink comp="56" pin=2"/></net>
+
+<net id="99"><net_src comp="94" pin="1"/><net_sink comp="81" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: p_dst_data_V | {5 6 }
+	Port: xc_out | {3 4 }
+	Port: yc_out | {3 4 }
+	Port: anglexcomp | {3 4 }
+	Port: angleycomp | {3 4 }
+	Port: xf_division_lut | {}
+	Port: ic | {3 4 }
+ - Input state : 
+	Port: resize : p_src_data_V | {1 2 }
+	Port: resize : xc_out | {}
+	Port: resize : yc_out | {}
+	Port: resize : anglexcomp | {}
+	Port: resize : angleycomp | {}
+	Port: resize : xf_division_lut | {3 4 }
+	Port: resize : ic | {3 4 }
+  - Chain level:
+	State 1
+		StgValue_9 : 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|--------------------------------|---------|---------|---------|---------|---------|
+| Operation|         Functional Unit        |   BRAM  |  DSP48E |  Delay  |    FF   |   LUT   |
+|----------|--------------------------------|---------|---------|---------|---------|---------|
+|          |      grp_xFresize60_fu_56      |    29   |   118   | 229.287 |  13552  |  12904  |
+|   call   | grp_resize_Loop_1_proc59_fu_74 |    0    |    0    |    0    |    40   |    55   |
+|          | grp_resize_Loop_2_proc61_fu_81 |    0    |    0    |    0    |    36   |    54   |
+|----------|--------------------------------|---------|---------|---------|---------|---------|
+|   Total  |                                |    29   |   118   | 229.287 |  13628  |  13013  |
+|----------|--------------------------------|---------|---------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++--------------------+--------+
+|                    |   FF   |
++--------------------+--------+
+| in_image_V_V_reg_88|   24   |
+|out_image_V_V_reg_94|   24   |
++--------------------+--------+
+|        Total       |   48   |
++--------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+
+|           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+--------+
+|  Function |   29   |   118  |   229  |  13628 |  13013 |
+|   Memory  |    -   |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |   48   |    -   |
++-----------+--------+--------+--------+--------+--------+
+|   Total   |   29   |   118  |   229  |  13676 |  13013 |
++-----------+--------+--------+--------+--------+--------+

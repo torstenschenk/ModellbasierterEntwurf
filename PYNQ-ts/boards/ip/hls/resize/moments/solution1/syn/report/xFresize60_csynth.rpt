@@ -1,0 +1,158 @@
+
+
+================================================================
+== Vivado HLS Report for 'xFresize60'
+================================================================
+* Date:           Mon Jan 13 23:46:13 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        moments
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.400|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  491301|  497838|  491301|  497838|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------+----------------------+--------+--------+--------+--------+---------+
+        |                                |                      |     Latency     |     Interval    | Pipeline|
+        |            Instance            |        Module        |   min  |   max  |   min  |   max  |   Type  |
+        +--------------------------------+----------------------+--------+--------+--------+--------+---------+
+        |grp_xFResizeAreaDownScal_fu_60  |xFResizeAreaDownScal  |  491300|  497837|  491300|  497837|   none  |
+        +--------------------------------+----------------------+--------+--------+--------+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|      2|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |       33|    118|   13147|  14626|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     51|
+|Register         |        -|      -|       5|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |       33|    118|   13152|  14679|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |       11|     53|      12|     27|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------+----------------------+---------+-------+-------+-------+
+    |            Instance            |        Module        | BRAM_18K| DSP48E|   FF  |  LUT  |
+    +--------------------------------+----------------------+---------+-------+-------+-------+
+    |grp_xFResizeAreaDownScal_fu_60  |xFResizeAreaDownScal  |       33|    118|  13147|  14626|
+    +--------------------------------+----------------------+---------+-------+-------+-------+
+    |Total                           |                      |       33|    118|  13147|  14626|
+    +--------------------------------+----------------------+---------+-------+-------+-------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+-------+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |ap_block_state1  |    or    |      0|  0|   2|           1|           1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |Total            |          |      0|  0|   2|           1|           1|
+    +-----------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------+----+-----------+-----+-----------+
+    |         Name        | LUT| Input Size| Bits| Total Bits|
+    +---------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm            |  15|          3|    1|          3|
+    |ap_done              |   9|          2|    1|          2|
+    |p_in_mat_V_V_read    |   9|          2|    1|          2|
+    |p_out_mat_V_V_write  |   9|          2|    1|          2|
+    |real_start           |   9|          2|    1|          2|
+    +---------------------+----+-----------+-----+-----------+
+    |Total                |  51|         11|    5|         11|
+    +---------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------+---+----+-----+-----------+
+    |                     Name                    | FF| LUT| Bits| Const Bits|
+    +---------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                    |  2|   0|    2|          0|
+    |ap_done_reg                                  |  1|   0|    1|          0|
+    |grp_xFResizeAreaDownScal_fu_60_ap_start_reg  |  1|   0|    1|          0|
+    |start_once_reg                               |  1|   0|    1|          0|
+    +---------------------------------------------+---+----+-----+-----------+
+    |Total                                        |  5|   0|    5|          0|
+    +---------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+---------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  | Source Object |    C Type    |
++----------------------+-----+-----+------------+---------------+--------------+
+|ap_clk                |  in |    1| ap_ctrl_hs |   xFresize60  | return value |
+|ap_rst                |  in |    1| ap_ctrl_hs |   xFresize60  | return value |
+|ap_start              |  in |    1| ap_ctrl_hs |   xFresize60  | return value |
+|start_full_n          |  in |    1| ap_ctrl_hs |   xFresize60  | return value |
+|ap_done               | out |    1| ap_ctrl_hs |   xFresize60  | return value |
+|ap_continue           |  in |    1| ap_ctrl_hs |   xFresize60  | return value |
+|ap_idle               | out |    1| ap_ctrl_hs |   xFresize60  | return value |
+|ap_ready              | out |    1| ap_ctrl_hs |   xFresize60  | return value |
+|start_out             | out |    1| ap_ctrl_hs |   xFresize60  | return value |
+|start_write           | out |    1| ap_ctrl_hs |   xFresize60  | return value |
+|p_in_mat_V_V_dout     |  in |   24|   ap_fifo  |  p_in_mat_V_V |    pointer   |
+|p_in_mat_V_V_empty_n  |  in |    1|   ap_fifo  |  p_in_mat_V_V |    pointer   |
+|p_in_mat_V_V_read     | out |    1|   ap_fifo  |  p_in_mat_V_V |    pointer   |
+|p_out_mat_V_V_din     | out |   24|   ap_fifo  | p_out_mat_V_V |    pointer   |
+|p_out_mat_V_V_full_n  |  in |    1|   ap_fifo  | p_out_mat_V_V |    pointer   |
+|p_out_mat_V_V_write   | out |    1|   ap_fifo  | p_out_mat_V_V |    pointer   |
+|xc_out                | out |   32|   ap_vld   |     xc_out    |    pointer   |
+|xc_out_ap_vld         | out |    1|   ap_vld   |     xc_out    |    pointer   |
+|yc_out                | out |   32|   ap_vld   |     yc_out    |    pointer   |
+|yc_out_ap_vld         | out |    1|   ap_vld   |     yc_out    |    pointer   |
+|anglexcomp            | out |   32|   ap_vld   |   anglexcomp  |    pointer   |
+|anglexcomp_ap_vld     | out |    1|   ap_vld   |   anglexcomp  |    pointer   |
+|angleycomp            | out |   32|   ap_vld   |   angleycomp  |    pointer   |
+|angleycomp_ap_vld     | out |    1|   ap_vld   |   angleycomp  |    pointer   |
++----------------------+-----+-----+------------+---------------+--------------+
+

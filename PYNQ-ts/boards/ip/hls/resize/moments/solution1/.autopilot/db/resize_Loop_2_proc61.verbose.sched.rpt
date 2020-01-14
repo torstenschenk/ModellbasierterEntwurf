@@ -1,0 +1,178 @@
+
+
+================================================================
+== Vivado HLS Report for 'resize_Loop_2_proc61'
+================================================================
+* Date:           Mon Jan 13 23:45:51 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        moments
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.268|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  58141|  58141|  58141|  58141|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-------+-------+----------+-----------+-----------+------+----------+
+        |             |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |  58140|  58140|       323|          -|          -|   180|    no    |
+        | + Loop 1.1  |    320|    320|         2|          1|          1|   320|    yes   |
+        +-------------+-------+-------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond2)
+3 --> 
+	5  / (exitcond)
+	4  / (!exitcond)
+4 --> 
+	3  / true
+5 --> 
+	2  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %out_image_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %p_dst_data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (1.76ns)   --->   "br label %0" [./include/imgproc/xf_resize.hpp:113]   --->   Operation 8 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 2.52>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%i1 = phi i8 [ 0, %newFuncRoot ], [ %i, %1 ]"   --->   Operation 9 'phi' 'i1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (1.55ns)   --->   "%exitcond2 = icmp eq i8 %i1, -76" [./include/imgproc/xf_resize.hpp:113]   --->   Operation 10 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 180, i64 180, i64 180)"   --->   Operation 11 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (1.91ns)   --->   "%i = add i8 %i1, 1" [./include/imgproc/xf_resize.hpp:113]   --->   Operation 12 'add' 'i' <Predicate = true> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %.exitStub, label %3" [./include/imgproc/xf_resize.hpp:113]   --->   Operation 13 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str11)" [./include/imgproc/xf_resize.hpp:114]   --->   Operation 14 'specregionbegin' 'tmp_3' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (1.76ns)   --->   "br label %2" [./include/imgproc/xf_resize.hpp:116]   --->   Operation 15 'br' <Predicate = (!exitcond2)> <Delay = 1.76>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 16 'ret' <Predicate = (exitcond2)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.82>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%j2 = phi i9 [ 0, %3 ], [ %j, %4 ]"   --->   Operation 17 'phi' 'j2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (1.66ns)   --->   "%exitcond = icmp eq i9 %j2, -192" [./include/imgproc/xf_resize.hpp:116]   --->   Operation 18 'icmp' 'exitcond' <Predicate = true> <Delay = 1.66> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 320, i64 320, i64 320)"   --->   Operation 19 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (1.82ns)   --->   "%j = add i9 %j2, 1" [./include/imgproc/xf_resize.hpp:116]   --->   Operation 20 'add' 'j' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %1, label %4" [./include/imgproc/xf_resize.hpp:116]   --->   Operation 21 'br' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 7.26>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_8 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str12)" [./include/imgproc/xf_resize.hpp:117]   --->   Operation 22 'specregionbegin' 'tmp_8' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [./include/imgproc/xf_resize.hpp:119]   --->   Operation 23 'specpipeline' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (3.63ns)   --->   "%tmp_V = call i24 @_ssdm_op_Read.ap_fifo.volatile.i24P(i24* %out_image_V_V)" [./include/imgproc/xf_resize.hpp:121]   --->   Operation 24 'read' 'tmp_V' <Predicate = (!exitcond)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 0> <FIFO>
+ST_4 : Operation 25 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i24P(i24* %p_dst_data_V, i24 %tmp_V)" [./include/imgproc/xf_resize.hpp:121]   --->   Operation 25 'write' <Predicate = (!exitcond)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 0> <FIFO>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%empty_30 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str12, i32 %tmp_8)" [./include/imgproc/xf_resize.hpp:122]   --->   Operation 26 'specregionend' 'empty_30' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "br label %2" [./include/imgproc/xf_resize.hpp:116]   --->   Operation 27 'br' <Predicate = (!exitcond)> <Delay = 0.00>
+
+State 5 <SV = 3> <Delay = 0.00>
+ST_5 : Operation 28 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str11, i32 %tmp_3)" [./include/imgproc/xf_resize.hpp:123]   --->   Operation 28 'specregionend' 'empty' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "br label %0" [./include/imgproc/xf_resize.hpp:113]   --->   Operation 29 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', ./include/imgproc/xf_resize.hpp:113) [7]  (1.77 ns)
+
+ <State 2>: 2.53ns
+The critical path consists of the following:
+	'icmp' operation ('exitcond2', ./include/imgproc/xf_resize.hpp:113) [8]  (1.55 ns)
+	blocking operation 0.978 ns on control path)
+
+ <State 3>: 1.82ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', ./include/imgproc/xf_resize.hpp:116) [16]  (0 ns)
+	'add' operation ('j', ./include/imgproc/xf_resize.hpp:116) [19]  (1.82 ns)
+
+ <State 4>: 7.27ns
+The critical path consists of the following:
+	fifo read on port 'out_image_V_V' (./include/imgproc/xf_resize.hpp:121) [24]  (3.63 ns)
+	fifo write on port 'p_dst_data_V' (./include/imgproc/xf_resize.hpp:121) [25]  (3.63 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

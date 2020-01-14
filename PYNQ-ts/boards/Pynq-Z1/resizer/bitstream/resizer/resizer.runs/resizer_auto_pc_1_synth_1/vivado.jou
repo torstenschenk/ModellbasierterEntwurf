@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Jan 13 23:58:20 2020
+# Process ID: 2500
+# Current directory: C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/resizer_auto_pc_1_synth_1
+# Command line: vivado.exe -log resizer_auto_pc_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source resizer_auto_pc_1.tcl
+# Log file: C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/resizer_auto_pc_1_synth_1/resizer_auto_pc_1.vds
+# Journal file: C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/resizer_auto_pc_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source resizer_auto_pc_1.tcl -notrace

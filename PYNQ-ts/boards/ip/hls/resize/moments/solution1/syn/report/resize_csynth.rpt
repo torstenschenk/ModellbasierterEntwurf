@@ -1,0 +1,164 @@
+
+
+================================================================
+== Vivado HLS Report for 'resize'
+================================================================
+* Date:           Mon Jan 13 23:46:15 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        moments
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.400|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+----------+
+    |     Latency     |     Interval    | Pipeline |
+    |   min  |   max  |   min  |   max  |   Type   |
+    +--------+--------+--------+--------+----------+
+    |  491301|  497838|  491302|  497839| dataflow |
+    +--------+--------+--------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+----------------------+--------+--------+--------+--------+---------+
+        |                         |                      |     Latency     |     Interval    | Pipeline|
+        |         Instance        |        Module        |   min  |   max  |   min  |   max  |   Type  |
+        +-------------------------+----------------------+--------+--------+--------+--------+---------+
+        |xFresize60_U0            |xFresize60            |  491301|  497838|  491301|  497838|   none  |
+        |resize_Loop_1_proc59_U0  |resize_Loop_1_proc59  |  231481|  231481|  231481|  231481|   none  |
+        |resize_Loop_2_proc61_U0  |resize_Loop_2_proc61  |   58141|   58141|   58141|   58141|   none  |
+        +-------------------------+----------------------+--------+--------+--------+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|      6|
+|FIFO             |        0|      -|      10|     72|
+|Instance         |       33|    118|   13222|  14991|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      9|
+|Register         |        -|      -|       1|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |       33|    118|   13233|  15078|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |       11|     53|      12|     28|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+-------+-------+
+    |         Instance        |        Module        | BRAM_18K| DSP48E|   FF  |  LUT  |
+    +-------------------------+----------------------+---------+-------+-------+-------+
+    |resize_Loop_1_proc59_U0  |resize_Loop_1_proc59  |        0|      0|     37|    161|
+    |resize_Loop_2_proc61_U0  |resize_Loop_2_proc61  |        0|      0|     33|    151|
+    |xFresize60_U0            |xFresize60            |       33|    118|  13152|  14679|
+    +-------------------------+----------------------+---------+-------+-------+-------+
+    |Total                    |                      |       33|    118|  13222|  14991|
+    +-------------------------+----------------------+---------+-------+-------+-------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-----------------+---------+---+----+------+-----+---------+
+    |       Name      | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +-----------------+---------+---+----+------+-----+---------+
+    |in_image_V_V_U   |        0|  5|  36|     2|   24|       48|
+    |out_image_V_V_U  |        0|  5|  36|     2|   24|       48|
+    +-----------------+---------+---+----+------+-----+---------+
+    |Total            |        0| 10|  72|     4|   48|       96|
+    +-----------------+---------+---+----+------+-----+---------+
+
+    * Expression: 
+    +------------------+----------+-------+---+----+------------+------------+
+    |   Variable Name  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------+----------+-------+---+----+------------+------------+
+    |ap_idle           |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_continue  |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_done      |    and   |      0|  0|   2|           1|           1|
+    +------------------+----------+-------+---+----+------------+------------+
+    |Total             |          |      0|  0|   6|           3|           3|
+    +------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------+----+-----------+-----+-----------+
+    |    Name    | LUT| Input Size| Bits| Total Bits|
+    +------------+----+-----------+-----+-----------+
+    |real_start  |   9|          2|    1|          2|
+    +------------+----+-----------+-----+-----------+
+    |Total       |   9|          2|    1|          2|
+    +------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+---+----+-----+-----------+
+    |      Name      | FF| LUT| Bits| Const Bits|
+    +----------------+---+----+-----+-----------+
+    |start_once_reg  |  1|   0|    1|          0|
+    +----------------+---+----+-----+-----------+
+    |Total           |  1|   0|    1|          0|
+    +----------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------------------+-----+-----+------------+--------------+--------------+
+|ap_start              |  in |    1| ap_ctrl_hs |    resize    | return value |
+|start_full_n          |  in |    1| ap_ctrl_hs |    resize    | return value |
+|start_out             | out |    1| ap_ctrl_hs |    resize    | return value |
+|start_write           | out |    1| ap_ctrl_hs |    resize    | return value |
+|ap_clk                |  in |    1| ap_ctrl_hs |    resize    | return value |
+|ap_rst                |  in |    1| ap_ctrl_hs |    resize    | return value |
+|ap_done               | out |    1| ap_ctrl_hs |    resize    | return value |
+|ap_ready              | out |    1| ap_ctrl_hs |    resize    | return value |
+|ap_idle               | out |    1| ap_ctrl_hs |    resize    | return value |
+|ap_continue           |  in |    1| ap_ctrl_hs |    resize    | return value |
+|p_src_data_V_dout     |  in |   24|   ap_fifo  | p_src_data_V |    pointer   |
+|p_src_data_V_empty_n  |  in |    1|   ap_fifo  | p_src_data_V |    pointer   |
+|p_src_data_V_read     | out |    1|   ap_fifo  | p_src_data_V |    pointer   |
+|p_dst_data_V_din      | out |   24|   ap_fifo  | p_dst_data_V |    pointer   |
+|p_dst_data_V_full_n   |  in |    1|   ap_fifo  | p_dst_data_V |    pointer   |
+|p_dst_data_V_write    | out |    1|   ap_fifo  | p_dst_data_V |    pointer   |
+|xc_out                | out |   32|   ap_vld   |    xc_out    |    pointer   |
+|xc_out_ap_vld         | out |    1|   ap_vld   |    xc_out    |    pointer   |
+|yc_out                | out |   32|   ap_vld   |    yc_out    |    pointer   |
+|yc_out_ap_vld         | out |    1|   ap_vld   |    yc_out    |    pointer   |
+|anglexcomp            | out |   32|   ap_vld   |  anglexcomp  |    pointer   |
+|anglexcomp_ap_vld     | out |    1|   ap_vld   |  anglexcomp  |    pointer   |
+|angleycomp            | out |   32|   ap_vld   |  angleycomp  |    pointer   |
+|angleycomp_ap_vld     | out |    1|   ap_vld   |  angleycomp  |    pointer   |
++----------------------+-----+-----+------------+--------------+--------------+
+
