@@ -21,13 +21,14 @@
 \BOOKMARK [2][-]{subsection.3.2.3}{Anschlie\337en an Jupyter Notebook}{section.3.2}% 21
 \BOOKMARK [0][-]{chapter.4}{Implementierung des Projekts}{}% 22
 \BOOKMARK [1][-]{section.4.1}{Algorithm}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.2}{Hardware Implementierung}{chapter.4}% 24
-\BOOKMARK [2][-]{subsection.4.2.1}{Einstellung von Pmod port}{section.4.2}% 25
-\BOOKMARK [1][-]{section.4.3}{HLS Software Implementierung}{chapter.4}% 26
-\BOOKMARK [2][-]{subsection.4.3.1}{IP Core f\374r Pynq}{section.4.3}% 27
-\BOOKMARK [2][-]{subsection.4.3.2}{IP core 'Moments' mit Vivado HLS erstellen}{section.4.3}% 28
-\BOOKMARK [2][-]{subsection.4.3.3}{Vivado Projekt}{section.4.3}% 29
-\BOOKMARK [2][-]{subsection.4.3.4}{Pynq-Notebook}{section.4.3}% 30
-\BOOKMARK [1][-]{section.4.4}{Code, Listings}{chapter.4}% 31
-\BOOKMARK [2][-]{subsection.4.4.1}{Simulation in OpenCV}{section.4.4}% 32
-\BOOKMARK [2][-]{subsection.4.4.2}{Simulation Numeric}{section.4.4}% 33
+\BOOKMARK [1][-]{section.4.2}{Float IEEE aut pynq-ARM}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.3}{Hardware Implementierung}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.4}{HLS Software Implementierung}{chapter.4}% 26
+\BOOKMARK [2][-]{subsection.4.4.1}{IP Core f\374r Pynq}{section.4.4}% 27
+\BOOKMARK [2][-]{subsection.4.4.2}{IP core 'Moments' mit Vivado HLS erstellen}{section.4.4}% 28
+\BOOKMARK [2][-]{subsection.4.4.3}{Vivado Projekt}{section.4.4}% 29
+\BOOKMARK [2][-]{subsection.4.4.4}{Pynq-Notebook}{section.4.4}% 30
+\BOOKMARK [1][-]{section.4.5}{Code, Listings}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.5.1}{Simulation in OpenCV}{section.4.5}% 32
+\BOOKMARK [2][-]{subsection.4.5.2}{Simulation Numeric}{section.4.5}% 33
+\BOOKMARK [2][-]{subsection.4.5.3}{IP Core Moments in Ausz\374gen}{section.4.5}% 34
