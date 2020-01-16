@@ -1004,7 +1004,13 @@ Der Datentransport läuft über Data width converter und DMA. Die In- und Output
 
 Nachdem alle mittels des Adresseditors alle Blöcke verbunden wurden und valide Verbindungen besitzen kann synthetisiert und implementiert werden. Falls der externe HLS IP Core verändert wurde, muss darauf geachtet werden das alle IP core Up-to-Date sind, sonst entstehen Kompilierungsfehler die schwer aufzufinden sind. 
 
-Final müssen der Bitstream, die Blockkonfiguration und die *.hwh Datei aus dem Projekt kopiert werden. Sie werden für die Pynq Konfiguration benötigt. Die *.hwh Datei ist in vielen Tutorien nicht erwähnt, jedoch werden Warnungen im Pynq-Notebook angezeigt, wenn sie nicht vorhanden ist. Alle drei Dateien müssen die gleiche Benennung vor der Dateiendung besitzen. 
+Final müssen der Bitstream, die Blockkonfiguration und die *.hwh Datei aus dem Projekt kopiert werden. Sie werden für die Pynq Konfiguration benötigt. Die *.hwh Datei ist in vielen Tutorien nicht erwähnt, jedoch werden Warnungen im Pynq-Notebook angezeigt, wenn sie nicht vorhanden ist. Alle drei Dateien müssen die gleiche Benennung vor der Dateiendung besitzen.\\
+
+Die *.hwh Datei liegt im IP-Projekt Ordner unter: 
+
+\begin{verbatim}
+prjname.srcs/sources_1/bd/resizer/hw_handoff/prjname.hwh
+\end{verbatim}
 
 Folgende Dateien können wie folgt auf den Pynq kopiert werden:
 
