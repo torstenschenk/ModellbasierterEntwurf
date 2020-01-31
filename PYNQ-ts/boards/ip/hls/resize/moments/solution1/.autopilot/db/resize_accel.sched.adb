@@ -273,14 +273,14 @@
 						<id>23</id>
 						<name>p_src_data_V</name>
 						<fileName>xf_resize_accel.cpp</fileName>
-						<fileDirectory>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</fileDirectory>
+						<fileDirectory>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</fileDirectory>
 						<lineNumber>78</lineNumber>
 						<contextFuncName>resize_accel</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="10" tracking_level="0" version="0">
-								<first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
+								<first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
 								<second class_id="11" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -321,14 +321,14 @@
 						<id>26</id>
 						<name>p_dst_data_V</name>
 						<fileName>xf_resize_accel.cpp</fileName>
-						<fileDirectory>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</fileDirectory>
+						<fileDirectory>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</fileDirectory>
 						<lineNumber>79</lineNumber>
 						<contextFuncName>resize_accel</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
+								<first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -369,14 +369,14 @@
 						<id>37</id>
 						<name></name>
 						<fileName>xf_resize_accel.cpp</fileName>
-						<fileDirectory>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</fileDirectory>
+						<fileDirectory>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</fileDirectory>
 						<lineNumber>85</lineNumber>
 						<contextFuncName>resize_accel</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
+								<first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -419,14 +419,14 @@
 						<id>40</id>
 						<name></name>
 						<fileName>xf_resize_accel.cpp</fileName>
-						<fileDirectory>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</fileDirectory>
+						<fileDirectory>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</fileDirectory>
 						<lineNumber>87</lineNumber>
 						<contextFuncName>resize_accel</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
+								<first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -477,14 +477,14 @@
 						<id>43</id>
 						<name></name>
 						<fileName>xf_resize_accel.cpp</fileName>
-						<fileDirectory>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</fileDirectory>
+						<fileDirectory>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</fileDirectory>
 						<lineNumber>90</lineNumber>
 						<contextFuncName>resize_accel</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
+								<first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -530,14 +530,14 @@
 						<id>44</id>
 						<name></name>
 						<fileName>xf_resize_accel.cpp</fileName>
-						<fileDirectory>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</fileDirectory>
+						<fileDirectory>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</fileDirectory>
 						<lineNumber>92</lineNumber>
 						<contextFuncName>resize_accel</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
+								<first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>

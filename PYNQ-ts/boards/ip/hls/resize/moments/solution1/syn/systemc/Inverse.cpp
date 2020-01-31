@@ -53,7 +53,7 @@ const sc_lv<8> Inverse::ap_const_lv8_0 = "00000000";
 const bool Inverse::ap_const_boolean_1 = true;
 
 Inverse::Inverse(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    xf_division_lut_U = new Inverse_xf_divisibkb("xf_division_lut_U");
+    xf_division_lut_U = new Inverse_xf_division_lut("xf_division_lut_U");
     xf_division_lut_U->clk(ap_clk);
     xf_division_lut_U->reset(ap_rst);
     xf_division_lut_U->address0(xf_division_lut_address0);

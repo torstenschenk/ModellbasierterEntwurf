@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Inverse'" level="0">
-<item name = "Date">Mon Jan 13 23:45:59 2020
+<item name = "Date">Fri Jan 31 22:07:12 2020
 </item>
 <item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
 <item name = "Project">moments</item>
@@ -73,7 +73,7 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="xf_division_lut_U">Inverse_xf_divisibkb, 4, 0, 0, 2049, 16, 1, 32784</column>
+<column name="xf_division_lut_U">Inverse_xf_division_lut, 4, 0, 0, 2049, 16, 1, 32784</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">

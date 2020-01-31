@@ -45,7 +45,7 @@ wire   [23:0] tmp_buf_2_V_write_a_fu_134_p10;
 wire   [23:0] tmp_buf_3_V_write_a_fu_156_p10;
 wire   [23:0] tmp_buf_4_V_write_a_fu_112_p10;
 
-resize_accel_mux_cud #(
+resize_accel_mux_83_24_1_1 #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 24 ),
@@ -58,7 +58,7 @@ resize_accel_mux_cud #(
     .din7_WIDTH( 24 ),
     .din8_WIDTH( 3 ),
     .dout_WIDTH( 24 ))
-resize_accel_mux_cud_U8(
+resize_accel_mux_83_24_1_1_U8(
     .din0(val1_V_read),
     .din1(tmp_buf_0_V_read),
     .din2(tmp_buf_0_V_read),
@@ -71,7 +71,7 @@ resize_accel_mux_cud_U8(
     .dout(tmp_buf_0_V_write_a_fu_68_p10)
 );
 
-resize_accel_mux_cud #(
+resize_accel_mux_83_24_1_1 #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 24 ),
@@ -84,7 +84,7 @@ resize_accel_mux_cud #(
     .din7_WIDTH( 24 ),
     .din8_WIDTH( 3 ),
     .dout_WIDTH( 24 ))
-resize_accel_mux_cud_U9(
+resize_accel_mux_83_24_1_1_U9(
     .din0(tmp_buf_1_V_read),
     .din1(val1_V_read),
     .din2(tmp_buf_1_V_read),
@@ -97,7 +97,7 @@ resize_accel_mux_cud_U9(
     .dout(tmp_buf_1_V_write_a_fu_90_p10)
 );
 
-resize_accel_mux_cud #(
+resize_accel_mux_83_24_1_1 #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 24 ),
@@ -110,7 +110,7 @@ resize_accel_mux_cud #(
     .din7_WIDTH( 24 ),
     .din8_WIDTH( 3 ),
     .dout_WIDTH( 24 ))
-resize_accel_mux_cud_U10(
+resize_accel_mux_83_24_1_1_U10(
     .din0(tmp_buf_4_V_read),
     .din1(tmp_buf_4_V_read),
     .din2(tmp_buf_4_V_read),
@@ -123,7 +123,7 @@ resize_accel_mux_cud_U10(
     .dout(tmp_buf_4_V_write_a_fu_112_p10)
 );
 
-resize_accel_mux_cud #(
+resize_accel_mux_83_24_1_1 #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 24 ),
@@ -136,7 +136,7 @@ resize_accel_mux_cud #(
     .din7_WIDTH( 24 ),
     .din8_WIDTH( 3 ),
     .dout_WIDTH( 24 ))
-resize_accel_mux_cud_U11(
+resize_accel_mux_83_24_1_1_U11(
     .din0(tmp_buf_2_V_read),
     .din1(tmp_buf_2_V_read),
     .din2(val1_V_read),
@@ -149,7 +149,7 @@ resize_accel_mux_cud_U11(
     .dout(tmp_buf_2_V_write_a_fu_134_p10)
 );
 
-resize_accel_mux_cud #(
+resize_accel_mux_83_24_1_1 #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 24 ),
@@ -162,7 +162,7 @@ resize_accel_mux_cud #(
     .din7_WIDTH( 24 ),
     .din8_WIDTH( 3 ),
     .dout_WIDTH( 24 ))
-resize_accel_mux_cud_U12(
+resize_accel_mux_83_24_1_1_U12(
     .din0(tmp_buf_3_V_read),
     .din1(tmp_buf_3_V_read),
     .din2(tmp_buf_3_V_read),

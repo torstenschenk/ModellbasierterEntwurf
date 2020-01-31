@@ -97,28 +97,28 @@ resize::resize(sc_module_name name) : sc_module(name), mVcdFile(0) {
     out_image_V_V_U->if_dout(out_image_V_V_dout);
     out_image_V_V_U->if_empty_n(out_image_V_V_empty_n);
     out_image_V_V_U->if_read(resize_Loop_2_proc61_U0_out_image_V_V_read);
-    start_for_xFresizJfO_U = new start_for_xFresizJfO("start_for_xFresizJfO_U");
-    start_for_xFresizJfO_U->clk(ap_clk);
-    start_for_xFresizJfO_U->reset(ap_rst);
-    start_for_xFresizJfO_U->if_read_ce(ap_var_for_const0);
-    start_for_xFresizJfO_U->if_write_ce(ap_var_for_const0);
-    start_for_xFresizJfO_U->if_din(start_for_xFresize60_U0_din);
-    start_for_xFresizJfO_U->if_full_n(start_for_xFresize60_U0_full_n);
-    start_for_xFresizJfO_U->if_write(resize_Loop_1_proc59_U0_start_write);
-    start_for_xFresizJfO_U->if_dout(start_for_xFresize60_U0_dout);
-    start_for_xFresizJfO_U->if_empty_n(start_for_xFresize60_U0_empty_n);
-    start_for_xFresizJfO_U->if_read(xFresize60_U0_ap_ready);
-    start_for_resize_KfY_U = new start_for_resize_KfY("start_for_resize_KfY_U");
-    start_for_resize_KfY_U->clk(ap_clk);
-    start_for_resize_KfY_U->reset(ap_rst);
-    start_for_resize_KfY_U->if_read_ce(ap_var_for_const0);
-    start_for_resize_KfY_U->if_write_ce(ap_var_for_const0);
-    start_for_resize_KfY_U->if_din(start_for_resize_Loop_2_proc61_U0_din);
-    start_for_resize_KfY_U->if_full_n(start_for_resize_Loop_2_proc61_U0_full_n);
-    start_for_resize_KfY_U->if_write(xFresize60_U0_start_write);
-    start_for_resize_KfY_U->if_dout(start_for_resize_Loop_2_proc61_U0_dout);
-    start_for_resize_KfY_U->if_empty_n(start_for_resize_Loop_2_proc61_U0_empty_n);
-    start_for_resize_KfY_U->if_read(resize_Loop_2_proc61_U0_ap_ready);
+    start_for_xFresize60_U0_U = new start_for_xFresize60_U0("start_for_xFresize60_U0_U");
+    start_for_xFresize60_U0_U->clk(ap_clk);
+    start_for_xFresize60_U0_U->reset(ap_rst);
+    start_for_xFresize60_U0_U->if_read_ce(ap_var_for_const0);
+    start_for_xFresize60_U0_U->if_write_ce(ap_var_for_const0);
+    start_for_xFresize60_U0_U->if_din(start_for_xFresize60_U0_din);
+    start_for_xFresize60_U0_U->if_full_n(start_for_xFresize60_U0_full_n);
+    start_for_xFresize60_U0_U->if_write(resize_Loop_1_proc59_U0_start_write);
+    start_for_xFresize60_U0_U->if_dout(start_for_xFresize60_U0_dout);
+    start_for_xFresize60_U0_U->if_empty_n(start_for_xFresize60_U0_empty_n);
+    start_for_xFresize60_U0_U->if_read(xFresize60_U0_ap_ready);
+    start_for_resize_Loop_2_proc61_U0_U = new start_for_resize_Loop_2_proc61_U0("start_for_resize_Loop_2_proc61_U0_U");
+    start_for_resize_Loop_2_proc61_U0_U->clk(ap_clk);
+    start_for_resize_Loop_2_proc61_U0_U->reset(ap_rst);
+    start_for_resize_Loop_2_proc61_U0_U->if_read_ce(ap_var_for_const0);
+    start_for_resize_Loop_2_proc61_U0_U->if_write_ce(ap_var_for_const0);
+    start_for_resize_Loop_2_proc61_U0_U->if_din(start_for_resize_Loop_2_proc61_U0_din);
+    start_for_resize_Loop_2_proc61_U0_U->if_full_n(start_for_resize_Loop_2_proc61_U0_full_n);
+    start_for_resize_Loop_2_proc61_U0_U->if_write(xFresize60_U0_start_write);
+    start_for_resize_Loop_2_proc61_U0_U->if_dout(start_for_resize_Loop_2_proc61_U0_dout);
+    start_for_resize_Loop_2_proc61_U0_U->if_empty_n(start_for_resize_Loop_2_proc61_U0_empty_n);
+    start_for_resize_Loop_2_proc61_U0_U->if_read(resize_Loop_2_proc61_U0_ap_ready);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -328,8 +328,8 @@ resize::~resize() {
     delete resize_Loop_2_proc61_U0;
     delete in_image_V_V_U;
     delete out_image_V_V_U;
-    delete start_for_xFresizJfO_U;
-    delete start_for_resize_KfY_U;
+    delete start_for_xFresize60_U0_U;
+    delete start_for_resize_Loop_2_proc61_U0_U;
 }
 
 void resize::thread_ap_var_for_const0() {

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'xfExtractPixels'" level="0">
-<item name = "Date">Mon Jan 13 23:46:00 2020
+<item name = "Date">Fri Jan 31 22:07:12 2020
 </item>
 <item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
 <item name = "Project">moments</item>
@@ -61,11 +61,11 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="resize_accel_mux_cud_U8">resize_accel_mux_cud, 0, 0, 0, 45</column>
-<column name="resize_accel_mux_cud_U9">resize_accel_mux_cud, 0, 0, 0, 45</column>
-<column name="resize_accel_mux_cud_U10">resize_accel_mux_cud, 0, 0, 0, 45</column>
-<column name="resize_accel_mux_cud_U11">resize_accel_mux_cud, 0, 0, 0, 45</column>
-<column name="resize_accel_mux_cud_U12">resize_accel_mux_cud, 0, 0, 0, 45</column>
+<column name="resize_accel_mux_83_24_1_1_U8">resize_accel_mux_83_24_1_1, 0, 0, 0, 45</column>
+<column name="resize_accel_mux_83_24_1_1_U9">resize_accel_mux_83_24_1_1, 0, 0, 0, 45</column>
+<column name="resize_accel_mux_83_24_1_1_U10">resize_accel_mux_83_24_1_1, 0, 0, 0, 45</column>
+<column name="resize_accel_mux_83_24_1_1_U11">resize_accel_mux_83_24_1_1, 0, 0, 0, 45</column>
+<column name="resize_accel_mux_83_24_1_1_U12">resize_accel_mux_83_24_1_1, 0, 0, 0, 45</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">

@@ -3,7 +3,7 @@
 # Memory (RAM/ROM)  definition:
 set ID 5
 set hasByteEnable 0
-set MemName Inverse_xf_divisibkb
+set MemName Inverse_xf_division_lut
 set CoreName ap_simcore_mem
 set PortList { 1 }
 set DataWd 16

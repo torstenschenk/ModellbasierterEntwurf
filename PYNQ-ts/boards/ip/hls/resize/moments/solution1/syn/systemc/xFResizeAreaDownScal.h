@@ -14,19 +14,19 @@
 #include "Inverse.h"
 #include "CoreProcessDownArea.h"
 #include "xfExtractPixels.h"
-#include "resize_accel_sdivFfa.h"
-#include "resize_accel_mux_Gfk.h"
-#include "resize_accel_mux_Hfu.h"
-#include "resize_accel_sremIfE.h"
-#include "xFResizeAreaDownSibs.h"
-#include "xFResizeAreaDownSjbC.h"
-#include "xFResizeAreaDownSmb6.h"
-#include "xFResizeAreaDownSocq.h"
-#include "xFResizeAreaDownStde.h"
-#include "xFResizeAreaDownSudo.h"
-#include "xFResizeAreaDownSvdy.h"
-#include "xFResizeAreaDownSwdI.h"
-#include "xFResizeAreaDownSEe0.h"
+#include "resize_accel_sdiv_32ns_32ns_32_36_seq_1.h"
+#include "resize_accel_mux_833_16_1_1.h"
+#include "resize_accel_mux_813_16_1_1.h"
+#include "resize_accel_srem_32s_10ns_32_36_1.h"
+#include "xFResizeAreaDownScal_lbuf_in_0_V.h"
+#include "xFResizeAreaDownScal_lbuf_in_1_V.h"
+#include "xFResizeAreaDownScal_lbuf_in_4_V.h"
+#include "xFResizeAreaDownScal_Hweight_0.h"
+#include "xFResizeAreaDownScal_Vweight.h"
+#include "xFResizeAreaDownScal_Hstart.h"
+#include "xFResizeAreaDownScal_Vstart.h"
+#include "xFResizeAreaDownScal_Hreq_0.h"
+#include "xFResizeAreaDownScal_Vreq.h"
 
 namespace ap_rtl {
 
@@ -60,29 +60,29 @@ struct xFResizeAreaDownScal : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    xFResizeAreaDownSibs* lbuf_in_0_V_U;
-    xFResizeAreaDownSjbC* lbuf_in_1_V_U;
-    xFResizeAreaDownSjbC* lbuf_in_2_V_U;
-    xFResizeAreaDownSjbC* lbuf_in_3_V_U;
-    xFResizeAreaDownSmb6* lbuf_in_4_V_U;
-    xFResizeAreaDownSibs* lbuf_in_5_V_U;
-    xFResizeAreaDownSocq* Hweight_0_U;
-    xFResizeAreaDownSocq* Hweight_1_U;
-    xFResizeAreaDownSocq* Hweight_2_U;
-    xFResizeAreaDownSocq* Hweight_3_U;
-    xFResizeAreaDownSocq* Hweight_4_U;
-    xFResizeAreaDownStde* Vweight_U;
-    xFResizeAreaDownSudo* Hstart_U;
-    xFResizeAreaDownSvdy* Vstart_U;
-    xFResizeAreaDownSwdI* Hreq_0_U;
-    xFResizeAreaDownSwdI* Hreq_1_U;
-    xFResizeAreaDownSwdI* Hreq_2_U;
-    xFResizeAreaDownSwdI* Hreq_3_U;
-    xFResizeAreaDownSwdI* Hreq_4_U;
-    xFResizeAreaDownSwdI* Hreq_5_U;
-    xFResizeAreaDownSwdI* Hreq_6_U;
-    xFResizeAreaDownSwdI* Hreq_7_U;
-    xFResizeAreaDownSEe0* Vreq_U;
+    xFResizeAreaDownScal_lbuf_in_0_V* lbuf_in_0_V_U;
+    xFResizeAreaDownScal_lbuf_in_1_V* lbuf_in_1_V_U;
+    xFResizeAreaDownScal_lbuf_in_1_V* lbuf_in_2_V_U;
+    xFResizeAreaDownScal_lbuf_in_1_V* lbuf_in_3_V_U;
+    xFResizeAreaDownScal_lbuf_in_4_V* lbuf_in_4_V_U;
+    xFResizeAreaDownScal_lbuf_in_0_V* lbuf_in_5_V_U;
+    xFResizeAreaDownScal_Hweight_0* Hweight_0_U;
+    xFResizeAreaDownScal_Hweight_0* Hweight_1_U;
+    xFResizeAreaDownScal_Hweight_0* Hweight_2_U;
+    xFResizeAreaDownScal_Hweight_0* Hweight_3_U;
+    xFResizeAreaDownScal_Hweight_0* Hweight_4_U;
+    xFResizeAreaDownScal_Vweight* Vweight_U;
+    xFResizeAreaDownScal_Hstart* Hstart_U;
+    xFResizeAreaDownScal_Vstart* Vstart_U;
+    xFResizeAreaDownScal_Hreq_0* Hreq_0_U;
+    xFResizeAreaDownScal_Hreq_0* Hreq_1_U;
+    xFResizeAreaDownScal_Hreq_0* Hreq_2_U;
+    xFResizeAreaDownScal_Hreq_0* Hreq_3_U;
+    xFResizeAreaDownScal_Hreq_0* Hreq_4_U;
+    xFResizeAreaDownScal_Hreq_0* Hreq_5_U;
+    xFResizeAreaDownScal_Hreq_0* Hreq_6_U;
+    xFResizeAreaDownScal_Hreq_0* Hreq_7_U;
+    xFResizeAreaDownScal_Vreq* Vreq_U;
     Inverse* grp_Inverse_fu_1782;
     CoreProcessDownArea* grp_CoreProcessDownArea_fu_1808;
     xfExtractPixels* grp_xfExtractPixels_fu_1849;
@@ -98,14 +98,14 @@ struct xFResizeAreaDownScal : public sc_module {
     xfExtractPixels* grp_xfExtractPixels_fu_1969;
     xfExtractPixels* grp_xfExtractPixels_fu_1981;
     xfExtractPixels* call_ret14_xfExtractPixels_fu_1993;
-    resize_accel_sdivFfa<1,36,32,32,32>* resize_accel_sdivFfa_U151;
-    resize_accel_sdivFfa<1,36,32,32,32>* resize_accel_sdivFfa_U152;
-    resize_accel_mux_Gfk<1,1,16,16,16,16,16,16,16,16,33,16>* resize_accel_mux_Gfk_U153;
-    resize_accel_mux_Hfu<1,1,16,16,16,16,16,16,16,16,13,16>* resize_accel_mux_Hfu_U154;
-    resize_accel_sremIfE<1,36,32,10,32>* resize_accel_sremIfE_U155;
-    resize_accel_sdivFfa<1,36,32,32,32>* resize_accel_sdivFfa_U156;
-    resize_accel_sdivFfa<1,36,32,32,32>* resize_accel_sdivFfa_U157;
-    resize_accel_sdivFfa<1,36,32,32,32>* resize_accel_sdivFfa_U158;
+    resize_accel_sdiv_32ns_32ns_32_36_seq_1<1,36,32,32,32>* resize_accel_sdiv_32ns_32ns_32_36_seq_1_U151;
+    resize_accel_sdiv_32ns_32ns_32_36_seq_1<1,36,32,32,32>* resize_accel_sdiv_32ns_32ns_32_36_seq_1_U152;
+    resize_accel_mux_833_16_1_1<1,1,16,16,16,16,16,16,16,16,33,16>* resize_accel_mux_833_16_1_1_U153;
+    resize_accel_mux_813_16_1_1<1,1,16,16,16,16,16,16,16,16,13,16>* resize_accel_mux_813_16_1_1_U154;
+    resize_accel_srem_32s_10ns_32_36_1<1,36,32,10,32>* resize_accel_srem_32s_10ns_32_36_1_U155;
+    resize_accel_sdiv_32ns_32ns_32_36_seq_1<1,36,32,32,32>* resize_accel_sdiv_32ns_32ns_32_36_seq_1_U156;
+    resize_accel_sdiv_32ns_32ns_32_36_seq_1<1,36,32,32,32>* resize_accel_sdiv_32ns_32ns_32_36_seq_1_U157;
+    resize_accel_sdiv_32ns_32ns_32_36_seq_1<1,36,32,32,32>* resize_accel_sdiv_32ns_32ns_32_36_seq_1_U158;
     sc_signal< sc_lv<72> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
     sc_signal< sc_logic > stream_in_V_V_blk_n;

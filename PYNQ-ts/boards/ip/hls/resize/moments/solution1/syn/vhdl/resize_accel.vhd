@@ -220,7 +220,7 @@ architecture behav of resize_accel is
     end component;
 
 
-    component start_for_xfMat2aLf8 IS
+    component start_for_xfMat2axis_U0 IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -421,7 +421,7 @@ begin
         if_empty_n => start_for_resize_U0_empty_n,
         if_read => resize_U0_ap_ready);
 
-    start_for_xfMat2aLf8_U : component start_for_xfMat2aLf8
+    start_for_xfMat2axis_U0_U : component start_for_xfMat2axis_U0
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,

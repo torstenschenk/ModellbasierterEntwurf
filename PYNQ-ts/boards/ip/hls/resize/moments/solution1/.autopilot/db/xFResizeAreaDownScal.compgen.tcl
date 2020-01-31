@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 151
-set name resize_accel_sdivFfa
+set name resize_accel_sdiv_32ns_32ns_32_36_seq_1
 set corename simcore_sdiv_seq
 set op sdiv
 set stage_num 36
@@ -95,7 +95,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_div, check your pla
 
 
 set id 153
-set name resize_accel_mux_Gfk
+set name resize_accel_mux_833_16_1_1
 set corename simcore_mux
 set op mux
 set stage_num 1
@@ -204,7 +204,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your
 
 
 set id 154
-set name resize_accel_mux_Hfu
+set name resize_accel_mux_813_16_1_1
 set corename simcore_mux
 set op mux
 set stage_num 1
@@ -313,7 +313,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your
 
 
 set id 155
-set name resize_accel_sremIfE
+set name resize_accel_srem_32s_10ns_32_36_1
 set corename simcore_srem
 set op srem
 set stage_num 36
@@ -400,7 +400,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_div, check your pla
 # Memory (RAM/ROM)  definition:
 set ID 163
 set hasByteEnable 0
-set MemName xFResizeAreaDownSibs
+set MemName xFResizeAreaDownScal_lbuf_in_0_V
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
 set DataWd 24
@@ -485,7 +485,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 # Memory (RAM/ROM)  definition:
 set ID 164
 set hasByteEnable 0
-set MemName xFResizeAreaDownSjbC
+set MemName xFResizeAreaDownScal_lbuf_in_1_V
 set CoreName ap_simcore_mem
 set PortList { 1 0 }
 set DataWd 24
@@ -570,7 +570,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 # Memory (RAM/ROM)  definition:
 set ID 165
 set hasByteEnable 0
-set MemName xFResizeAreaDownSmb6
+set MemName xFResizeAreaDownScal_lbuf_in_4_V
 set CoreName ap_simcore_mem
 set PortList { 1 2 }
 set DataWd 24
@@ -655,7 +655,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 # Memory (RAM/ROM)  definition:
 set ID 166
 set hasByteEnable 0
-set MemName xFResizeAreaDownSocq
+set MemName xFResizeAreaDownScal_Hweight_0
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
 set DataWd 16
@@ -740,7 +740,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 # Memory (RAM/ROM)  definition:
 set ID 167
 set hasByteEnable 0
-set MemName xFResizeAreaDownStde
+set MemName xFResizeAreaDownScal_Vweight
 set CoreName ap_simcore_mem
 set PortList { 2 1 }
 set DataWd 16
@@ -825,7 +825,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 # Memory (RAM/ROM)  definition:
 set ID 168
 set hasByteEnable 0
-set MemName xFResizeAreaDownSudo
+set MemName xFResizeAreaDownScal_Hstart
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
 set DataWd 14
@@ -910,7 +910,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 # Memory (RAM/ROM)  definition:
 set ID 169
 set hasByteEnable 0
-set MemName xFResizeAreaDownSvdy
+set MemName xFResizeAreaDownScal_Vstart
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
 set DataWd 13
@@ -995,7 +995,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 # Memory (RAM/ROM)  definition:
 set ID 170
 set hasByteEnable 0
-set MemName xFResizeAreaDownSwdI
+set MemName xFResizeAreaDownScal_Hreq_0
 set CoreName ap_simcore_mem
 set PortList { 2 1 }
 set DataWd 16
@@ -1080,7 +1080,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 # Memory (RAM/ROM)  definition:
 set ID 171
 set hasByteEnable 0
-set MemName xFResizeAreaDownSEe0
+set MemName xFResizeAreaDownScal_Vreq
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
 set DataWd 16

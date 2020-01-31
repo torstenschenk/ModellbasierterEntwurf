@@ -187,7 +187,7 @@ architecture behav of resize is
     end component;
 
 
-    component start_for_xFresizJfO IS
+    component start_for_xFresize60_U0 IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -202,7 +202,7 @@ architecture behav of resize is
     end component;
 
 
-    component start_for_resize_KfY IS
+    component start_for_resize_Loop_2_proc61_U0 IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -307,7 +307,7 @@ begin
         if_empty_n => out_image_V_V_empty_n,
         if_read => resize_Loop_2_proc61_U0_out_image_V_V_read);
 
-    start_for_xFresizJfO_U : component start_for_xFresizJfO
+    start_for_xFresize60_U0_U : component start_for_xFresize60_U0
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -320,7 +320,7 @@ begin
         if_empty_n => start_for_xFresize60_U0_empty_n,
         if_read => xFresize60_U0_ap_ready);
 
-    start_for_resize_KfY_U : component start_for_resize_KfY
+    start_for_resize_Loop_2_proc61_U0_U : component start_for_resize_Loop_2_proc61_U0
     port map (
         clk => ap_clk,
         reset => ap_rst,

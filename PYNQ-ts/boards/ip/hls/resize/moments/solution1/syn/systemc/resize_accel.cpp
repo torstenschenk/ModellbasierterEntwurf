@@ -147,17 +147,17 @@ resize_accel::resize_accel(sc_module_name name) : sc_module(name), mVcdFile(0) {
     start_for_resize_U0_U->if_dout(start_for_resize_U0_dout);
     start_for_resize_U0_U->if_empty_n(start_for_resize_U0_empty_n);
     start_for_resize_U0_U->if_read(resize_U0_ap_ready);
-    start_for_xfMat2aLf8_U = new start_for_xfMat2aLf8("start_for_xfMat2aLf8_U");
-    start_for_xfMat2aLf8_U->clk(ap_clk);
-    start_for_xfMat2aLf8_U->reset(ap_rst_n_inv);
-    start_for_xfMat2aLf8_U->if_read_ce(ap_var_for_const0);
-    start_for_xfMat2aLf8_U->if_write_ce(ap_var_for_const0);
-    start_for_xfMat2aLf8_U->if_din(start_for_xfMat2axis_U0_din);
-    start_for_xfMat2aLf8_U->if_full_n(start_for_xfMat2axis_U0_full_n);
-    start_for_xfMat2aLf8_U->if_write(resize_U0_start_write);
-    start_for_xfMat2aLf8_U->if_dout(start_for_xfMat2axis_U0_dout);
-    start_for_xfMat2aLf8_U->if_empty_n(start_for_xfMat2axis_U0_empty_n);
-    start_for_xfMat2aLf8_U->if_read(xfMat2axis_U0_ap_ready);
+    start_for_xfMat2axis_U0_U = new start_for_xfMat2axis_U0("start_for_xfMat2axis_U0_U");
+    start_for_xfMat2axis_U0_U->clk(ap_clk);
+    start_for_xfMat2axis_U0_U->reset(ap_rst_n_inv);
+    start_for_xfMat2axis_U0_U->if_read_ce(ap_var_for_const0);
+    start_for_xfMat2axis_U0_U->if_write_ce(ap_var_for_const0);
+    start_for_xfMat2axis_U0_U->if_din(start_for_xfMat2axis_U0_din);
+    start_for_xfMat2axis_U0_U->if_full_n(start_for_xfMat2axis_U0_full_n);
+    start_for_xfMat2axis_U0_U->if_write(resize_U0_start_write);
+    start_for_xfMat2axis_U0_U->if_dout(start_for_xfMat2axis_U0_dout);
+    start_for_xfMat2axis_U0_U->if_empty_n(start_for_xfMat2axis_U0_empty_n);
+    start_for_xfMat2axis_U0_U->if_read(xfMat2axis_U0_ap_ready);
 
     SC_METHOD(thread_ap_done);
     sensitive << ( ap_sync_done );
@@ -347,7 +347,7 @@ resize_accel::~resize_accel() {
     delete p_src_data_V_U;
     delete p_dst_data_V_U;
     delete start_for_resize_U0_U;
-    delete start_for_xfMat2aLf8_U;
+    delete start_for_xfMat2axis_U0_U;
 }
 
 void resize_accel::thread_ap_var_for_const0() {

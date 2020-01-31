@@ -214,7 +214,7 @@ fifo_w24_d2_A out_image_V_V_U(
     .if_read(resize_Loop_2_proc61_U0_out_image_V_V_read)
 );
 
-start_for_xFresizJfO start_for_xFresizJfO_U(
+start_for_xFresize60_U0 start_for_xFresize60_U0_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
@@ -227,7 +227,7 @@ start_for_xFresizJfO start_for_xFresizJfO_U(
     .if_read(xFresize60_U0_ap_ready)
 );
 
-start_for_resize_KfY start_for_resize_KfY_U(
+start_for_resize_Loop_2_proc61_U0 start_for_resize_Loop_2_proc61_U0_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),

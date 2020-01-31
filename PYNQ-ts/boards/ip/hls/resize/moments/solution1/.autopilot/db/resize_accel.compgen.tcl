@@ -200,8 +200,8 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 198
-set FifoName start_for_xfMat2aLf8
-set InstName start_for_xfMat2aLf8_U
+set FifoName start_for_xfMat2axis_U0
+set InstName start_for_xfMat2axis_U0_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0

@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 8
-set name resize_accel_mux_cud
+set name resize_accel_mux_83_24_1_1
 set corename simcore_mux
 set op mux
 set stage_num 1

@@ -134,8 +134,8 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 184
-set FifoName start_for_xFresizJfO
-set InstName start_for_xFresizJfO_U
+set FifoName start_for_xFresize60_U0
+set InstName start_for_xFresize60_U0_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
@@ -200,8 +200,8 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 185
-set FifoName start_for_resize_KfY
-set InstName start_for_resize_KfY_U
+set FifoName start_for_resize_Loop_2_proc61_U0
+set InstName start_for_resize_Loop_2_proc61_U0_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0

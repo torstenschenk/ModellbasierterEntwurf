@@ -1514,7 +1514,7 @@ initial begin
 #0 ap_return_3_preg = 32'd0;
 end
 
-xFResizeAreaDownSibs #(
+xFResizeAreaDownScal_lbuf_in_0_V #(
     .DataWidth( 24 ),
     .AddressRange( 640 ),
     .AddressWidth( 10 ))
@@ -1528,7 +1528,7 @@ lbuf_in_0_V_U(
     .q0(lbuf_in_0_V_q0)
 );
 
-xFResizeAreaDownSjbC #(
+xFResizeAreaDownScal_lbuf_in_1_V #(
     .DataWidth( 24 ),
     .AddressRange( 640 ),
     .AddressWidth( 10 ))
@@ -1544,7 +1544,7 @@ lbuf_in_1_V_U(
     .d1(lbuf_in_2_V_q0)
 );
 
-xFResizeAreaDownSjbC #(
+xFResizeAreaDownScal_lbuf_in_1_V #(
     .DataWidth( 24 ),
     .AddressRange( 640 ),
     .AddressWidth( 10 ))
@@ -1560,7 +1560,7 @@ lbuf_in_2_V_U(
     .d1(lbuf_in_3_V_q0)
 );
 
-xFResizeAreaDownSjbC #(
+xFResizeAreaDownScal_lbuf_in_1_V #(
     .DataWidth( 24 ),
     .AddressRange( 640 ),
     .AddressWidth( 10 ))
@@ -1576,7 +1576,7 @@ lbuf_in_3_V_U(
     .d1(lbuf_in_4_V_q0)
 );
 
-xFResizeAreaDownSmb6 #(
+xFResizeAreaDownScal_lbuf_in_4_V #(
     .DataWidth( 24 ),
     .AddressRange( 640 ),
     .AddressWidth( 10 ))
@@ -1593,7 +1593,7 @@ lbuf_in_4_V_U(
     .q1(lbuf_in_4_V_q1)
 );
 
-xFResizeAreaDownSibs #(
+xFResizeAreaDownScal_lbuf_in_0_V #(
     .DataWidth( 24 ),
     .AddressRange( 640 ),
     .AddressWidth( 10 ))
@@ -1607,7 +1607,7 @@ lbuf_in_5_V_U(
     .q0(lbuf_in_5_V_q0)
 );
 
-xFResizeAreaDownSocq #(
+xFResizeAreaDownScal_Hweight_0 #(
     .DataWidth( 16 ),
     .AddressRange( 640 ),
     .AddressWidth( 10 ))
@@ -1621,7 +1621,7 @@ Hweight_0_U(
     .q0(Hweight_0_q0)
 );
 
-xFResizeAreaDownSocq #(
+xFResizeAreaDownScal_Hweight_0 #(
     .DataWidth( 16 ),
     .AddressRange( 640 ),
     .AddressWidth( 10 ))
@@ -1635,7 +1635,7 @@ Hweight_1_U(
     .q0(Hweight_1_q0)
 );
 
-xFResizeAreaDownSocq #(
+xFResizeAreaDownScal_Hweight_0 #(
     .DataWidth( 16 ),
     .AddressRange( 640 ),
     .AddressWidth( 10 ))
@@ -1649,7 +1649,7 @@ Hweight_2_U(
     .q0(Hweight_2_q0)
 );
 
-xFResizeAreaDownSocq #(
+xFResizeAreaDownScal_Hweight_0 #(
     .DataWidth( 16 ),
     .AddressRange( 640 ),
     .AddressWidth( 10 ))
@@ -1663,7 +1663,7 @@ Hweight_3_U(
     .q0(Hweight_3_q0)
 );
 
-xFResizeAreaDownSocq #(
+xFResizeAreaDownScal_Hweight_0 #(
     .DataWidth( 16 ),
     .AddressRange( 640 ),
     .AddressWidth( 10 ))
@@ -1677,7 +1677,7 @@ Hweight_4_U(
     .q0(Hweight_4_q0)
 );
 
-xFResizeAreaDownStde #(
+xFResizeAreaDownScal_Vweight #(
     .DataWidth( 16 ),
     .AddressRange( 720 ),
     .AddressWidth( 10 ))
@@ -1694,7 +1694,7 @@ Vweight_U(
     .q1(Vweight_q1)
 );
 
-xFResizeAreaDownSudo #(
+xFResizeAreaDownScal_Hstart #(
     .DataWidth( 14 ),
     .AddressRange( 640 ),
     .AddressWidth( 10 ))
@@ -1708,7 +1708,7 @@ Hstart_U(
     .q0(Hstart_q0)
 );
 
-xFResizeAreaDownSvdy #(
+xFResizeAreaDownScal_Vstart #(
     .DataWidth( 13 ),
     .AddressRange( 360 ),
     .AddressWidth( 9 ))
@@ -1722,7 +1722,7 @@ Vstart_U(
     .q0(Vstart_q0)
 );
 
-xFResizeAreaDownSwdI #(
+xFResizeAreaDownScal_Hreq_0 #(
     .DataWidth( 16 ),
     .AddressRange( 80 ),
     .AddressWidth( 7 ))
@@ -1739,7 +1739,7 @@ Hreq_0_U(
     .q1(Hreq_0_q1)
 );
 
-xFResizeAreaDownSwdI #(
+xFResizeAreaDownScal_Hreq_0 #(
     .DataWidth( 16 ),
     .AddressRange( 80 ),
     .AddressWidth( 7 ))
@@ -1756,7 +1756,7 @@ Hreq_1_U(
     .q1(Hreq_1_q1)
 );
 
-xFResizeAreaDownSwdI #(
+xFResizeAreaDownScal_Hreq_0 #(
     .DataWidth( 16 ),
     .AddressRange( 80 ),
     .AddressWidth( 7 ))
@@ -1773,7 +1773,7 @@ Hreq_2_U(
     .q1(Hreq_2_q1)
 );
 
-xFResizeAreaDownSwdI #(
+xFResizeAreaDownScal_Hreq_0 #(
     .DataWidth( 16 ),
     .AddressRange( 80 ),
     .AddressWidth( 7 ))
@@ -1790,7 +1790,7 @@ Hreq_3_U(
     .q1(Hreq_3_q1)
 );
 
-xFResizeAreaDownSwdI #(
+xFResizeAreaDownScal_Hreq_0 #(
     .DataWidth( 16 ),
     .AddressRange( 80 ),
     .AddressWidth( 7 ))
@@ -1807,7 +1807,7 @@ Hreq_4_U(
     .q1(Hreq_4_q1)
 );
 
-xFResizeAreaDownSwdI #(
+xFResizeAreaDownScal_Hreq_0 #(
     .DataWidth( 16 ),
     .AddressRange( 80 ),
     .AddressWidth( 7 ))
@@ -1824,7 +1824,7 @@ Hreq_5_U(
     .q1(Hreq_5_q1)
 );
 
-xFResizeAreaDownSwdI #(
+xFResizeAreaDownScal_Hreq_0 #(
     .DataWidth( 16 ),
     .AddressRange( 80 ),
     .AddressWidth( 7 ))
@@ -1841,7 +1841,7 @@ Hreq_6_U(
     .q1(Hreq_6_q1)
 );
 
-xFResizeAreaDownSwdI #(
+xFResizeAreaDownScal_Hreq_0 #(
     .DataWidth( 16 ),
     .AddressRange( 80 ),
     .AddressWidth( 7 ))
@@ -1858,7 +1858,7 @@ Hreq_7_U(
     .q1(Hreq_7_q1)
 );
 
-xFResizeAreaDownSEe0 #(
+xFResizeAreaDownScal_Vreq #(
     .DataWidth( 16 ),
     .AddressRange( 360 ),
     .AddressWidth( 9 ))
@@ -2139,13 +2139,13 @@ xfExtractPixels call_ret14_xfExtractPixels_fu_1993(
     .ap_return_4(call_ret14_xfExtractPixels_fu_1993_ap_return_4)
 );
 
-resize_accel_sdivFfa #(
+resize_accel_sdiv_32ns_32ns_32_36_seq_1 #(
     .ID( 1 ),
     .NUM_STAGE( 36 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-resize_accel_sdivFfa_U151(
+resize_accel_sdiv_32ns_32ns_32_36_seq_1_U151(
     .clk(ap_clk),
     .reset(ap_rst),
     .start(grp_fu_3338_ap_start),
@@ -2156,13 +2156,13 @@ resize_accel_sdivFfa_U151(
     .dout(grp_fu_3338_p2)
 );
 
-resize_accel_sdivFfa #(
+resize_accel_sdiv_32ns_32ns_32_36_seq_1 #(
     .ID( 1 ),
     .NUM_STAGE( 36 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-resize_accel_sdivFfa_U152(
+resize_accel_sdiv_32ns_32ns_32_36_seq_1_U152(
     .clk(ap_clk),
     .reset(ap_rst),
     .start(grp_fu_3344_ap_start),
@@ -2173,7 +2173,7 @@ resize_accel_sdivFfa_U152(
     .dout(grp_fu_3344_p2)
 );
 
-resize_accel_mux_Gfk #(
+resize_accel_mux_833_16_1_1 #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
@@ -2186,7 +2186,7 @@ resize_accel_mux_Gfk #(
     .din7_WIDTH( 16 ),
     .din8_WIDTH( 33 ),
     .dout_WIDTH( 16 ))
-resize_accel_mux_Gfk_U153(
+resize_accel_mux_833_16_1_1_U153(
     .din0(Hreq_0_q0),
     .din1(Hreq_1_q0),
     .din2(Hreq_2_q0),
@@ -2199,7 +2199,7 @@ resize_accel_mux_Gfk_U153(
     .dout(index_offset_fu_4152_p10)
 );
 
-resize_accel_mux_Hfu #(
+resize_accel_mux_813_16_1_1 #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
@@ -2212,7 +2212,7 @@ resize_accel_mux_Hfu #(
     .din7_WIDTH( 16 ),
     .din8_WIDTH( 13 ),
     .dout_WIDTH( 16 ))
-resize_accel_mux_Hfu_U154(
+resize_accel_mux_813_16_1_1_U154(
     .din0(Hreq_0_q1),
     .din1(Hreq_1_q1),
     .din2(Hreq_2_q1),
@@ -2225,13 +2225,13 @@ resize_accel_mux_Hfu_U154(
     .dout(tmp_13_fu_4186_p10)
 );
 
-resize_accel_sremIfE #(
+resize_accel_srem_32s_10ns_32_36_1 #(
     .ID( 1 ),
     .NUM_STAGE( 36 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 10 ),
     .dout_WIDTH( 32 ))
-resize_accel_sremIfE_U155(
+resize_accel_srem_32s_10ns_32_36_1_U155(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_4814_p0),
@@ -2240,13 +2240,13 @@ resize_accel_sremIfE_U155(
     .dout(grp_fu_4814_p2)
 );
 
-resize_accel_sdivFfa #(
+resize_accel_sdiv_32ns_32ns_32_36_seq_1 #(
     .ID( 1 ),
     .NUM_STAGE( 36 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-resize_accel_sdivFfa_U156(
+resize_accel_sdiv_32ns_32ns_32_36_seq_1_U156(
     .clk(ap_clk),
     .reset(ap_rst),
     .start(grp_fu_5028_ap_start),
@@ -2257,13 +2257,13 @@ resize_accel_sdivFfa_U156(
     .dout(grp_fu_5028_p2)
 );
 
-resize_accel_sdivFfa #(
+resize_accel_sdiv_32ns_32ns_32_36_seq_1 #(
     .ID( 1 ),
     .NUM_STAGE( 36 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-resize_accel_sdivFfa_U157(
+resize_accel_sdiv_32ns_32ns_32_36_seq_1_U157(
     .clk(ap_clk),
     .reset(ap_rst),
     .start(grp_fu_5033_ap_start),
@@ -2274,13 +2274,13 @@ resize_accel_sdivFfa_U157(
     .dout(grp_fu_5033_p2)
 );
 
-resize_accel_sdivFfa #(
+resize_accel_sdiv_32ns_32ns_32_36_seq_1 #(
     .ID( 1 ),
     .NUM_STAGE( 36 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-resize_accel_sdivFfa_U158(
+resize_accel_sdiv_32ns_32ns_32_36_seq_1_U158(
     .clk(ap_clk),
     .reset(ap_rst),
     .start(grp_fu_5038_ap_start),

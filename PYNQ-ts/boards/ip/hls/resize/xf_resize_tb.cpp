@@ -29,9 +29,13 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ***************************************************************************/
 #include "xf_headers.h"
 #include "xf_resize_config.h"
+#include <cstdio>
 #include <cmath>
 
 int main(int argc,char **argv){
+	FILE   *fp;
+	fp=fopen("out.dat","w");
+
 	cv::Mat img, result, result_ocv,error;
 
 //	if(argc != 2){
@@ -42,14 +46,14 @@ int main(int argc,char **argv){
 	img = cv::imread(argv[1],0);
 #endif
 #if RGBA
-	img = cv::imread("test.png",1);
+	img = cv::imread("Block0.png",1);
 #endif
 	if(!img.data){
 		printf("Image not valid!\n");
 		return -1;
 	}
 
-	cv::imwrite("input_mirror.png",img);
+	//cv::imwrite("input_mirror.png",img);
 
 	uint16_t height = img.rows;
 	uint16_t width = img.cols;
@@ -63,67 +67,88 @@ int main(int argc,char **argv){
 
 	xf::Mat<TYPE, HEIGHT, WIDTH, NPC1> imgInput(height, width);
 	xf::Mat<TYPE, HEIGHT, WIDTH, NPC1> imgOutput(newheight, newwidth);
+
+
 	imgInput.copyTo(img.data);
 	
 	axis_t *input = new axis_t [height*width];
 	axis_t *output = new axis_t [newheight*newwidth];
 	
 	// Store data in axis
-
 	for (int ind=0; ind<(height*width); ind++) {
 		input[ind].data = imgInput.data[ind];
 	}
-	
 	int inval=0, xc_out=0, yc_out=0, anglexcomp=0, angleycomp=0;
 
+	// call ip core
 	resize_accel(input, output, inval, &xc_out, &yc_out, &anglexcomp, &angleycomp);
 	
-	// Copy data from axis
-	for (int ind=0; ind<(newheight*newwidth); ind++) {
-		imgOutput.data[ind] = output[ind].data;
-	}
+	// copy data from axis
+	//for (int ind=0; ind<(newheight*newwidth); ind++) {
+	//	imgOutput.data[ind] = output[ind].data;
+	//}
 	
-	printf("xcenter %d ycenter %d, xcomp %d ycomp %d\n",xc_out, yc_out, anglexcomp, angleycomp);
-
 	double angle = 0.5 * atan2(angleycomp,anglexcomp);
-	printf("angleRAD %.3f angleDEG %.3f\n",angle, 180*angle/3.14159);
+	double angle_deg = 180.0* angle/3.14159;
+	//printf("angleRAD %.3f angleDEG %.3f\n",angle, 180*angle/3.14159);
+
+	//printf("Center X %d Center Y %d, xcomp %d ycomp %d\n",xc_out, yc_out, anglexcomp, angleycomp);
+	//printf("Center X %d, Center Y %d, Angle tan2 %.2f\n",xc_out, yc_out, angle_deg);
+	fprintf(fp,"Center X %d, Center Y %d, Angle tan2 %.2f\n",xc_out, yc_out, angle_deg);
+
 
 	delete[] input;
 	delete[] output;
 
-	result.data = imgOutput.copyFrom();
+	#if 0
+		result.data = imgOutput.copyFrom();
 
 	
-	/*OpenCV resize function*/
-	cv::resize(img,result_ocv,cv::Size(newwidth, newheight),0,0,CV_INTER_LINEAR);
+		/*OpenCV resize function*/
+		cv::resize(img,result_ocv,cv::Size(newwidth, newheight),0,0,CV_INTER_LINEAR);
 
-	cv::absdiff(result,result_ocv,error);
+		cv::absdiff(result,result_ocv,error);
 
-	double minval=256,maxval=0;
-	int cnt = 0;
-	for (int i=0;i<error.rows;i++){
-		for(int j=0;j<error.cols;j++){
-			uchar v = error.at<uchar>(i,j);
-			if (v>1)
-				cnt++;
-			if (minval > v )
-				minval = v;
-			if (maxval < v)
-				maxval = v;
+		double minval=256,maxval=0;
+		int cnt = 0;
+		for (int i=0;i<error.rows;i++){
+			for(int j=0;j<error.cols;j++){
+				uchar v = error.at<uchar>(i,j);
+				if (v>1)
+					cnt++;
+				if (minval > v )
+					minval = v;
+				if (maxval < v)
+					maxval = v;
+			}
 		}
+		float err_per = 100.0*(float)cnt/(error.rows*error.cols);
+
+		fprintf(stderr,"Minimum error in intensity = %f\n Maximum error in intensity = %f\n Percentage of pixels above error threshold = %f\n",minval,maxval,err_per);
+
+		//cv::imwrite("output_hls.png", result);
+		//cv::imwrite("resize_ocv.png", result_ocv);
+		//cv::imwrite("error.png", error);
+
+		//	if(maxval>2){
+		//		printf("\nTest Failed\n");
+		//		return -1;
+		//	}
+	#endif
+
+	fclose(fp);
+	printf ("Comparing against output data \n");
+	if (system("diff -w out.dat out.gold.dat")) {
+		fprintf(stdout, "*******************************************\n");
+		fprintf(stdout, "FAIL: The result is not correct\n");
+		fprintf(stdout, "*******************************************\n");
+		return 1;
+	} else {
+		fprintf(stdout, "*******************************************\n");
+		fprintf(stdout, "PASS: The result is correct!\n");
+		fprintf(stdout, "*******************************************\n");
+		return 0;
 	}
-	float err_per = 100.0*(float)cnt/(error.rows*error.cols);
-
-	fprintf(stderr,"Minimum error in intensity = %f\n Maximum error in intensity = %f\n Percentage of pixels above error threshold = %f\n",minval,maxval,err_per);
-
-	cv::imwrite("output_hls.png", result);
-	cv::imwrite("resize_ocv.png", result_ocv);
-	cv::imwrite("error.png", error);
-
-//	if(maxval>2){
-//		printf("\nTest Failed\n");
-//		return -1;
-//	}
 
 	return 0;
 }

@@ -83,11 +83,11 @@ set RtlHierarchyInfo {[
 			{"Name" : "tmp_buf_4_V_read", "Type" : "None", "Direction" : "I"},
 			{"Name" : "val1_V_read", "Type" : "None", "Direction" : "I"},
 			{"Name" : "pos_r", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.resize_accel_mux_cud_U8", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.resize_accel_mux_cud_U9", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.resize_accel_mux_cud_U10", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.resize_accel_mux_cud_U11", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.resize_accel_mux_cud_U12", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.resize_accel_mux_83_24_1_1_U8", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.resize_accel_mux_83_24_1_1_U9", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.resize_accel_mux_83_24_1_1_U10", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.resize_accel_mux_83_24_1_1_U11", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.resize_accel_mux_83_24_1_1_U12", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
