@@ -4,6 +4,8 @@
     <logs>
       <synLog/>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="moments" solutionName="solution1" date="2020-02-01T03:11:03.588+0100"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="moments" solutionName="solution1" date="2020-02-01T03:11:03.542+0100"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="moments" solutionName="solution1" date="2020-02-01T01:15:55.335+0100"/>
         <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="moments" solutionName="solution1" date="2020-02-01T01:15:55.296+0100"/>
       </csimLog>

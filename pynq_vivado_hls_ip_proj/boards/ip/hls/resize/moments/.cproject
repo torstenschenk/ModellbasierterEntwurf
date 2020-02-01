@@ -173,11 +173,11 @@
                             							
                             <option id="gnu.cpp.compiler.option.include.paths.646704926" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
                                 								
-                                <listOptionValue builtIn="false" value="C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize"/>
-                                								
                                 <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include"/>
                                 								
                                 <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/pynq_vivado_hls_ip_proj/boards/ip/hls/resize"/>
                                 								
                                 <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include/ap_sysc"/>
                                 								
@@ -381,11 +381,11 @@
                             							
                             <option id="gnu.cpp.compiler.option.include.paths.1304058585" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
                                 								
-                                <listOptionValue builtIn="false" value="C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize"/>
-                                								
                                 <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include"/>
                                 								
                                 <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/pynq_vivado_hls_ip_proj/boards/ip/hls/resize"/>
                                 								
                                 <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include/ap_sysc"/>
                                 								
