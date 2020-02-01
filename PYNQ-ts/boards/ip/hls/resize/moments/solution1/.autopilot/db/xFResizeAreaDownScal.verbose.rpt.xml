@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'xFResizeAreaDownScal'" level="0">
-<item name = "Date">Fri Jan 31 22:07:14 2020
+<item name = "Date">Fri Jan 31 23:06:10 2020
 </item>
 <item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
 <item name = "Project">moments</item>
@@ -86,14 +86,14 @@
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="grp_CoreProcessDownArea_fu_1808">CoreProcessDownArea, 0, 90, 2932, 817</column>
 <column name="grp_Inverse_fu_1782">Inverse, 4, 0, 110, 544</column>
-<column name="resize_accel_mux_813_16_1_1_U154">resize_accel_mux_813_16_1_1, 0, 0, 0, 45</column>
-<column name="resize_accel_mux_833_16_1_1_U153">resize_accel_mux_833_16_1_1, 0, 0, 0, 45</column>
-<column name="resize_accel_sdiv_32ns_32ns_32_36_seq_1_U151">resize_accel_sdiv_32ns_32ns_32_36_seq_1, 0, 0, 394, 238</column>
-<column name="resize_accel_sdiv_32ns_32ns_32_36_seq_1_U152">resize_accel_sdiv_32ns_32ns_32_36_seq_1, 0, 0, 394, 238</column>
-<column name="resize_accel_sdiv_32ns_32ns_32_36_seq_1_U156">resize_accel_sdiv_32ns_32ns_32_36_seq_1, 0, 0, 394, 238</column>
-<column name="resize_accel_sdiv_32ns_32ns_32_36_seq_1_U157">resize_accel_sdiv_32ns_32ns_32_36_seq_1, 0, 0, 394, 238</column>
-<column name="resize_accel_sdiv_32ns_32ns_32_36_seq_1_U158">resize_accel_sdiv_32ns_32ns_32_36_seq_1, 0, 0, 394, 238</column>
-<column name="resize_accel_srem_32s_10ns_32_36_1_U155">resize_accel_srem_32s_10ns_32_36_1, 0, 0, 2283, 1738</column>
+<column name="resize_accel_mux_Gfk_U153">resize_accel_mux_Gfk, 0, 0, 0, 45</column>
+<column name="resize_accel_mux_Hfu_U154">resize_accel_mux_Hfu, 0, 0, 0, 45</column>
+<column name="resize_accel_sdivFfa_U151">resize_accel_sdivFfa, 0, 0, 394, 238</column>
+<column name="resize_accel_sdivFfa_U152">resize_accel_sdivFfa, 0, 0, 394, 238</column>
+<column name="resize_accel_sdivFfa_U156">resize_accel_sdivFfa, 0, 0, 394, 238</column>
+<column name="resize_accel_sdivFfa_U157">resize_accel_sdivFfa, 0, 0, 394, 238</column>
+<column name="resize_accel_sdivFfa_U158">resize_accel_sdivFfa, 0, 0, 394, 238</column>
+<column name="resize_accel_sremIfE_U155">resize_accel_sremIfE, 0, 0, 2283, 1738</column>
 <column name="grp_xfExtractPixels_fu_1849">xfExtractPixels, 0, 0, 0, 225</column>
 <column name="grp_xfExtractPixels_fu_1861">xfExtractPixels, 0, 0, 0, 225</column>
 <column name="grp_xfExtractPixels_fu_1873">xfExtractPixels, 0, 0, 0, 225</column>
@@ -115,29 +115,29 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="Hreq_0_U">xFResizeAreaDownScal_Hreq_0, 1, 0, 0, 80, 16, 1, 1280</column>
-<column name="Hreq_1_U">xFResizeAreaDownScal_Hreq_0, 1, 0, 0, 80, 16, 1, 1280</column>
-<column name="Hreq_2_U">xFResizeAreaDownScal_Hreq_0, 1, 0, 0, 80, 16, 1, 1280</column>
-<column name="Hreq_3_U">xFResizeAreaDownScal_Hreq_0, 1, 0, 0, 80, 16, 1, 1280</column>
-<column name="Hreq_4_U">xFResizeAreaDownScal_Hreq_0, 1, 0, 0, 80, 16, 1, 1280</column>
-<column name="Hreq_5_U">xFResizeAreaDownScal_Hreq_0, 1, 0, 0, 80, 16, 1, 1280</column>
-<column name="Hreq_6_U">xFResizeAreaDownScal_Hreq_0, 1, 0, 0, 80, 16, 1, 1280</column>
-<column name="Hreq_7_U">xFResizeAreaDownScal_Hreq_0, 1, 0, 0, 80, 16, 1, 1280</column>
-<column name="Hstart_U">xFResizeAreaDownScal_Hstart, 1, 0, 0, 640, 14, 1, 8960</column>
-<column name="Hweight_0_U">xFResizeAreaDownScal_Hweight_0, 1, 0, 0, 640, 16, 1, 10240</column>
-<column name="Hweight_1_U">xFResizeAreaDownScal_Hweight_0, 1, 0, 0, 640, 16, 1, 10240</column>
-<column name="Hweight_2_U">xFResizeAreaDownScal_Hweight_0, 1, 0, 0, 640, 16, 1, 10240</column>
-<column name="Hweight_3_U">xFResizeAreaDownScal_Hweight_0, 1, 0, 0, 640, 16, 1, 10240</column>
-<column name="Hweight_4_U">xFResizeAreaDownScal_Hweight_0, 1, 0, 0, 640, 16, 1, 10240</column>
-<column name="Vreq_U">xFResizeAreaDownScal_Vreq, 1, 0, 0, 360, 16, 1, 5760</column>
-<column name="Vstart_U">xFResizeAreaDownScal_Vstart, 1, 0, 0, 360, 13, 1, 4680</column>
-<column name="Vweight_U">xFResizeAreaDownScal_Vweight, 1, 0, 0, 720, 16, 1, 11520</column>
-<column name="lbuf_in_0_V_U">xFResizeAreaDownScal_lbuf_in_0_V, 2, 0, 0, 640, 24, 1, 15360</column>
-<column name="lbuf_in_5_V_U">xFResizeAreaDownScal_lbuf_in_0_V, 2, 0, 0, 640, 24, 1, 15360</column>
-<column name="lbuf_in_1_V_U">xFResizeAreaDownScal_lbuf_in_1_V, 2, 0, 0, 640, 24, 1, 15360</column>
-<column name="lbuf_in_2_V_U">xFResizeAreaDownScal_lbuf_in_1_V, 2, 0, 0, 640, 24, 1, 15360</column>
-<column name="lbuf_in_3_V_U">xFResizeAreaDownScal_lbuf_in_1_V, 2, 0, 0, 640, 24, 1, 15360</column>
-<column name="lbuf_in_4_V_U">xFResizeAreaDownScal_lbuf_in_4_V, 2, 0, 0, 640, 24, 1, 15360</column>
+<column name="Vreq_U">xFResizeAreaDownSEe0, 1, 0, 0, 360, 16, 1, 5760</column>
+<column name="lbuf_in_0_V_U">xFResizeAreaDownSibs, 2, 0, 0, 640, 24, 1, 15360</column>
+<column name="lbuf_in_5_V_U">xFResizeAreaDownSibs, 2, 0, 0, 640, 24, 1, 15360</column>
+<column name="lbuf_in_1_V_U">xFResizeAreaDownSjbC, 2, 0, 0, 640, 24, 1, 15360</column>
+<column name="lbuf_in_2_V_U">xFResizeAreaDownSjbC, 2, 0, 0, 640, 24, 1, 15360</column>
+<column name="lbuf_in_3_V_U">xFResizeAreaDownSjbC, 2, 0, 0, 640, 24, 1, 15360</column>
+<column name="lbuf_in_4_V_U">xFResizeAreaDownSmb6, 2, 0, 0, 640, 24, 1, 15360</column>
+<column name="Hweight_0_U">xFResizeAreaDownSocq, 1, 0, 0, 640, 16, 1, 10240</column>
+<column name="Hweight_1_U">xFResizeAreaDownSocq, 1, 0, 0, 640, 16, 1, 10240</column>
+<column name="Hweight_2_U">xFResizeAreaDownSocq, 1, 0, 0, 640, 16, 1, 10240</column>
+<column name="Hweight_3_U">xFResizeAreaDownSocq, 1, 0, 0, 640, 16, 1, 10240</column>
+<column name="Hweight_4_U">xFResizeAreaDownSocq, 1, 0, 0, 640, 16, 1, 10240</column>
+<column name="Vweight_U">xFResizeAreaDownStde, 1, 0, 0, 720, 16, 1, 11520</column>
+<column name="Hstart_U">xFResizeAreaDownSudo, 1, 0, 0, 640, 14, 1, 8960</column>
+<column name="Vstart_U">xFResizeAreaDownSvdy, 1, 0, 0, 360, 13, 1, 4680</column>
+<column name="Hreq_0_U">xFResizeAreaDownSwdI, 1, 0, 0, 80, 16, 1, 1280</column>
+<column name="Hreq_1_U">xFResizeAreaDownSwdI, 1, 0, 0, 80, 16, 1, 1280</column>
+<column name="Hreq_2_U">xFResizeAreaDownSwdI, 1, 0, 0, 80, 16, 1, 1280</column>
+<column name="Hreq_3_U">xFResizeAreaDownSwdI, 1, 0, 0, 80, 16, 1, 1280</column>
+<column name="Hreq_4_U">xFResizeAreaDownSwdI, 1, 0, 0, 80, 16, 1, 1280</column>
+<column name="Hreq_5_U">xFResizeAreaDownSwdI, 1, 0, 0, 80, 16, 1, 1280</column>
+<column name="Hreq_6_U">xFResizeAreaDownSwdI, 1, 0, 0, 80, 16, 1, 1280</column>
+<column name="Hreq_7_U">xFResizeAreaDownSwdI, 1, 0, 0, 80, 16, 1, 1280</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">

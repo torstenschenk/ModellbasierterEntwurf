@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:resize_accel:1.0
-// IP Revision: 2001132350
+// IP Revision: 2001312306
 
 (* X_CORE_INFO = "resize_accel,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "resizer_resize_accel_0_0,resize_accel,{}" *)
-(* CORE_GENERATION_INFO = "resizer_resize_accel_0_0,resize_accel,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=resize_accel,x_ipVersion=1.0,x_ipCoreRevision=2001132350,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_AXILITES_ADDR_WIDTH=6,C_S_AXI_AXILITES_DATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "resizer_resize_accel_0_0,resize_accel,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=resize_accel,x_ipVersion=1.0,x_ipCoreRevision=2001312306,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_AXILITES_ADDR_WIDTH=6,C_S_AXI_AXILITES_DATA_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module resizer_resize_accel_0_0 (

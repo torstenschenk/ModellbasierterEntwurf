@@ -282,7 +282,7 @@ start_for_resize_U0 start_for_resize_U0_U(
     .if_read(resize_U0_ap_ready)
 );
 
-start_for_xfMat2axis_U0 start_for_xfMat2axis_U0_U(
+start_for_xfMat2aLf8 start_for_xfMat2aLf8_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),

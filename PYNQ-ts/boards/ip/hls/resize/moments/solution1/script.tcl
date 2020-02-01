@@ -5,10 +5,10 @@
 ############################################################
 open_project moments
 set_top resize_accel
-add_files xf_resize_config.h
-add_files xf_resize_accel.cpp
-add_files xf_headers.h
 add_files xf_config_params.h
+add_files xf_headers.h
+add_files xf_resize_accel.cpp
+add_files xf_resize_config.h
 add_files -tb xf_resize_tb.cpp -cflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xc7z020clg400-1} -tool vivado

@@ -16,7 +16,7 @@
 #include "xfMat2axis.h"
 #include "fifo_w24_d150_A.h"
 #include "start_for_resize_U0.h"
-#include "start_for_xfMat2axis_U0.h"
+#include "start_for_xfMat2aLf8.h"
 #include "resize_accel_AXILiteS_s_axi.h"
 
 namespace ap_rtl {
@@ -73,7 +73,7 @@ struct resize_accel : public sc_module {
     fifo_w24_d150_A* p_src_data_V_U;
     fifo_w24_d150_A* p_dst_data_V_U;
     start_for_resize_U0* start_for_resize_U0_U;
-    start_for_xfMat2axis_U0* start_for_xfMat2axis_U0_U;
+    start_for_xfMat2aLf8* start_for_xfMat2aLf8_U;
     sc_signal< sc_logic > ap_rst_n_inv;
     sc_signal< sc_logic > ap_start;
     sc_signal< sc_logic > ap_ready;

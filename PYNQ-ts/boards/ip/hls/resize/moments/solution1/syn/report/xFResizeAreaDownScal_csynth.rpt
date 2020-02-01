@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'xFResizeAreaDownScal'
 ================================================================
-* Date:           Fri Jan 31 22:07:13 2020
+* Date:           Fri Jan 31 23:06:09 2020
 
 * Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
 * Project:        moments
@@ -96,69 +96,69 @@
 
 + Detail: 
     * Instance: 
-    +----------------------------------------------+-----------------------------------------+---------+-------+------+------+
-    |                   Instance                   |                  Module                 | BRAM_18K| DSP48E|  FF  |  LUT |
-    +----------------------------------------------+-----------------------------------------+---------+-------+------+------+
-    |grp_CoreProcessDownArea_fu_1808               |CoreProcessDownArea                      |        0|     90|  2932|   817|
-    |grp_Inverse_fu_1782                           |Inverse                                  |        4|      0|   110|   544|
-    |resize_accel_mux_813_16_1_1_U154              |resize_accel_mux_813_16_1_1              |        0|      0|     0|    45|
-    |resize_accel_mux_833_16_1_1_U153              |resize_accel_mux_833_16_1_1              |        0|      0|     0|    45|
-    |resize_accel_sdiv_32ns_32ns_32_36_seq_1_U151  |resize_accel_sdiv_32ns_32ns_32_36_seq_1  |        0|      0|   394|   238|
-    |resize_accel_sdiv_32ns_32ns_32_36_seq_1_U152  |resize_accel_sdiv_32ns_32ns_32_36_seq_1  |        0|      0|   394|   238|
-    |resize_accel_sdiv_32ns_32ns_32_36_seq_1_U156  |resize_accel_sdiv_32ns_32ns_32_36_seq_1  |        0|      0|   394|   238|
-    |resize_accel_sdiv_32ns_32ns_32_36_seq_1_U157  |resize_accel_sdiv_32ns_32ns_32_36_seq_1  |        0|      0|   394|   238|
-    |resize_accel_sdiv_32ns_32ns_32_36_seq_1_U158  |resize_accel_sdiv_32ns_32ns_32_36_seq_1  |        0|      0|   394|   238|
-    |resize_accel_srem_32s_10ns_32_36_1_U155       |resize_accel_srem_32s_10ns_32_36_1       |        0|      0|  2283|  1738|
-    |grp_xfExtractPixels_fu_1849                   |xfExtractPixels                          |        0|      0|     0|   225|
-    |grp_xfExtractPixels_fu_1861                   |xfExtractPixels                          |        0|      0|     0|   225|
-    |grp_xfExtractPixels_fu_1873                   |xfExtractPixels                          |        0|      0|     0|   225|
-    |grp_xfExtractPixels_fu_1885                   |xfExtractPixels                          |        0|      0|     0|   225|
-    |grp_xfExtractPixels_fu_1897                   |xfExtractPixels                          |        0|      0|     0|   225|
-    |grp_xfExtractPixels_fu_1909                   |xfExtractPixels                          |        0|      0|     0|   225|
-    |grp_xfExtractPixels_fu_1921                   |xfExtractPixels                          |        0|      0|     0|   225|
-    |grp_xfExtractPixels_fu_1933                   |xfExtractPixels                          |        0|      0|     0|   225|
-    |grp_xfExtractPixels_fu_1945                   |xfExtractPixels                          |        0|      0|     0|   225|
-    |grp_xfExtractPixels_fu_1957                   |xfExtractPixels                          |        0|      0|     0|   225|
-    |grp_xfExtractPixels_fu_1969                   |xfExtractPixels                          |        0|      0|     0|   225|
-    |grp_xfExtractPixels_fu_1981                   |xfExtractPixels                          |        0|      0|     0|   225|
-    |call_ret14_xfExtractPixels_fu_1993            |xfExtractPixels                          |        0|      0|     0|   225|
-    +----------------------------------------------+-----------------------------------------+---------+-------+------+------+
-    |Total                                         |                                         |        4|     90|  7295|  7304|
-    +----------------------------------------------+-----------------------------------------+---------+-------+------+------+
+    +------------------------------------+----------------------+---------+-------+------+------+
+    |              Instance              |        Module        | BRAM_18K| DSP48E|  FF  |  LUT |
+    +------------------------------------+----------------------+---------+-------+------+------+
+    |grp_CoreProcessDownArea_fu_1808     |CoreProcessDownArea   |        0|     90|  2932|   817|
+    |grp_Inverse_fu_1782                 |Inverse               |        4|      0|   110|   544|
+    |resize_accel_mux_Gfk_U153           |resize_accel_mux_Gfk  |        0|      0|     0|    45|
+    |resize_accel_mux_Hfu_U154           |resize_accel_mux_Hfu  |        0|      0|     0|    45|
+    |resize_accel_sdivFfa_U151           |resize_accel_sdivFfa  |        0|      0|   394|   238|
+    |resize_accel_sdivFfa_U152           |resize_accel_sdivFfa  |        0|      0|   394|   238|
+    |resize_accel_sdivFfa_U156           |resize_accel_sdivFfa  |        0|      0|   394|   238|
+    |resize_accel_sdivFfa_U157           |resize_accel_sdivFfa  |        0|      0|   394|   238|
+    |resize_accel_sdivFfa_U158           |resize_accel_sdivFfa  |        0|      0|   394|   238|
+    |resize_accel_sremIfE_U155           |resize_accel_sremIfE  |        0|      0|  2283|  1738|
+    |grp_xfExtractPixels_fu_1849         |xfExtractPixels       |        0|      0|     0|   225|
+    |grp_xfExtractPixels_fu_1861         |xfExtractPixels       |        0|      0|     0|   225|
+    |grp_xfExtractPixels_fu_1873         |xfExtractPixels       |        0|      0|     0|   225|
+    |grp_xfExtractPixels_fu_1885         |xfExtractPixels       |        0|      0|     0|   225|
+    |grp_xfExtractPixels_fu_1897         |xfExtractPixels       |        0|      0|     0|   225|
+    |grp_xfExtractPixels_fu_1909         |xfExtractPixels       |        0|      0|     0|   225|
+    |grp_xfExtractPixels_fu_1921         |xfExtractPixels       |        0|      0|     0|   225|
+    |grp_xfExtractPixels_fu_1933         |xfExtractPixels       |        0|      0|     0|   225|
+    |grp_xfExtractPixels_fu_1945         |xfExtractPixels       |        0|      0|     0|   225|
+    |grp_xfExtractPixels_fu_1957         |xfExtractPixels       |        0|      0|     0|   225|
+    |grp_xfExtractPixels_fu_1969         |xfExtractPixels       |        0|      0|     0|   225|
+    |grp_xfExtractPixels_fu_1981         |xfExtractPixels       |        0|      0|     0|   225|
+    |call_ret14_xfExtractPixels_fu_1993  |xfExtractPixels       |        0|      0|     0|   225|
+    +------------------------------------+----------------------+---------+-------+------+------+
+    |Total                               |                      |        4|     90|  7295|  7304|
+    +------------------------------------+----------------------+---------+-------+------+------+
 
     * DSP48: 
     N/A
 
     * Memory: 
-    +---------------+----------------------------------+---------+---+----+------+-----+------+-------------+
-    |     Memory    |              Module              | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
-    +---------------+----------------------------------+---------+---+----+------+-----+------+-------------+
-    |Hreq_0_U       |xFResizeAreaDownScal_Hreq_0       |        1|  0|   0|    80|   16|     1|         1280|
-    |Hreq_1_U       |xFResizeAreaDownScal_Hreq_0       |        1|  0|   0|    80|   16|     1|         1280|
-    |Hreq_2_U       |xFResizeAreaDownScal_Hreq_0       |        1|  0|   0|    80|   16|     1|         1280|
-    |Hreq_3_U       |xFResizeAreaDownScal_Hreq_0       |        1|  0|   0|    80|   16|     1|         1280|
-    |Hreq_4_U       |xFResizeAreaDownScal_Hreq_0       |        1|  0|   0|    80|   16|     1|         1280|
-    |Hreq_5_U       |xFResizeAreaDownScal_Hreq_0       |        1|  0|   0|    80|   16|     1|         1280|
-    |Hreq_6_U       |xFResizeAreaDownScal_Hreq_0       |        1|  0|   0|    80|   16|     1|         1280|
-    |Hreq_7_U       |xFResizeAreaDownScal_Hreq_0       |        1|  0|   0|    80|   16|     1|         1280|
-    |Hstart_U       |xFResizeAreaDownScal_Hstart       |        1|  0|   0|   640|   14|     1|         8960|
-    |Hweight_0_U    |xFResizeAreaDownScal_Hweight_0    |        1|  0|   0|   640|   16|     1|        10240|
-    |Hweight_1_U    |xFResizeAreaDownScal_Hweight_0    |        1|  0|   0|   640|   16|     1|        10240|
-    |Hweight_2_U    |xFResizeAreaDownScal_Hweight_0    |        1|  0|   0|   640|   16|     1|        10240|
-    |Hweight_3_U    |xFResizeAreaDownScal_Hweight_0    |        1|  0|   0|   640|   16|     1|        10240|
-    |Hweight_4_U    |xFResizeAreaDownScal_Hweight_0    |        1|  0|   0|   640|   16|     1|        10240|
-    |Vreq_U         |xFResizeAreaDownScal_Vreq         |        1|  0|   0|   360|   16|     1|         5760|
-    |Vstart_U       |xFResizeAreaDownScal_Vstart       |        1|  0|   0|   360|   13|     1|         4680|
-    |Vweight_U      |xFResizeAreaDownScal_Vweight      |        1|  0|   0|   720|   16|     1|        11520|
-    |lbuf_in_0_V_U  |xFResizeAreaDownScal_lbuf_in_0_V  |        2|  0|   0|   640|   24|     1|        15360|
-    |lbuf_in_5_V_U  |xFResizeAreaDownScal_lbuf_in_0_V  |        2|  0|   0|   640|   24|     1|        15360|
-    |lbuf_in_1_V_U  |xFResizeAreaDownScal_lbuf_in_1_V  |        2|  0|   0|   640|   24|     1|        15360|
-    |lbuf_in_2_V_U  |xFResizeAreaDownScal_lbuf_in_1_V  |        2|  0|   0|   640|   24|     1|        15360|
-    |lbuf_in_3_V_U  |xFResizeAreaDownScal_lbuf_in_1_V  |        2|  0|   0|   640|   24|     1|        15360|
-    |lbuf_in_4_V_U  |xFResizeAreaDownScal_lbuf_in_4_V  |        2|  0|   0|   640|   24|     1|        15360|
-    +---------------+----------------------------------+---------+---+----+------+-----+------+-------------+
-    |Total          |                                  |       29|  0|   0|  9760|  411|    23|       184520|
-    +---------------+----------------------------------+---------+---+----+------+-----+------+-------------+
+    +---------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |     Memory    |        Module        | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +---------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |Vreq_U         |xFResizeAreaDownSEe0  |        1|  0|   0|   360|   16|     1|         5760|
+    |lbuf_in_0_V_U  |xFResizeAreaDownSibs  |        2|  0|   0|   640|   24|     1|        15360|
+    |lbuf_in_5_V_U  |xFResizeAreaDownSibs  |        2|  0|   0|   640|   24|     1|        15360|
+    |lbuf_in_1_V_U  |xFResizeAreaDownSjbC  |        2|  0|   0|   640|   24|     1|        15360|
+    |lbuf_in_2_V_U  |xFResizeAreaDownSjbC  |        2|  0|   0|   640|   24|     1|        15360|
+    |lbuf_in_3_V_U  |xFResizeAreaDownSjbC  |        2|  0|   0|   640|   24|     1|        15360|
+    |lbuf_in_4_V_U  |xFResizeAreaDownSmb6  |        2|  0|   0|   640|   24|     1|        15360|
+    |Hweight_0_U    |xFResizeAreaDownSocq  |        1|  0|   0|   640|   16|     1|        10240|
+    |Hweight_1_U    |xFResizeAreaDownSocq  |        1|  0|   0|   640|   16|     1|        10240|
+    |Hweight_2_U    |xFResizeAreaDownSocq  |        1|  0|   0|   640|   16|     1|        10240|
+    |Hweight_3_U    |xFResizeAreaDownSocq  |        1|  0|   0|   640|   16|     1|        10240|
+    |Hweight_4_U    |xFResizeAreaDownSocq  |        1|  0|   0|   640|   16|     1|        10240|
+    |Vweight_U      |xFResizeAreaDownStde  |        1|  0|   0|   720|   16|     1|        11520|
+    |Hstart_U       |xFResizeAreaDownSudo  |        1|  0|   0|   640|   14|     1|         8960|
+    |Vstart_U       |xFResizeAreaDownSvdy  |        1|  0|   0|   360|   13|     1|         4680|
+    |Hreq_0_U       |xFResizeAreaDownSwdI  |        1|  0|   0|    80|   16|     1|         1280|
+    |Hreq_1_U       |xFResizeAreaDownSwdI  |        1|  0|   0|    80|   16|     1|         1280|
+    |Hreq_2_U       |xFResizeAreaDownSwdI  |        1|  0|   0|    80|   16|     1|         1280|
+    |Hreq_3_U       |xFResizeAreaDownSwdI  |        1|  0|   0|    80|   16|     1|         1280|
+    |Hreq_4_U       |xFResizeAreaDownSwdI  |        1|  0|   0|    80|   16|     1|         1280|
+    |Hreq_5_U       |xFResizeAreaDownSwdI  |        1|  0|   0|    80|   16|     1|         1280|
+    |Hreq_6_U       |xFResizeAreaDownSwdI  |        1|  0|   0|    80|   16|     1|         1280|
+    |Hreq_7_U       |xFResizeAreaDownSwdI  |        1|  0|   0|    80|   16|     1|         1280|
+    +---------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |Total          |                      |       29|  0|   0|  9760|  411|    23|       184520|
+    +---------------+----------------------+---------+---+----+------+-----+------+-------------+
 
     * FIFO: 
     N/A

@@ -11,11 +11,11 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "resize_accel_mul_mul_16ns_8ns_24_1_1.h"
-#include "resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1.h"
-#include "resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1.h"
-#include "resize_accel_mul_mul_19ns_16ns_32_1_1.h"
-#include "resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1.h"
+#include "resize_accel_mul_dEe.h"
+#include "resize_accel_mac_eOg.h"
+#include "resize_accel_mac_fYi.h"
+#include "resize_accel_mul_g8j.h"
+#include "resize_accel_mac_hbi.h"
 
 namespace ap_rtl {
 
@@ -74,96 +74,96 @@ struct CoreProcessDownArea : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U21;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U22;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U23;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U24;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U25;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U26;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U27;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U28;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U29;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U30;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U31;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U32;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U33;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U34;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U35;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U36;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U37;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U38;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U39;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U40;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U41;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U42;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U43;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U44;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U45;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U46;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U47;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U48;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U49;
-    resize_accel_mul_mul_16ns_8ns_24_1_1<1,1,16,8,24>* resize_accel_mul_mul_16ns_8ns_24_1_1_U50;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U51;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U52;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U53;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U54;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U55;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U56;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U57;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U58;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U59;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U60;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U61;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U62;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U63;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U64;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U65;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U66;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U67;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U68;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U69;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U70;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U71;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U72;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U73;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U74;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U75;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U76;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U77;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U78;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U79;
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1<1,1,16,8,24,25>* resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U80;
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1<1,1,16,8,26,27>* resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U81;
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1<1,1,16,8,26,27>* resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U82;
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1<1,1,16,8,26,27>* resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U83;
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1<1,1,16,8,26,27>* resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U84;
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1<1,1,16,8,26,27>* resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U85;
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1<1,1,16,8,26,27>* resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U86;
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1<1,1,16,8,26,27>* resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U87;
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1<1,1,16,8,26,27>* resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U88;
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1<1,1,16,8,26,27>* resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U89;
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1<1,1,16,8,26,27>* resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U90;
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1<1,1,16,8,26,27>* resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U91;
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1<1,1,16,8,26,27>* resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U92;
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1<1,1,16,8,26,27>* resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U93;
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1<1,1,16,8,26,27>* resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U94;
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1<1,1,16,8,26,27>* resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U95;
-    resize_accel_mul_mul_19ns_16ns_32_1_1<1,1,19,16,32>* resize_accel_mul_mul_19ns_16ns_32_1_1_U96;
-    resize_accel_mul_mul_19ns_16ns_32_1_1<1,1,19,16,32>* resize_accel_mul_mul_19ns_16ns_32_1_1_U97;
-    resize_accel_mul_mul_19ns_16ns_32_1_1<1,1,19,16,32>* resize_accel_mul_mul_19ns_16ns_32_1_1_U98;
-    resize_accel_mul_mul_19ns_16ns_32_1_1<1,1,19,16,32>* resize_accel_mul_mul_19ns_16ns_32_1_1_U99;
-    resize_accel_mul_mul_19ns_16ns_32_1_1<1,1,19,16,32>* resize_accel_mul_mul_19ns_16ns_32_1_1_U100;
-    resize_accel_mul_mul_19ns_16ns_32_1_1<1,1,19,16,32>* resize_accel_mul_mul_19ns_16ns_32_1_1_U101;
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1<1,1,19,16,32,32>* resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U102;
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1<1,1,19,16,32,32>* resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U103;
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1<1,1,19,16,32,32>* resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U104;
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1<1,1,19,16,32,32>* resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U105;
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1<1,1,19,16,32,32>* resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U106;
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1<1,1,19,16,32,32>* resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U107;
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1<1,1,19,16,32,32>* resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U108;
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1<1,1,19,16,32,32>* resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U109;
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1<1,1,19,16,32,32>* resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U110;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U21;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U22;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U23;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U24;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U25;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U26;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U27;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U28;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U29;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U30;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U31;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U32;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U33;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U34;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U35;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U36;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U37;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U38;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U39;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U40;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U41;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U42;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U43;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U44;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U45;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U46;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U47;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U48;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U49;
+    resize_accel_mul_dEe<1,1,16,8,24>* resize_accel_mul_dEe_U50;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U51;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U52;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U53;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U54;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U55;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U56;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U57;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U58;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U59;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U60;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U61;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U62;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U63;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U64;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U65;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U66;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U67;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U68;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U69;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U70;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U71;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U72;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U73;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U74;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U75;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U76;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U77;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U78;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U79;
+    resize_accel_mac_eOg<1,1,16,8,24,25>* resize_accel_mac_eOg_U80;
+    resize_accel_mac_fYi<1,1,16,8,26,27>* resize_accel_mac_fYi_U81;
+    resize_accel_mac_fYi<1,1,16,8,26,27>* resize_accel_mac_fYi_U82;
+    resize_accel_mac_fYi<1,1,16,8,26,27>* resize_accel_mac_fYi_U83;
+    resize_accel_mac_fYi<1,1,16,8,26,27>* resize_accel_mac_fYi_U84;
+    resize_accel_mac_fYi<1,1,16,8,26,27>* resize_accel_mac_fYi_U85;
+    resize_accel_mac_fYi<1,1,16,8,26,27>* resize_accel_mac_fYi_U86;
+    resize_accel_mac_fYi<1,1,16,8,26,27>* resize_accel_mac_fYi_U87;
+    resize_accel_mac_fYi<1,1,16,8,26,27>* resize_accel_mac_fYi_U88;
+    resize_accel_mac_fYi<1,1,16,8,26,27>* resize_accel_mac_fYi_U89;
+    resize_accel_mac_fYi<1,1,16,8,26,27>* resize_accel_mac_fYi_U90;
+    resize_accel_mac_fYi<1,1,16,8,26,27>* resize_accel_mac_fYi_U91;
+    resize_accel_mac_fYi<1,1,16,8,26,27>* resize_accel_mac_fYi_U92;
+    resize_accel_mac_fYi<1,1,16,8,26,27>* resize_accel_mac_fYi_U93;
+    resize_accel_mac_fYi<1,1,16,8,26,27>* resize_accel_mac_fYi_U94;
+    resize_accel_mac_fYi<1,1,16,8,26,27>* resize_accel_mac_fYi_U95;
+    resize_accel_mul_g8j<1,1,19,16,32>* resize_accel_mul_g8j_U96;
+    resize_accel_mul_g8j<1,1,19,16,32>* resize_accel_mul_g8j_U97;
+    resize_accel_mul_g8j<1,1,19,16,32>* resize_accel_mul_g8j_U98;
+    resize_accel_mul_g8j<1,1,19,16,32>* resize_accel_mul_g8j_U99;
+    resize_accel_mul_g8j<1,1,19,16,32>* resize_accel_mul_g8j_U100;
+    resize_accel_mul_g8j<1,1,19,16,32>* resize_accel_mul_g8j_U101;
+    resize_accel_mac_hbi<1,1,19,16,32,32>* resize_accel_mac_hbi_U102;
+    resize_accel_mac_hbi<1,1,19,16,32,32>* resize_accel_mac_hbi_U103;
+    resize_accel_mac_hbi<1,1,19,16,32,32>* resize_accel_mac_hbi_U104;
+    resize_accel_mac_hbi<1,1,19,16,32,32>* resize_accel_mac_hbi_U105;
+    resize_accel_mac_hbi<1,1,19,16,32,32>* resize_accel_mac_hbi_U106;
+    resize_accel_mac_hbi<1,1,19,16,32,32>* resize_accel_mac_hbi_U107;
+    resize_accel_mac_hbi<1,1,19,16,32,32>* resize_accel_mac_hbi_U108;
+    resize_accel_mac_hbi<1,1,19,16,32,32>* resize_accel_mac_hbi_U109;
+    resize_accel_mac_hbi<1,1,19,16,32,32>* resize_accel_mac_hbi_U110;
     sc_signal< sc_lv<1> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_pp0_stage0;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter0;

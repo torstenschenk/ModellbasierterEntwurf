@@ -224,7 +224,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -273,7 +273,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -322,7 +322,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -371,7 +371,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -420,7 +420,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -469,7 +469,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -518,7 +518,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -567,7 +567,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -615,7 +615,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -630,7 +630,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>tmp_buf[0].V</originalName>
-              <rtlName>resize_accel_mux_83_24_1_1_U8</rtlName>
+              <rtlName>resize_accel_mux_cud_U8</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>24</bitwidth>
@@ -672,7 +672,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -687,7 +687,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>tmp_buf[1].V</originalName>
-              <rtlName>resize_accel_mux_83_24_1_1_U9</rtlName>
+              <rtlName>resize_accel_mux_cud_U9</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>24</bitwidth>
@@ -729,7 +729,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -744,7 +744,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>tmp_buf[4].V</originalName>
-              <rtlName>resize_accel_mux_83_24_1_1_U10</rtlName>
+              <rtlName>resize_accel_mux_cud_U10</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>24</bitwidth>
@@ -786,7 +786,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -801,7 +801,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>tmp_buf[2].V</originalName>
-              <rtlName>resize_accel_mux_83_24_1_1_U11</rtlName>
+              <rtlName>resize_accel_mux_cud_U11</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>24</bitwidth>
@@ -843,7 +843,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -858,7 +858,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>tmp_buf[3].V</originalName>
-              <rtlName>resize_accel_mux_83_24_1_1_U12</rtlName>
+              <rtlName>resize_accel_mux_cud_U12</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>24</bitwidth>
@@ -900,7 +900,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -949,7 +949,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -998,7 +998,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1047,7 +1047,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1096,7 +1096,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1145,7 +1145,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1848,7 +1848,7 @@
         <count>5</count>
         <item_version>0</item_version>
         <item class_id="32" tracking_level="0" version="0">
-          <first>resize_accel_mux_83_24_1_1_U10 (resize_accel_mux_83_24_1_1)</first>
+          <first>resize_accel_mux_cud_U10 (resize_accel_mux_cud)</first>
           <second class_id="33" tracking_level="0" version="0">
             <count>2</count>
             <item_version>0</item_version>
@@ -1863,7 +1863,7 @@
           </second>
         </item>
         <item>
-          <first>resize_accel_mux_83_24_1_1_U11 (resize_accel_mux_83_24_1_1)</first>
+          <first>resize_accel_mux_cud_U11 (resize_accel_mux_cud)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -1878,7 +1878,7 @@
           </second>
         </item>
         <item>
-          <first>resize_accel_mux_83_24_1_1_U12 (resize_accel_mux_83_24_1_1)</first>
+          <first>resize_accel_mux_cud_U12 (resize_accel_mux_cud)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -1893,7 +1893,7 @@
           </second>
         </item>
         <item>
-          <first>resize_accel_mux_83_24_1_1_U8 (resize_accel_mux_83_24_1_1)</first>
+          <first>resize_accel_mux_cud_U8 (resize_accel_mux_cud)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -1908,7 +1908,7 @@
           </second>
         </item>
         <item>
-          <first>resize_accel_mux_83_24_1_1_U9 (resize_accel_mux_83_24_1_1)</first>
+          <first>resize_accel_mux_cud_U9 (resize_accel_mux_cud)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -1947,35 +1947,35 @@
         <count>5</count>
         <item_version>0</item_version>
         <item>
-          <first>resize_accel_mux_83_24_1_1_U10</first>
+          <first>resize_accel_mux_cud_U10</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>resize_accel_mux_83_24_1_1_U11</first>
+          <first>resize_accel_mux_cud_U11</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>resize_accel_mux_83_24_1_1_U12</first>
+          <first>resize_accel_mux_cud_U12</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>resize_accel_mux_83_24_1_1_U8</first>
+          <first>resize_accel_mux_cud_U8</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>resize_accel_mux_83_24_1_1_U9</first>
+          <first>resize_accel_mux_cud_U9</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -1986,7 +1986,7 @@
         <count>5</count>
         <item_version>0</item_version>
         <item class_id="36" tracking_level="0" version="0">
-          <first>resize_accel_mux_83_24_1_1_U10 (resize_accel_mux_83_24_1_1)</first>
+          <first>resize_accel_mux_cud_U10 (resize_accel_mux_cud)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -1994,7 +1994,7 @@
           </second>
         </item>
         <item>
-          <first>resize_accel_mux_83_24_1_1_U11 (resize_accel_mux_83_24_1_1)</first>
+          <first>resize_accel_mux_cud_U11 (resize_accel_mux_cud)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -2002,7 +2002,7 @@
           </second>
         </item>
         <item>
-          <first>resize_accel_mux_83_24_1_1_U12 (resize_accel_mux_83_24_1_1)</first>
+          <first>resize_accel_mux_cud_U12 (resize_accel_mux_cud)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -2010,7 +2010,7 @@
           </second>
         </item>
         <item>
-          <first>resize_accel_mux_83_24_1_1_U8 (resize_accel_mux_83_24_1_1)</first>
+          <first>resize_accel_mux_cud_U8 (resize_accel_mux_cud)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -2018,7 +2018,7 @@
           </second>
         </item>
         <item>
-          <first>resize_accel_mux_83_24_1_1_U9 (resize_accel_mux_83_24_1_1)</first>
+          <first>resize_accel_mux_cud_U9 (resize_accel_mux_cud)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>

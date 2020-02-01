@@ -1224,7 +1224,7 @@ arrayctor.loop6.preheader:25  call void (...)* @_ssdm_op_SpecResourceLimit(i32 1
 
 <Node id="31" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24" op_3_bw="24" op_4_bw="24" op_5_bw="24" op_6_bw="24" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="32" op_11_bw="0" op_12_bw="0" op_13_bw="0" op_14_bw="0" op_15_bw="0">
 <![CDATA[
-arrayctor.loop6.preheader:26  call void (...)* @_ssdm_op_SpecMemCore([640 x i24]* %lbuf_in_0_V, [640 x i24]* %lbuf_in_1_V, [640 x i24]* %lbuf_in_2_V, [640 x i24]* %lbuf_in_3_V, [640 x i24]* %lbuf_in_4_V, [640 x i24]* %lbuf_in_5_V, [1 x i8]* @p_str, [13 x i8]* @p_str18, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+arrayctor.loop6.preheader:26  call void (...)* @_ssdm_op_SpecMemCore([640 x i24]* %lbuf_in_0_V, [640 x i24]* %lbuf_in_1_V, [640 x i24]* %lbuf_in_2_V, [640 x i24]* %lbuf_in_3_V, [640 x i24]* %lbuf_in_4_V, [640 x i24]* %lbuf_in_5_V, [1 x i8]* @p_str, [13 x i8]* @p_str16, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1770,7 +1770,7 @@ arrayctor.loop6.preheader:33  br label %0
 
 <Node id="48" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str20) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str18) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -2614,7 +2614,7 @@ arrayctor.loop6.preheader:33  br label %0
 
 <Node id="123" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:0  %tmp_56 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str21)
+:0  %tmp_56 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str19)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_56"/></StgValue>
@@ -2875,7 +2875,7 @@ branch4:1  br label %5
 
 <Node id="144" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-:1  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str21, i32 %tmp_56)
+:1  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str19, i32 %tmp_56)
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -4240,7 +4240,7 @@ branch17:1  br label %._crit_edge1843280
 
 <Node id="235" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str22) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str20) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -5009,7 +5009,7 @@ branch17:1  br label %._crit_edge1843280
 
 <Node id="305" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:0  %tmp_65 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str23)
+:0  %tmp_65 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str21)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_65"/></StgValue>
@@ -5105,7 +5105,7 @@ branch17:1  br label %._crit_edge1843280
 
 <Node id="311" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-:6  %empty_22 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str23, i32 %tmp_65)
+:6  %empty_22 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str21, i32 %tmp_65)
 
 ]]></Node>
 <StgValue><ssdm name="empty_22"/></StgValue>
@@ -6906,7 +6906,7 @@ arrayctor.loop10.preheader.preheader:64  br label %arrayctor.loop10.preheader
 
 <Node id="359" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:0  %tmp_80 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str24)
+:0  %tmp_80 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str22)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_80"/></StgValue>
@@ -7146,7 +7146,7 @@ arrayctor.loop10.preheader.preheader:64  br label %arrayctor.loop10.preheader
 
 <Node id="379" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-:20  %empty_23 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str24, i32 %tmp_80)
+:20  %empty_23 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str22, i32 %tmp_80)
 
 ]]></Node>
 <StgValue><ssdm name="empty_23"/></StgValue>
@@ -7897,7 +7897,7 @@ _ifconv:50  %Vweight_load_4 = load i16* %Vweight_addr_8, align 2
 
 <Node id="460" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-_ifconv:0  call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str26) nounwind
+_ifconv:0  call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str24) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -7912,7 +7912,7 @@ _ifconv:0  call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str26) nounwind
 
 <Node id="461" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-_ifconv:1  %tmp_72 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str26)
+_ifconv:1  %tmp_72 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str24)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_72"/></StgValue>
@@ -8426,7 +8426,7 @@ _ifconv:53  br label %.preheader1833
 
 <Node id="532" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str28) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str26) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -8442,7 +8442,7 @@ _ifconv:53  br label %.preheader1833
 
 <Node id="533" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:1  %tmp_98 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str28)
+:1  %tmp_98 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str26)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_98"/></StgValue>
@@ -16831,7 +16831,7 @@ _ZrsILi13ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit21:4  
 
 <Node id="1042" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-.preheader.preheader.0:6  %empty_24 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str28, i32 %tmp_98)
+.preheader.preheader.0:6  %empty_24 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str26, i32 %tmp_98)
 
 ]]></Node>
 <StgValue><ssdm name="empty_24"/></StgValue>
@@ -19571,7 +19571,7 @@ _ifconv1:6  %p_s_25 = select i1 %not_s, i16 %start_index_in_buffe, i16 %op2_assi
 
 <Node id="1072" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-_ifconv1:7  %empty_26 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str26, i32 %tmp_72)
+_ifconv1:7  %empty_26 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str24, i32 %tmp_72)
 
 ]]></Node>
 <StgValue><ssdm name="empty_26"/></StgValue>

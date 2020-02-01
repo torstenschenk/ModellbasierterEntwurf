@@ -23,6 +23,10 @@ vlib activehdl/axis_dwidth_converter_v1_1_17
 vlib activehdl/axi_vip_v1_1_4
 vlib activehdl/processing_system7_vip_v1_0_6
 vlib activehdl/proc_sys_reset_v5_0_13
+vlib activehdl/axi_protocol_converter_v2_1_18
+vlib activehdl/axi_clock_converter_v2_1_17
+vlib activehdl/blk_mem_gen_v8_4_2
+vlib activehdl/axi_dwidth_converter_v2_1_18
 
 vmap xilinx_vip activehdl/xilinx_vip
 vmap xil_defaultlib activehdl/xil_defaultlib
@@ -46,6 +50,10 @@ vmap axis_dwidth_converter_v1_1_17 activehdl/axis_dwidth_converter_v1_1_17
 vmap axi_vip_v1_1_4 activehdl/axi_vip_v1_1_4
 vmap processing_system7_vip_v1_0_6 activehdl/processing_system7_vip_v1_0_6
 vmap proc_sys_reset_v5_0_13 activehdl/proc_sys_reset_v5_0_13
+vmap axi_protocol_converter_v2_1_18 activehdl/axi_protocol_converter_v2_1_18
+vmap axi_clock_converter_v2_1_17 activehdl/axi_clock_converter_v2_1_17
+vmap blk_mem_gen_v8_4_2 activehdl/blk_mem_gen_v8_4_2
+vmap axi_dwidth_converter_v2_1_18 activehdl/axi_dwidth_converter_v2_1_18
 
 vlog -work xilinx_vip  -sv2k12 "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "C:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
@@ -147,11 +155,66 @@ vcom -work xil_defaultlib -93 \
 "../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_rst_ps7_0_100M_0/sim/resizer_rst_ps7_0_100M_0.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/ec67/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/8713/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/70cf/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"c:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/ip/resizer_resize_accel_0_0/resizer_resize_accel_0_0_sim_netlist.v" \
-"c:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_pc_0/resizer_auto_pc_0_sim_netlist.v" \
-"c:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_us_0/resizer_auto_us_0_sim_netlist.v" \
-"c:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_us_1/resizer_auto_us_1_sim_netlist.v" \
-"c:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_pc_1/resizer_auto_pc_1_sim_netlist.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/axis2xfMat.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/CoreProcessDownArea.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/fifo_w24_d2_A.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/fifo_w24_d150_A.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/Inverse.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/Inverse_xf_divisibkb.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_AXILiteS_s_axi.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mac_eOg.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mac_fYi.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mac_hbi.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mul_dEe.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mul_g8j.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mux_cud.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mux_Gfk.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mux_Hfu.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_sdivFfa.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_sremIfE.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_Loop_1_proc59.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_Loop_2_proc61.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/start_for_resize_KfY.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/start_for_resize_U0.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/start_for_xfMat2aLf8.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/start_for_xFresizJfO.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xfExtractPixels.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xfMat2axis.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFresize60.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownScal.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSEe0.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSibs.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSjbC.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSmb6.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSocq.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownStde.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSudo.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSvdy.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSwdI.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_resize_accel_0_0/sim/resizer_resize_accel_0_0.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/sim/resizer.v" \
+
+vlog -work axi_protocol_converter_v2_1_18  -v2k5 "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/ec67/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/8713/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/70cf/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/ec67/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/8713/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/70cf/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_pc_0/sim/resizer_auto_pc_0.v" \
+
+vlog -work axi_clock_converter_v2_1_17  -v2k5 "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/ec67/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/8713/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/70cf/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/693a/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
+
+vlog -work blk_mem_gen_v8_4_2  -v2k5 "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/ec67/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/8713/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/70cf/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/37c2/simulation/blk_mem_gen_v8_4.v" \
+
+vlog -work axi_dwidth_converter_v2_1_18  -v2k5 "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/ec67/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/8713/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/70cf/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0815/hdl/axi_dwidth_converter_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/ec67/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/8713/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ipshared/70cf/hdl" "+incdir+../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_us_0/sim/resizer_auto_us_0.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_us_1/sim/resizer_auto_us_1.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_pc_1/sim/resizer_auto_pc_1.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

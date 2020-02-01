@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 21
-set name resize_accel_mul_mul_16ns_8ns_24_1_1
+set name resize_accel_mul_dEe
 set corename simcore_mul
 set op mul
 set stage_num 1
@@ -77,7 +77,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 
 
 set id 51
-set name resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+set name resize_accel_mac_eOg
 set corename simcore_mac
 set op mac
 set stage_num 1
@@ -159,7 +159,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 
 
 set id 81
-set name resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+set name resize_accel_mac_fYi
 set corename simcore_mac
 set op mac
 set stage_num 1
@@ -241,7 +241,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 
 
 set id 96
-set name resize_accel_mul_mul_19ns_16ns_32_1_1
+set name resize_accel_mul_g8j
 set corename simcore_mul
 set op mul
 set stage_num 1
@@ -317,7 +317,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 
 
 set id 102
-set name resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1
+set name resize_accel_mac_hbi
 set corename simcore_mac
 set op mac
 set stage_num 1

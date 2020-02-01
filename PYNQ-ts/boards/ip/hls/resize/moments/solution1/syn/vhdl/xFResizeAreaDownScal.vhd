@@ -1693,7 +1693,7 @@ architecture behav of xFResizeAreaDownScal is
     end component;
 
 
-    component resize_accel_sdiv_32ns_32ns_32_36_seq_1 IS
+    component resize_accel_sdivFfa IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -1712,7 +1712,7 @@ architecture behav of xFResizeAreaDownScal is
     end component;
 
 
-    component resize_accel_mux_833_16_1_1 IS
+    component resize_accel_mux_Gfk IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -1740,7 +1740,7 @@ architecture behav of xFResizeAreaDownScal is
     end component;
 
 
-    component resize_accel_mux_813_16_1_1 IS
+    component resize_accel_mux_Hfu IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -1768,7 +1768,7 @@ architecture behav of xFResizeAreaDownScal is
     end component;
 
 
-    component resize_accel_srem_32s_10ns_32_36_1 IS
+    component resize_accel_sremIfE IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -1785,7 +1785,7 @@ architecture behav of xFResizeAreaDownScal is
     end component;
 
 
-    component xFResizeAreaDownScal_lbuf_in_0_V IS
+    component xFResizeAreaDownSibs IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -1801,7 +1801,7 @@ architecture behav of xFResizeAreaDownScal is
     end component;
 
 
-    component xFResizeAreaDownScal_lbuf_in_1_V IS
+    component xFResizeAreaDownSjbC IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -1819,7 +1819,7 @@ architecture behav of xFResizeAreaDownScal is
     end component;
 
 
-    component xFResizeAreaDownScal_lbuf_in_4_V IS
+    component xFResizeAreaDownSmb6 IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -1838,7 +1838,7 @@ architecture behav of xFResizeAreaDownScal is
     end component;
 
 
-    component xFResizeAreaDownScal_Hweight_0 IS
+    component xFResizeAreaDownSocq IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -1854,7 +1854,7 @@ architecture behav of xFResizeAreaDownScal is
     end component;
 
 
-    component xFResizeAreaDownScal_Vweight IS
+    component xFResizeAreaDownStde IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -1873,7 +1873,7 @@ architecture behav of xFResizeAreaDownScal is
     end component;
 
 
-    component xFResizeAreaDownScal_Hstart IS
+    component xFResizeAreaDownSudo IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -1889,7 +1889,7 @@ architecture behav of xFResizeAreaDownScal is
     end component;
 
 
-    component xFResizeAreaDownScal_Vstart IS
+    component xFResizeAreaDownSvdy IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -1905,7 +1905,7 @@ architecture behav of xFResizeAreaDownScal is
     end component;
 
 
-    component xFResizeAreaDownScal_Hreq_0 IS
+    component xFResizeAreaDownSwdI IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -1924,7 +1924,7 @@ architecture behav of xFResizeAreaDownScal is
     end component;
 
 
-    component xFResizeAreaDownScal_Vreq IS
+    component xFResizeAreaDownSEe0 IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -1942,7 +1942,7 @@ architecture behav of xFResizeAreaDownScal is
 
 
 begin
-    lbuf_in_0_V_U : component xFResizeAreaDownScal_lbuf_in_0_V
+    lbuf_in_0_V_U : component xFResizeAreaDownSibs
     generic map (
         DataWidth => 24,
         AddressRange => 640,
@@ -1956,7 +1956,7 @@ begin
         d0 => lbuf_in_1_V_q0,
         q0 => lbuf_in_0_V_q0);
 
-    lbuf_in_1_V_U : component xFResizeAreaDownScal_lbuf_in_1_V
+    lbuf_in_1_V_U : component xFResizeAreaDownSjbC
     generic map (
         DataWidth => 24,
         AddressRange => 640,
@@ -1972,7 +1972,7 @@ begin
         we1 => lbuf_in_1_V_we1,
         d1 => lbuf_in_2_V_q0);
 
-    lbuf_in_2_V_U : component xFResizeAreaDownScal_lbuf_in_1_V
+    lbuf_in_2_V_U : component xFResizeAreaDownSjbC
     generic map (
         DataWidth => 24,
         AddressRange => 640,
@@ -1988,7 +1988,7 @@ begin
         we1 => lbuf_in_2_V_we1,
         d1 => lbuf_in_3_V_q0);
 
-    lbuf_in_3_V_U : component xFResizeAreaDownScal_lbuf_in_1_V
+    lbuf_in_3_V_U : component xFResizeAreaDownSjbC
     generic map (
         DataWidth => 24,
         AddressRange => 640,
@@ -2004,7 +2004,7 @@ begin
         we1 => lbuf_in_3_V_we1,
         d1 => lbuf_in_4_V_q0);
 
-    lbuf_in_4_V_U : component xFResizeAreaDownScal_lbuf_in_4_V
+    lbuf_in_4_V_U : component xFResizeAreaDownSmb6
     generic map (
         DataWidth => 24,
         AddressRange => 640,
@@ -2021,7 +2021,7 @@ begin
         d1 => lbuf_in_4_V_d1,
         q1 => lbuf_in_4_V_q1);
 
-    lbuf_in_5_V_U : component xFResizeAreaDownScal_lbuf_in_0_V
+    lbuf_in_5_V_U : component xFResizeAreaDownSibs
     generic map (
         DataWidth => 24,
         AddressRange => 640,
@@ -2035,7 +2035,7 @@ begin
         d0 => stream_in_V_V_dout,
         q0 => lbuf_in_5_V_q0);
 
-    Hweight_0_U : component xFResizeAreaDownScal_Hweight_0
+    Hweight_0_U : component xFResizeAreaDownSocq
     generic map (
         DataWidth => 16,
         AddressRange => 640,
@@ -2049,7 +2049,7 @@ begin
         d0 => Hweight_0_d0,
         q0 => Hweight_0_q0);
 
-    Hweight_1_U : component xFResizeAreaDownScal_Hweight_0
+    Hweight_1_U : component xFResizeAreaDownSocq
     generic map (
         DataWidth => 16,
         AddressRange => 640,
@@ -2063,7 +2063,7 @@ begin
         d0 => Hweight_1_d0,
         q0 => Hweight_1_q0);
 
-    Hweight_2_U : component xFResizeAreaDownScal_Hweight_0
+    Hweight_2_U : component xFResizeAreaDownSocq
     generic map (
         DataWidth => 16,
         AddressRange => 640,
@@ -2077,7 +2077,7 @@ begin
         d0 => Hweight_2_d0,
         q0 => Hweight_2_q0);
 
-    Hweight_3_U : component xFResizeAreaDownScal_Hweight_0
+    Hweight_3_U : component xFResizeAreaDownSocq
     generic map (
         DataWidth => 16,
         AddressRange => 640,
@@ -2091,7 +2091,7 @@ begin
         d0 => Hweight_3_d0,
         q0 => Hweight_3_q0);
 
-    Hweight_4_U : component xFResizeAreaDownScal_Hweight_0
+    Hweight_4_U : component xFResizeAreaDownSocq
     generic map (
         DataWidth => 16,
         AddressRange => 640,
@@ -2105,7 +2105,7 @@ begin
         d0 => Hweight_4_d0,
         q0 => Hweight_4_q0);
 
-    Vweight_U : component xFResizeAreaDownScal_Vweight
+    Vweight_U : component xFResizeAreaDownStde
     generic map (
         DataWidth => 16,
         AddressRange => 720,
@@ -2122,7 +2122,7 @@ begin
         ce1 => Vweight_ce1,
         q1 => Vweight_q1);
 
-    Hstart_U : component xFResizeAreaDownScal_Hstart
+    Hstart_U : component xFResizeAreaDownSudo
     generic map (
         DataWidth => 14,
         AddressRange => 640,
@@ -2136,7 +2136,7 @@ begin
         d0 => Hstart_d0,
         q0 => Hstart_q0);
 
-    Vstart_U : component xFResizeAreaDownScal_Vstart
+    Vstart_U : component xFResizeAreaDownSvdy
     generic map (
         DataWidth => 13,
         AddressRange => 360,
@@ -2150,7 +2150,7 @@ begin
         d0 => Vstart_d0,
         q0 => Vstart_q0);
 
-    Hreq_0_U : component xFResizeAreaDownScal_Hreq_0
+    Hreq_0_U : component xFResizeAreaDownSwdI
     generic map (
         DataWidth => 16,
         AddressRange => 80,
@@ -2167,7 +2167,7 @@ begin
         ce1 => Hreq_0_ce1,
         q1 => Hreq_0_q1);
 
-    Hreq_1_U : component xFResizeAreaDownScal_Hreq_0
+    Hreq_1_U : component xFResizeAreaDownSwdI
     generic map (
         DataWidth => 16,
         AddressRange => 80,
@@ -2184,7 +2184,7 @@ begin
         ce1 => Hreq_1_ce1,
         q1 => Hreq_1_q1);
 
-    Hreq_2_U : component xFResizeAreaDownScal_Hreq_0
+    Hreq_2_U : component xFResizeAreaDownSwdI
     generic map (
         DataWidth => 16,
         AddressRange => 80,
@@ -2201,7 +2201,7 @@ begin
         ce1 => Hreq_2_ce1,
         q1 => Hreq_2_q1);
 
-    Hreq_3_U : component xFResizeAreaDownScal_Hreq_0
+    Hreq_3_U : component xFResizeAreaDownSwdI
     generic map (
         DataWidth => 16,
         AddressRange => 80,
@@ -2218,7 +2218,7 @@ begin
         ce1 => Hreq_3_ce1,
         q1 => Hreq_3_q1);
 
-    Hreq_4_U : component xFResizeAreaDownScal_Hreq_0
+    Hreq_4_U : component xFResizeAreaDownSwdI
     generic map (
         DataWidth => 16,
         AddressRange => 80,
@@ -2235,7 +2235,7 @@ begin
         ce1 => Hreq_4_ce1,
         q1 => Hreq_4_q1);
 
-    Hreq_5_U : component xFResizeAreaDownScal_Hreq_0
+    Hreq_5_U : component xFResizeAreaDownSwdI
     generic map (
         DataWidth => 16,
         AddressRange => 80,
@@ -2252,7 +2252,7 @@ begin
         ce1 => Hreq_5_ce1,
         q1 => Hreq_5_q1);
 
-    Hreq_6_U : component xFResizeAreaDownScal_Hreq_0
+    Hreq_6_U : component xFResizeAreaDownSwdI
     generic map (
         DataWidth => 16,
         AddressRange => 80,
@@ -2269,7 +2269,7 @@ begin
         ce1 => Hreq_6_ce1,
         q1 => Hreq_6_q1);
 
-    Hreq_7_U : component xFResizeAreaDownScal_Hreq_0
+    Hreq_7_U : component xFResizeAreaDownSwdI
     generic map (
         DataWidth => 16,
         AddressRange => 80,
@@ -2286,7 +2286,7 @@ begin
         ce1 => Hreq_7_ce1,
         q1 => Hreq_7_q1);
 
-    Vreq_U : component xFResizeAreaDownScal_Vreq
+    Vreq_U : component xFResizeAreaDownSEe0
     generic map (
         DataWidth => 16,
         AddressRange => 360,
@@ -2567,7 +2567,7 @@ begin
         ap_return_3 => call_ret14_xfExtractPixels_fu_1993_ap_return_3,
         ap_return_4 => call_ret14_xfExtractPixels_fu_1993_ap_return_4);
 
-    resize_accel_sdiv_32ns_32ns_32_36_seq_1_U151 : component resize_accel_sdiv_32ns_32ns_32_36_seq_1
+    resize_accel_sdivFfa_U151 : component resize_accel_sdivFfa
     generic map (
         ID => 1,
         NUM_STAGE => 36,
@@ -2584,7 +2584,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_3338_p2);
 
-    resize_accel_sdiv_32ns_32ns_32_36_seq_1_U152 : component resize_accel_sdiv_32ns_32ns_32_36_seq_1
+    resize_accel_sdivFfa_U152 : component resize_accel_sdivFfa
     generic map (
         ID => 1,
         NUM_STAGE => 36,
@@ -2601,7 +2601,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_3344_p2);
 
-    resize_accel_mux_833_16_1_1_U153 : component resize_accel_mux_833_16_1_1
+    resize_accel_mux_Gfk_U153 : component resize_accel_mux_Gfk
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -2627,7 +2627,7 @@ begin
         din8 => index_offset_fu_4152_p9,
         dout => index_offset_fu_4152_p10);
 
-    resize_accel_mux_813_16_1_1_U154 : component resize_accel_mux_813_16_1_1
+    resize_accel_mux_Hfu_U154 : component resize_accel_mux_Hfu
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -2653,7 +2653,7 @@ begin
         din8 => tmp_13_fu_4186_p9,
         dout => tmp_13_fu_4186_p10);
 
-    resize_accel_srem_32s_10ns_32_36_1_U155 : component resize_accel_srem_32s_10ns_32_36_1
+    resize_accel_sremIfE_U155 : component resize_accel_sremIfE
     generic map (
         ID => 1,
         NUM_STAGE => 36,
@@ -2668,7 +2668,7 @@ begin
         ce => grp_fu_4814_ce,
         dout => grp_fu_4814_p2);
 
-    resize_accel_sdiv_32ns_32ns_32_36_seq_1_U156 : component resize_accel_sdiv_32ns_32ns_32_36_seq_1
+    resize_accel_sdivFfa_U156 : component resize_accel_sdivFfa
     generic map (
         ID => 1,
         NUM_STAGE => 36,
@@ -2685,7 +2685,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_5028_p2);
 
-    resize_accel_sdiv_32ns_32ns_32_36_seq_1_U157 : component resize_accel_sdiv_32ns_32ns_32_36_seq_1
+    resize_accel_sdivFfa_U157 : component resize_accel_sdivFfa
     generic map (
         ID => 1,
         NUM_STAGE => 36,
@@ -2702,7 +2702,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_5033_p2);
 
-    resize_accel_sdiv_32ns_32ns_32_36_seq_1_U158 : component resize_accel_sdiv_32ns_32ns_32_36_seq_1
+    resize_accel_sdivFfa_U158 : component resize_accel_sdivFfa
     generic map (
         ID => 1,
         NUM_STAGE => 36,

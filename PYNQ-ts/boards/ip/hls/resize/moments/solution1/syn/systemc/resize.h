@@ -15,8 +15,8 @@
 #include "xFresize60.h"
 #include "resize_Loop_2_proc61.h"
 #include "fifo_w24_d2_A.h"
-#include "start_for_xFresize60_U0.h"
-#include "start_for_resize_Loop_2_proc61_U0.h"
+#include "start_for_xFresizJfO.h"
+#include "start_for_resize_KfY.h"
 
 namespace ap_rtl {
 
@@ -62,8 +62,8 @@ struct resize : public sc_module {
     resize_Loop_2_proc61* resize_Loop_2_proc61_U0;
     fifo_w24_d2_A* in_image_V_V_U;
     fifo_w24_d2_A* out_image_V_V_U;
-    start_for_xFresize60_U0* start_for_xFresize60_U0_U;
-    start_for_resize_Loop_2_proc61_U0* start_for_resize_Loop_2_proc61_U0_U;
+    start_for_xFresizJfO* start_for_xFresizJfO_U;
+    start_for_resize_KfY* start_for_resize_KfY_U;
     sc_signal< sc_logic > real_start;
     sc_signal< sc_logic > start_once_reg;
     sc_signal< sc_logic > internal_ap_ready;

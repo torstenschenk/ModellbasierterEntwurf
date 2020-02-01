@@ -42,7 +42,7 @@ set SCTraceOption all
 set TargetInfo xc7z020:clg400:-1
 set SourceFiles {sc {} c ../../xf_resize_accel.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile /home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/moments/solution1/solution1.directive
+set DirectiveFile C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/moments/solution1/solution1.directive
 set TBFiles {verilog ../../xf_resize_tb.cpp bc ../../xf_resize_tb.cpp vhdl ../../xf_resize_tb.cpp sc ../../xf_resize_tb.cpp cas ../../xf_resize_tb.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

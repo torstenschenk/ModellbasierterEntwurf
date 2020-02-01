@@ -824,7 +824,7 @@ architecture behav of CoreProcessDownArea is
     signal tmp_303_1_fu_1874_p10 : STD_LOGIC_VECTOR (23 downto 0);
     signal tmp_303_2_fu_1934_p10 : STD_LOGIC_VECTOR (23 downto 0);
 
-    component resize_accel_mul_mul_16ns_8ns_24_1_1 IS
+    component resize_accel_mul_dEe IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -838,7 +838,7 @@ architecture behav of CoreProcessDownArea is
     end component;
 
 
-    component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 IS
+    component resize_accel_mac_eOg IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -854,7 +854,7 @@ architecture behav of CoreProcessDownArea is
     end component;
 
 
-    component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 IS
+    component resize_accel_mac_fYi IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -870,7 +870,7 @@ architecture behav of CoreProcessDownArea is
     end component;
 
 
-    component resize_accel_mul_mul_19ns_16ns_32_1_1 IS
+    component resize_accel_mul_g8j IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -884,7 +884,7 @@ architecture behav of CoreProcessDownArea is
     end component;
 
 
-    component resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1 IS
+    component resize_accel_mac_hbi IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -902,7 +902,7 @@ architecture behav of CoreProcessDownArea is
 
 
 begin
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U21 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U21 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -914,7 +914,7 @@ begin
         din1 => tmp_122_fu_1760_p1,
         dout => tmp_122_fu_1760_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U22 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U22 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -926,7 +926,7 @@ begin
         din1 => tmp_123_fu_1766_p1,
         dout => tmp_123_fu_1766_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U23 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U23 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -938,7 +938,7 @@ begin
         din1 => tmp_132_fu_1772_p1,
         dout => tmp_132_fu_1772_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U24 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U24 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -950,7 +950,7 @@ begin
         din1 => tmp_133_fu_1778_p1,
         dout => tmp_133_fu_1778_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U25 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U25 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -962,7 +962,7 @@ begin
         din1 => tmp_142_fu_1784_p1,
         dout => tmp_142_fu_1784_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U26 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U26 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -974,7 +974,7 @@ begin
         din1 => tmp_143_fu_1790_p1,
         dout => tmp_143_fu_1790_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U27 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U27 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -986,7 +986,7 @@ begin
         din1 => tmp_152_fu_1796_p1,
         dout => tmp_152_fu_1796_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U28 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U28 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -998,7 +998,7 @@ begin
         din1 => tmp_153_fu_1802_p1,
         dout => tmp_153_fu_1802_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U29 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U29 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1010,7 +1010,7 @@ begin
         din1 => tmp_162_fu_1808_p1,
         dout => tmp_162_fu_1808_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U30 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U30 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1022,7 +1022,7 @@ begin
         din1 => tmp_163_fu_1814_p1,
         dout => tmp_163_fu_1814_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U31 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U31 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1034,7 +1034,7 @@ begin
         din1 => tmp_234_1_fu_1820_p1,
         dout => tmp_234_1_fu_1820_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U32 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U32 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1046,7 +1046,7 @@ begin
         din1 => tmp_237_1_fu_1826_p1,
         dout => tmp_237_1_fu_1826_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U33 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U33 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1058,7 +1058,7 @@ begin
         din1 => tmp_253_1_fu_1832_p1,
         dout => tmp_253_1_fu_1832_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U34 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U34 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1070,7 +1070,7 @@ begin
         din1 => tmp_255_1_fu_1838_p1,
         dout => tmp_255_1_fu_1838_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U35 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U35 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1082,7 +1082,7 @@ begin
         din1 => tmp_269_1_fu_1844_p1,
         dout => tmp_269_1_fu_1844_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U36 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U36 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1094,7 +1094,7 @@ begin
         din1 => tmp_271_1_fu_1850_p1,
         dout => tmp_271_1_fu_1850_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U37 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U37 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1106,7 +1106,7 @@ begin
         din1 => tmp_285_1_fu_1856_p1,
         dout => tmp_285_1_fu_1856_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U38 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U38 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1118,7 +1118,7 @@ begin
         din1 => tmp_287_1_fu_1862_p1,
         dout => tmp_287_1_fu_1862_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U39 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U39 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1130,7 +1130,7 @@ begin
         din1 => tmp_301_1_fu_1868_p1,
         dout => tmp_301_1_fu_1868_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U40 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U40 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1142,7 +1142,7 @@ begin
         din1 => tmp_303_1_fu_1874_p1,
         dout => tmp_303_1_fu_1874_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U41 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U41 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1154,7 +1154,7 @@ begin
         din1 => tmp_234_2_fu_1880_p1,
         dout => tmp_234_2_fu_1880_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U42 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U42 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1166,7 +1166,7 @@ begin
         din1 => tmp_237_2_fu_1886_p1,
         dout => tmp_237_2_fu_1886_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U43 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U43 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1178,7 +1178,7 @@ begin
         din1 => tmp_253_2_fu_1892_p1,
         dout => tmp_253_2_fu_1892_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U44 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U44 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1190,7 +1190,7 @@ begin
         din1 => tmp_255_2_fu_1898_p1,
         dout => tmp_255_2_fu_1898_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U45 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U45 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1202,7 +1202,7 @@ begin
         din1 => tmp_269_2_fu_1904_p1,
         dout => tmp_269_2_fu_1904_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U46 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U46 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1214,7 +1214,7 @@ begin
         din1 => tmp_271_2_fu_1910_p1,
         dout => tmp_271_2_fu_1910_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U47 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U47 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1226,7 +1226,7 @@ begin
         din1 => tmp_285_2_fu_1916_p1,
         dout => tmp_285_2_fu_1916_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U48 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U48 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1238,7 +1238,7 @@ begin
         din1 => tmp_287_2_fu_1922_p1,
         dout => tmp_287_2_fu_1922_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U49 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U49 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1250,7 +1250,7 @@ begin
         din1 => tmp_301_2_fu_1928_p1,
         dout => tmp_301_2_fu_1928_p2);
 
-    resize_accel_mul_mul_16ns_8ns_24_1_1_U50 : component resize_accel_mul_mul_16ns_8ns_24_1_1
+    resize_accel_mul_dEe_U50 : component resize_accel_mul_dEe
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1262,7 +1262,7 @@ begin
         din1 => tmp_303_2_fu_1934_p1,
         dout => tmp_303_2_fu_1934_p2);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U51 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U51 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1276,7 +1276,7 @@ begin
         din2 => grp_fu_1940_p2,
         dout => grp_fu_1940_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U52 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U52 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1290,7 +1290,7 @@ begin
         din2 => grp_fu_1949_p2,
         dout => grp_fu_1949_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U53 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U53 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1304,7 +1304,7 @@ begin
         din2 => grp_fu_1958_p2,
         dout => grp_fu_1958_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U54 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U54 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1318,7 +1318,7 @@ begin
         din2 => grp_fu_1967_p2,
         dout => grp_fu_1967_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U55 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U55 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1332,7 +1332,7 @@ begin
         din2 => grp_fu_1976_p2,
         dout => grp_fu_1976_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U56 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U56 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1346,7 +1346,7 @@ begin
         din2 => grp_fu_1985_p2,
         dout => grp_fu_1985_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U57 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U57 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1360,7 +1360,7 @@ begin
         din2 => grp_fu_1994_p2,
         dout => grp_fu_1994_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U58 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U58 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1374,7 +1374,7 @@ begin
         din2 => grp_fu_2003_p2,
         dout => grp_fu_2003_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U59 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U59 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1388,7 +1388,7 @@ begin
         din2 => grp_fu_2012_p2,
         dout => grp_fu_2012_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U60 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U60 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1402,7 +1402,7 @@ begin
         din2 => grp_fu_2021_p2,
         dout => grp_fu_2021_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U61 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U61 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1416,7 +1416,7 @@ begin
         din2 => grp_fu_2030_p2,
         dout => grp_fu_2030_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U62 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U62 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1430,7 +1430,7 @@ begin
         din2 => grp_fu_2039_p2,
         dout => grp_fu_2039_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U63 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U63 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1444,7 +1444,7 @@ begin
         din2 => grp_fu_2048_p2,
         dout => grp_fu_2048_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U64 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U64 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1458,7 +1458,7 @@ begin
         din2 => grp_fu_2057_p2,
         dout => grp_fu_2057_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U65 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U65 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1472,7 +1472,7 @@ begin
         din2 => grp_fu_2066_p2,
         dout => grp_fu_2066_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U66 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U66 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1486,7 +1486,7 @@ begin
         din2 => grp_fu_2075_p2,
         dout => grp_fu_2075_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U67 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U67 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1500,7 +1500,7 @@ begin
         din2 => grp_fu_2084_p2,
         dout => grp_fu_2084_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U68 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U68 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1514,7 +1514,7 @@ begin
         din2 => grp_fu_2093_p2,
         dout => grp_fu_2093_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U69 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U69 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1528,7 +1528,7 @@ begin
         din2 => grp_fu_2102_p2,
         dout => grp_fu_2102_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U70 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U70 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1542,7 +1542,7 @@ begin
         din2 => grp_fu_2111_p2,
         dout => grp_fu_2111_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U71 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U71 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1556,7 +1556,7 @@ begin
         din2 => grp_fu_2120_p2,
         dout => grp_fu_2120_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U72 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U72 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1570,7 +1570,7 @@ begin
         din2 => grp_fu_2129_p2,
         dout => grp_fu_2129_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U73 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U73 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1584,7 +1584,7 @@ begin
         din2 => grp_fu_2138_p2,
         dout => grp_fu_2138_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U74 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U74 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1598,7 +1598,7 @@ begin
         din2 => grp_fu_2147_p2,
         dout => grp_fu_2147_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U75 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U75 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1612,7 +1612,7 @@ begin
         din2 => grp_fu_2156_p2,
         dout => grp_fu_2156_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U76 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U76 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1626,7 +1626,7 @@ begin
         din2 => grp_fu_2165_p2,
         dout => grp_fu_2165_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U77 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U77 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1640,7 +1640,7 @@ begin
         din2 => grp_fu_2174_p2,
         dout => grp_fu_2174_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U78 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U78 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1654,7 +1654,7 @@ begin
         din2 => grp_fu_2183_p2,
         dout => grp_fu_2183_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U79 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U79 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1668,7 +1668,7 @@ begin
         din2 => grp_fu_2192_p2,
         dout => grp_fu_2192_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U80 : component resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1
+    resize_accel_mac_eOg_U80 : component resize_accel_mac_eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1682,7 +1682,7 @@ begin
         din2 => grp_fu_2201_p2,
         dout => grp_fu_2201_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U81 : component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+    resize_accel_mac_fYi_U81 : component resize_accel_mac_fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1696,7 +1696,7 @@ begin
         din2 => grp_fu_2210_p2,
         dout => grp_fu_2210_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U82 : component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+    resize_accel_mac_fYi_U82 : component resize_accel_mac_fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1710,7 +1710,7 @@ begin
         din2 => grp_fu_2219_p2,
         dout => grp_fu_2219_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U83 : component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+    resize_accel_mac_fYi_U83 : component resize_accel_mac_fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1724,7 +1724,7 @@ begin
         din2 => grp_fu_2228_p2,
         dout => grp_fu_2228_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U84 : component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+    resize_accel_mac_fYi_U84 : component resize_accel_mac_fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1738,7 +1738,7 @@ begin
         din2 => grp_fu_2237_p2,
         dout => grp_fu_2237_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U85 : component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+    resize_accel_mac_fYi_U85 : component resize_accel_mac_fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1752,7 +1752,7 @@ begin
         din2 => grp_fu_2246_p2,
         dout => grp_fu_2246_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U86 : component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+    resize_accel_mac_fYi_U86 : component resize_accel_mac_fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1766,7 +1766,7 @@ begin
         din2 => grp_fu_2255_p2,
         dout => grp_fu_2255_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U87 : component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+    resize_accel_mac_fYi_U87 : component resize_accel_mac_fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1780,7 +1780,7 @@ begin
         din2 => grp_fu_2264_p2,
         dout => grp_fu_2264_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U88 : component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+    resize_accel_mac_fYi_U88 : component resize_accel_mac_fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1794,7 +1794,7 @@ begin
         din2 => grp_fu_2273_p2,
         dout => grp_fu_2273_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U89 : component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+    resize_accel_mac_fYi_U89 : component resize_accel_mac_fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1808,7 +1808,7 @@ begin
         din2 => grp_fu_2282_p2,
         dout => grp_fu_2282_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U90 : component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+    resize_accel_mac_fYi_U90 : component resize_accel_mac_fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1822,7 +1822,7 @@ begin
         din2 => grp_fu_2291_p2,
         dout => grp_fu_2291_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U91 : component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+    resize_accel_mac_fYi_U91 : component resize_accel_mac_fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1836,7 +1836,7 @@ begin
         din2 => grp_fu_2300_p2,
         dout => grp_fu_2300_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U92 : component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+    resize_accel_mac_fYi_U92 : component resize_accel_mac_fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1850,7 +1850,7 @@ begin
         din2 => grp_fu_2309_p2,
         dout => grp_fu_2309_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U93 : component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+    resize_accel_mac_fYi_U93 : component resize_accel_mac_fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1864,7 +1864,7 @@ begin
         din2 => grp_fu_2318_p2,
         dout => grp_fu_2318_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U94 : component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+    resize_accel_mac_fYi_U94 : component resize_accel_mac_fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1878,7 +1878,7 @@ begin
         din2 => grp_fu_2327_p2,
         dout => grp_fu_2327_p3);
 
-    resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U95 : component resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1
+    resize_accel_mac_fYi_U95 : component resize_accel_mac_fYi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1892,7 +1892,7 @@ begin
         din2 => grp_fu_2336_p2,
         dout => grp_fu_2336_p3);
 
-    resize_accel_mul_mul_19ns_16ns_32_1_1_U96 : component resize_accel_mul_mul_19ns_16ns_32_1_1
+    resize_accel_mul_g8j_U96 : component resize_accel_mul_g8j
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1904,7 +1904,7 @@ begin
         din1 => tmp_140_fu_2345_p1,
         dout => tmp_140_fu_2345_p2);
 
-    resize_accel_mul_mul_19ns_16ns_32_1_1_U97 : component resize_accel_mul_mul_19ns_16ns_32_1_1
+    resize_accel_mul_g8j_U97 : component resize_accel_mul_g8j
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1916,7 +1916,7 @@ begin
         din1 => tmp_160_fu_2351_p1,
         dout => tmp_160_fu_2351_p2);
 
-    resize_accel_mul_mul_19ns_16ns_32_1_1_U98 : component resize_accel_mul_mul_19ns_16ns_32_1_1
+    resize_accel_mul_g8j_U98 : component resize_accel_mul_g8j
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1928,7 +1928,7 @@ begin
         din1 => tmp_265_1_fu_2357_p1,
         dout => tmp_265_1_fu_2357_p2);
 
-    resize_accel_mul_mul_19ns_16ns_32_1_1_U99 : component resize_accel_mul_mul_19ns_16ns_32_1_1
+    resize_accel_mul_g8j_U99 : component resize_accel_mul_g8j
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1940,7 +1940,7 @@ begin
         din1 => tmp_297_1_fu_2363_p1,
         dout => tmp_297_1_fu_2363_p2);
 
-    resize_accel_mul_mul_19ns_16ns_32_1_1_U100 : component resize_accel_mul_mul_19ns_16ns_32_1_1
+    resize_accel_mul_g8j_U100 : component resize_accel_mul_g8j
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1952,7 +1952,7 @@ begin
         din1 => tmp_265_2_fu_2369_p1,
         dout => tmp_265_2_fu_2369_p2);
 
-    resize_accel_mul_mul_19ns_16ns_32_1_1_U101 : component resize_accel_mul_mul_19ns_16ns_32_1_1
+    resize_accel_mul_g8j_U101 : component resize_accel_mul_g8j
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1964,7 +1964,7 @@ begin
         din1 => tmp_297_2_fu_2375_p1,
         dout => tmp_297_2_fu_2375_p2);
 
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U102 : component resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1
+    resize_accel_mac_hbi_U102 : component resize_accel_mac_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1978,7 +1978,7 @@ begin
         din2 => tmp_140_reg_3012,
         dout => grp_fu_2381_p3);
 
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U103 : component resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1
+    resize_accel_mac_hbi_U103 : component resize_accel_mac_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1992,7 +1992,7 @@ begin
         din2 => grp_fu_2395_p3,
         dout => grp_fu_2388_p3);
 
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U104 : component resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1
+    resize_accel_mac_hbi_U104 : component resize_accel_mac_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -2006,7 +2006,7 @@ begin
         din2 => tmp_160_reg_3017,
         dout => grp_fu_2395_p3);
 
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U105 : component resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1
+    resize_accel_mac_hbi_U105 : component resize_accel_mac_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -2020,7 +2020,7 @@ begin
         din2 => tmp_265_1_reg_3022,
         dout => grp_fu_2403_p3);
 
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U106 : component resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1
+    resize_accel_mac_hbi_U106 : component resize_accel_mac_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -2034,7 +2034,7 @@ begin
         din2 => grp_fu_2417_p3,
         dout => grp_fu_2410_p3);
 
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U107 : component resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1
+    resize_accel_mac_hbi_U107 : component resize_accel_mac_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -2048,7 +2048,7 @@ begin
         din2 => tmp_297_1_reg_3027,
         dout => grp_fu_2417_p3);
 
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U108 : component resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1
+    resize_accel_mac_hbi_U108 : component resize_accel_mac_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -2062,7 +2062,7 @@ begin
         din2 => tmp_265_2_reg_3032,
         dout => grp_fu_2425_p3);
 
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U109 : component resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1
+    resize_accel_mac_hbi_U109 : component resize_accel_mac_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -2076,7 +2076,7 @@ begin
         din2 => grp_fu_2439_p3,
         dout => grp_fu_2432_p3);
 
-    resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U110 : component resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1
+    resize_accel_mac_hbi_U110 : component resize_accel_mac_hbi
     generic map (
         ID => 1,
         NUM_STAGE => 1,

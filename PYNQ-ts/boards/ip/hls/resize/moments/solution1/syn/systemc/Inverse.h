@@ -11,7 +11,7 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "Inverse_xf_division_lut.h"
+#include "Inverse_xf_divisibkb.h"
 
 namespace ap_rtl {
 
@@ -37,7 +37,7 @@ struct Inverse : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    Inverse_xf_division_lut* xf_division_lut_U;
+    Inverse_xf_divisibkb* xf_division_lut_U;
     sc_signal< sc_lv<8> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
     sc_signal< sc_lv<12> > xf_division_lut_address0;

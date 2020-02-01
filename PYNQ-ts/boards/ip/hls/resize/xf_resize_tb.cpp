@@ -38,16 +38,8 @@ int main(int argc,char **argv){
 
 	cv::Mat img, result, result_ocv,error;
 
-//	if(argc != 2){
-//		printf("Usage : <executable> <input image> \n");
-//		return -1;
-//	}
-#if GRAY
-	img = cv::imread(argv[1],0);
-#endif
-#if RGBA
-	img = cv::imread("Block0.png",1);
-#endif
+	// get size
+	img = cv::imread("pics_simu_hls/Block0.png",1);
 	if(!img.data){
 		printf("Image not valid!\n");
 		return -1;
@@ -64,47 +56,58 @@ int main(int argc,char **argv){
 	result_ocv.create(cv::Size(newwidth, newheight), img.type());
 	error.create(cv::Size(newwidth, newheight), img.type());
 
-
 	xf::Mat<TYPE, HEIGHT, WIDTH, NPC1> imgInput(height, width);
 	xf::Mat<TYPE, HEIGHT, WIDTH, NPC1> imgOutput(newheight, newwidth);
 
-
-	imgInput.copyTo(img.data);
-	
 	axis_t *input = new axis_t [height*width];
 	axis_t *output = new axis_t [newheight*newwidth];
 	
-	// Store data in axis
-	for (int ind=0; ind<(height*width); ind++) {
-		input[ind].data = imgInput.data[ind];
+	std::string name = "pics_simu_hls/Block";
+	std::string ext = ".png";
+	std::string imgname;
+	char numstr[21]; // enough to hold all numbers up to 64-bits
+
+	for (int i = 0; i < 16; ++i) {
+		// format string and load all 16 images
+		sprintf(numstr, "%d", i);
+		imgname = name + numstr + ext;
+
+		img = cv::imread(imgname,1);
+		if(!img.data){
+			printf("Image not valid, %s\n",imgname);
+			return -1;
+		}
+
+		imgInput.copyTo(img.data);
+		// Store data in axis
+		for (int ind=0; ind<(height*width); ind++) {
+			input[ind].data = imgInput.data[ind];
+		}
+		int inval=0, xc_out=0, yc_out=0, anglexcomp=0, angleycomp=0;
+
+		// call ip core
+		resize_accel(input, output, inval, &xc_out, &yc_out, &anglexcomp, &angleycomp);
+
+		// copy data from axis
+		//for (int ind=0; ind<(newheight*newwidth); ind++) {
+		//	imgOutput.data[ind] = output[ind].data;
+		//}
+
+		double angle = 0.5 * atan2(angleycomp,anglexcomp);
+		double angle_deg = 180.0* angle/3.14159;
+		//printf("angleRAD %.3f angleDEG %.3f\n",angle, 180*angle/3.14159);
+
+		//printf("Center X %d Center Y %d, xcomp %d ycomp %d\n",xc_out, yc_out, anglexcomp, angleycomp);
+		//printf("Center X %d, Center Y %d, Angle tan2 %.2f\n",xc_out, yc_out, angle_deg);
+		fprintf(fp,"xcomp %d ycomp %d\n",anglexcomp, angleycomp);
+		fprintf(fp,"Center X %d, Center Y %d, Angle tan2 %.2f\n",xc_out, yc_out, angle_deg);
 	}
-	int inval=0, xc_out=0, yc_out=0, anglexcomp=0, angleycomp=0;
-
-	// call ip core
-	resize_accel(input, output, inval, &xc_out, &yc_out, &anglexcomp, &angleycomp);
 	
-	// copy data from axis
-	//for (int ind=0; ind<(newheight*newwidth); ind++) {
-	//	imgOutput.data[ind] = output[ind].data;
-	//}
-	
-	double angle = 0.5 * atan2(angleycomp,anglexcomp);
-	double angle_deg = 180.0* angle/3.14159;
-	//printf("angleRAD %.3f angleDEG %.3f\n",angle, 180*angle/3.14159);
-
-	//printf("Center X %d Center Y %d, xcomp %d ycomp %d\n",xc_out, yc_out, anglexcomp, angleycomp);
-	//printf("Center X %d, Center Y %d, Angle tan2 %.2f\n",xc_out, yc_out, angle_deg);
-	fprintf(fp,"Center X %d, Center Y %d, Angle tan2 %.2f\n",xc_out, yc_out, angle_deg);
-
-
 	delete[] input;
 	delete[] output;
 
 	#if 0
 		result.data = imgOutput.copyFrom();
-
-	
-		/*OpenCV resize function*/
 		cv::resize(img,result_ocv,cv::Size(newwidth, newheight),0,0,CV_INTER_LINEAR);
 
 		cv::absdiff(result,result_ocv,error);

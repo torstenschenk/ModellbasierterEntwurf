@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Jan 14 00:07:07 2020
-# Process ID: 9028
+# Start of session at: Sat Feb  1 00:12:52 2020
+# Process ID: 8292
 # Current directory: C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1
 # Command line: vivado.exe -log resizer_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source resizer_wrapper.tcl
 # Log file: C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/resizer_wrapper.vds
@@ -15,20 +15,20 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Misca/beuth_ws1920/M
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is c:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.cache/ip 
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 302.211 ; gain = 26.211
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 302.137 ; gain = 25.438
 Command: synth_design -top resizer_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2536 
+INFO: Helper process launched with PID 9860 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 417.035 ; gain = 107.426
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 416.496 ; gain = 107.230
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'resizer_wrapper' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/hdl/resizer_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'resizer' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:675]
-INFO: [Synth 8-6157] synthesizing module 'resizer_axi_dma_0_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_axi_dma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'resizer_axi_dma_0_0' (1#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'resizer_axi_dma_0_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'resizer_axi_dma_0_0' (1#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_axi_dma_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'axi_dma_0' of module 'resizer_axi_dma_0_0' requires 64 connections, but only 59 given [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:901]
 INFO: [Synth 8-6157] synthesizing module 'resizer_axi_interconnect_0_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:1283]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_TUHLEE' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:417]
@@ -36,30 +36,30 @@ INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_TUHLEE' (2#1) [C
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1TJHPSL' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:542]
 INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1TJHPSL' (3#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:542]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1TO5R7U' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:2446]
-INFO: [Synth 8-6157] synthesizing module 'resizer_auto_pc_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'resizer_auto_pc_0' (4#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'resizer_auto_pc_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'resizer_auto_pc_0' (4#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1TO5R7U' (5#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:2446]
-INFO: [Synth 8-6157] synthesizing module 'resizer_xbar_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'resizer_xbar_0' (6#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'resizer_xbar_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'resizer_xbar_0' (6#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_xbar_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'xbar' of module 'resizer_xbar_0' requires 40 connections, but only 38 given [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:1793]
 INFO: [Synth 8-6155] done synthesizing module 'resizer_axi_interconnect_0_0' (7#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:1283]
 INFO: [Synth 8-6157] synthesizing module 'resizer_axi_interconnect_1_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:1834]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1VS6YA0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:12]
-INFO: [Synth 8-6157] synthesizing module 'resizer_auto_pc_1' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'resizer_auto_pc_1' (8#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'resizer_auto_pc_1' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'resizer_auto_pc_1' (8#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_auto_pc_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1VS6YA0' (9#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:12]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_W18PZO' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:2751]
-INFO: [Synth 8-6157] synthesizing module 'resizer_auto_us_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_auto_us_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'resizer_auto_us_0' (10#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_auto_us_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'resizer_auto_us_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'resizer_auto_us_0' (10#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_auto_us_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'auto_us' of module 'resizer_auto_us_0' requires 34 connections, but only 33 given [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:2878]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_W18PZO' (11#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:2751]
 INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1VXGRTJ' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:2914]
-INFO: [Synth 8-6157] synthesizing module 'resizer_auto_us_1' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_auto_us_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'resizer_auto_us_1' (12#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_auto_us_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'resizer_auto_us_1' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_auto_us_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'resizer_auto_us_1' (12#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_auto_us_1_stub.v:6]
 WARNING: [Synth 8-350] instance 'auto_us' of module 'resizer_auto_us_1' requires 40 connections, but only 39 given [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:3065]
 INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1VXGRTJ' (13#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:2914]
-INFO: [Synth 8-6157] synthesizing module 'resizer_xbar_1' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_xbar_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'resizer_xbar_1' (14#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_xbar_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'resizer_xbar_1' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'resizer_xbar_1' (14#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_xbar_1_stub.v:6]
 WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'resizer_xbar_1' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:2417]
 WARNING: [Synth 8-689] width (64) of port connection 's_axi_rdata' does not match port width (128) of module 'resizer_xbar_1' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:2434]
 WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'resizer_xbar_1' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:2435]
@@ -67,19 +67,19 @@ WARNING: [Synth 8-689] width (2) of port connection 's_axi_rresp' does not match
 WARNING: [Synth 8-689] width (1) of port connection 's_axi_rvalid' does not match port width (2) of module 'resizer_xbar_1' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:2438]
 WARNING: [Synth 8-350] instance 'xbar' of module 'resizer_xbar_1' requires 78 connections, but only 76 given [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:2367]
 INFO: [Synth 8-6155] done synthesizing module 'resizer_axi_interconnect_1_0' (15#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:1834]
-INFO: [Synth 8-6157] synthesizing module 'resizer_axis_dwidth_converter_0_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_axis_dwidth_converter_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'resizer_axis_dwidth_converter_0_0' (16#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_axis_dwidth_converter_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'resizer_axis_dwidth_converter_0_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_axis_dwidth_converter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'resizer_axis_dwidth_converter_0_0' (16#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_axis_dwidth_converter_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'axis_dwidth_converter_0' of module 'resizer_axis_dwidth_converter_0_0' requires 12 connections, but only 11 given [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:1117]
-INFO: [Synth 8-6157] synthesizing module 'resizer_axis_dwidth_converter_1_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_axis_dwidth_converter_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'resizer_axis_dwidth_converter_1_0' (17#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_axis_dwidth_converter_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'resizer_resize_accel_0_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_resize_accel_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'resizer_resize_accel_0_0' (18#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_resize_accel_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'resizer_axis_dwidth_converter_1_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_axis_dwidth_converter_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'resizer_axis_dwidth_converter_1_0' (17#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_axis_dwidth_converter_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'resizer_resize_accel_0_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_resize_accel_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'resizer_resize_accel_0_0' (18#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_resize_accel_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'moments_0' of module 'resizer_resize_accel_0_0' requires 28 connections, but only 27 given [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:1141]
-INFO: [Synth 8-6157] synthesizing module 'resizer_processing_system7_0_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'resizer_processing_system7_0_0' (19#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'resizer_processing_system7_0_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'resizer_processing_system7_0_0' (19#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'resizer_processing_system7_0_0' requires 107 connections, but only 103 given [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:1169]
-INFO: [Synth 8-6157] synthesizing module 'resizer_rst_ps7_0_100M_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'resizer_rst_ps7_0_100M_0' (20#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-9028-alienware/realtime/resizer_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'resizer_rst_ps7_0_100M_0' [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'resizer_rst_ps7_0_100M_0' (20#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/.Xil/Vivado-8292-alienware/realtime/resizer_rst_ps7_0_100M_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'resizer_rst_ps7_0_100M_0' requires 10 connections, but only 7 given [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:1273]
 INFO: [Synth 8-6155] done synthesizing module 'resizer' (21#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/synth/resizer.v:675]
 INFO: [Synth 8-6155] done synthesizing module 'resizer_wrapper' (22#1) [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/hdl/resizer_wrapper.v:12]
@@ -110,7 +110,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_TUHLEE has unconnected port M_AR
 WARNING: [Synth 8-3331] design m00_couplers_imp_TUHLEE has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_TUHLEE has unconnected port S_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 474.336 ; gain = 164.727
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 473.945 ; gain = 164.680
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -123,10 +123,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 474.336 ; gain = 164.727
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 473.945 ; gain = 164.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 474.336 ; gain = 164.727
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 473.945 ; gain = 164.680
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -161,21 +161,21 @@ Parsing XDC File [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boa
 Finished Parsing XDC File [C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 795.977 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 796.406 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 795.977 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 795.977 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 796.406 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 796.406 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 795.977 ; gain = 486.367
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 796.406 ; gain = 487.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 795.977 ; gain = 486.367
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 796.406 ; gain = 487.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -456,10 +456,10 @@ Applied set_property DONT_TOUCH = true for resizer_i/axi_interconnect_1/s00_coup
 Applied set_property DONT_TOUCH = true for resizer_i/axi_interconnect_1/s01_couplers/auto_us. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for resizer_i/axi_interconnect_1/m00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 795.977 ; gain = 486.367
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 796.406 ; gain = 487.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 795.977 ; gain = 486.367
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 796.406 ; gain = 487.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -511,7 +511,7 @@ WARNING: [Synth 8-3331] design resizer_axi_interconnect_0_0 has unconnected port
 WARNING: [Synth 8-3331] design resizer_axi_interconnect_0_0 has unconnected port M01_ACLK
 WARNING: [Synth 8-3331] design resizer_axi_interconnect_0_0 has unconnected port M01_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 795.977 ; gain = 486.367
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 796.406 ; gain = 487.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -525,13 +525,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'resizer_i/processing_system7_0/FCLK_CLK0' to pin 'resizer_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 814.387 ; gain = 504.777
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 814.781 ; gain = 505.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 814.613 ; gain = 505.004
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 815.152 ; gain = 505.887
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -543,7 +543,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 824.418 ; gain = 514.809
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 824.961 ; gain = 515.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -567,7 +567,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 824.418 ; gain = 514.809
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 824.961 ; gain = 515.695
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -580,7 +580,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 824.418 ; gain = 514.809
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 824.961 ; gain = 515.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -592,25 +592,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 824.418 ; gain = 514.809
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 824.961 ; gain = 515.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 824.418 ; gain = 514.809
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 824.961 ; gain = 515.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 824.418 ; gain = 514.809
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 824.961 ; gain = 515.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 824.418 ; gain = 514.809
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 824.961 ; gain = 515.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -666,25 +666,25 @@ Report Instance Areas:
 |8     |      s01_couplers     |s01_couplers_imp_1VXGRTJ     |   142|
 +------+-----------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 824.418 ; gain = 514.809
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 824.961 ; gain = 515.695
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 824.418 ; gain = 193.168
-Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 824.418 ; gain = 514.809
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 824.961 ; gain = 193.234
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 824.961 ; gain = 515.695
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 838.250 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 841.352 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 58 Infos, 57 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 842.824 ; gain = 540.613
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 842.824 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 845.926 ; gain = 543.789
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 845.926 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.runs/synth_1/resizer_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file resizer_wrapper_utilization_synth.rpt -pb resizer_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 14 00:08:11 2020...
+INFO: [Common 17-206] Exiting Vivado at Sat Feb  1 00:14:00 2020...

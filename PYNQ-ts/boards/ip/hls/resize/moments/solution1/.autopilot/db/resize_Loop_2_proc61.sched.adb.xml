@@ -182,7 +182,7 @@ newFuncRoot:2  br label %0
 
 <Node id="13" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:0  %tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str13)
+:0  %tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str11)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_3"/></StgValue>
@@ -311,7 +311,7 @@ newFuncRoot:2  br label %0
 
 <Node id="22" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:0  %tmp_8 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str14)
+:0  %tmp_8 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str12)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_8"/></StgValue>
@@ -375,7 +375,7 @@ newFuncRoot:2  br label %0
 
 <Node id="26" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-:4  %empty_30 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str14, i32 %tmp_8)
+:4  %empty_30 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str12, i32 %tmp_8)
 
 ]]></Node>
 <StgValue><ssdm name="empty_30"/></StgValue>
@@ -409,7 +409,7 @@ newFuncRoot:2  br label %0
 
 <Node id="29" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-:0  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str13, i32 %tmp_3)
+:0  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str11, i32 %tmp_3)
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>

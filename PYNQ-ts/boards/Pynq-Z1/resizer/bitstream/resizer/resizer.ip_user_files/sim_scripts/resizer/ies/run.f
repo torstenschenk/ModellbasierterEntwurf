@@ -98,11 +98,66 @@
   "../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_rst_ps7_0_100M_0/sim/resizer_rst_ps7_0_100M_0.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "c:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/ip/resizer_resize_accel_0_0/resizer_resize_accel_0_0_sim_netlist.v" \
-  "c:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_pc_0/resizer_auto_pc_0_sim_netlist.v" \
-  "c:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_us_0/resizer_auto_us_0_sim_netlist.v" \
-  "c:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_us_1/resizer_auto_us_1_sim_netlist.v" \
-  "c:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/Pynq-Z1/resizer/bitstream/resizer/resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_pc_1/resizer_auto_pc_1_sim_netlist.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/axis2xfMat.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/CoreProcessDownArea.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/fifo_w24_d2_A.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/fifo_w24_d150_A.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/Inverse.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/Inverse_xf_divisibkb.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_AXILiteS_s_axi.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mac_eOg.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mac_fYi.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mac_hbi.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mul_dEe.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mul_g8j.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mux_cud.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mux_Gfk.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_mux_Hfu.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_sdivFfa.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel_sremIfE.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_Loop_1_proc59.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_Loop_2_proc61.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/start_for_resize_KfY.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/start_for_resize_U0.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/start_for_xfMat2aLf8.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/start_for_xFresizJfO.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xfExtractPixels.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xfMat2axis.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFresize60.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownScal.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSEe0.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSibs.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSjbC.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSmb6.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSocq.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownStde.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSudo.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSvdy.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/xFResizeAreaDownSwdI.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/de7c/hdl/verilog/resize_accel.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_resize_accel_0_0/sim/resizer_resize_accel_0_0.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/sim/resizer.v" \
+-endlib
+-makelib ies_lib/axi_protocol_converter_v2_1_18 \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_pc_0/sim/resizer_auto_pc_0.v" \
+-endlib
+-makelib ies_lib/axi_clock_converter_v2_1_17 \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/693a/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/blk_mem_gen_v8_4_2 \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/37c2/simulation/blk_mem_gen_v8_4.v" \
+-endlib
+-makelib ies_lib/axi_dwidth_converter_v2_1_18 \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0815/hdl/axi_dwidth_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_us_0/sim/resizer_auto_us_0.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_us_1/sim/resizer_auto_us_1.v" \
+  "../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_pc_1/sim/resizer_auto_pc_1.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v

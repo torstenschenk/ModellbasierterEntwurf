@@ -142,7 +142,7 @@ initial begin
 #0 ap_return_1_preg = 8'd0;
 end
 
-Inverse_xf_division_lut #(
+Inverse_xf_divisibkb #(
     .DataWidth( 16 ),
     .AddressRange( 2049 ),
     .AddressWidth( 12 ))

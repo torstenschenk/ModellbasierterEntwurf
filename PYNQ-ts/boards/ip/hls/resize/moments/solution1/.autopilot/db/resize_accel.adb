@@ -280,7 +280,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -328,7 +328,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -376,7 +376,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -426,7 +426,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -484,7 +484,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -537,7 +537,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize</first>
+                  <first>C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1512,7 +1512,7 @@
           </second>
         </item>
         <item>
-          <first>start_for_xfMat2axis_U0_U (start_for_xfMat2axis_U0)</first>
+          <first>start_for_xfMat2aLf8_U (start_for_xfMat2aLf8)</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -1694,7 +1694,7 @@
           </second>
         </item>
         <item>
-          <first>start_for_xfMat2axis_U0_U</first>
+          <first>start_for_xfMat2aLf8_U</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>

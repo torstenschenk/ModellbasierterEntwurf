@@ -29,62 +29,57 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/moments/.apc/.src</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/moments/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/moments/.apc/.tb</location>
-		</link>
-		<link>
-			<name>.reference/stdio.h</name>
-			<type>1</type>
-			<location>/usr/include/stdio.h</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/moments/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/moments/solution1/.tcls</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/moments/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/xf_config_params.h</name>
 			<type>1</type>
-			<location>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/xf_config_params.h</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/xf_config_params.h</location>
 		</link>
 		<link>
 			<name>source/xf_headers.h</name>
 			<type>1</type>
-			<location>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/xf_headers.h</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/xf_headers.h</location>
 		</link>
 		<link>
 			<name>source/xf_resize_accel.cpp</name>
 			<type>1</type>
-			<location>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/xf_resize_accel.cpp</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/xf_resize_accel.cpp</location>
 		</link>
 		<link>
 			<name>source/xf_resize_config.h</name>
 			<type>1</type>
-			<location>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/xf_resize_config.h</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/xf_resize_config.h</location>
 		</link>
 		<link>
 			<name>testbench/xf_resize_tb.cpp</name>
 			<type>1</type>
-			<location>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/xf_resize_tb.cpp</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/xf_resize_tb.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/moments/solution1/solution1.directive</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/moments/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/moments/solution1/directives.tcl</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/moments/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/moments/solution1/script.tcl</location>
+			<location>C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/moments/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="xf_resize_config.h" path="/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/xf_resize_config.h"/>
-    <originFiles name="xf_resize_accel.cpp" path="/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/xf_resize_accel.cpp"/>
-    <originFiles name="xf_headers.h" path="/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/xf_headers.h"/>
-    <originFiles name="xf_config_params.h" path="/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/xf_config_params.h"/>
+    <originFiles name="xf_config_params.h" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize\xf_config_params.h"/>
+    <originFiles name="xf_headers.h" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize\xf_headers.h"/>
+    <originFiles name="xf_resize_accel.cpp" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize\xf_resize_accel.cpp"/>
+    <originFiles name="xf_resize_config.h" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize\xf_resize_config.h"/>
   </source>
   <testbench>
-    <originFiles name="xf_resize_tb.cpp" path="/home/ts/Documents/beuth_lectures/ModellbasierterEntwurf/PYNQ-ts/boards/ip/hls/resize/xf_resize_tb.cpp"/>
+    <originFiles name="xf_resize_tb.cpp" path="C:\Users\Misca\beuth_ws1920\ModellbasierterEntwurf\PYNQ-ts\boards\ip\hls\resize\xf_resize_tb.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

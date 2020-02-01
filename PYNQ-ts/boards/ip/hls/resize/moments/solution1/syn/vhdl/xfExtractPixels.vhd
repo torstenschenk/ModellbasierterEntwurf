@@ -39,7 +39,7 @@ architecture behav of xfExtractPixels is
     signal tmp_buf_3_V_write_a_fu_156_p10 : STD_LOGIC_VECTOR (23 downto 0);
     signal tmp_buf_4_V_write_a_fu_112_p10 : STD_LOGIC_VECTOR (23 downto 0);
 
-    component resize_accel_mux_83_24_1_1 IS
+    component resize_accel_mux_cud IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -69,7 +69,7 @@ architecture behav of xfExtractPixels is
 
 
 begin
-    resize_accel_mux_83_24_1_1_U8 : component resize_accel_mux_83_24_1_1
+    resize_accel_mux_cud_U8 : component resize_accel_mux_cud
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -95,7 +95,7 @@ begin
         din8 => tmp_fu_64_p1,
         dout => tmp_buf_0_V_write_a_fu_68_p10);
 
-    resize_accel_mux_83_24_1_1_U9 : component resize_accel_mux_83_24_1_1
+    resize_accel_mux_cud_U9 : component resize_accel_mux_cud
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -121,7 +121,7 @@ begin
         din8 => tmp_fu_64_p1,
         dout => tmp_buf_1_V_write_a_fu_90_p10);
 
-    resize_accel_mux_83_24_1_1_U10 : component resize_accel_mux_83_24_1_1
+    resize_accel_mux_cud_U10 : component resize_accel_mux_cud
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -147,7 +147,7 @@ begin
         din8 => tmp_fu_64_p1,
         dout => tmp_buf_4_V_write_a_fu_112_p10);
 
-    resize_accel_mux_83_24_1_1_U11 : component resize_accel_mux_83_24_1_1
+    resize_accel_mux_cud_U11 : component resize_accel_mux_cud
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -173,7 +173,7 @@ begin
         din8 => tmp_fu_64_p1,
         dout => tmp_buf_2_V_write_a_fu_134_p10);
 
-    resize_accel_mux_83_24_1_1_U12 : component resize_accel_mux_83_24_1_1
+    resize_accel_mux_cud_U12 : component resize_accel_mux_cud
     generic map (
         ID => 1,
         NUM_STAGE => 1,

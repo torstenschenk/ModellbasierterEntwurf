@@ -164,7 +164,7 @@ architecture behav of Inverse is
     signal ap_condition_171 : BOOLEAN;
     signal ap_condition_174 : BOOLEAN;
 
-    component Inverse_xf_division_lut IS
+    component Inverse_xf_divisibkb IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -180,7 +180,7 @@ architecture behav of Inverse is
 
 
 begin
-    xf_division_lut_U : component Inverse_xf_division_lut
+    xf_division_lut_U : component Inverse_xf_divisibkb
     generic map (
         DataWidth => 16,
         AddressRange => 2049,

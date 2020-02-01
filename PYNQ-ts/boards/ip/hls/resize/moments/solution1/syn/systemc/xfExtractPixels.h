@@ -11,7 +11,7 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "resize_accel_mux_83_24_1_1.h"
+#include "resize_accel_mux_cud.h"
 
 namespace ap_rtl {
 
@@ -40,11 +40,11 @@ struct xfExtractPixels : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    resize_accel_mux_83_24_1_1<1,1,24,24,24,24,24,24,24,24,3,24>* resize_accel_mux_83_24_1_1_U8;
-    resize_accel_mux_83_24_1_1<1,1,24,24,24,24,24,24,24,24,3,24>* resize_accel_mux_83_24_1_1_U9;
-    resize_accel_mux_83_24_1_1<1,1,24,24,24,24,24,24,24,24,3,24>* resize_accel_mux_83_24_1_1_U10;
-    resize_accel_mux_83_24_1_1<1,1,24,24,24,24,24,24,24,24,3,24>* resize_accel_mux_83_24_1_1_U11;
-    resize_accel_mux_83_24_1_1<1,1,24,24,24,24,24,24,24,24,3,24>* resize_accel_mux_83_24_1_1_U12;
+    resize_accel_mux_cud<1,1,24,24,24,24,24,24,24,24,3,24>* resize_accel_mux_cud_U8;
+    resize_accel_mux_cud<1,1,24,24,24,24,24,24,24,24,3,24>* resize_accel_mux_cud_U9;
+    resize_accel_mux_cud<1,1,24,24,24,24,24,24,24,24,3,24>* resize_accel_mux_cud_U10;
+    resize_accel_mux_cud<1,1,24,24,24,24,24,24,24,24,3,24>* resize_accel_mux_cud_U11;
+    resize_accel_mux_cud<1,1,24,24,24,24,24,24,24,24,3,24>* resize_accel_mux_cud_U12;
     sc_signal< sc_lv<3> > tmp_fu_64_p1;
     sc_signal< sc_lv<24> > tmp_buf_0_V_write_a_fu_68_p10;
     sc_signal< sc_lv<24> > tmp_buf_1_V_write_a_fu_90_p10;

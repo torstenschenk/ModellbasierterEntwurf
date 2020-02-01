@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Mon Jan 13 23:58:04 2020
+//Date        : Fri Jan 31 23:12:35 2020
 //Host        : alienware running 64-bit major release  (build 9200)
 //Command     : generate_target resizer.bd
 //Design      : resizer

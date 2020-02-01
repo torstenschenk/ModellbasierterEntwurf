@@ -858,1188 +858,1188 @@ initial begin
 #0 ic = 32'd0;
 end
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U21(
+resize_accel_mul_dEe_U21(
     .din0(tmp_122_fu_1760_p0),
     .din1(tmp_122_fu_1760_p1),
     .dout(tmp_122_fu_1760_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U22(
+resize_accel_mul_dEe_U22(
     .din0(tmp_123_fu_1766_p0),
     .din1(tmp_123_fu_1766_p1),
     .dout(tmp_123_fu_1766_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U23(
+resize_accel_mul_dEe_U23(
     .din0(tmp_132_fu_1772_p0),
     .din1(tmp_132_fu_1772_p1),
     .dout(tmp_132_fu_1772_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U24(
+resize_accel_mul_dEe_U24(
     .din0(tmp_133_fu_1778_p0),
     .din1(tmp_133_fu_1778_p1),
     .dout(tmp_133_fu_1778_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U25(
+resize_accel_mul_dEe_U25(
     .din0(tmp_142_fu_1784_p0),
     .din1(tmp_142_fu_1784_p1),
     .dout(tmp_142_fu_1784_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U26(
+resize_accel_mul_dEe_U26(
     .din0(tmp_143_fu_1790_p0),
     .din1(tmp_143_fu_1790_p1),
     .dout(tmp_143_fu_1790_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U27(
+resize_accel_mul_dEe_U27(
     .din0(tmp_152_fu_1796_p0),
     .din1(tmp_152_fu_1796_p1),
     .dout(tmp_152_fu_1796_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U28(
+resize_accel_mul_dEe_U28(
     .din0(tmp_153_fu_1802_p0),
     .din1(tmp_153_fu_1802_p1),
     .dout(tmp_153_fu_1802_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U29(
+resize_accel_mul_dEe_U29(
     .din0(tmp_162_fu_1808_p0),
     .din1(tmp_162_fu_1808_p1),
     .dout(tmp_162_fu_1808_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U30(
+resize_accel_mul_dEe_U30(
     .din0(tmp_163_fu_1814_p0),
     .din1(tmp_163_fu_1814_p1),
     .dout(tmp_163_fu_1814_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U31(
+resize_accel_mul_dEe_U31(
     .din0(tmp_234_1_fu_1820_p0),
     .din1(tmp_234_1_fu_1820_p1),
     .dout(tmp_234_1_fu_1820_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U32(
+resize_accel_mul_dEe_U32(
     .din0(tmp_237_1_fu_1826_p0),
     .din1(tmp_237_1_fu_1826_p1),
     .dout(tmp_237_1_fu_1826_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U33(
+resize_accel_mul_dEe_U33(
     .din0(tmp_253_1_fu_1832_p0),
     .din1(tmp_253_1_fu_1832_p1),
     .dout(tmp_253_1_fu_1832_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U34(
+resize_accel_mul_dEe_U34(
     .din0(tmp_255_1_fu_1838_p0),
     .din1(tmp_255_1_fu_1838_p1),
     .dout(tmp_255_1_fu_1838_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U35(
+resize_accel_mul_dEe_U35(
     .din0(tmp_269_1_fu_1844_p0),
     .din1(tmp_269_1_fu_1844_p1),
     .dout(tmp_269_1_fu_1844_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U36(
+resize_accel_mul_dEe_U36(
     .din0(tmp_271_1_fu_1850_p0),
     .din1(tmp_271_1_fu_1850_p1),
     .dout(tmp_271_1_fu_1850_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U37(
+resize_accel_mul_dEe_U37(
     .din0(tmp_285_1_fu_1856_p0),
     .din1(tmp_285_1_fu_1856_p1),
     .dout(tmp_285_1_fu_1856_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U38(
+resize_accel_mul_dEe_U38(
     .din0(tmp_287_1_fu_1862_p0),
     .din1(tmp_287_1_fu_1862_p1),
     .dout(tmp_287_1_fu_1862_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U39(
+resize_accel_mul_dEe_U39(
     .din0(tmp_301_1_fu_1868_p0),
     .din1(tmp_301_1_fu_1868_p1),
     .dout(tmp_301_1_fu_1868_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U40(
+resize_accel_mul_dEe_U40(
     .din0(tmp_303_1_fu_1874_p0),
     .din1(tmp_303_1_fu_1874_p1),
     .dout(tmp_303_1_fu_1874_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U41(
+resize_accel_mul_dEe_U41(
     .din0(tmp_234_2_fu_1880_p0),
     .din1(tmp_234_2_fu_1880_p1),
     .dout(tmp_234_2_fu_1880_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U42(
+resize_accel_mul_dEe_U42(
     .din0(tmp_237_2_fu_1886_p0),
     .din1(tmp_237_2_fu_1886_p1),
     .dout(tmp_237_2_fu_1886_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U43(
+resize_accel_mul_dEe_U43(
     .din0(tmp_253_2_fu_1892_p0),
     .din1(tmp_253_2_fu_1892_p1),
     .dout(tmp_253_2_fu_1892_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U44(
+resize_accel_mul_dEe_U44(
     .din0(tmp_255_2_fu_1898_p0),
     .din1(tmp_255_2_fu_1898_p1),
     .dout(tmp_255_2_fu_1898_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U45(
+resize_accel_mul_dEe_U45(
     .din0(tmp_269_2_fu_1904_p0),
     .din1(tmp_269_2_fu_1904_p1),
     .dout(tmp_269_2_fu_1904_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U46(
+resize_accel_mul_dEe_U46(
     .din0(tmp_271_2_fu_1910_p0),
     .din1(tmp_271_2_fu_1910_p1),
     .dout(tmp_271_2_fu_1910_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U47(
+resize_accel_mul_dEe_U47(
     .din0(tmp_285_2_fu_1916_p0),
     .din1(tmp_285_2_fu_1916_p1),
     .dout(tmp_285_2_fu_1916_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U48(
+resize_accel_mul_dEe_U48(
     .din0(tmp_287_2_fu_1922_p0),
     .din1(tmp_287_2_fu_1922_p1),
     .dout(tmp_287_2_fu_1922_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U49(
+resize_accel_mul_dEe_U49(
     .din0(tmp_301_2_fu_1928_p0),
     .din1(tmp_301_2_fu_1928_p1),
     .dout(tmp_301_2_fu_1928_p2)
 );
 
-resize_accel_mul_mul_16ns_8ns_24_1_1 #(
+resize_accel_mul_dEe #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 24 ))
-resize_accel_mul_mul_16ns_8ns_24_1_1_U50(
+resize_accel_mul_dEe_U50(
     .din0(tmp_303_2_fu_1934_p0),
     .din1(tmp_303_2_fu_1934_p1),
     .dout(tmp_303_2_fu_1934_p2)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U51(
+resize_accel_mac_eOg_U51(
     .din0(grp_fu_1940_p0),
     .din1(grp_fu_1940_p1),
     .din2(grp_fu_1940_p2),
     .dout(grp_fu_1940_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U52(
+resize_accel_mac_eOg_U52(
     .din0(grp_fu_1949_p0),
     .din1(grp_fu_1949_p1),
     .din2(grp_fu_1949_p2),
     .dout(grp_fu_1949_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U53(
+resize_accel_mac_eOg_U53(
     .din0(grp_fu_1958_p0),
     .din1(grp_fu_1958_p1),
     .din2(grp_fu_1958_p2),
     .dout(grp_fu_1958_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U54(
+resize_accel_mac_eOg_U54(
     .din0(grp_fu_1967_p0),
     .din1(grp_fu_1967_p1),
     .din2(grp_fu_1967_p2),
     .dout(grp_fu_1967_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U55(
+resize_accel_mac_eOg_U55(
     .din0(grp_fu_1976_p0),
     .din1(grp_fu_1976_p1),
     .din2(grp_fu_1976_p2),
     .dout(grp_fu_1976_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U56(
+resize_accel_mac_eOg_U56(
     .din0(grp_fu_1985_p0),
     .din1(grp_fu_1985_p1),
     .din2(grp_fu_1985_p2),
     .dout(grp_fu_1985_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U57(
+resize_accel_mac_eOg_U57(
     .din0(grp_fu_1994_p0),
     .din1(grp_fu_1994_p1),
     .din2(grp_fu_1994_p2),
     .dout(grp_fu_1994_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U58(
+resize_accel_mac_eOg_U58(
     .din0(grp_fu_2003_p0),
     .din1(grp_fu_2003_p1),
     .din2(grp_fu_2003_p2),
     .dout(grp_fu_2003_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U59(
+resize_accel_mac_eOg_U59(
     .din0(grp_fu_2012_p0),
     .din1(grp_fu_2012_p1),
     .din2(grp_fu_2012_p2),
     .dout(grp_fu_2012_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U60(
+resize_accel_mac_eOg_U60(
     .din0(grp_fu_2021_p0),
     .din1(grp_fu_2021_p1),
     .din2(grp_fu_2021_p2),
     .dout(grp_fu_2021_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U61(
+resize_accel_mac_eOg_U61(
     .din0(grp_fu_2030_p0),
     .din1(grp_fu_2030_p1),
     .din2(grp_fu_2030_p2),
     .dout(grp_fu_2030_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U62(
+resize_accel_mac_eOg_U62(
     .din0(grp_fu_2039_p0),
     .din1(grp_fu_2039_p1),
     .din2(grp_fu_2039_p2),
     .dout(grp_fu_2039_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U63(
+resize_accel_mac_eOg_U63(
     .din0(grp_fu_2048_p0),
     .din1(grp_fu_2048_p1),
     .din2(grp_fu_2048_p2),
     .dout(grp_fu_2048_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U64(
+resize_accel_mac_eOg_U64(
     .din0(grp_fu_2057_p0),
     .din1(grp_fu_2057_p1),
     .din2(grp_fu_2057_p2),
     .dout(grp_fu_2057_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U65(
+resize_accel_mac_eOg_U65(
     .din0(grp_fu_2066_p0),
     .din1(grp_fu_2066_p1),
     .din2(grp_fu_2066_p2),
     .dout(grp_fu_2066_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U66(
+resize_accel_mac_eOg_U66(
     .din0(grp_fu_2075_p0),
     .din1(grp_fu_2075_p1),
     .din2(grp_fu_2075_p2),
     .dout(grp_fu_2075_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U67(
+resize_accel_mac_eOg_U67(
     .din0(grp_fu_2084_p0),
     .din1(grp_fu_2084_p1),
     .din2(grp_fu_2084_p2),
     .dout(grp_fu_2084_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U68(
+resize_accel_mac_eOg_U68(
     .din0(grp_fu_2093_p0),
     .din1(grp_fu_2093_p1),
     .din2(grp_fu_2093_p2),
     .dout(grp_fu_2093_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U69(
+resize_accel_mac_eOg_U69(
     .din0(grp_fu_2102_p0),
     .din1(grp_fu_2102_p1),
     .din2(grp_fu_2102_p2),
     .dout(grp_fu_2102_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U70(
+resize_accel_mac_eOg_U70(
     .din0(grp_fu_2111_p0),
     .din1(grp_fu_2111_p1),
     .din2(grp_fu_2111_p2),
     .dout(grp_fu_2111_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U71(
+resize_accel_mac_eOg_U71(
     .din0(grp_fu_2120_p0),
     .din1(grp_fu_2120_p1),
     .din2(grp_fu_2120_p2),
     .dout(grp_fu_2120_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U72(
+resize_accel_mac_eOg_U72(
     .din0(grp_fu_2129_p0),
     .din1(grp_fu_2129_p1),
     .din2(grp_fu_2129_p2),
     .dout(grp_fu_2129_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U73(
+resize_accel_mac_eOg_U73(
     .din0(grp_fu_2138_p0),
     .din1(grp_fu_2138_p1),
     .din2(grp_fu_2138_p2),
     .dout(grp_fu_2138_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U74(
+resize_accel_mac_eOg_U74(
     .din0(grp_fu_2147_p0),
     .din1(grp_fu_2147_p1),
     .din2(grp_fu_2147_p2),
     .dout(grp_fu_2147_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U75(
+resize_accel_mac_eOg_U75(
     .din0(grp_fu_2156_p0),
     .din1(grp_fu_2156_p1),
     .din2(grp_fu_2156_p2),
     .dout(grp_fu_2156_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U76(
+resize_accel_mac_eOg_U76(
     .din0(grp_fu_2165_p0),
     .din1(grp_fu_2165_p1),
     .din2(grp_fu_2165_p2),
     .dout(grp_fu_2165_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U77(
+resize_accel_mac_eOg_U77(
     .din0(grp_fu_2174_p0),
     .din1(grp_fu_2174_p1),
     .din2(grp_fu_2174_p2),
     .dout(grp_fu_2174_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U78(
+resize_accel_mac_eOg_U78(
     .din0(grp_fu_2183_p0),
     .din1(grp_fu_2183_p1),
     .din2(grp_fu_2183_p2),
     .dout(grp_fu_2183_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U79(
+resize_accel_mac_eOg_U79(
     .din0(grp_fu_2192_p0),
     .din1(grp_fu_2192_p1),
     .din2(grp_fu_2192_p2),
     .dout(grp_fu_2192_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1 #(
+resize_accel_mac_eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 24 ),
     .dout_WIDTH( 25 ))
-resize_accel_mac_muladd_16ns_8ns_24ns_25_1_1_U80(
+resize_accel_mac_eOg_U80(
     .din0(grp_fu_2201_p0),
     .din1(grp_fu_2201_p1),
     .din2(grp_fu_2201_p2),
     .dout(grp_fu_2201_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 #(
+resize_accel_mac_fYi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 26 ),
     .dout_WIDTH( 27 ))
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U81(
+resize_accel_mac_fYi_U81(
     .din0(grp_fu_2210_p0),
     .din1(grp_fu_2210_p1),
     .din2(grp_fu_2210_p2),
     .dout(grp_fu_2210_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 #(
+resize_accel_mac_fYi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 26 ),
     .dout_WIDTH( 27 ))
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U82(
+resize_accel_mac_fYi_U82(
     .din0(grp_fu_2219_p0),
     .din1(grp_fu_2219_p1),
     .din2(grp_fu_2219_p2),
     .dout(grp_fu_2219_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 #(
+resize_accel_mac_fYi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 26 ),
     .dout_WIDTH( 27 ))
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U83(
+resize_accel_mac_fYi_U83(
     .din0(grp_fu_2228_p0),
     .din1(grp_fu_2228_p1),
     .din2(grp_fu_2228_p2),
     .dout(grp_fu_2228_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 #(
+resize_accel_mac_fYi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 26 ),
     .dout_WIDTH( 27 ))
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U84(
+resize_accel_mac_fYi_U84(
     .din0(grp_fu_2237_p0),
     .din1(grp_fu_2237_p1),
     .din2(grp_fu_2237_p2),
     .dout(grp_fu_2237_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 #(
+resize_accel_mac_fYi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 26 ),
     .dout_WIDTH( 27 ))
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U85(
+resize_accel_mac_fYi_U85(
     .din0(grp_fu_2246_p0),
     .din1(grp_fu_2246_p1),
     .din2(grp_fu_2246_p2),
     .dout(grp_fu_2246_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 #(
+resize_accel_mac_fYi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 26 ),
     .dout_WIDTH( 27 ))
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U86(
+resize_accel_mac_fYi_U86(
     .din0(grp_fu_2255_p0),
     .din1(grp_fu_2255_p1),
     .din2(grp_fu_2255_p2),
     .dout(grp_fu_2255_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 #(
+resize_accel_mac_fYi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 26 ),
     .dout_WIDTH( 27 ))
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U87(
+resize_accel_mac_fYi_U87(
     .din0(grp_fu_2264_p0),
     .din1(grp_fu_2264_p1),
     .din2(grp_fu_2264_p2),
     .dout(grp_fu_2264_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 #(
+resize_accel_mac_fYi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 26 ),
     .dout_WIDTH( 27 ))
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U88(
+resize_accel_mac_fYi_U88(
     .din0(grp_fu_2273_p0),
     .din1(grp_fu_2273_p1),
     .din2(grp_fu_2273_p2),
     .dout(grp_fu_2273_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 #(
+resize_accel_mac_fYi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 26 ),
     .dout_WIDTH( 27 ))
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U89(
+resize_accel_mac_fYi_U89(
     .din0(grp_fu_2282_p0),
     .din1(grp_fu_2282_p1),
     .din2(grp_fu_2282_p2),
     .dout(grp_fu_2282_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 #(
+resize_accel_mac_fYi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 26 ),
     .dout_WIDTH( 27 ))
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U90(
+resize_accel_mac_fYi_U90(
     .din0(grp_fu_2291_p0),
     .din1(grp_fu_2291_p1),
     .din2(grp_fu_2291_p2),
     .dout(grp_fu_2291_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 #(
+resize_accel_mac_fYi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 26 ),
     .dout_WIDTH( 27 ))
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U91(
+resize_accel_mac_fYi_U91(
     .din0(grp_fu_2300_p0),
     .din1(grp_fu_2300_p1),
     .din2(grp_fu_2300_p2),
     .dout(grp_fu_2300_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 #(
+resize_accel_mac_fYi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 26 ),
     .dout_WIDTH( 27 ))
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U92(
+resize_accel_mac_fYi_U92(
     .din0(grp_fu_2309_p0),
     .din1(grp_fu_2309_p1),
     .din2(grp_fu_2309_p2),
     .dout(grp_fu_2309_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 #(
+resize_accel_mac_fYi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 26 ),
     .dout_WIDTH( 27 ))
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U93(
+resize_accel_mac_fYi_U93(
     .din0(grp_fu_2318_p0),
     .din1(grp_fu_2318_p1),
     .din2(grp_fu_2318_p2),
     .dout(grp_fu_2318_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 #(
+resize_accel_mac_fYi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 26 ),
     .dout_WIDTH( 27 ))
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U94(
+resize_accel_mac_fYi_U94(
     .din0(grp_fu_2327_p0),
     .din1(grp_fu_2327_p1),
     .din2(grp_fu_2327_p2),
     .dout(grp_fu_2327_p3)
 );
 
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1 #(
+resize_accel_mac_fYi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 8 ),
     .din2_WIDTH( 26 ),
     .dout_WIDTH( 27 ))
-resize_accel_mac_muladd_16ns_8ns_26ns_27_1_1_U95(
+resize_accel_mac_fYi_U95(
     .din0(grp_fu_2336_p0),
     .din1(grp_fu_2336_p1),
     .din2(grp_fu_2336_p2),
     .dout(grp_fu_2336_p3)
 );
 
-resize_accel_mul_mul_19ns_16ns_32_1_1 #(
+resize_accel_mul_g8j #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 19 ),
     .din1_WIDTH( 16 ),
     .dout_WIDTH( 32 ))
-resize_accel_mul_mul_19ns_16ns_32_1_1_U96(
+resize_accel_mul_g8j_U96(
     .din0(tmp_140_fu_2345_p0),
     .din1(tmp_140_fu_2345_p1),
     .dout(tmp_140_fu_2345_p2)
 );
 
-resize_accel_mul_mul_19ns_16ns_32_1_1 #(
+resize_accel_mul_g8j #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 19 ),
     .din1_WIDTH( 16 ),
     .dout_WIDTH( 32 ))
-resize_accel_mul_mul_19ns_16ns_32_1_1_U97(
+resize_accel_mul_g8j_U97(
     .din0(tmp_160_fu_2351_p0),
     .din1(tmp_160_fu_2351_p1),
     .dout(tmp_160_fu_2351_p2)
 );
 
-resize_accel_mul_mul_19ns_16ns_32_1_1 #(
+resize_accel_mul_g8j #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 19 ),
     .din1_WIDTH( 16 ),
     .dout_WIDTH( 32 ))
-resize_accel_mul_mul_19ns_16ns_32_1_1_U98(
+resize_accel_mul_g8j_U98(
     .din0(tmp_265_1_fu_2357_p0),
     .din1(tmp_265_1_fu_2357_p1),
     .dout(tmp_265_1_fu_2357_p2)
 );
 
-resize_accel_mul_mul_19ns_16ns_32_1_1 #(
+resize_accel_mul_g8j #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 19 ),
     .din1_WIDTH( 16 ),
     .dout_WIDTH( 32 ))
-resize_accel_mul_mul_19ns_16ns_32_1_1_U99(
+resize_accel_mul_g8j_U99(
     .din0(tmp_297_1_fu_2363_p0),
     .din1(tmp_297_1_fu_2363_p1),
     .dout(tmp_297_1_fu_2363_p2)
 );
 
-resize_accel_mul_mul_19ns_16ns_32_1_1 #(
+resize_accel_mul_g8j #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 19 ),
     .din1_WIDTH( 16 ),
     .dout_WIDTH( 32 ))
-resize_accel_mul_mul_19ns_16ns_32_1_1_U100(
+resize_accel_mul_g8j_U100(
     .din0(tmp_265_2_fu_2369_p0),
     .din1(tmp_265_2_fu_2369_p1),
     .dout(tmp_265_2_fu_2369_p2)
 );
 
-resize_accel_mul_mul_19ns_16ns_32_1_1 #(
+resize_accel_mul_g8j #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 19 ),
     .din1_WIDTH( 16 ),
     .dout_WIDTH( 32 ))
-resize_accel_mul_mul_19ns_16ns_32_1_1_U101(
+resize_accel_mul_g8j_U101(
     .din0(tmp_297_2_fu_2375_p0),
     .din1(tmp_297_2_fu_2375_p1),
     .dout(tmp_297_2_fu_2375_p2)
 );
 
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1 #(
+resize_accel_mac_hbi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 19 ),
     .din1_WIDTH( 16 ),
     .din2_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U102(
+resize_accel_mac_hbi_U102(
     .din0(grp_fu_2381_p0),
     .din1(grp_fu_2381_p1),
     .din2(tmp_140_reg_3012),
     .dout(grp_fu_2381_p3)
 );
 
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1 #(
+resize_accel_mac_hbi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 19 ),
     .din1_WIDTH( 16 ),
     .din2_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U103(
+resize_accel_mac_hbi_U103(
     .din0(grp_fu_2388_p0),
     .din1(grp_fu_2388_p1),
     .din2(grp_fu_2395_p3),
     .dout(grp_fu_2388_p3)
 );
 
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1 #(
+resize_accel_mac_hbi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 19 ),
     .din1_WIDTH( 16 ),
     .din2_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U104(
+resize_accel_mac_hbi_U104(
     .din0(grp_fu_2395_p0),
     .din1(grp_fu_2395_p1),
     .din2(tmp_160_reg_3017),
     .dout(grp_fu_2395_p3)
 );
 
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1 #(
+resize_accel_mac_hbi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 19 ),
     .din1_WIDTH( 16 ),
     .din2_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U105(
+resize_accel_mac_hbi_U105(
     .din0(grp_fu_2403_p0),
     .din1(grp_fu_2403_p1),
     .din2(tmp_265_1_reg_3022),
     .dout(grp_fu_2403_p3)
 );
 
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1 #(
+resize_accel_mac_hbi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 19 ),
     .din1_WIDTH( 16 ),
     .din2_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U106(
+resize_accel_mac_hbi_U106(
     .din0(grp_fu_2410_p0),
     .din1(grp_fu_2410_p1),
     .din2(grp_fu_2417_p3),
     .dout(grp_fu_2410_p3)
 );
 
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1 #(
+resize_accel_mac_hbi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 19 ),
     .din1_WIDTH( 16 ),
     .din2_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U107(
+resize_accel_mac_hbi_U107(
     .din0(grp_fu_2417_p0),
     .din1(grp_fu_2417_p1),
     .din2(tmp_297_1_reg_3027),
     .dout(grp_fu_2417_p3)
 );
 
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1 #(
+resize_accel_mac_hbi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 19 ),
     .din1_WIDTH( 16 ),
     .din2_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U108(
+resize_accel_mac_hbi_U108(
     .din0(grp_fu_2425_p0),
     .din1(grp_fu_2425_p1),
     .din2(tmp_265_2_reg_3032),
     .dout(grp_fu_2425_p3)
 );
 
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1 #(
+resize_accel_mac_hbi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 19 ),
     .din1_WIDTH( 16 ),
     .din2_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U109(
+resize_accel_mac_hbi_U109(
     .din0(grp_fu_2432_p0),
     .din1(grp_fu_2432_p1),
     .din2(grp_fu_2439_p3),
     .dout(grp_fu_2432_p3)
 );
 
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1 #(
+resize_accel_mac_hbi #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 19 ),
     .din1_WIDTH( 16 ),
     .din2_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-resize_accel_mac_muladd_19ns_16ns_32ns_32_1_1_U110(
+resize_accel_mac_hbi_U110(
     .din0(grp_fu_2439_p0),
     .din1(grp_fu_2439_p1),
     .din2(tmp_297_2_reg_3037),
