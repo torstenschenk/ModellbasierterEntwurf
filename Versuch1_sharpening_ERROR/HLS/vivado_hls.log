@@ -1,9 +1,0 @@
-INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2016.2/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'Misca' on host 'alienware' (Windows NT_amd64 version 6.2) on Tue Jan 07 00:25:30 +0100 2020
-INFO: [HLS 200-10] In directory 'C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch1_sharpening/HLS'
-INFO: [HLS 200-10] Opening project 'C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch1_sharpening/HLS/sharpening'.
-INFO: [HLS 200-10] Opening solution 'C:/Users/Misca/beuth_ws1920/ModellbasierterEntwurf/Versuch1_sharpening/HLS/sharpening/solution1'.
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
-make: `csim.exe' is up to date.
-INFO: [SIM 211-1] CSim done with 0 errors.
