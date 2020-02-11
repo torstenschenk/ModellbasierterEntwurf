@@ -65,7 +65,7 @@ Um Codeabschnitte besser von Beschreibungen besser unterscheiden zu können, wur
 \label{Projektbeschreibung}
 In diesem Projekt sollen die Momente von Regionen (Blobs) berechnet werden. Momente sind im englischen Sprachgebrauch etabliert und werden im Deutschen als Massenträgheitsmomente oder einfach Trägheitsmomente bezeichnet. Sie kommen zum Einsatz wo statische Kennwerte die Konturabhängig sind benötigt werden. Eine wichtige Fragestellung ist z.B. in welcher Richtung sich ein L-Profil biegen wird. Die kontinuierliche Darstellung von Momenten als Integral in dem I(x,y) die gesamte Fläche eines Querschnittes darstellt: $$M = \int \int I(i,j) dxdy$$
 
-Diskret (Bildpixel) können durch Iteration über alle Pixel einer Region die Momente berechnet werden. Die allgemeine Formel kann für alle Kombinationen verwendet werden, z.B. $M_{00}$, $M_{01}$, $M_{20}$. Die Zahlen dienen hierbei gleichzeitig als Exponent p oder q.: $$M_{p,q} = \sum \sum i^p jp^q I(i,j)$$
+Diskret (Bildpixel) können durch Iteration über alle Pixel einer Region die Momente berechnet werden. Die allgemeine Formel kann für alle Kombinationen verwendet werden, z.B. $M_{00}$, $M_{01}$, $M_{20}$. Die Zahlen dienen hierbei gleichzeitig als Exponent p oder q.: $$M_{p,q} = \sum \sum i^p j^q I(i,j)$$
 
 	\begin{figure}[H]
 	\centering
@@ -510,7 +510,7 @@ Der folgende Algorthimus zur Bestimmung der Flächenmomente bis zum Grad 2 wird 
 \For{$jedes$ $i$ $in$ $L$}
 	\State $px = L_i$
     \If{$px_7 == 1)$}
-    	\State $r=i/\%b$ $(Zeile)$
+    	\State $r=i/b$ $(Zeile)$
     	\State $c=i\%b$  $(Spalte)$
       	\State $m_{00}+=1$    
 	    \State $m_{01}+= c$ 

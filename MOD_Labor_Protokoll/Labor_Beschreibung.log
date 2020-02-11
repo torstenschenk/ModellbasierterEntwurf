@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.4)  16 JAN 2020 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.4)  11 FEB 2020 18:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1917,20 +1917,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 1007--1008
 <img_pynq/jupyter1.png, id=576, 689.57625pt x 811.53188pt>
 File: img_pynq/jupyter1.png Graphic file (type png)
 <use img_pynq/jupyter1.png>
-Package pdftex.def Info: img_pynq/jupyter1.png  used on input line 1037.
+Package pdftex.def Info: img_pynq/jupyter1.png  used on input line 1035.
 (pdftex.def)             Requested size: 455.24408pt x 535.76129pt.
 
-Overfull \hbox (32.72156pt too wide) in paragraph at lines 1037--1038
+Overfull \hbox (32.72156pt too wide) in paragraph at lines 1035--1036
  [][] 
  []
 
 <img_pynq/jupyter2.png, id=577, 764.8575pt x 810.02625pt>
 File: img_pynq/jupyter2.png Graphic file (type png)
 <use img_pynq/jupyter2.png>
-Package pdftex.def Info: img_pynq/jupyter2.png  used on input line 1044.
+Package pdftex.def Info: img_pynq/jupyter2.png  used on input line 1042.
 (pdftex.def)             Requested size: 455.24408pt x 482.1261pt.
 
-Overfull \hbox (32.72156pt too wide) in paragraph at lines 1044--1045
+Overfull \hbox (32.72156pt too wide) in paragraph at lines 1042--1043
  [][] 
  []
 
@@ -1938,10 +1938,10 @@ Overfull \hbox (32.72156pt too wide) in paragraph at lines 1044--1045
 <img_pynq/jupyter3.png, id=583, 853.68938pt x 804.00375pt>
 File: img_pynq/jupyter3.png Graphic file (type png)
 <use img_pynq/jupyter3.png>
-Package pdftex.def Info: img_pynq/jupyter3.png  used on input line 1051.
+Package pdftex.def Info: img_pynq/jupyter3.png  used on input line 1049.
 (pdftex.def)             Requested size: 455.24408pt x 428.7576pt.
 
-Overfull \hbox (32.72156pt too wide) in paragraph at lines 1051--1052
+Overfull \hbox (32.72156pt too wide) in paragraph at lines 1049--1050
  [][] 
  []
 
@@ -1949,15 +1949,15 @@ Overfull \hbox (32.72156pt too wide) in paragraph at lines 1051--1052
 <img_pynq/jupyter4.png, id=590, 701.62125pt x 731.73375pt>
 File: img_pynq/jupyter4.png Graphic file (type png)
 <use img_pynq/jupyter4.png>
-Package pdftex.def Info: img_pynq/jupyter4.png  used on input line 1058.
+Package pdftex.def Info: img_pynq/jupyter4.png  used on input line 1056.
 (pdftex.def)             Requested size: 455.24408pt x 474.79507pt.
 
-Overfull \hbox (32.72156pt too wide) in paragraph at lines 1058--1059
+Overfull \hbox (32.72156pt too wide) in paragraph at lines 1056--1057
  [][] 
  []
 
 [38 <./img_pynq/jupyter3.png>]
-Overfull \hbox (13.09262pt too wide) in paragraph at lines 1063--1064
+Overfull \hbox (13.09262pt too wide) in paragraph at lines 1061--1062
 []\T1/qag/m/n/10 Die Er-geb-nis-se von zwei Ein-ga-be-bil-dern sind im fol-gen-
 den zu-sam-men-ko-piert. Die Schwer-
  []
@@ -1965,37 +1965,37 @@ den zu-sam-men-ko-piert. Die Schwer-
 <img_pynq/blob1.png, id=596, 928.46875pt x 359.3425pt>
 File: img_pynq/blob1.png Graphic file (type png)
 <use img_pynq/blob1.png>
-Package pdftex.def Info: img_pynq/blob1.png  used on input line 1067.
+Package pdftex.def Info: img_pynq/blob1.png  used on input line 1065.
 (pdftex.def)             Requested size: 341.43306pt x 132.14313pt.
 [39 <./img_pynq/jupyter4.png>]
 <img_pynq/blob2.png, id=602, 928.46875pt x 359.3425pt>
 File: img_pynq/blob2.png Graphic file (type png)
 <use img_pynq/blob2.png>
-Package pdftex.def Info: img_pynq/blob2.png  used on input line 1074.
+Package pdftex.def Info: img_pynq/blob2.png  used on input line 1072.
 (pdftex.def)             Requested size: 341.43306pt x 132.14313pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 1083.
+nput line 1081.
  [40 <./img_pynq/blob1.png (PNG copy)> <./img_pynq/blob2.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 1147--1148
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1146
 
  []
 
 [41]
-Overfull \hbox (15.48193pt too wide) in paragraph at lines 1159--1160
+Overfull \hbox (15.48193pt too wide) in paragraph at lines 1157--1158
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (21.482pt too wide) in paragraph at lines 1163--1164
+Overfull \hbox (21.482pt too wide) in paragraph at lines 1161--1162
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [42]
-Overfull \hbox (9.48187pt too wide) in paragraph at lines 1208--1210
+Overfull \hbox (9.48187pt too wide) in paragraph at lines 1206--1208
 [][][][][][][][][][][][] 
  []
 
@@ -2008,27 +2008,27 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 ) [43]
-Overfull \hbox (3.48181pt too wide) in paragraph at lines 1256--1257
+Overfull \hbox (3.48181pt too wide) in paragraph at lines 1254--1255
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (15.48193pt too wide) in paragraph at lines 1257--1259
+Overfull \hbox (15.48193pt too wide) in paragraph at lines 1255--1257
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.48181pt too wide) in paragraph at lines 1262--1263
+Overfull \hbox (3.48181pt too wide) in paragraph at lines 1260--1261
 [][][][][][][][][][][][][][] 
  []
 
 [44]
-Overfull \hbox (33.48212pt too wide) in paragraph at lines 1308--1309
+Overfull \hbox (33.48212pt too wide) in paragraph at lines 1306--1307
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [45] [46]
-Overfull \hbox (30.68106pt too wide) in paragraph at lines 1356--1358
+Overfull \hbox (30.68106pt too wide) in paragraph at lines 1354--1356
 \T1/cmtt/m/n/10 https://blog.digilentinc.com/python-zynq-pynq-introducing-our-l
 atest-collaborationl 
  []
@@ -2040,19 +2040,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{cite.PYNQ-Z1}
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.1381 \end{document}
+l.1379 \end{document}
                      pdfTeX warning (ext4): destination with the same identifie
 r (name{cite.PYNQ-Z1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.1381 \end{document}
+l.1379 \end{document}
                      ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1381.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1381.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1379.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1379.
  (./Labor_Beschreibung.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1381.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1381.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1379.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1379.
 
 Package rerunfilecheck Info: File `Labor_Beschreibung.out' has not changed.
 (rerunfilecheck)             Checksum: F2BFF6E0864F53935EC36AE4B54B28D6;2315.
@@ -2070,7 +2070,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  23321 strings out of 494757
  401945 string characters out of 6175786
- 523457 words of memory out of 5000000
+ 524457 words of memory out of 5000000
  25766 multiletter control sequences out of 15000+600000
  47362 words of font info for 51 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
@@ -2088,7 +2088,7 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></us
 r/share/texmf/fonts/type1/public/tex-gyre/qagb.pfb></usr/share/texmf/fonts/type
 1/public/tex-gyre/qagr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qagri.
 pfb>
-Output written on Labor_Beschreibung.pdf (47 pages, 9214860 bytes).
+Output written on Labor_Beschreibung.pdf (47 pages, 9214851 bytes).
 PDF statistics:
  1121 PDF objects out of 1200 (max. 8388607)
  905 compressed objects within 10 object streams
