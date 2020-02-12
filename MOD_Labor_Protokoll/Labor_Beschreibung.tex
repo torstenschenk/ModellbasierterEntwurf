@@ -1057,54 +1057,241 @@ dir: _moments_neu ---- dir:bitstream---moments.bit
 \end{verbatim}
 
 \subsection{Pynq-Notebook}
+\subsubsection{Moment Calculator in PL}
+
 Es wurden zwei Notebooks erstellt, eines soll die Verwendung und Verarbeitungszeiten des PL Blockes, d.h. die Hardwarebeschleunigung bewerten. Das andere soll die Verarbeitung auf dem Pynq Prozessor ausführen. Beide Ergebnisse können damit direkt im Browser verglichen werden. Durch die schnelle prototypische Python Umgebung können auch einfache Bilder geladen und Visualisiert werden.
 
 Auf den 4 Screenshots ist das PL Notebook in Auszügen dargestellt. 
 
+
+%&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 \begin{figure}[H]
 \centering
-\subfloat{\includegraphics[width=16cm]{img_pynq/jupyter1}}
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/jupyter1_1}}
 \caption{Jupyter Notebook mit Ergebnissen 1}
 \label{fig:Notebook1}
 \end{figure}
+%
+%\begin{figure}[H]
+%\centering
+%\subfloat{\includegraphics[width=16cm]{img_pynq/jupyter2_1}}
+%\caption{Jupyter Notebook mit Ergebnissen 2}
+%\label{fig:Notebook2}
+%\end{figure}
+%
+%\begin{figure}[H]
+%\centering
+%\subfloat{\includegraphics[width=16cm]{img_pynq/jupyter3_1}}
+%\caption{Jupyter Notebook mit Ergebnissen 3}
+%\label{fig:Notebook3}
+%\end{figure}
+%
+%\begin{figure}[H]
+%\centering
+%\subfloat{\includegraphics[width=16cm]{img_pynq/jupyter4_1}}
+%\caption{Jupyter Notebook mit Ergebnissen 4}
+%\label{fig:Notebook4}
+%\end{figure}
+%&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-\begin{figure}[H]
-\centering
-\subfloat{\includegraphics[width=16cm]{img_pynq/jupyter2}}
-\caption{Jupyter Notebook mit Ergebnissen 2}
-\label{fig:Notebook2}
-\end{figure}
 
-\begin{figure}[H]
-\centering
-\subfloat{\includegraphics[width=16cm]{img_pynq/jupyter3}}
-\caption{Jupyter Notebook mit Ergebnissen 3}
-\label{fig:Notebook3}
-\end{figure}
 
-\begin{figure}[H]
-\centering
-\subfloat{\includegraphics[width=16cm]{img_pynq/jupyter4}}
-\caption{Jupyter Notebook mit Ergebnissen 4}
-\label{fig:Notebook4}
-\end{figure}
+%\begin{figure}[H]
+%\centering
+%\subfloat{\includegraphics[width=16cm]{img_pynq/jupyter1}}
+%\caption{Jupyter Notebook mit Ergebnissen 1}
+%\label{fig:Notebook1}
+%\end{figure}
+%
+%\begin{figure}[H]
+%\centering
+%\subfloat{\includegraphics[width=16cm]{img_pynq/jupyter2}}
+%\caption{Jupyter Notebook mit Ergebnissen 2}
+%\label{fig:Notebook2}
+%\end{figure}
+%
+%\begin{figure}[H]
+%\centering
+%\subfloat{\includegraphics[width=16cm]{img_pynq/jupyter3}}
+%\caption{Jupyter Notebook mit Ergebnissen 3}
+%\label{fig:Notebook3}
+%\end{figure}
+%
+%\begin{figure}[H]
+%\centering
+%\subfloat{\includegraphics[width=16cm]{img_pynq/jupyter4}}
+%\caption{Jupyter Notebook mit Ergebnissen 4}
+%\label{fig:Notebook4}
+%\end{figure}
 
 Die Ergebnisse von zwei Eingabebildern sind im folgenden zusammenkopiert. Die Schwerpunktachse ist als rote Linie eingezeichnet. Die Bilder wurden im Ip-Core auf halbe Größe skaliert und binarisiert bevor die Trägheitsmomente berechnet wurden.
 
 \begin{figure}[H]
 \centering
-\subfloat{\includegraphics[width=12cm]{img_pynq/blob1}}
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/blob1}}
 \caption{Blob mit verrückter Aussenkontur}
 \label{fig:blob1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\subfloat{\includegraphics[width=12cm]{img_pynq/blob2}}
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/blob2}}
 \caption{Gespiegelter Beuth Schriftzug}
 \label{fig:blob2}
 \end{figure}
 
+%------------------------------------------------------
+\subsubsection{Moment Calculator in PL- LOOP}
+
+
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/PL_LOOP_1}}
+\caption{Jupyter Notebook -  LP Loop Code1}
+\label{fig:LOOP1}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/PL_LOOP_2}}
+\caption{Jupyter Notebook -  LP Loop Code 2}
+\label{fig:LOOP2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/PL_LOOP_3}}
+\caption{Jupyter Notebook -  LP Loop Code 3}
+\label{fig:LOOP3}
+\end{figure}
+
+ Die  Ergebnisse lauten: 
+ 
+ \begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Loop_Ergebnis1}}
+\caption{Ergebnis 1}
+\label{fig:Ergebnis_1}
+\end{figure}
+
+ \begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Loop_Ergebnis2}}
+\caption{Ergebnis 2}
+\label{fig:Ergebnis_2}
+\end{figure}
+
+ \begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Loop_Ergebnis3}}
+\caption{Ergebnis 3}
+\label{fig:Ergebnis_3}
+\end{figure}
+
+
+ \begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Loop_Ergebnis4}}
+\caption{Ergebnis 4}
+\label{fig:Ergebnis_4}
+\end{figure}
+
+
+ \begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Loop_Ergebnis5}}
+\caption{Ergebnis 5}
+\label{fig:Ergebnis_5}
+\end{figure}
+
+ \begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Loop_Ergebnis6}}
+\caption{Ergebnis 6}
+\label{fig:Ergebnis_6}
+\end{figure}
+
+
+ \begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Loop_Ergebnis7}}
+\caption{Ergebnis 7}
+\label{fig:Ergebnis_7}
+\end{figure}
+
+ \begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Loop_Ergebnis8}}
+\caption{Ergebnis 8}
+\label{fig:Ergebnis_8}
+\end{figure}
+
+ \begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Loop_Ergebnis9}}
+\caption{Ergebnis 9}
+\label{fig:Ergebnis_9}
+\end{figure}
+
+ \begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Loop_Ergebnis10}}
+\caption{Ergebnis 10}
+\label{fig:Ergebnis_10}
+\end{figure}
+
+ \begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Loop_Ergebnis11}}
+\caption{Ergebnis 11}
+\label{fig:Ergebnis_11}
+\end{figure}
+
+ \begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Loop_Ergebnis12}}
+\caption{Ergebnis 12}
+\label{fig:Ergebnis_12}
+\end{figure}
+
+
+%------------------------------------------------------
+\subsubsection{Moment Calculator in PS}
+Hier zeigen wir die Code und Ergebnis von Moment Calculator in Processing System:
+
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Moment_PS1}}
+\caption{Moment Rechner in PS 1}
+\label{fig:Moment Rechner_in_PS_1}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Moment_PS2}}
+\caption{Moment Rechner in PS 2}
+\label{fig:Moment Rechner_in_PS_2}
+\end{figure}
+
+ \begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Moment_PS3}}
+\caption{Moment Rechner in PS 3}
+\label{fig:Moment Rechner_in_PS_3}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=\textwidth]{img_pynq/Moment_PS4}}
+\caption{Moment Rechner in PS 4}
+\label{fig:Moment Rechner_in_PS_4}
+\end{figure}
+
+
+
+%-----------------------------------------
 \section{Code, Listings}
 
 \subsection{Simulation in OpenCV}
