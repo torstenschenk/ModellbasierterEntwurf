@@ -65,7 +65,7 @@ Um Codeabschnitte besser von Beschreibungen besser unterscheiden zu können, wur
 \label{Projektbeschreibung}
 In diesem Projekt sollen die Momente von Regionen (Blobs) berechnet werden. Momente sind im englischen Sprachgebrauch etabliert und werden im Deutschen als Massenträgheitsmomente oder einfach Trägheitsmomente bezeichnet. Sie kommen zum Einsatz wo statische Kennwerte die Konturabhängig sind benötigt werden. Eine wichtige Fragestellung ist z.B. in welcher Richtung sich ein L-Profil biegen wird. Die kontinuierliche Darstellung von Momenten als Integral in dem I(x,y) die gesamte Fläche eines Querschnittes darstellt: $$M = \int \int I(i,j) dxdy$$
 
-Diskret (Bildpixel) können durch Iteration über alle Pixel einer Region die Momente berechnet werden. Die allgemeine Formel kann für alle Kombinationen verwendet werden, z.B. $M_{00}$, $M_{01}$, $M_{20}$. Die Zahlen dienen hierbei gleichzeitig als Exponent p oder q.: $$M_{p,q} = \sum \sum i^p jp^q I(i,j)$$
+Diskret (Bildpixel) können durch Iteration über alle Pixel einer Region die Momente berechnet werden. Die allgemeine Formel kann für alle Kombinationen verwendet werden, z.B. $M_{00}$, $M_{01}$, $M_{20}$. Die Zahlen dienen hierbei gleichzeitig als Exponent p oder q.: $$M_{p,q} = \sum \sum i^p j^q I(i,j)$$
 
 	\begin{figure}[H]
 	\centering
@@ -74,7 +74,7 @@ Diskret (Bildpixel) können durch Iteration über alle Pixel einer Region die Mo
 	\label{Entwurf des Projects}
 	\end{figure}
 
-Im Projekt soll auf Bildern jeweils mindestens eine Region selektiert werden. In diese soll zur Anzeige des Ergebnisses der Schwerpunkt und die Orientierung in Richtung der Achse mit höherem Biegemoment. In der folgenden Abbildung sind die Schwerpunkte lila und die Orientierung grün eingezeichnet.
+Im Projekt soll auf Bildern jeweils mindestens eine Region selektiert werden. In diese soll zur Anzeige des Ergebnisses der Schwerpunkt und die Orientierung in Richtung der Achse mit höherem Biegemoment. In der folgenden Abbildung sind die Schwerpunkte lila und die Orientierung grün eingezeichnet. I(i,j) ist 1 auf binarisierten Bildern.
 	
 	\begin{figure}[H]
 	\centering
@@ -387,7 +387,7 @@ VGA- D Adapter umfasst die Spezifikation einer analogen elektronischen Schnittst
 	%	3. Chapter
 	%------------------------------------------------
 
-\chapter{Softdware}
+\chapter{Software}
 
 	
 \section{Einrichtung der SDkarte}
@@ -497,7 +497,7 @@ Der Standard-Hostname lautet \textbf{pynq} und die statische Standard-IP-Adresse
 
 \section{Algorithm}
  
-Zur Einschätzung des Zahlenraumes wird mit Bildgröße 640x480 gearbeitet. Bei einem Objekt von ca. 1/4 Größe des Kamerabildes muss mit ~640*480 / 4 = 76800 Pixlen im Objekt gerechnet werden. Wen das Objekt mittig liegt sind x oder y Koordinaten im Bereich $\{100,500\}$. Bei der Berechnung von $m_{02}$ wird die Spaltennummer mit sich selbst multipliziert und aufaddiert. Dies Ergibt eine Summe von $41.463.400=\{500*500+499*499+.....102*102+101*101+100*100\}$ und würde in den Wertebereich in (nicht Vorzeichen behaftete) 26Bits $2^{26}=67.108.864$. Bei  Betrachtung der gesamten Bildgröße: $87.586.240=\{640*640+639*639+.....2*2+1*1\}$ benötigt mindestens 27Bits $2^{27}=134.217.728$.
+Zur Einschätzung des Zahlenraumes wird mit Bildgröße 640x480 gearbeitet. Bei einem Objekt von ca. 1/4 Größe des Kamerabildes muss mit ~640*480 / 4 = 76800 Pixlen im Objekt gerechnet werden. Wen das Objekt mittig liegt sind x oder y Koordinaten im Bereich $\{100,500\}$. Bei der Berechnung von $m_{02}$ wird die Spaltennummer mit sich selbst multipliziert und aufaddiert. Dies ergibt eine Summe von $41.463.400=\{500*500+499*499+.....102*102+101*101+100*100\}$ und würde in den Wertebereich in (nicht Vorzeichen behaftete) 26Bits $2^{26}=67.108.864$. Bei  Betrachtung der gesamten Bildgröße: $87.586.240=\{640*640+639*639+.....2*2+1*1\}$ benötigt mindestens 27Bits $2^{27}=134.217.728$.
 Der folgende Algorthimus zur Bestimmung der Flächenmomente bis zum Grad 2 wird vollständig in einen Int32 Datentyp passen.
 
  
@@ -565,7 +565,7 @@ Center X 150.00, Center Y 104.00, Angle clockwise 61.61 $^\circ$ \\
 \end{tcolorbox}
 
 \textbf{Anpassung des Winkelergebnisses, atan2 mit positiven Argumenten:}
-Es erfolgt eine Gegenüberstellung von dem Ergebnis der atan2 Funktion mit Argumenten, die einmal mit korrektem Vorzeichen verwendet werden und einmal mit ihrem Absolutwert. Bei Verwendung des Absolutwertes muss das Ergebnis nochmal korrigiert werden.
+Es erfolgt eine Gegenüberstellung von dem Ergebnis der atan2 Funktion mit Argumenten, die einmal mit korrektem Vorzeichen verwendet werden und einmal mit ihrem Absolutwert. Bei Verwendung des Absolutwertes muss das Ergebnis korrigiert werden.
 \begin{tcolorbox}
 $mult = \mu_{11}* \mu_{11}$ versus $mult = abs(\mu_{11}* \mu_{11})$ Ergebnis mit $abs$ gekennzeichnet\\
 $sub = \mu_{20}-\mu_{02}$ versus $sub = abs(\mu_{20}-\mu_{02})$ Ergebnis mit $abs$ gekennzeichnet\\
@@ -752,17 +752,15 @@ Auf 32-Bit-x86-Systemen mit erweiterter Genauigkeit entsprechen einige Compiler 
 
 \section{HLS Software Implementierung}
 In diesem Abschnitt wird eine kurze Einführung in die HLS \footnote{High Level Synthesis} gegeben, um sie für Pynq-Z1 zu nutzen.\\
-\textbf{Was bedeutet HLS?}\\
- High Level Synthesis wurde eingeführt, um die Elektronikkenntnisse zu reduzieren, die zum Entwerfen von Hardware erforderlich sind. Dies erleichtert auch den Ablauf des Hardware-Designs, wenn es darum geht, ein bestimmtes Verhaltensmodell zu erreichen.\\
+\textbf{Was bedeutet HLS?} High Level Synthesis wurde eingeführt, um Ingenieuren mit geringen Elektronikkenntnissen den Entwurf von Hardware zu ermöglichen und dazu die Entwicklungsgeschwindigkeit zu erhöhen. Es erleichtert auch den Ablauf des Hardware-Designs, wenn es darum geht, ein bestimmtes Verhaltensmodell zu erreichen.\\
  Unter Verwendung einer Programmiersprache wie C / C ++ implementieren wir das Verhaltensmodell in Hardware. \\
- Das HLS-Tool bildet unser Verhaltensmodell in Hardware ab und generiert den HDL-Code dafür und dann wird synthetisiert und danach im letzten Schritt wird  auf einem FPGA implementiert.
+ Das HLS-Tool bildet unser Verhaltensmodell in Hardware ab und generiert den HDL-Code. Dieser dann wird synthetisiert und danach im letzten Schritt wird auf einem FPGA implementiert. Nachdem wir uns mit HLS vertraut gemacht haben erzeugen wir unseren eigenen \textbf{IP Core}.
 
-Wenn wir mit HLS vertraut sind, fahren wir mit dem Beginn der Schritte fort und erzeugen unseren eigenen \textbf{IP Core}.
 \subsection{IP Core für Pynq}
 Im ersten Schritt wird das Thema einen eigenen IP Core in HLS behandelt!\\
 
 \textbf{Schritt 1:} \textit{Erstellung eines neuen Projekts}\\
-- Öffnen wir Vivado HLS und legen wir ein neues Projekt mit dem eigenen Funktionsnamen z.B. \textbf{„XXXX“} an.\\
+- Öffnen wir Vivado HLS und legen wir ein neues Projekt mit dem eigenen Funktionsnamen z.B. \textbf{„moments“} an.\\
 - Wählen wir ein Bauteil oder eine Entwicklungsplatine aus (wir verwenden PYNQ-Z1) und
  beenden wir die Erstellung des neuen Projekts.\\
  - Sollte Pynq-Z1 nicht unter Boards angezeigt werden, kann stattdessen der Typ \textbf{xc7z020clg400-1} in der Partliste ausgewählt werden. Die Pin-Belegung und Boardlayout ist für HLS nicht nötig. 
@@ -897,7 +895,7 @@ Nach dem Export unseres IP-Cores sind wir mit dem IP-Core-Design mit Vivado HLS 
 
 Der nächste Schritt besteht darin, die gesamte Hardware-Architektur einschließlich unseres IP-Cores mit Vivado zu entwerfen.
 
-\subsection{IP core 'Moments' mit Vivado HLS erstellen}
+\subsection{IP Core 'Moments' mit Vivado HLS erstellen}
 
 Der Algorithmus zur Berechnung der Momente wurde in einen Xilinx IP Core eingebettet und nutzt die bereits Implementierte Bildskalierung des Cores zur Reduktion der Wertebereiche. Zugrunde gelegt wurde das repo:
 
